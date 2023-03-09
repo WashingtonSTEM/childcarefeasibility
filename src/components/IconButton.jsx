@@ -11,6 +11,7 @@ const IconButton = styled(Button)`
   border-radius: 31px;
   padding: 0;
   text-transform: none;
+  text-align: center;
   background: ${props => props.backgroundColor || Button.background };
   ${ props => props.backgroundColor 
     ? `
@@ -26,5 +27,9 @@ const IconButton = styled(Button)`
     : ''
 }
 `
+
+IconButton.propTypes = {
+  backgroundColor: PropTypes.string
+}
 
 export default IconButton
