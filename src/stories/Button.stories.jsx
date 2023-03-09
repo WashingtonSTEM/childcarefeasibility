@@ -16,10 +16,11 @@ const Story = {
   },
 }
 
-const Template = (args) => <Button {...args}>Next</Button>
+const Template = (args) => <Button {...args}>{args.text}</Button>
 const defaulrArgs = {
-  disabled: false,
-  textAlign: 'center'
+  text: 'Next',
+  textAlign: 'center',
+  disabled: false
 }
 
 export const Primary = Template.bind({})

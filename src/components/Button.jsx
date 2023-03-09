@@ -28,8 +28,8 @@ const Button = styled.button.attrs(props => ({
   }
   &:disabled {
     opacity: 50%;
-    cursor: null;
-    pointer-events: null;
+    cursor: none;
+    pointer-events: none;
   }
 `
 
