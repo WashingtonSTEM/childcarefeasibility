@@ -36,4 +36,11 @@ Secondary.args = {
   ...defaulrArgs
 }
 
+export const CustomBackground = Template.bind({})
+CustomBackground.args = {
+  variant: 'secondary',
+  backgroundColor: 'green',
+  ...defaulrArgs
+}
+
 export default Story

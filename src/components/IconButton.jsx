@@ -11,6 +11,20 @@ const IconButton = styled(Button)`
   border-radius: 31px;
   padding: 0;
   text-transform: none;
+  background: ${props => props.backgroundColor || Button.background };
+  ${ props => props.backgroundColor 
+    ? `
+      &:hover:not([disabled]) {
+        opacity: 75%;
+        background: ${props.backgroundColor}
+      }
+      &:active:not([disabled]) {
+        opacity: 90%;
+        background: ${props.backgroundColor}
+      }
+    `
+    : ''
+}
 `
 
 export default IconButton
