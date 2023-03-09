@@ -78,15 +78,16 @@ const Input = ({ sufix, type, disabled, ...props }) => {
           type={type === 'text' ? type : null}
           {...props}
         />
-        { (!props.value || props.value === '') && <Text>This is the text</Text> }
+        { (!props.value || props.value === '') && <Text>{props.label}</Text> }
       </InputWraper>
-      <Text align="right">{ sufix }</Text>
+      {sufix && <Text align="right">{ sufix }</Text>}
     </Container>
   )
 }
 
 Input.propTypes = {
-  sufix: PropTypes.string
+  sufix: PropTypes.string,
+  label: PropTypes.string,
 }
 
 Input.defaultProps = {

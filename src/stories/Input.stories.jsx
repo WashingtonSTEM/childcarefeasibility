@@ -18,12 +18,14 @@ const Template = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
+  label: 'This is the label',
   value: '',
   disabled: false
 }
 
 export const WithSufix = Template.bind({})
 WithSufix.args = {
+  label: 'This is the label',
   value: '',
   sufix: '$',
   disabled: false

@@ -7,8 +7,9 @@ const Container = styled.label`
   gap: 10px;
   cursor: pointer;
   font-size: 16px;
-  font-family: 'Freight';
-  font-weight: 300;
+  font-family: 'Roboto';
+  font-weight: 400;
+  color: #012846;
 `
 
 const Switch = styled.div`
