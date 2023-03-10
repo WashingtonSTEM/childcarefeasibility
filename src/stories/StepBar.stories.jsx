@@ -15,7 +15,11 @@ const Story = {
   }
 }
 
-const Template = (args) => <StepBar {...args} />
+const Template = (args) => (
+  <div style={{ width: 360 }}>
+    <StepBar {...args} />
+  </div>
+)
 
 export const Default = Template.bind({})
 Default.args = {

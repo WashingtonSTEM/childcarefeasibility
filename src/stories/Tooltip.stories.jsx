@@ -10,9 +10,16 @@ const Story = {
       control: false
     }
   },
+  parameters: {
+    layout: 'padded',
+  },
 }
 
-const Template = (args) => <Tooltip {...args} />
+const Template = (args) => (
+  <div style={{ width: 360 }}>
+    <Tooltip {...args} />
+  </div>
+)
 
 export const TriggerOnHover = Template.bind({})
 TriggerOnHover.args = {

@@ -9,7 +9,7 @@ const Story = {
 }
 
 const Template = (args) => (
-  <div style={{ width: '50%' }}>
+  <div style={{ width: 360 }}>
     <TextBox>{args.text}</TextBox>
   </div>
 )
