@@ -5,11 +5,15 @@ const TextBox = styled.div`
   background: #012846;
   border-radius: 4px;
   color: #F3F3F3;
-  padding: 20px 16px;
   font-family: 'Roboto';
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  font-size: 17px;
+  padding: 16px 10px;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 20px 16px;
+  }
 `
 
 export default TextBox

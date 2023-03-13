@@ -24,13 +24,13 @@ const Toggle = styled.button`
   &:after {
     content: '';
     position: absolute;
-    background-image: url(${DropdownArrowDown});
     width: 18px;
     height: 10px;
-    top: 22px;
+    top: calc(50% - 5px);
     right: 10px;
     transition: 250ms all;
     transform: rotate(${props => props.show ? '180' : '0'}deg);
+    background-image: url(${DropdownArrowDown.src});
   }
 }
 `
@@ -38,11 +38,15 @@ const Toggle = styled.button`
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 55px;
+  height: 40px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 14px;
+  @media (max-width: 768px) {
+    height: 55px;
+    font-size: 17px;
+  }
   ${Toggle} {
     ${props => props.type === 'list' ? `
     &:after {
@@ -125,12 +129,17 @@ const Dropdown = ({ label, options, value, onChange, ...props }) => {
 }
 
 Dropdown.propTypes = {
-  value: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['menu', 'list'])
+  value: PropTypes.string,
+  type: PropTypes.oneOf(['menu', 'list']),
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    text: PropTypes.string
+  }))
 }
 
 Dropdown.defaultProps = {
-  type: 'menu'
+  type: 'menu',
+  value: null,
 }
 
 export default Dropdown

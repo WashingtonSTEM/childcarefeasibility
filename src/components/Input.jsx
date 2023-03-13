@@ -6,14 +6,14 @@ const Container = styled.label`
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: 55px;
+  height: 40px;
   background: #D9D9D9;
   border: 1px solid #012846;
   border-radius: 4px;
   font-family: 'Roboto';
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  font-size: 17px;
   line-height: 20px;
   border-radius: 4px;
   transition: 300ms all;
@@ -24,6 +24,10 @@ const Container = styled.label`
   }
   &:* {
     cursor: text;
+  }
+  @media (max-width: 768px) {
+    height: 55px;
+    font-size: 17px;
   }
 `
 

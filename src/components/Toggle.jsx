@@ -10,13 +10,16 @@ const Container = styled.label`
   font-family: 'Roboto';
   font-weight: 400;
   color: #012846;
+  @media (min-width: 769px) {
+    font-size: 14px;
+  }
 `
 
 const Switch = styled.div`
   position: relative;
-  width: 90px;
-  height: 52px;
   background: #D9D9D9;
+  width: 54px;
+  height: 33px;
   border-radius: 38px;
   border: 1px solid #012846;
   transition: 300ms all;
@@ -24,13 +27,22 @@ const Switch = styled.div`
     content: "";
     transition: 300ms all;
     position: absolute;
-    width: 41px;
-    height: 41px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     top: 50%;
-    left: 6px;
+    left: 4px;
     background: #012846;
     transform: translate(0, -50%);
+    @media (max-width: 768px) {
+      width: 41px;
+      height: 41px;
+      left: 6px;
+    }
+  }
+  @media (max-width: 768px) {
+    width: 90px;
+    height: 55px;
   }
 `
 
@@ -43,7 +55,10 @@ const Input = styled.input`
     border: 1px solid #D9D9D9;
     &:before {
       background: #D9D9D9;
-      transform: translate(36px, -50%);
+      transform: translate(19px, -50%);
+      @media (max-width: 768px) {
+        transform: translate(34px, -50%);
+      }
     }
   }
 `
