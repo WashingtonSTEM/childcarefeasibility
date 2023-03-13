@@ -23,7 +23,7 @@ const Container = styled.label`
     background: #948A85;
   }
   &:* {
-    cursor: text;
+    cursor: ${props => props.disabled ? 'none' : 'text'};
   }
   @media (max-width: 768px) {
     height: 55px;
@@ -40,11 +40,17 @@ const InputWraper = styled.div`
 
 const Text = styled.span`
   position: absolute;
-  top: 17px;
+  top: 10px;
   left: ${props => props.align !== 'right' ? '10px' : null};
   right: ${props => props.align !== 'left' ? '10px' : null};
   color: #012846;
   transition: 200ms all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media (max-width: 768px) {
+    top: 17px;
+  }
 `
 
 const StyledInput = styled.input`
@@ -84,7 +90,7 @@ const Input = ({ sufix, type, disabled, ...props }) => {
         />
         { (!props.value || props.value === '') && <Text>{props.label}</Text> }
       </InputWraper>
-      {sufix && <Text align="right">{ sufix }</Text>}
+      {sufix && <Text align="right" style={{ marginLeft: 8 }}>{ sufix }</Text>}
     </Container>
   )
 }
