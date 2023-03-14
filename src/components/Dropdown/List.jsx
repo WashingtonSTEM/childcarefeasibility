@@ -11,6 +11,7 @@ const List = styled.div`
   padding: 24px 30px;
   box-sizing: border-box;
   overflow-y: auto;
+  z-index: 1;
 `
 
 const Item = styled.a`

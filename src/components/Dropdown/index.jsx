@@ -17,7 +17,7 @@ const Toggle = styled.button`
   border-radius: ${props => props.show ? '4px 4px 0 0' : '4px'};
   font-family: inherit;
   font-size: inherit;
-  color: #012846;
+  color: '#012846';
   text-align: left;
   padding: 0 10px;
   cursor: pointer;
@@ -47,13 +47,6 @@ const Container = styled.div`
     height: 55px;
     font-size: 17px;
   }
-  ${Toggle} {
-    ${props => props.type === 'list' ? `
-    &:after {
-      display: none;
-    }
-    ` : ''}
-  }
 `
 
 const Back = styled.div`
@@ -63,7 +56,6 @@ const Back = styled.div`
 const Dropdown = ({ label, options, value, onChange, ...props }) => {
   const containerRef = useRef()
   const [show, setShow] = useState(false)
-
   const selectedOption = value ? options.find(({ value: opValue }) => opValue === value)?.text : null
 
   const open = () => setShow(true)
@@ -92,7 +84,7 @@ const Dropdown = ({ label, options, value, onChange, ...props }) => {
   }
 
   return (
-    <Container ref={containerRef} type={props.type}>
+    <Container ref={containerRef} type={props.type} className="dropdown-control">
       <Toggle onClick={handleOnClick} show={show}>
         {selectedOption || label}
       </Toggle>
@@ -131,6 +123,7 @@ const Dropdown = ({ label, options, value, onChange, ...props }) => {
 Dropdown.propTypes = {
   value: PropTypes.string,
   type: PropTypes.oneOf(['menu', 'list']),
+  onChange: PropTypes.func.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.string,
     text: PropTypes.string

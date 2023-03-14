@@ -11,12 +11,15 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "bootstrap": "^5.2.3",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
     "prop-types": "15.8.1",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
+    "styled-bootstrap-grid": "^3.1.2",
     "styled-components": "5.3.8"
   },
   "devDependencies": {

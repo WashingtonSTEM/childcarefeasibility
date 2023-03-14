@@ -2,6 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import InfoButton from './InfoButton'
 import TextBox from './TextBox'
 
 const PortalContainer = styled.div`
@@ -38,7 +39,7 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
   return (
     <>
       <div {...containerProps}>
-        {children}
+        {children || <InfoButton backgroundColor={show ? '#012846' : null} />}
       </div>
       {show && (
         <PortalContainer>
