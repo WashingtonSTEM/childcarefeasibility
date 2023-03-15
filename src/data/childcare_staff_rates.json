@@ -1,50 +1,50 @@
 [
   {
-    "Facility Type": "Center",
-    "Child": "Infant",
-    "# of Caregivers": "1",
-    "# of Children": "4"
+    "facilityType": "Center",
+    "child": "Infant",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "4"
   },
   {
-    "Facility Type": "Center",
-    "Child": "Toddler",
-    "# of Caregivers": "1",
-    "# of Children": "7"
+    "facilityType": "Center",
+    "child": "Toddler",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "7"
   },
   {
-    "Facility Type": "Center",
-    "Child": "Preschooler",
-    "# of Caregivers": "1",
-    "# of Children": "10"
+    "facilityType": "Center",
+    "child": "Preschooler",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "10"
   },
   {
-    "Facility Type": "Center",
-    "Child": "School Age",
-    "# of Caregivers": "1",
-    "# of Children": "15"
+    "facilityType": "Center",
+    "child": "School Age",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "15"
   },
   {
-    "Facility Type": "FCC",
-    "Child": "Infant",
-    "# of Caregivers": "1",
-    "# of Children": "4"
+    "facilityType": "FCC",
+    "child": "Infant",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "4"
   },
   {
-    "Facility Type": "FCC",
-    "Child": "Toddler",
-    "# of Caregivers": "1",
-    "# of Children": "4"
+    "facilityType": "FCC",
+    "child": "Toddler",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "4"
   },
   {
-    "Facility Type": "FCC",
-    "Child": "Preschooler",
-    "# of Caregivers": "1",
-    "# of Children": "4"
+    "facilityType": "FCC",
+    "child": "Preschooler",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "4"
   },
   {
-    "Facility Type": "FCC",
-    "Child": "School Age",
-    "# of Caregivers": "1",
-    "# of Children": "4"
+    "facilityType": "FCC",
+    "child": "School Age",
+    "numberOfCaregivers": "1",
+    "numberOfChildren": "4"
   }
 ]
