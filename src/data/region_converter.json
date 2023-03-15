@@ -1,0 +1,158 @@
+[
+  {
+    "County": "Okanogan",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Ferry",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Stevens",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Pend Orielle",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Chelan",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Douglas",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Grant",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Lincoln",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Adams",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Garfield",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Asotin",
+    "Region": "Region 1"
+  },
+  {
+    "County": "Spokane",
+    "Region": "Spokane"
+  },
+  {
+    "County": "Kittitas",
+    "Region": "Region 2"
+  },
+  {
+    "County": "Yakima",
+    "Region": "Region 2"
+  },
+  {
+    "County": "Franklin",
+    "Region": "Region 2"
+  },
+  {
+    "County": "Columbia",
+    "Region": "Region 2"
+  },
+  {
+    "County": "Whatcom",
+    "Region": "Region 3"
+  },
+  {
+    "County": "Skagit",
+    "Region": "Region 3"
+  },
+  {
+    "County": "Snohomish",
+    "Region": "Region 3"
+  },
+  {
+    "County": "San Juan",
+    "Region": "Region 3"
+  },
+  {
+    "County": "Island",
+    "Region": "Region 3"
+  },
+  {
+    "County": "Clark",
+    "Region": "Region 3"
+  },
+  {
+    "County": "King",
+    "Region": "Region 4"
+  },
+  {
+    "County": "Pierce",
+    "Region": "Region 5"
+  },
+  {
+    "County": "Kitsap",
+    "Region": "Region 5"
+  },
+  {
+    "County": "Clallam",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Jefferson",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Mason",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Grays Harbor",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Thurston",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Pacific",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Wahkiakum",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Cowlitz",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Lewis",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Skamania",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Klickitat",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Benton",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Walla Walla",
+    "Region": "Region 6"
+  },
+  {
+    "County": "Whitman",
+    "Region": "Region 6"
+  }
+]

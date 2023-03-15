@@ -1,0 +1,50 @@
+[
+  {
+    "Facility Type": "Center",
+    "Child": "Infant",
+    "# of Caregivers": "1",
+    "# of Children": "4"
+  },
+  {
+    "Facility Type": "Center",
+    "Child": "Toddler",
+    "# of Caregivers": "1",
+    "# of Children": "7"
+  },
+  {
+    "Facility Type": "Center",
+    "Child": "Preschooler",
+    "# of Caregivers": "1",
+    "# of Children": "10"
+  },
+  {
+    "Facility Type": "Center",
+    "Child": "School Age",
+    "# of Caregivers": "1",
+    "# of Children": "15"
+  },
+  {
+    "Facility Type": "FCC",
+    "Child": "Infant",
+    "# of Caregivers": "1",
+    "# of Children": "4"
+  },
+  {
+    "Facility Type": "FCC",
+    "Child": "Toddler",
+    "# of Caregivers": "1",
+    "# of Children": "4"
+  },
+  {
+    "Facility Type": "FCC",
+    "Child": "Preschooler",
+    "# of Caregivers": "1",
+    "# of Children": "4"
+  },
+  {
+    "Facility Type": "FCC",
+    "Child": "School Age",
+    "# of Caregivers": "1",
+    "# of Children": "4"
+  }
+]

@@ -1,0 +1,1406 @@
+[
+  {
+    "County": "San Juan",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Whatcom",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $1,011.00 ",
+    " Preschool Cost ": " $939.00 ",
+    " School Age  Cost ": " $542.00 "
+  },
+  {
+    "County": "Island",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $845.00 ",
+    " Preschool Cost ": " $845.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Skagit",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $997.00 ",
+    " Toddler Cost ": " $867.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $550.00 "
+  },
+  {
+    "County": "Snohomish",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,192.00 ",
+    " Toddler Cost ": " $1,083.00 ",
+    " Preschool Cost ": " $975.00 ",
+    " School Age  Cost ": " $500.00 "
+  },
+  {
+    "County": "King",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,300.00 ",
+    " Toddler Cost ": " $1,200.00 ",
+    " Preschool Cost ": " $1,062.00 ",
+    " School Age  Cost ": " $433.00 "
+  },
+  {
+    "County": "Kitsap",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,036.00 ",
+    " Toddler Cost ": " $867.00 ",
+    " Preschool Cost ": " $812.00 ",
+    " School Age  Cost ": " $520.00 "
+  },
+  {
+    "County": "Pierce",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $867.00 ",
+    " Preschool Cost ": " $823.00 ",
+    " School Age  Cost ": " $433.00 "
+  },
+  {
+    "County": "Clallam",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,018.00 ",
+    " Toddler Cost ": " $883.00 ",
+    " Preschool Cost ": " $850.00 ",
+    " School Age  Cost ": " $510.00 "
+  },
+  {
+    "County": "Jefferson",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,094.00 ",
+    " Toddler Cost ": " $997.00 ",
+    " Preschool Cost ": " $997.00 ",
+    " School Age  Cost ": " $539.00 "
+  },
+  {
+    "County": "Grays Harbor",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $945.00 ",
+    " Toddler Cost ": " $850.00 ",
+    " Preschool Cost ": " $798.00 ",
+    " School Age  Cost ": " $697.00 "
+  },
+  {
+    "County": "Mason",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $830.00 ",
+    " Toddler Cost ": " $750.00 ",
+    " Preschool Cost ": " $700.00 ",
+    " School Age  Cost ": " $563.00 "
+  },
+  {
+    "County": "Thurston",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $900.00 ",
+    " Preschool Cost ": " $788.00 ",
+    " School Age  Cost ": " $477.00 "
+  },
+  {
+    "County": "Pacific",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $812.00 ",
+    " Toddler Cost ": " $779.00 ",
+    " Preschool Cost ": " $779.00 ",
+    " School Age  Cost ": " $704.00 "
+  },
+  {
+    "County": "Lewis",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $780.00 ",
+    " Toddler Cost ": " $650.00 ",
+    " Preschool Cost ": " $593.00 ",
+    " School Age  Cost ": " $353.00 "
+  },
+  {
+    "County": "Wahkiakum",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Cowlitz",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $758.00 ",
+    " Toddler Cost ": " $758.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $477.00 "
+  },
+  {
+    "County": "Clark",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $867.00 ",
+    " Toddler Cost ": " $812.00 ",
+    " Preschool Cost ": " $764.00 ",
+    " School Age  Cost ": " $531.00 "
+  },
+  {
+    "County": "Skamania",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $650.00 ",
+    " Toddler Cost ": " $650.00 ",
+    " Preschool Cost ": " $550.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Klickitat",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,100.00 ",
+    " Toddler Cost ": " $900.00 ",
+    " Preschool Cost ": " $900.00 ",
+    " School Age  Cost ": " $600.00 "
+  },
+  {
+    "County": "Yakima",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $813.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $303.00 "
+  },
+  {
+    "County": "Kittitas",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $910.00 ",
+    " Toddler Cost ": " $802.00 ",
+    " Preschool Cost ": " $802.00 ",
+    " School Age  Cost ": " $255.00 "
+  },
+  {
+    "County": "Chelan",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $971.00 ",
+    " Toddler Cost ": " $841.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $325.00 "
+  },
+  {
+    "County": "Okanogan",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $888.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $325.00 "
+  },
+  {
+    "County": "Douglas",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $867.00 ",
+    " Toddler Cost ": " $758.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $303.00 "
+  },
+  {
+    "County": "Grant",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $867.00 ",
+    " Toddler Cost ": " $758.00 ",
+    " Preschool Cost ": " $714.00 ",
+    " School Age  Cost ": " $325.00 "
+  },
+  {
+    "County": "Benton",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $880.00 ",
+    " Toddler Cost ": " $775.00 ",
+    " Preschool Cost ": " $737.00 ",
+    " School Age  Cost ": " $303.00 "
+  },
+  {
+    "County": "Franklin",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $867.00 ",
+    " Preschool Cost ": " $800.00 ",
+    " School Age  Cost ": " $325.00 "
+  },
+  {
+    "County": "Walla Walla",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $898.00 ",
+    " Toddler Cost ": " $845.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $314.00 "
+  },
+  {
+    "County": "Columbia",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Garfield",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Asotin",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Adams",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $867.00 ",
+    " Preschool Cost ": " $802.00 ",
+    " School Age  Cost ": " $325.00 "
+  },
+  {
+    "County": "Whitman",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Lincoln",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $823.00 ",
+    " Toddler Cost ": " $823.00 ",
+    " Preschool Cost ": " $737.00 ",
+    " School Age  Cost ": " $672.00 "
+  },
+  {
+    "County": "Spokane",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $900.00 ",
+    " Toddler Cost ": " $795.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $325.00 "
+  },
+  {
+    "County": "Pend Orielle",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Stevens",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $779.00 ",
+    " Toddler Cost ": " $628.00 ",
+    " Preschool Cost ": " $683.00 ",
+    " School Age  Cost ": " $390.00 "
+  },
+  {
+    "County": "Ferry",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $867.00 ",
+    " Toddler Cost ": " $758.00 ",
+    " Preschool Cost ": " $693.00 ",
+    " School Age  Cost ": " $234.00 "
+  },
+  {
+    "County": "San Juan",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,387.00 ",
+    " Toddler Cost ": " $1,213.00 ",
+    " Preschool Cost ": " $1,040.00 ",
+    " School Age  Cost ": " $282.00 "
+  },
+  {
+    "County": "Whatcom",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,460.00 ",
+    " Toddler Cost ": " $1,413.00 ",
+    " Preschool Cost ": " $1,181.00 ",
+    " School Age  Cost ": " $628.00 "
+  },
+  {
+    "County": "Island",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $938.00 ",
+    " Preschool Cost ": " $840.00 ",
+    " School Age  Cost ": " $542.00 "
+  },
+  {
+    "County": "Skagit",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,363.00 ",
+    " Toddler Cost ": " $1,062.00 ",
+    " Preschool Cost ": " $888.00 ",
+    " School Age  Cost ": " $452.00 "
+  },
+  {
+    "County": "Snohomish",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,620.00 ",
+    " Toddler Cost ": " $1,365.00 ",
+    " Preschool Cost ": " $1,200.00 ",
+    " School Age  Cost ": " $520.00 "
+  },
+  {
+    "County": "King",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,905.00 ",
+    " Toddler Cost ": " $1,677.00 ",
+    " Preschool Cost ": " $1,425.00 ",
+    " School Age  Cost ": " $531.00 "
+  },
+  {
+    "County": "Kitsap",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,440.00 ",
+    " Toddler Cost ": " $1,192.00 ",
+    " Preschool Cost ": " $966.00 ",
+    " School Age  Cost ": " $490.00 "
+  },
+  {
+    "County": "Pierce",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,300.00 ",
+    " Toddler Cost ": " $1,077.00 ",
+    " Preschool Cost ": " $953.00 ",
+    " School Age  Cost ": " $542.00 "
+  },
+  {
+    "County": "Clallam",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,268.00 ",
+    " Toddler Cost ": " $1,127.00 ",
+    " Preschool Cost ": " $1,018.00 ",
+    " School Age  Cost ": " $477.00 "
+  },
+  {
+    "County": "Jefferson",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Grays Harbor",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,235.00 ",
+    " Toddler Cost ": " $1,105.00 ",
+    " Preschool Cost ": " $902.00 ",
+    " School Age  Cost ": " $501.00 "
+  },
+  {
+    "County": "Mason",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,050.00 ",
+    " Toddler Cost ": " $958.00 ",
+    " Preschool Cost ": " $885.00 ",
+    " School Age  Cost ": " $704.00 "
+  },
+  {
+    "County": "Thurston",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,283.00 ",
+    " Toddler Cost ": " $1,133.00 ",
+    " Preschool Cost ": " $1,039.00 ",
+    " School Age  Cost ": " $600.00 "
+  },
+  {
+    "County": "Pacific",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,073.00 ",
+    " Toddler Cost ": " $932.00 ",
+    " Preschool Cost ": " $542.00 ",
+    " School Age  Cost ": " $672.00 "
+  },
+  {
+    "County": "Lewis",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,016.00 ",
+    " Toddler Cost ": " $886.00 ",
+    " Preschool Cost ": " $805.00 ",
+    " School Age  Cost ": " $585.00 "
+  },
+  {
+    "County": "Wahkiakum",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Cowlitz",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,160.00 ",
+    " Toddler Cost ": " $1,050.00 ",
+    " Preschool Cost ": " $960.00 ",
+    " School Age  Cost ": " $567.00 "
+  },
+  {
+    "County": "Clark",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,616.00 ",
+    " Toddler Cost ": " $1,369.00 ",
+    " Preschool Cost ": " $1,133.00 ",
+    " School Age  Cost ": " $585.00 "
+  },
+  {
+    "County": "Skamania",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Klickitat",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $1,018.00 ",
+    " Preschool Cost ": " $1,018.00 ",
+    " School Age  Cost ": " $433.00 "
+  },
+  {
+    "County": "Yakima",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,078.00 ",
+    " Toddler Cost ": " $823.00 ",
+    " Preschool Cost ": " $791.00 ",
+    " School Age  Cost ": " $593.00 "
+  },
+  {
+    "County": "Kittitas",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,050.00 ",
+    " Toddler Cost ": " $921.00 ",
+    " Preschool Cost ": " $873.00 ",
+    " School Age  Cost ": " $464.00 "
+  },
+  {
+    "County": "Chelan",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $825.00 ",
+    " Preschool Cost ": " $808.00 ",
+    " School Age  Cost ": " $595.00 "
+  },
+  {
+    "County": "Okanogan",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $897.00 ",
+    " Toddler Cost ": " $813.00 ",
+    " Preschool Cost ": " $741.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Douglas",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $458.00 ",
+    " Toddler Cost ": " $800.00 ",
+    " Preschool Cost ": " $735.00 ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Grant",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $911.00 ",
+    " Toddler Cost ": " $848.00 ",
+    " Preschool Cost ": " $800.00 ",
+    " School Age  Cost ": " $700.00 "
+  },
+  {
+    "County": "Benton",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,221.00 ",
+    " Toddler Cost ": " $1,062.00 ",
+    " Preschool Cost ": " $889.00 ",
+    " School Age  Cost ": " $595.00 "
+  },
+  {
+    "County": "Franklin",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,048.00 ",
+    " Toddler Cost ": " $1,050.00 ",
+    " Preschool Cost ": " $850.00 ",
+    " School Age  Cost ": " $628.00 "
+  },
+  {
+    "County": "Walla Walla",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,135.00 ",
+    " Toddler Cost ": " $1,107.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $722.00 "
+  },
+  {
+    "County": "Columbia",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Garfield",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Asotin",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $793.00 ",
+    " Toddler Cost ": " $749.00 ",
+    " Preschool Cost ": " $695.00 ",
+    " School Age  Cost ": " $455.00 "
+  },
+  {
+    "County": "Adams",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Whitman",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,402.00 ",
+    " Toddler Cost ": " $1,218.00 ",
+    " Preschool Cost ": " $1,055.00 ",
+    " School Age  Cost ": " $464.00 "
+  },
+  {
+    "County": "Lincoln",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Spokane",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $1,175.00 ",
+    " Toddler Cost ": " $1,000.00 ",
+    " Preschool Cost ": " $900.00 ",
+    " School Age  Cost ": " $585.00 "
+  },
+  {
+    "County": "Pend Orielle",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Stevens",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $759.00 ",
+    " Toddler Cost ": " $726.00 ",
+    " Preschool Cost ": " $636.00 ",
+    " School Age  Cost ": " $883.00 "
+  },
+  {
+    "County": "Ferry",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "Median",
+    "Infant Cost": " $765.00 ",
+    " Toddler Cost ": " $703.00 ",
+    " Preschool Cost ": " $544.00 ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "San Juan",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Whatcom",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,210.00 ",
+    " Toddler Cost ": " $1,083.00 ",
+    " Preschool Cost ": " $1,051.00 ",
+    " School Age  Cost ": " $618.00 "
+  },
+  {
+    "County": "Island",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,138.00 ",
+    " Toddler Cost ": " $1,083.00 ",
+    " Preschool Cost ": " $1,040.00 ",
+    " School Age  Cost ": " $728.00 "
+  },
+  {
+    "County": "Skagit",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,150.00 ",
+    " Toddler Cost ": " $1,060.00 ",
+    " Preschool Cost ": " $1,040.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Snohomish",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,387.00 ",
+    " Toddler Cost ": " $1,250.00 ",
+    " Preschool Cost ": " $1,192.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "King",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,500.00 ",
+    " Toddler Cost ": " $1,408.00 ",
+    " Preschool Cost ": " $1,300.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Kitsap",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $1,034.00 ",
+    " Preschool Cost ": " $995.00 ",
+    " School Age  Cost ": " $594.00 "
+  },
+  {
+    "County": "Pierce",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,171.00 ",
+    " Toddler Cost ": " $1,030.00 ",
+    " Preschool Cost ": " $963.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Clallam",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,192.00 ",
+    " Toddler Cost ": " $994.00 ",
+    " Preschool Cost ": " $950.00 ",
+    " School Age  Cost ": " $569.00 "
+  },
+  {
+    "County": "Jefferson",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,143.00 ",
+    " Toddler Cost ": " $1,094.00 ",
+    " Preschool Cost ": " $1,094.00 ",
+    " School Age  Cost ": " $659.00 "
+  },
+  {
+    "County": "Grays Harbor",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $975.00 ",
+    " Toddler Cost ": " $936.00 ",
+    " Preschool Cost ": " $823.00 ",
+    " School Age  Cost ": " $790.00 "
+  },
+  {
+    "County": "Mason",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $865.00 ",
+    " Toddler Cost ": " $800.00 ",
+    " Preschool Cost ": " $738.00 ",
+    " School Age  Cost ": " $574.00 "
+  },
+  {
+    "County": "Thurston",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,113.00 ",
+    " Toddler Cost ": " $970.00 ",
+    " Preschool Cost ": " $873.00 ",
+    " School Age  Cost ": " $574.00 "
+  },
+  {
+    "County": "Pacific",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $834.00 ",
+    " Toddler Cost ": " $817.00 ",
+    " Preschool Cost ": " $817.00 ",
+    " School Age  Cost ": " $785.00 "
+  },
+  {
+    "County": "Lewis",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $850.00 ",
+    " Toddler Cost ": " $688.00 ",
+    " Preschool Cost ": " $637.00 ",
+    " School Age  Cost ": " $415.00 "
+  },
+  {
+    "County": "Wahkiakum",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Cowlitz",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $910.00 ",
+    " Toddler Cost ": " $846.00 ",
+    " Preschool Cost ": " $800.00 ",
+    " School Age  Cost ": " $663.00 "
+  },
+  {
+    "County": "Clark",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $975.00 ",
+    " Preschool Cost ": " $877.00 ",
+    " School Age  Cost ": " $650.00 "
+  },
+  {
+    "County": "Skamania",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $704.00 ",
+    " Toddler Cost ": " $704.00 ",
+    " Preschool Cost ": " $600.00 ",
+    " School Age  Cost ": " $953.00 "
+  },
+  {
+    "County": "Klickitat",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,100.00 ",
+    " Toddler Cost ": " $900.00 ",
+    " Preschool Cost ": " $900.00 ",
+    " School Age  Cost ": " $600.00 "
+  },
+  {
+    "County": "Yakima",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $975.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $433.00 "
+  },
+  {
+    "County": "Kittitas",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $939.00 ",
+    " Preschool Cost ": " $865.00 ",
+    " School Age  Cost ": " $349.00 "
+  },
+  {
+    "County": "Chelan",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,170.00 ",
+    " Toddler Cost ": " $1,083.00 ",
+    " Preschool Cost ": " $975.00 ",
+    " School Age  Cost ": " $542.00 "
+  },
+  {
+    "County": "Okanogan",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $1,083.00 ",
+    " Preschool Cost ": " $1,029.00 ",
+    " School Age  Cost ": " $567.00 "
+  },
+  {
+    "County": "Douglas",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $986.00 ",
+    " Toddler Cost ": " $868.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $433.00 "
+  },
+  {
+    "County": "Grant",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,001.00 ",
+    " Toddler Cost ": " $918.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $536.00 "
+  },
+  {
+    "County": "Benton",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $975.00 ",
+    " Preschool Cost ": " $842.00 ",
+    " School Age  Cost ": " $477.00 "
+  },
+  {
+    "County": "Franklin",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,288.00 ",
+    " Toddler Cost ": " $1,083.00 ",
+    " Preschool Cost ": " $1,083.00 ",
+    " School Age  Cost ": " $482.00 "
+  },
+  {
+    "County": "Walla Walla",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,300.00 ",
+    " Toddler Cost ": " $1,262.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $402.00 "
+  },
+  {
+    "County": "Columbia",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Garfield",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Asotin",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Adams",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,083.00 ",
+    " Toddler Cost ": " $1,062.00 ",
+    " Preschool Cost ": " $948.00 ",
+    " School Age  Cost ": " $336.00 "
+  },
+  {
+    "County": "Whitman",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Lincoln",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $823.00 ",
+    " Toddler Cost ": " $823.00 ",
+    " Preschool Cost ": " $737.00 ",
+    " School Age  Cost ": " $672.00 "
+  },
+  {
+    "County": "Spokane",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $976.00 ",
+    " Toddler Cost ": " $952.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $395.00 "
+  },
+  {
+    "County": "Pend Orielle",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Stevens",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $800.00 ",
+    " Toddler Cost ": " $769.00 ",
+    " Preschool Cost ": " $758.00 ",
+    " School Age  Cost ": " $444.00 "
+  },
+  {
+    "County": "Ferry",
+    "FCC or Center-Based": "FCC",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $867.00 ",
+    " Toddler Cost ": " $758.00 ",
+    " Preschool Cost ": " $693.00 ",
+    " School Age  Cost ": " $234.00 "
+  },
+  {
+    "County": "San Juan",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,387.00 ",
+    " Toddler Cost ": " $1,326.00 ",
+    " Preschool Cost ": " $1,209.00 ",
+    " School Age  Cost ": " $282.00 "
+  },
+  {
+    "County": "Whatcom",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,668.00 ",
+    " Toddler Cost ": " $1,517.00 ",
+    " Preschool Cost ": " $1,300.00 ",
+    " School Age  Cost ": " $689.00 "
+  },
+  {
+    "County": "Island",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $1,036.00 ",
+    " Preschool Cost ": " $1,120.00 ",
+    " School Age  Cost ": " $555.00 "
+  },
+  {
+    "County": "Skagit",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,474.00 ",
+    " Toddler Cost ": " $1,190.00 ",
+    " Preschool Cost ": " $1,057.00 ",
+    " School Age  Cost ": " $620.00 "
+  },
+  {
+    "County": "Snohomish",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,799.00 ",
+    " Toddler Cost ": " $1,604.00 ",
+    " Preschool Cost ": " $1,365.00 ",
+    " School Age  Cost ": " $744.00 "
+  },
+  {
+    "County": "King",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $2,209.00 ",
+    " Toddler Cost ": " $1,958.00 ",
+    " Preschool Cost ": " $1,657.00 ",
+    " School Age  Cost ": " $718.00 "
+  },
+  {
+    "County": "Kitsap",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,495.00 ",
+    " Toddler Cost ": " $1,326.00 ",
+    " Preschool Cost ": " $1,144.00 ",
+    " School Age  Cost ": " $610.00 "
+  },
+  {
+    "County": "Pierce",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,484.00 ",
+    " Toddler Cost ": " $1,270.00 ",
+    " Preschool Cost ": " $1,111.00 ",
+    " School Age  Cost ": " $622.00 "
+  },
+  {
+    "County": "Clallam",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,316.00 ",
+    " Toddler Cost ": " $1,131.00 ",
+    " Preschool Cost ": " $1,045.00 ",
+    " School Age  Cost ": " $514.00 "
+  },
+  {
+    "County": "Jefferson",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Grays Harbor",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,235.00 ",
+    " Toddler Cost ": " $1,105.00 ",
+    " Preschool Cost ": " $1,018.00 ",
+    " School Age  Cost ": " $615.00 "
+  },
+  {
+    "County": "Mason",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,086.00 ",
+    " Toddler Cost ": " $973.00 ",
+    " Preschool Cost ": " $914.00 ",
+    " School Age  Cost ": " $707.00 "
+  },
+  {
+    "County": "Thurston",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,493.00 ",
+    " Toddler Cost ": " $1,240.00 ",
+    " Preschool Cost ": " $1,148.00 ",
+    " School Age  Cost ": " $691.00 "
+  },
+  {
+    "County": "Pacific",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,073.00 ",
+    " Toddler Cost ": " $932.00 ",
+    " Preschool Cost ": " $688.00 ",
+    " School Age  Cost ": " $672.00 "
+  },
+  {
+    "County": "Lewis",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,067.00 ",
+    " Toddler Cost ": " $975.00 ",
+    " Preschool Cost ": " $888.00 ",
+    " School Age  Cost ": " $701.00 "
+  },
+  {
+    "County": "Wahkiakum",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Cowlitz",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,235.00 ",
+    " Toddler Cost ": " $1,105.00 ",
+    " Preschool Cost ": " $1,018.00 ",
+    " School Age  Cost ": " $646.00 "
+  },
+  {
+    "County": "Clark",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,668.00 ",
+    " Toddler Cost ": " $1,495.00 ",
+    " Preschool Cost ": " $1,262.00 ",
+    " School Age  Cost ": " $693.00 "
+  },
+  {
+    "County": "Skamania",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Klickitat",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $1,018.00 ",
+    " Preschool Cost ": " $1,018.00 ",
+    " School Age  Cost ": " $440.00 "
+  },
+  {
+    "County": "Yakima",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,192.00 ",
+    " Toddler Cost ": " $939.00 ",
+    " Preschool Cost ": " $867.00 ",
+    " School Age  Cost ": " $646.00 "
+  },
+  {
+    "County": "Kittitas",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,073.00 ",
+    " Toddler Cost ": " $960.00 ",
+    " Preschool Cost ": " $895.00 ",
+    " School Age  Cost ": " $485.00 "
+  },
+  {
+    "County": "Chelan",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,148.00 ",
+    " Toddler Cost ": " $888.00 ",
+    " Preschool Cost ": " $863.00 ",
+    " School Age  Cost ": " $980.00 "
+  },
+  {
+    "County": "Okanogan",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $944.00 ",
+    " Toddler Cost ": " $840.00 ",
+    " Preschool Cost ": " $769.00 ",
+    " School Age  Cost ": " $775.00 "
+  },
+  {
+    "County": "Douglas",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $679.00 ",
+    " Toddler Cost ": " $813.00 ",
+    " Preschool Cost ": " $780.00 ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Grant",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $963.00 ",
+    " Toddler Cost ": " $875.00 ",
+    " Preschool Cost ": " $819.00 ",
+    " School Age  Cost ": " $867.00 "
+  },
+  {
+    "County": "Benton",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,325.00 ",
+    " Toddler Cost ": " $1,125.00 ",
+    " Preschool Cost ": " $999.00 ",
+    " School Age  Cost ": " $801.00 "
+  },
+  {
+    "County": "Franklin",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,077.00 ",
+    " Toddler Cost ": " $1,240.00 ",
+    " Preschool Cost ": " $977.00 ",
+    " School Age  Cost ": " $731.00 "
+  },
+  {
+    "County": "Walla Walla",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,249.00 ",
+    " Toddler Cost ": " $1,203.00 ",
+    " Preschool Cost ": " $1,067.00 ",
+    " School Age  Cost ": " $736.00 "
+  },
+  {
+    "County": "Columbia",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Garfield",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Asotin",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $849.00 ",
+    " Toddler Cost ": " $796.00 ",
+    " Preschool Cost ": " $754.00 ",
+    " School Age  Cost ": " $737.00 "
+  },
+  {
+    "County": "Adams",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Whitman",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,543.00 ",
+    " Toddler Cost ": " $1,394.00 ",
+    " Preschool Cost ": " $1,205.00 ",
+    " School Age  Cost ": " $583.00 "
+  },
+  {
+    "County": "Lincoln",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Spokane",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $1,300.00 ",
+    " Toddler Cost ": " $1,100.00 ",
+    " Preschool Cost ": " $982.00 ",
+    " School Age  Cost ": " $711.00 "
+  },
+  {
+    "County": "Pend Orielle",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $-   ",
+    " Toddler Cost ": " $-   ",
+    " Preschool Cost ": " $-   ",
+    " School Age  Cost ": " $-   "
+  },
+  {
+    "County": "Stevens",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $759.00 ",
+    " Toddler Cost ": " $769.00 ",
+    " Preschool Cost ": " $689.00 ",
+    " School Age  Cost ": " $994.00 "
+  },
+  {
+    "County": "Ferry",
+    "FCC or Center-Based": "Center-Based",
+    "Median or 7th Percentile": "75th Percentile",
+    "Infant Cost": " $765.00 ",
+    " Toddler Cost ": " $703.00 ",
+    " Preschool Cost ": " $544.00 ",
+    " School Age  Cost ": " $-   "
+  }
+]
