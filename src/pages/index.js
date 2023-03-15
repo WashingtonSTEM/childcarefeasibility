@@ -60,12 +60,12 @@ const Page = () => {
   const handleSubmit = () => {
     const { errors, isValid } = validate(data, validationRules)
   
-    // if (!isValid) {
-    //   setErrors(errors)
+    if (!isValid) {
+      setErrors(errors)
   
-    //   return
-    // }
-    // setErrors({})
+      return
+    }
+    setErrors({})
     router.push('/results')
   }
 
