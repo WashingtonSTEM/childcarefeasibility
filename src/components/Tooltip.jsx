@@ -39,8 +39,10 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
 
   return (
     <>
-      <div {...containerProps}>
-        {children ? <div ref={divRef}>{children}</div> : <InfoButton backgroundColor={show ? '#012846' : null} />}
+      <div {...containerProps} style={{ fontStyle: 'italic' }}>
+        <div ref={divRef}>
+          {children || <InfoButton backgroundColor={show ? '#012846' : null} />}
+        </div>
       </div>
       {show && (
         <PortalContainer style={{ top: divRef.current?.offsetHeight + 8 }}>

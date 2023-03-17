@@ -9,6 +9,7 @@ import Divider from '@/components/Divider'
 import StepBar from '@/components/StepBar'
 import useForm from '@/hooks/useForm'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import Instructions from '@/components/Calculator/Instructions'
 
 import StepOne, { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
 import StepTwo, { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
@@ -50,14 +51,14 @@ const Page = () => {
           ...stepOneRules,
           ...stepTwoRules,
           ...stepThreeRules
-        })   
+        })
       }
     }
   }
 
   const handleStepDirection = (direction) => {
     let nextStep = step + direction
-    
+
     const isValid = validate(data, validationRules[`step${step}`])
 
     if (!isValid) {
@@ -68,7 +69,7 @@ const Page = () => {
       nextStep = 1
     }
     window.scrollTo(0, 0)
-    
+
     setStep(nextStep)
 
     if (nextStep > MAX_STEPS) {
@@ -99,8 +100,26 @@ const Page = () => {
             <Row className="justify-content-md-center">
               <Col xs lg="8">
                 <Title>Child Care Business Feasibility Calculator</Title>
-                <Text>Welcome</Text>
-                <Text style={{ maxWidth: 620 }}>Welcome to the child care feasibility calculator! we understand that starting or expanding a childcare business can be a challenging process, and that&apos;s why we&apos;ve developed this tool to help you determine the feasibility of your child care business idea.</Text>
+                {isMobile ? (
+                  <Instructions text='Welcome to the child care feasibility
+                  calculator. Starting or expanding a child
+                  care business can be a challenging
+                  process. This tool is designed to help
+                  you determine the feasibility of your child
+                  care business idea.' />
+                ) : (
+                  <>
+                    <Text>Welcome</Text>
+                    <Text style={{ maxWidth: 620 }}>
+                      Welcome to the child care feasibility
+                      calculator. Starting or expanding a child
+                      care business can be a challenging
+                      process. This tool is designed to help
+                      you determine the feasibility of your child
+                      care business idea.
+                    </Text>
+                  </>
+                )}
               </Col>
             </Row>
           </Container>

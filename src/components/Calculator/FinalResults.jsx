@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const finalResultsFields = [
   'Expected fee revenue',
-  'Grants/government support (USDA food program)',
   'Expected salaries',
   'Expected benefits',
   'Rent/mortgage cost',
@@ -45,10 +44,10 @@ const FinalResults = ({ mobile }) => {
             </Row>
             <Row key={`${field}-result-${index}`} style={{ padding: '12px 0' }}>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>$ 0000</Text>
+                <Text style={{ fontWeight: 400, color: '#012846' }}>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>$ 0000</Text>
+                <Text style={{ fontWeight: 400, color: '#012846' }}>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
               </Col>
             </Row>
           </>
@@ -61,7 +60,7 @@ const FinalResults = ({ mobile }) => {
     <>
       <Row style={{ marginBottom: 60 }}>
         <Col md={4} lg={6}>
-          <Text style={{ fontWeight: 'bold' }}>Final Results</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 30 }}>Final Results</Text>
         </Col>
         <Col md={4} lg={3} style={{ textAlign: 'center' }}>
           <Text>Monthly</Text>
@@ -76,10 +75,10 @@ const FinalResults = ({ mobile }) => {
             <Text style={{ fontWeight: 'bold' }}>{field}</Text>
           </Col>
           <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            <Text>$ 0000</Text>
+            <Text>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
           </Col>
           <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            <Text>$ 0000</Text>
+            <Text>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
           </Col>
         </Row>
       ))}

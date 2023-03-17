@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { Row } from 'styled-bootstrap-grid'
 
 import Input from '@/components/Input'
@@ -6,12 +7,13 @@ import Tooltip from '@/components/Tooltip'
 import FormGroup from '@/components/FormGroup'
 import Instructions from '@/components/Calculator/Instructions'
 import { isRequired, minInt } from '@/utils/validate'
+import { getEstimatedNumberOfChildCareAdministrators, getEstimatedNumberOfChildCareWorkers, getEstimatedNumberOfPreschoolTeachers } from '@/helpers/formulas'
 
 export const validationRules = {
   numberOfInfants: [isRequired, minInt(0)],
   numberOfToddlers: [isRequired, minInt(0)],
   numberOfPreschoolers: [isRequired, minInt(0)],
-  numberOfChildrenPerAge: [isRequired, minInt(0)],
+  numberOfSchoolAgeChildren: [isRequired, minInt(0)],
   numberOfClassrooms: [isRequired, minInt(0)],
   numberOfChildCaseWorkers: [isRequired, minInt(0)],
   numberOfPreschoolTeachers: [isRequired, minInt(0)],
@@ -19,12 +21,50 @@ export const validationRules = {
 }
 
 const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
+  const estimatedNumberOfChildCareAdministrators = useMemo(() => {
+    const { typeOfFacility } = data
+
+    if (!typeOfFacility) {
+      return null
+    }
+
+    return getEstimatedNumberOfChildCareAdministrators(typeOfFacility)
+  }, [data])
+
+  const estimatedNumberOfPreschoolTeachers = useMemo(() => {
+    const { typeOfFacility, numberOfClassrooms } = data
+
+    if (!typeOfFacility || !numberOfClassrooms) {
+      return null
+    }
+
+    return getEstimatedNumberOfPreschoolTeachers(typeOfFacility, numberOfClassrooms)
+  }, [data])
+
+  const estimatedNumberOfChildCareWorkers = useMemo(() => {
+    const { typeOfFacility, numberOfInfants, numberOfToddlers, numberOfPreschoolers, numberOfSchoolAgeChildren } = data
+
+    if (!typeOfFacility || !numberOfInfants || !numberOfToddlers || !numberOfPreschoolers || !numberOfSchoolAgeChildren) {
+      return null
+    }
+
+    return getEstimatedNumberOfChildCareWorkers(
+      typeOfFacility,
+      estimatedNumberOfPreschoolTeachers,
+      estimatedNumberOfChildCareAdministrators,
+      numberOfInfants,
+      numberOfToddlers,
+      numberOfPreschoolers,
+      numberOfSchoolAgeChildren
+    )
+  }, [data, estimatedNumberOfChildCareAdministrators, estimatedNumberOfPreschoolTeachers])
+
   if (!show) {
     return null
   }
 
   const handleOnChange = ({ target }) => {
-    onDataChange?.(target.name, target.value)
+    onDataChange?.(target.name, parseInt(target.value))
   }
 
   return (
@@ -35,7 +75,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfInfants'
             type='number'
-            label='# of infants'
+            label='# of Infants'
             min={0}
             value={data.numberOfInfants}
             onChange={handleOnChange}
@@ -45,7 +85,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfToddlers'
             type='number'
-            label='# of toddlers'
+            label='# of Toddlers'
             min={0}
             value={data.numberOfToddlers}
             onChange={handleOnChange}
@@ -55,19 +95,19 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfPreschoolers'
             type='number'
-            label='# of preschoolers'
+            label='# of Preschoolers'
             min={0}
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
           />
         </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfChildrenPerAge}>
+        <FormGroup lg={3} error={errors.numberOfSchoolAgeChildren}>
           <Input
-            name='numberOfChildrenPerAge'
+            name='numberOfSchoolAgeChildren'
             type='number'
-            label='# of children per age'
+            label='# of School-Age Children'
             min={0}
-            value={data.numberOfChildrenPerAge}
+            value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
           />
         </FormGroup>
@@ -88,14 +128,22 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='numberOfChildCaseWorkers'
               type='number'
-              label='# of child care workers'
+              label='# of child care staff'
               min={0}
               value={data.numberOfChildCaseWorkers}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center aide, center assistant teacher, family home aide, family home assistant teacher, school-age child care assistant' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center aide, center assistant teacher, family home aide, family home assistant teacher, school-age child care assistant.' />
           </div>
-          {data.numberOfChildCaseWorkers && data.numberOfChildCaseWorkers !== '' && <TextBox style={{ marginTop: 4 }}>Estimated # of child care administrators (center director of family child care owner)</TextBox>}
+          {estimatedNumberOfChildCareWorkers !== null && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {estimatedNumberOfChildCareWorkers}
+                <br />
+                Estimated # of child care staff
+              </>
+            </TextBox>
+          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolTeachers}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -107,9 +155,17 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfPreschoolTeachers}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center lead teacher, family home lead teacher, school-age lead staff or group leader' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center lead teacher, family home lead teacher, school-age lead staff or group leader.' />
           </div>
-          {data.numberOfPreschoolTeachers && data.numberOfPreschoolTeachers !== '' && <TextBox style={{ marginTop: 4 }}>Estimated # of preschool teachers</TextBox>}
+          {estimatedNumberOfPreschoolTeachers !== null && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {estimatedNumberOfPreschoolTeachers}
+                <br />
+                Estimated # of preschool teachers
+              </>
+            </TextBox>
+          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
@@ -121,9 +177,17 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfChildCareAdministrators}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center program supervisor, center director, family home owner, school-age assistant director, school-age program director, school-age site coordinator' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center program supervisor, center director, family home owner, school-age assistant director, school-age program director, school-age site coordinator.' />
           </div>
-          {data.numberOfChildCareAdministrators && data.numberOfChildCareAdministrators !== '' && <TextBox style={{ marginTop: 4 }}>Estimated # of child care workers</TextBox>}
+          {estimatedNumberOfChildCareAdministrators !== null && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {estimatedNumberOfChildCareAdministrators}
+                <br />
+                Estimated # of child care administrators (center director of family child care owner)
+              </>
+            </TextBox>
+          )}
         </FormGroup>
       </Row>
     </>

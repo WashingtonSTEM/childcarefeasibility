@@ -78,14 +78,11 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             name='rentOrMortageCost'
             type='number'
             sufix='$'
-            label='Monthly rent/mortgage cost if known'
+            label='Monthly rent/mortgage cost, if known'
             min={0}
             value={data.rentOrMortageCost}
             onChange={handleInputChange}
           />
-        </FormGroup>
-        <FormGroup lg={3}>
-          <Toggle label='Summer schedule?' checked={!!data.summerSchedule} onChange={({ target }) => onDataChange?.('summerSchedule', target.checked)} />
         </FormGroup>
         <FormGroup lg={3} error={errors.collectionsRate}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>

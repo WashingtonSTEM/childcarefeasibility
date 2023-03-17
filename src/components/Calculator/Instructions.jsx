@@ -9,7 +9,6 @@ const Text = styled.span`
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  text-transform: capitalize;
   color: #948A85;
 `
 

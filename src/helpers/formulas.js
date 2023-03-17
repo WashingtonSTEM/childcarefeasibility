@@ -19,13 +19,14 @@ export enum Child {
 )
 */
 export const getMaximumNumberOfInfantsSupported = (facilityType, squareFootage = 0) => {
-  const squareFootagePerChildren = Math.floor(squareFootage / 50);
+  const squareFootagePerChildren = Math.floor(squareFootage / 50)
+
   if (facilityType === 'FCC' && squareFootagePerChildren > 3) {
-    return 3;
+    return 3
   }
 
-  return squareFootagePerChildren;
-};
+  return squareFootagePerChildren
+}
 
 /*
 =+IF(
@@ -36,24 +37,25 @@ export const getMaximumNumberOfInfantsSupported = (facilityType, squareFootage =
 */
 export const getMaximumNumberOfPreschoolers = (facilityType, squareFootage = 0, maximumNumbersOfInfantsSupported = 0) => {
   if (facilityType !== 'FCC') {
-    return Math.floor(squareFootage / 35);
+    return Math.floor(squareFootage / 35)
   }
 
   const numberOfPreschoolers = Math.floor((squareFootage - maximumNumbersOfInfantsSupported * 50) / 35)
 
   if (numberOfPreschoolers > 9) {
-    return 9;
+    return 9
   }
-  return numberOfPreschoolers;
-};
+
+  return numberOfPreschoolers
+}
 
 export const getNumberOfChildrenRecommendation = (facilityType) => {
   if (facilityType !== 'FCC') {
-    return '';
+    return ''
   }
 
-  return 'NOTE: Family Child Cares may have up to 12 children, 3 of which may be under age 2.';
-};
+  return 'NOTE: Family Child Cares may have up to 12 children, 3 of which may be under age 2.'
+}
 
 /*
 =+IF(
@@ -72,10 +74,10 @@ D24 = Number of Preschoolers
 D25 = Number of School-Age Children
 */
 export const getRatioForFacilityAndChildren = (facilityType, child) => {
-  const rates = require('../data/childcare_staff_rates.json');
+  const rates = require('../data/childcare_staff_ratios.json')
 
-  return rates.find((rate) => rate.facilityType === facilityType && rate.child === child)?.numberOfChildren || 1;
-};
+  return rates.find((rate) => rate.facilityType === facilityType && rate.child === child)?.numberOfChildren || 1
+}
 
 export const getEstimatedNumberOfChildCareWorkers = (
   facilityType,
@@ -86,38 +88,39 @@ export const getEstimatedNumberOfChildCareWorkers = (
   preschoolers = 0,
   schoolAgeChildren = 0
 ) => {
-  const total = infants + toddlers + preschoolers + schoolAgeChildren;
+  const total = infants + toddlers + preschoolers + schoolAgeChildren
+
   if (facilityType === 'FCC') {
-    return (Math.ceil(total / 4) - estimatedNumberOfChildCareAdministrators - estimatedNumberOfPreschoolTeachers);
+    return (Math.ceil(total / 4) - estimatedNumberOfChildCareAdministrators - estimatedNumberOfPreschoolTeachers)
   }
 
   // This might be on a different route
-  const rates = require('../data/childcare_staff_ratios.json');
+  const rates = require('../data/childcare_staff_ratios.json')
 
   const estimated =
     Math.ceil(infants / getRatioForFacilityAndChildren(facilityType, 'Infant'))
     + Math.ceil(toddlers / getRatioForFacilityAndChildren(facilityType, 'Toddler'))
     + Math.ceil(preschoolers / getRatioForFacilityAndChildren(facilityType, 'Preschooler'))
     + Math.ceil(schoolAgeChildren / getRatioForFacilityAndChildren(facilityType, 'School Age'))
-    - estimatedNumberOfPreschoolTeachers;
+    - estimatedNumberOfPreschoolTeachers
 
   if (estimated < 0) {
-    return 0;
+    return 0
   }
 
-  return estimated;
-};
+  return estimated
+}
 
 export const getEstimatedNumberOfPreschoolTeachers = (facilityType, numberOfClassrooms = 1) => {
-  return facilityType === 'FCC' ? numberOfClassrooms - 1 : numberOfClassrooms ;
-};
+  return facilityType === 'FCC' ? numberOfClassrooms - 1 : numberOfClassrooms
+}
 
 export const getEstimatedNumberOfChildCareAdministrators = (facilityType) => {
   // The formula is like this, let's keep it as it is
   // in case it changes in the future
   if (facilityType === 'FCC') {
-    return 1;
+    return 1
   }
 
-  return 1;
-};
+  return 1
+}

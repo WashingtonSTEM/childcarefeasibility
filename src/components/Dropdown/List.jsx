@@ -11,7 +11,7 @@ const ListContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background: white;
-  padding: 24px 30px;
+  padding: 24px 0;
   box-sizing: border-box;
   z-index: 1;
 `
@@ -50,7 +50,7 @@ export const ListItem = ({ value, onClick, children }) => {
 const List = ({ show, onClose, children, ...props }) => {
   return (
     <ListContainer show={show} {...props}>
-      <LinkButton style={{ marginBottom: 12 }} onClick={onClose}>
+      <LinkButton style={{ marginBottom: 12, padding: '0 30px' }} onClick={onClose}>
         <Back>
           <svg
             width="10"
@@ -64,7 +64,7 @@ const List = ({ show, onClose, children, ...props }) => {
           <span style={{ marginLeft: 12 }}>Back</span>
         </Back>
       </LinkButton>
-      <div style={{ height: '100%', overflowY: 'auto' }}>
+      <div style={{ height: '100%', overflowY: 'auto', padding: '0 30px' }}>
         {children}
       </div>
     </ListContainer>
