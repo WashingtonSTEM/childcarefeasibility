@@ -2,1405 +2,1405 @@
   {
     "county": "San Juan",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Whatcom",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $1,011.00 ",
-    "preschoolCost": " $939.00 ",
-    "schoolAgeCost": " $542.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1083,
+    "toddlerCost": 1011,
+    "preschoolCost": 939,
+    "schoolAgeCost": 542
   },
   {
     "county": "Island",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $845.00 ",
-    "preschoolCost": " $845.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1083,
+    "toddlerCost": 845,
+    "preschoolCost": 845,
+    "schoolAgeCost": 650
   },
   {
     "county": "Skagit",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $997.00 ",
-    "toddlerCost": " $867.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $550.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 997,
+    "toddlerCost": 867,
+    "preschoolCost": 867,
+    "schoolAgeCost": 550
   },
   {
     "county": "Snohomish",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,192.00 ",
-    "toddlerCost": " $1,083.00 ",
-    "preschoolCost": " $975.00 ",
-    "schoolAgeCost": " $500.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1192,
+    "toddlerCost": 1083,
+    "preschoolCost": 975,
+    "schoolAgeCost": 500
   },
   {
     "county": "King",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,300.00 ",
-    "toddlerCost": " $1,200.00 ",
-    "preschoolCost": " $1,062.00 ",
-    "schoolAgeCost": " $433.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1300,
+    "toddlerCost": 1200,
+    "preschoolCost": 1062,
+    "schoolAgeCost": 433
   },
   {
     "county": "Kitsap",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,036.00 ",
-    "toddlerCost": " $867.00 ",
-    "preschoolCost": " $812.00 ",
-    "schoolAgeCost": " $520.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1036,
+    "toddlerCost": 867,
+    "preschoolCost": 812,
+    "schoolAgeCost": 520
   },
   {
     "county": "Pierce",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $867.00 ",
-    "preschoolCost": " $823.00 ",
-    "schoolAgeCost": " $433.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 867,
+    "preschoolCost": 823,
+    "schoolAgeCost": 433
   },
   {
     "county": "Clallam",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,018.00 ",
-    "toddlerCost": " $883.00 ",
-    "preschoolCost": " $850.00 ",
-    "schoolAgeCost": " $510.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1018,
+    "toddlerCost": 883,
+    "preschoolCost": 850,
+    "schoolAgeCost": 510
   },
   {
     "county": "Jefferson",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,094.00 ",
-    "toddlerCost": " $997.00 ",
-    "preschoolCost": " $997.00 ",
-    "schoolAgeCost": " $539.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1094,
+    "toddlerCost": 997,
+    "preschoolCost": 997,
+    "schoolAgeCost": 539
   },
   {
     "county": "Grays Harbor",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $945.00 ",
-    "toddlerCost": " $850.00 ",
-    "preschoolCost": " $798.00 ",
-    "schoolAgeCost": " $697.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 945,
+    "toddlerCost": 850,
+    "preschoolCost": 798,
+    "schoolAgeCost": 697
   },
   {
     "county": "Mason",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $830.00 ",
-    "toddlerCost": " $750.00 ",
-    "preschoolCost": " $700.00 ",
-    "schoolAgeCost": " $563.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 830,
+    "toddlerCost": 750,
+    "preschoolCost": 700,
+    "schoolAgeCost": 563
   },
   {
     "county": "Thurston",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $900.00 ",
-    "preschoolCost": " $788.00 ",
-    "schoolAgeCost": " $477.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 900,
+    "preschoolCost": 788,
+    "schoolAgeCost": 477
   },
   {
     "county": "Pacific",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $812.00 ",
-    "toddlerCost": " $779.00 ",
-    "preschoolCost": " $779.00 ",
-    "schoolAgeCost": " $704.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 812,
+    "toddlerCost": 779,
+    "preschoolCost": 779,
+    "schoolAgeCost": 704
   },
   {
     "county": "Lewis",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $780.00 ",
-    "toddlerCost": " $650.00 ",
-    "preschoolCost": " $593.00 ",
-    "schoolAgeCost": " $353.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 780,
+    "toddlerCost": 650,
+    "preschoolCost": 593,
+    "schoolAgeCost": 353
   },
   {
     "county": "Wahkiakum",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Cowlitz",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $758.00 ",
-    "toddlerCost": " $758.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $477.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 758,
+    "toddlerCost": 758,
+    "preschoolCost": 758,
+    "schoolAgeCost": 477
   },
   {
     "county": "Clark",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $867.00 ",
-    "toddlerCost": " $812.00 ",
-    "preschoolCost": " $764.00 ",
-    "schoolAgeCost": " $531.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 867,
+    "toddlerCost": 812,
+    "preschoolCost": 764,
+    "schoolAgeCost": 531
   },
   {
     "county": "Skamania",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $650.00 ",
-    "toddlerCost": " $650.00 ",
-    "preschoolCost": " $550.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 650,
+    "toddlerCost": 650,
+    "preschoolCost": 550,
+    "schoolAgeCost": 650
   },
   {
     "county": "Klickitat",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,100.00 ",
-    "toddlerCost": " $900.00 ",
-    "preschoolCost": " $900.00 ",
-    "schoolAgeCost": " $600.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1100,
+    "toddlerCost": 900,
+    "preschoolCost": 900,
+    "schoolAgeCost": 600
   },
   {
     "county": "Yakima",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $813.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $303.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 813,
+    "preschoolCost": 758,
+    "schoolAgeCost": 303
   },
   {
     "county": "Kittitas",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $910.00 ",
-    "toddlerCost": " $802.00 ",
-    "preschoolCost": " $802.00 ",
-    "schoolAgeCost": " $255.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 910,
+    "toddlerCost": 802,
+    "preschoolCost": 802,
+    "schoolAgeCost": 255
   },
   {
     "county": "Chelan",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $971.00 ",
-    "toddlerCost": " $841.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $325.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 971,
+    "toddlerCost": 841,
+    "preschoolCost": 758,
+    "schoolAgeCost": 325
   },
   {
     "county": "Okanogan",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $888.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $325.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 888,
+    "preschoolCost": 758,
+    "schoolAgeCost": 325
   },
   {
     "county": "Douglas",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $867.00 ",
-    "toddlerCost": " $758.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $303.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 867,
+    "toddlerCost": 758,
+    "preschoolCost": 758,
+    "schoolAgeCost": 303
   },
   {
     "county": "Grant",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $867.00 ",
-    "toddlerCost": " $758.00 ",
-    "preschoolCost": " $714.00 ",
-    "schoolAgeCost": " $325.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 867,
+    "toddlerCost": 758,
+    "preschoolCost": 714,
+    "schoolAgeCost": 325
   },
   {
     "county": "Benton",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $880.00 ",
-    "toddlerCost": " $775.00 ",
-    "preschoolCost": " $737.00 ",
-    "schoolAgeCost": " $303.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 880,
+    "toddlerCost": 775,
+    "preschoolCost": 737,
+    "schoolAgeCost": 303
   },
   {
     "county": "Franklin",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $867.00 ",
-    "preschoolCost": " $800.00 ",
-    "schoolAgeCost": " $325.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 867,
+    "preschoolCost": 800,
+    "schoolAgeCost": 325
   },
   {
     "county": "Walla Walla",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $898.00 ",
-    "toddlerCost": " $845.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $314.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 898,
+    "toddlerCost": 845,
+    "preschoolCost": 758,
+    "schoolAgeCost": 314
   },
   {
     "county": "Columbia",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Garfield",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Asotin",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Adams",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $867.00 ",
-    "preschoolCost": " $802.00 ",
-    "schoolAgeCost": " $325.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 867,
+    "preschoolCost": 802,
+    "schoolAgeCost": 325
   },
   {
     "county": "Whitman",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Lincoln",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $823.00 ",
-    "toddlerCost": " $823.00 ",
-    "preschoolCost": " $737.00 ",
-    "schoolAgeCost": " $672.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 823,
+    "toddlerCost": 823,
+    "preschoolCost": 737,
+    "schoolAgeCost": 672
   },
   {
     "county": "Spokane",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $900.00 ",
-    "toddlerCost": " $795.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $325.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 900,
+    "toddlerCost": 795,
+    "preschoolCost": 758,
+    "schoolAgeCost": 325
   },
   {
     "county": "Pend Orielle",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Stevens",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $779.00 ",
-    "toddlerCost": " $628.00 ",
-    "preschoolCost": " $683.00 ",
-    "schoolAgeCost": " $390.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 779,
+    "toddlerCost": 628,
+    "preschoolCost": 683,
+    "schoolAgeCost": 390
   },
   {
     "county": "Ferry",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $867.00 ",
-    "toddlerCost": " $758.00 ",
-    "preschoolCost": " $693.00 ",
-    "schoolAgeCost": " $234.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 867,
+    "toddlerCost": 758,
+    "preschoolCost": 693,
+    "schoolAgeCost": 234
   },
   {
     "county": "San Juan",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,387.00 ",
-    "toddlerCost": " $1,213.00 ",
-    "preschoolCost": " $1,040.00 ",
-    "schoolAgeCost": " $282.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1387,
+    "toddlerCost": 1213,
+    "preschoolCost": 1040,
+    "schoolAgeCost": 282
   },
   {
     "county": "Whatcom",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,460.00 ",
-    "toddlerCost": " $1,413.00 ",
-    "preschoolCost": " $1,181.00 ",
-    "schoolAgeCost": " $628.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1460,
+    "toddlerCost": 1413,
+    "preschoolCost": 1181,
+    "schoolAgeCost": 628
   },
   {
     "county": "Island",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $938.00 ",
-    "preschoolCost": " $840.00 ",
-    "schoolAgeCost": " $542.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": 938,
+    "preschoolCost": 840,
+    "schoolAgeCost": 542
   },
   {
     "county": "Skagit",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,363.00 ",
-    "toddlerCost": " $1,062.00 ",
-    "preschoolCost": " $888.00 ",
-    "schoolAgeCost": " $452.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1363,
+    "toddlerCost": 1062,
+    "preschoolCost": 888,
+    "schoolAgeCost": 452
   },
   {
     "county": "Snohomish",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,620.00 ",
-    "toddlerCost": " $1,365.00 ",
-    "preschoolCost": " $1,200.00 ",
-    "schoolAgeCost": " $520.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1620,
+    "toddlerCost": 1365,
+    "preschoolCost": 1200,
+    "schoolAgeCost": 520
   },
   {
     "county": "King",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,905.00 ",
-    "toddlerCost": " $1,677.00 ",
-    "preschoolCost": " $1,425.00 ",
-    "schoolAgeCost": " $531.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1905,
+    "toddlerCost": 1677,
+    "preschoolCost": 1425,
+    "schoolAgeCost": 531
   },
   {
     "county": "Kitsap",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,440.00 ",
-    "toddlerCost": " $1,192.00 ",
-    "preschoolCost": " $966.00 ",
-    "schoolAgeCost": " $490.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1440,
+    "toddlerCost": 1192,
+    "preschoolCost": 966,
+    "schoolAgeCost": 490
   },
   {
     "county": "Pierce",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,300.00 ",
-    "toddlerCost": " $1,077.00 ",
-    "preschoolCost": " $953.00 ",
-    "schoolAgeCost": " $542.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1300,
+    "toddlerCost": 1077,
+    "preschoolCost": 953,
+    "schoolAgeCost": 542
   },
   {
     "county": "Clallam",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,268.00 ",
-    "toddlerCost": " $1,127.00 ",
-    "preschoolCost": " $1,018.00 ",
-    "schoolAgeCost": " $477.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1268,
+    "toddlerCost": 1127,
+    "preschoolCost": 1018,
+    "schoolAgeCost": 477
   },
   {
     "county": "Jefferson",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Grays Harbor",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,235.00 ",
-    "toddlerCost": " $1,105.00 ",
-    "preschoolCost": " $902.00 ",
-    "schoolAgeCost": " $501.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1235,
+    "toddlerCost": 1105,
+    "preschoolCost": 902,
+    "schoolAgeCost": 501
   },
   {
     "county": "Mason",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,050.00 ",
-    "toddlerCost": " $958.00 ",
-    "preschoolCost": " $885.00 ",
-    "schoolAgeCost": " $704.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1050,
+    "toddlerCost": 958,
+    "preschoolCost": 885,
+    "schoolAgeCost": 704
   },
   {
     "county": "Thurston",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,283.00 ",
-    "toddlerCost": " $1,133.00 ",
-    "preschoolCost": " $1,039.00 ",
-    "schoolAgeCost": " $600.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1283,
+    "toddlerCost": 1133,
+    "preschoolCost": 1039,
+    "schoolAgeCost": 600
   },
   {
     "county": "Pacific",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,073.00 ",
-    "toddlerCost": " $932.00 ",
-    "preschoolCost": " $542.00 ",
-    "schoolAgeCost": " $672.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1073,
+    "toddlerCost": 932,
+    "preschoolCost": 542,
+    "schoolAgeCost": 672
   },
   {
     "county": "Lewis",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,016.00 ",
-    "toddlerCost": " $886.00 ",
-    "preschoolCost": " $805.00 ",
-    "schoolAgeCost": " $585.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1016,
+    "toddlerCost": 886,
+    "preschoolCost": 805,
+    "schoolAgeCost": 585
   },
   {
     "county": "Wahkiakum",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Cowlitz",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,160.00 ",
-    "toddlerCost": " $1,050.00 ",
-    "preschoolCost": " $960.00 ",
-    "schoolAgeCost": " $567.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1160,
+    "toddlerCost": 1050,
+    "preschoolCost": 960,
+    "schoolAgeCost": 567
   },
   {
     "county": "Clark",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,616.00 ",
-    "toddlerCost": " $1,369.00 ",
-    "preschoolCost": " $1,133.00 ",
-    "schoolAgeCost": " $585.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1616,
+    "toddlerCost": 1369,
+    "preschoolCost": 1133,
+    "schoolAgeCost": 585
   },
   {
     "county": "Skamania",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Klickitat",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $1,018.00 ",
-    "preschoolCost": " $1,018.00 ",
-    "schoolAgeCost": " $433.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": 1018,
+    "preschoolCost": 1018,
+    "schoolAgeCost": 433
   },
   {
     "county": "Yakima",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,078.00 ",
-    "toddlerCost": " $823.00 ",
-    "preschoolCost": " $791.00 ",
-    "schoolAgeCost": " $593.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1078,
+    "toddlerCost": 823,
+    "preschoolCost": 791,
+    "schoolAgeCost": 593
   },
   {
     "county": "Kittitas",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,050.00 ",
-    "toddlerCost": " $921.00 ",
-    "preschoolCost": " $873.00 ",
-    "schoolAgeCost": " $464.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1050,
+    "toddlerCost": 921,
+    "preschoolCost": 873,
+    "schoolAgeCost": 464
   },
   {
     "county": "Chelan",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $825.00 ",
-    "preschoolCost": " $808.00 ",
-    "schoolAgeCost": " $595.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 975,
+    "toddlerCost": 825,
+    "preschoolCost": 808,
+    "schoolAgeCost": 595
   },
   {
     "county": "Okanogan",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $897.00 ",
-    "toddlerCost": " $813.00 ",
-    "preschoolCost": " $741.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 897,
+    "toddlerCost": 813,
+    "preschoolCost": 741,
+    "schoolAgeCost": 650
   },
   {
     "county": "Douglas",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $458.00 ",
-    "toddlerCost": " $800.00 ",
-    "preschoolCost": " $735.00 ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 458,
+    "toddlerCost": 800,
+    "preschoolCost": 735,
+    "schoolAgeCost": null
   },
   {
     "county": "Grant",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $911.00 ",
-    "toddlerCost": " $848.00 ",
-    "preschoolCost": " $800.00 ",
-    "schoolAgeCost": " $700.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 911,
+    "toddlerCost": 848,
+    "preschoolCost": 800,
+    "schoolAgeCost": 700
   },
   {
     "county": "Benton",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,221.00 ",
-    "toddlerCost": " $1,062.00 ",
-    "preschoolCost": " $889.00 ",
-    "schoolAgeCost": " $595.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1221,
+    "toddlerCost": 1062,
+    "preschoolCost": 889,
+    "schoolAgeCost": 595
   },
   {
     "county": "Franklin",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,048.00 ",
-    "toddlerCost": " $1,050.00 ",
-    "preschoolCost": " $850.00 ",
-    "schoolAgeCost": " $628.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1048,
+    "toddlerCost": 1050,
+    "preschoolCost": 850,
+    "schoolAgeCost": 628
   },
   {
     "county": "Walla Walla",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,135.00 ",
-    "toddlerCost": " $1,107.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $722.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1135,
+    "toddlerCost": 1107,
+    "preschoolCost": 867,
+    "schoolAgeCost": 722
   },
   {
     "county": "Columbia",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Garfield",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Asotin",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $793.00 ",
-    "toddlerCost": " $749.00 ",
-    "preschoolCost": " $695.00 ",
-    "schoolAgeCost": " $455.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 793,
+    "toddlerCost": 749,
+    "preschoolCost": 695,
+    "schoolAgeCost": 455
   },
   {
     "county": "Adams",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Whitman",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,402.00 ",
-    "toddlerCost": " $1,218.00 ",
-    "preschoolCost": " $1,055.00 ",
-    "schoolAgeCost": " $464.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1402,
+    "toddlerCost": 1218,
+    "preschoolCost": 1055,
+    "schoolAgeCost": 464
   },
   {
     "county": "Lincoln",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Spokane",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $1,175.00 ",
-    "toddlerCost": " $1,000.00 ",
-    "preschoolCost": " $900.00 ",
-    "schoolAgeCost": " $585.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 1175,
+    "toddlerCost": 1000,
+    "preschoolCost": 900,
+    "schoolAgeCost": 585
   },
   {
     "county": "Pend Orielle",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Stevens",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $759.00 ",
-    "toddlerCost": " $726.00 ",
-    "preschoolCost": " $636.00 ",
-    "schoolAgeCost": " $883.00 "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 759,
+    "toddlerCost": 726,
+    "preschoolCost": 636,
+    "schoolAgeCost": 883
   },
   {
     "county": "Ferry",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "Median",
-    "infantCost": " $765.00 ",
-    "toddlerCost": " $703.00 ",
-    "preschoolCost": " $544.00 ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "Median",
+    "infantCost": 765,
+    "toddlerCost": 703,
+    "preschoolCost": 544,
+    "schoolAgeCost": null
   },
   {
     "county": "San Juan",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Whatcom",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,210.00 ",
-    "toddlerCost": " $1,083.00 ",
-    "preschoolCost": " $1,051.00 ",
-    "schoolAgeCost": " $618.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1210,
+    "toddlerCost": 1083,
+    "preschoolCost": 1051,
+    "schoolAgeCost": 618
   },
   {
     "county": "Island",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,138.00 ",
-    "toddlerCost": " $1,083.00 ",
-    "preschoolCost": " $1,040.00 ",
-    "schoolAgeCost": " $728.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1138,
+    "toddlerCost": 1083,
+    "preschoolCost": 1040,
+    "schoolAgeCost": 728
   },
   {
     "county": "Skagit",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,150.00 ",
-    "toddlerCost": " $1,060.00 ",
-    "preschoolCost": " $1,040.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1150,
+    "toddlerCost": 1060,
+    "preschoolCost": 1040,
+    "schoolAgeCost": 650
   },
   {
     "county": "Snohomish",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,387.00 ",
-    "toddlerCost": " $1,250.00 ",
-    "preschoolCost": " $1,192.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1387,
+    "toddlerCost": 1250,
+    "preschoolCost": 1192,
+    "schoolAgeCost": 650
   },
   {
     "county": "King",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,500.00 ",
-    "toddlerCost": " $1,408.00 ",
-    "preschoolCost": " $1,300.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1500,
+    "toddlerCost": 1408,
+    "preschoolCost": 1300,
+    "schoolAgeCost": 650
   },
   {
     "county": "Kitsap",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $1,034.00 ",
-    "preschoolCost": " $995.00 ",
-    "schoolAgeCost": " $594.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 1034,
+    "preschoolCost": 995,
+    "schoolAgeCost": 594
   },
   {
     "county": "Pierce",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,171.00 ",
-    "toddlerCost": " $1,030.00 ",
-    "preschoolCost": " $963.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1171,
+    "toddlerCost": 1030,
+    "preschoolCost": 963,
+    "schoolAgeCost": 650
   },
   {
     "county": "Clallam",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,192.00 ",
-    "toddlerCost": " $994.00 ",
-    "preschoolCost": " $950.00 ",
-    "schoolAgeCost": " $569.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1192,
+    "toddlerCost": 994,
+    "preschoolCost": 950,
+    "schoolAgeCost": 569
   },
   {
     "county": "Jefferson",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,143.00 ",
-    "toddlerCost": " $1,094.00 ",
-    "preschoolCost": " $1,094.00 ",
-    "schoolAgeCost": " $659.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1143,
+    "toddlerCost": 1094,
+    "preschoolCost": 1094,
+    "schoolAgeCost": 659
   },
   {
     "county": "Grays Harbor",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $975.00 ",
-    "toddlerCost": " $936.00 ",
-    "preschoolCost": " $823.00 ",
-    "schoolAgeCost": " $790.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 975,
+    "toddlerCost": 936,
+    "preschoolCost": 823,
+    "schoolAgeCost": 790
   },
   {
     "county": "Mason",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $865.00 ",
-    "toddlerCost": " $800.00 ",
-    "preschoolCost": " $738.00 ",
-    "schoolAgeCost": " $574.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 865,
+    "toddlerCost": 800,
+    "preschoolCost": 738,
+    "schoolAgeCost": 574
   },
   {
     "county": "Thurston",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,113.00 ",
-    "toddlerCost": " $970.00 ",
-    "preschoolCost": " $873.00 ",
-    "schoolAgeCost": " $574.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1113,
+    "toddlerCost": 970,
+    "preschoolCost": 873,
+    "schoolAgeCost": 574
   },
   {
     "county": "Pacific",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $834.00 ",
-    "toddlerCost": " $817.00 ",
-    "preschoolCost": " $817.00 ",
-    "schoolAgeCost": " $785.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 834,
+    "toddlerCost": 817,
+    "preschoolCost": 817,
+    "schoolAgeCost": 785
   },
   {
     "county": "Lewis",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $850.00 ",
-    "toddlerCost": " $688.00 ",
-    "preschoolCost": " $637.00 ",
-    "schoolAgeCost": " $415.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 850,
+    "toddlerCost": 688,
+    "preschoolCost": 637,
+    "schoolAgeCost": 415
   },
   {
     "county": "Wahkiakum",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Cowlitz",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $910.00 ",
-    "toddlerCost": " $846.00 ",
-    "preschoolCost": " $800.00 ",
-    "schoolAgeCost": " $663.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 910,
+    "toddlerCost": 846,
+    "preschoolCost": 800,
+    "schoolAgeCost": 663
   },
   {
     "county": "Clark",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $975.00 ",
-    "preschoolCost": " $877.00 ",
-    "schoolAgeCost": " $650.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 975,
+    "preschoolCost": 877,
+    "schoolAgeCost": 650
   },
   {
     "county": "Skamania",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $704.00 ",
-    "toddlerCost": " $704.00 ",
-    "preschoolCost": " $600.00 ",
-    "schoolAgeCost": " $953.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 704,
+    "toddlerCost": 704,
+    "preschoolCost": 600,
+    "schoolAgeCost": 953
   },
   {
     "county": "Klickitat",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,100.00 ",
-    "toddlerCost": " $900.00 ",
-    "preschoolCost": " $900.00 ",
-    "schoolAgeCost": " $600.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1100,
+    "toddlerCost": 900,
+    "preschoolCost": 900,
+    "schoolAgeCost": 600
   },
   {
     "county": "Yakima",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $975.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $433.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 975,
+    "preschoolCost": 867,
+    "schoolAgeCost": 433
   },
   {
     "county": "Kittitas",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $939.00 ",
-    "preschoolCost": " $865.00 ",
-    "schoolAgeCost": " $349.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 939,
+    "preschoolCost": 865,
+    "schoolAgeCost": 349
   },
   {
     "county": "Chelan",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,170.00 ",
-    "toddlerCost": " $1,083.00 ",
-    "preschoolCost": " $975.00 ",
-    "schoolAgeCost": " $542.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1170,
+    "toddlerCost": 1083,
+    "preschoolCost": 975,
+    "schoolAgeCost": 542
   },
   {
     "county": "Okanogan",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $1,083.00 ",
-    "preschoolCost": " $1,029.00 ",
-    "schoolAgeCost": " $567.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 1083,
+    "preschoolCost": 1029,
+    "schoolAgeCost": 567
   },
   {
     "county": "Douglas",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $986.00 ",
-    "toddlerCost": " $868.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $433.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 986,
+    "toddlerCost": 868,
+    "preschoolCost": 867,
+    "schoolAgeCost": 433
   },
   {
     "county": "Grant",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,001.00 ",
-    "toddlerCost": " $918.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $536.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1001,
+    "toddlerCost": 918,
+    "preschoolCost": 867,
+    "schoolAgeCost": 536
   },
   {
     "county": "Benton",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $975.00 ",
-    "preschoolCost": " $842.00 ",
-    "schoolAgeCost": " $477.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 975,
+    "preschoolCost": 842,
+    "schoolAgeCost": 477
   },
   {
     "county": "Franklin",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,288.00 ",
-    "toddlerCost": " $1,083.00 ",
-    "preschoolCost": " $1,083.00 ",
-    "schoolAgeCost": " $482.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1288,
+    "toddlerCost": 1083,
+    "preschoolCost": 1083,
+    "schoolAgeCost": 482
   },
   {
     "county": "Walla Walla",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,300.00 ",
-    "toddlerCost": " $1,262.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $402.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1300,
+    "toddlerCost": 1262,
+    "preschoolCost": 867,
+    "schoolAgeCost": 402
   },
   {
     "county": "Columbia",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Garfield",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Asotin",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Adams",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,083.00 ",
-    "toddlerCost": " $1,062.00 ",
-    "preschoolCost": " $948.00 ",
-    "schoolAgeCost": " $336.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1083,
+    "toddlerCost": 1062,
+    "preschoolCost": 948,
+    "schoolAgeCost": 336
   },
   {
     "county": "Whitman",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Lincoln",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $823.00 ",
-    "toddlerCost": " $823.00 ",
-    "preschoolCost": " $737.00 ",
-    "schoolAgeCost": " $672.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 823,
+    "toddlerCost": 823,
+    "preschoolCost": 737,
+    "schoolAgeCost": 672
   },
   {
     "county": "Spokane",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $976.00 ",
-    "toddlerCost": " $952.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $395.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 976,
+    "toddlerCost": 952,
+    "preschoolCost": 867,
+    "schoolAgeCost": 395
   },
   {
     "county": "Pend Orielle",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Stevens",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $800.00 ",
-    "toddlerCost": " $769.00 ",
-    "preschoolCost": " $758.00 ",
-    "schoolAgeCost": " $444.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 800,
+    "toddlerCost": 769,
+    "preschoolCost": 758,
+    "schoolAgeCost": 444
   },
   {
     "county": "Ferry",
     "fccOrCenterBased": "FCC",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $867.00 ",
-    "toddlerCost": " $758.00 ",
-    "preschoolCost": " $693.00 ",
-    "schoolAgeCost": " $234.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 867,
+    "toddlerCost": 758,
+    "preschoolCost": 693,
+    "schoolAgeCost": 234
   },
   {
     "county": "San Juan",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,387.00 ",
-    "toddlerCost": " $1,326.00 ",
-    "preschoolCost": " $1,209.00 ",
-    "schoolAgeCost": " $282.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1387,
+    "toddlerCost": 1326,
+    "preschoolCost": 1209,
+    "schoolAgeCost": 282
   },
   {
     "county": "Whatcom",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,668.00 ",
-    "toddlerCost": " $1,517.00 ",
-    "preschoolCost": " $1,300.00 ",
-    "schoolAgeCost": " $689.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1668,
+    "toddlerCost": 1517,
+    "preschoolCost": 1300,
+    "schoolAgeCost": 689
   },
   {
     "county": "Island",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $1,036.00 ",
-    "preschoolCost": " $1,120.00 ",
-    "schoolAgeCost": " $555.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": 1036,
+    "preschoolCost": 1120,
+    "schoolAgeCost": 555
   },
   {
     "county": "Skagit",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,474.00 ",
-    "toddlerCost": " $1,190.00 ",
-    "preschoolCost": " $1,057.00 ",
-    "schoolAgeCost": " $620.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1474,
+    "toddlerCost": 1190,
+    "preschoolCost": 1057,
+    "schoolAgeCost": 620
   },
   {
     "county": "Snohomish",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,799.00 ",
-    "toddlerCost": " $1,604.00 ",
-    "preschoolCost": " $1,365.00 ",
-    "schoolAgeCost": " $744.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1799,
+    "toddlerCost": 1604,
+    "preschoolCost": 1365,
+    "schoolAgeCost": 744
   },
   {
     "county": "King",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $2,209.00 ",
-    "toddlerCost": " $1,958.00 ",
-    "preschoolCost": " $1,657.00 ",
-    "schoolAgeCost": " $718.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 2209,
+    "toddlerCost": 1958,
+    "preschoolCost": 1657,
+    "schoolAgeCost": 718
   },
   {
     "county": "Kitsap",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,495.00 ",
-    "toddlerCost": " $1,326.00 ",
-    "preschoolCost": " $1,144.00 ",
-    "schoolAgeCost": " $610.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1495,
+    "toddlerCost": 1326,
+    "preschoolCost": 1144,
+    "schoolAgeCost": 610
   },
   {
     "county": "Pierce",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,484.00 ",
-    "toddlerCost": " $1,270.00 ",
-    "preschoolCost": " $1,111.00 ",
-    "schoolAgeCost": " $622.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1484,
+    "toddlerCost": 1270,
+    "preschoolCost": 1111,
+    "schoolAgeCost": 622
   },
   {
     "county": "Clallam",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,316.00 ",
-    "toddlerCost": " $1,131.00 ",
-    "preschoolCost": " $1,045.00 ",
-    "schoolAgeCost": " $514.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1316,
+    "toddlerCost": 1131,
+    "preschoolCost": 1045,
+    "schoolAgeCost": 514
   },
   {
     "county": "Jefferson",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Grays Harbor",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,235.00 ",
-    "toddlerCost": " $1,105.00 ",
-    "preschoolCost": " $1,018.00 ",
-    "schoolAgeCost": " $615.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1235,
+    "toddlerCost": 1105,
+    "preschoolCost": 1018,
+    "schoolAgeCost": 615
   },
   {
     "county": "Mason",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,086.00 ",
-    "toddlerCost": " $973.00 ",
-    "preschoolCost": " $914.00 ",
-    "schoolAgeCost": " $707.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1086,
+    "toddlerCost": 973,
+    "preschoolCost": 914,
+    "schoolAgeCost": 707
   },
   {
     "county": "Thurston",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,493.00 ",
-    "toddlerCost": " $1,240.00 ",
-    "preschoolCost": " $1,148.00 ",
-    "schoolAgeCost": " $691.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1493,
+    "toddlerCost": 1240,
+    "preschoolCost": 1148,
+    "schoolAgeCost": 691
   },
   {
     "county": "Pacific",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,073.00 ",
-    "toddlerCost": " $932.00 ",
-    "preschoolCost": " $688.00 ",
-    "schoolAgeCost": " $672.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1073,
+    "toddlerCost": 932,
+    "preschoolCost": 688,
+    "schoolAgeCost": 672
   },
   {
     "county": "Lewis",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,067.00 ",
-    "toddlerCost": " $975.00 ",
-    "preschoolCost": " $888.00 ",
-    "schoolAgeCost": " $701.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1067,
+    "toddlerCost": 975,
+    "preschoolCost": 888,
+    "schoolAgeCost": 701
   },
   {
     "county": "Wahkiakum",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Cowlitz",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,235.00 ",
-    "toddlerCost": " $1,105.00 ",
-    "preschoolCost": " $1,018.00 ",
-    "schoolAgeCost": " $646.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1235,
+    "toddlerCost": 1105,
+    "preschoolCost": 1018,
+    "schoolAgeCost": 646
   },
   {
     "county": "Clark",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,668.00 ",
-    "toddlerCost": " $1,495.00 ",
-    "preschoolCost": " $1,262.00 ",
-    "schoolAgeCost": " $693.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1668,
+    "toddlerCost": 1495,
+    "preschoolCost": 1262,
+    "schoolAgeCost": 693
   },
   {
     "county": "Skamania",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Klickitat",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $1,018.00 ",
-    "preschoolCost": " $1,018.00 ",
-    "schoolAgeCost": " $440.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": 1018,
+    "preschoolCost": 1018,
+    "schoolAgeCost": 440
   },
   {
     "county": "Yakima",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,192.00 ",
-    "toddlerCost": " $939.00 ",
-    "preschoolCost": " $867.00 ",
-    "schoolAgeCost": " $646.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1192,
+    "toddlerCost": 939,
+    "preschoolCost": 867,
+    "schoolAgeCost": 646
   },
   {
     "county": "Kittitas",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,073.00 ",
-    "toddlerCost": " $960.00 ",
-    "preschoolCost": " $895.00 ",
-    "schoolAgeCost": " $485.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1073,
+    "toddlerCost": 960,
+    "preschoolCost": 895,
+    "schoolAgeCost": 485
   },
   {
     "county": "Chelan",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,148.00 ",
-    "toddlerCost": " $888.00 ",
-    "preschoolCost": " $863.00 ",
-    "schoolAgeCost": " $980.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1148,
+    "toddlerCost": 888,
+    "preschoolCost": 863,
+    "schoolAgeCost": 980
   },
   {
     "county": "Okanogan",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $944.00 ",
-    "toddlerCost": " $840.00 ",
-    "preschoolCost": " $769.00 ",
-    "schoolAgeCost": " $775.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 944,
+    "toddlerCost": 840,
+    "preschoolCost": 769,
+    "schoolAgeCost": 775
   },
   {
     "county": "Douglas",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $679.00 ",
-    "toddlerCost": " $813.00 ",
-    "preschoolCost": " $780.00 ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 679,
+    "toddlerCost": 813,
+    "preschoolCost": 780,
+    "schoolAgeCost": null
   },
   {
     "county": "Grant",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $963.00 ",
-    "toddlerCost": " $875.00 ",
-    "preschoolCost": " $819.00 ",
-    "schoolAgeCost": " $867.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 963,
+    "toddlerCost": 875,
+    "preschoolCost": 819,
+    "schoolAgeCost": 867
   },
   {
     "county": "Benton",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,325.00 ",
-    "toddlerCost": " $1,125.00 ",
-    "preschoolCost": " $999.00 ",
-    "schoolAgeCost": " $801.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1325,
+    "toddlerCost": 1125,
+    "preschoolCost": 999,
+    "schoolAgeCost": 801
   },
   {
     "county": "Franklin",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,077.00 ",
-    "toddlerCost": " $1,240.00 ",
-    "preschoolCost": " $977.00 ",
-    "schoolAgeCost": " $731.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1077,
+    "toddlerCost": 1240,
+    "preschoolCost": 977,
+    "schoolAgeCost": 731
   },
   {
     "county": "Walla Walla",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,249.00 ",
-    "toddlerCost": " $1,203.00 ",
-    "preschoolCost": " $1,067.00 ",
-    "schoolAgeCost": " $736.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1249,
+    "toddlerCost": 1203,
+    "preschoolCost": 1067,
+    "schoolAgeCost": 736
   },
   {
     "county": "Columbia",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Garfield",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Asotin",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $849.00 ",
-    "toddlerCost": " $796.00 ",
-    "preschoolCost": " $754.00 ",
-    "schoolAgeCost": " $737.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 849,
+    "toddlerCost": 796,
+    "preschoolCost": 754,
+    "schoolAgeCost": 737
   },
   {
     "county": "Adams",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Whitman",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,543.00 ",
-    "toddlerCost": " $1,394.00 ",
-    "preschoolCost": " $1,205.00 ",
-    "schoolAgeCost": " $583.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1543,
+    "toddlerCost": 1394,
+    "preschoolCost": 1205,
+    "schoolAgeCost": 583
   },
   {
     "county": "Lincoln",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Spokane",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $1,300.00 ",
-    "toddlerCost": " $1,100.00 ",
-    "preschoolCost": " $982.00 ",
-    "schoolAgeCost": " $711.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 1300,
+    "toddlerCost": 1100,
+    "preschoolCost": 982,
+    "schoolAgeCost": 711
   },
   {
     "county": "Pend Orielle",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $-   ",
-    "toddlerCost": " $-   ",
-    "preschoolCost": " $-   ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": null,
+    "toddlerCost": null,
+    "preschoolCost": null,
+    "schoolAgeCost": null
   },
   {
     "county": "Stevens",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $759.00 ",
-    "toddlerCost": " $769.00 ",
-    "preschoolCost": " $689.00 ",
-    "schoolAgeCost": " $994.00 "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 759,
+    "toddlerCost": 769,
+    "preschoolCost": 689,
+    "schoolAgeCost": 994
   },
   {
     "county": "Ferry",
     "fccOrCenterBased": "Center-Based",
-    "medianOr75thPercentile": "75th Percentile",
-    "infantCost": " $765.00 ",
-    "toddlerCost": " $703.00 ",
-    "preschoolCost": " $544.00 ",
-    "schoolAgeCost": " $-   "
+    "medianOr7thPercentile": "75th Percentile",
+    "infantCost": 765,
+    "toddlerCost": 703,
+    "preschoolCost": 544,
+    "schoolAgeCost": null
   }
 ]
