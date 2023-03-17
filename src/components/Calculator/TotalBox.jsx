@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 
@@ -15,13 +16,13 @@ const Text = styled.span`
     text-transform: capitalize;
     color: #F3F3F3;
 `
-const NetIncome = ({ mobile }) => {
+const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
   if (mobile) {
     return (
-      <Box>
+      <Box {...props}>
         <Row>
           <Col col={12}>
-            <Text style={{ fontWeight: 'bold', color: 'white' }}>Net income</Text>
+            <Text style={{ fontWeight: '600', color: 'white' }}>{label}</Text>
           </Col>
         </Row>
         <Row style={{ padding: '12px 0' }}>
@@ -34,10 +35,10 @@ const NetIncome = ({ mobile }) => {
         </Row>
         <Row>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>$ 0000</Text>
+            <Text style={{ color: 'white' }}>$ {monthlyValue}</Text>
           </Col>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>$ 0000</Text>
+            <Text style={{ color: 'white' }}>$ {annualValue}</Text>
           </Col>
         </Row>
       </Box>
@@ -45,20 +46,27 @@ const NetIncome = ({ mobile }) => {
   }
 
   return (
-    <Box>
+    <Box {...props}>
       <Row style={{ padding: '30px 0' }}>
         <Col col={12} lg={6}>
-          <Text style={{ fontWeight: 'bold', color: 'white' }}>Net income</Text>
+          <Text style={{ fontWeight: '600', color: 'white' }}>{label}</Text>
         </Col>
         <Col col={4} lg={3} style={{ textAlign: 'center' }}>
-          <Text style={{ color: 'white' }}>$ 0000</Text>
+          <Text style={{ color: 'white' }}>$ {monthlyValue}</Text>
         </Col>
         <Col col={4} lg={3} style={{ textAlign: 'center' }}>
-          <Text style={{ color: 'white' }}>$ 0000</Text>
+          <Text style={{ color: 'white' }}>$ {annualValue}</Text>
         </Col>
       </Row>
     </Box>
   )
 }
 
-export default NetIncome
+TotalBox.propTypes = {
+  label: PropTypes.string.isRequired,
+  monthlyValue: PropTypes.number.isRequired,
+  annualValue: PropTypes.number.isRequired,
+  mobile: PropTypes.bool
+}
+
+export default TotalBox

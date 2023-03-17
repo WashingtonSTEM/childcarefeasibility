@@ -8,7 +8,7 @@ import TextBox from '@/components/TextBox'
 import Button from '@/components/Button'
 import Tooltip from '@/components/Tooltip'
 import FinalResults from '@/components/Calculator/FinalResults'
-import NetIncome from '@/components/Calculator/NetIncome'
+import TotalBox from '@/components/Calculator/TotalBox'
 import useMediaQuery from '@/hooks/useMediaQuery'
 
 import styles from '@/styles/Calculator.module.css'
@@ -51,13 +51,13 @@ const ResultsPage = () => {
             <Col col={4}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                 <Text>Revenue per child (monthly)</Text>
-                <Tooltip tooltipText='Expected monthly revenue per child'><Text>?</Text></Tooltip>
+                <Tooltip tooltipText='Expected monthly revenue per child' trigger={isMobile ? 'click' : 'hover'}><Text>?</Text></Tooltip>
               </div>
             </Col>
             <Col col={4}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                 <Text>Subsidized</Text>
-                <Tooltip tooltipText='Working connections child care subsidy per month at 22 days per month'><Text>?</Text></Tooltip>
+                <Tooltip tooltipText='Working connections child care subsidy per month at 22 days per month' trigger={isMobile ? 'click' : 'hover'}><Text>?</Text></Tooltip>
               </div>
             </Col>
           </Row>
@@ -162,7 +162,25 @@ const ResultsPage = () => {
           </Row>
           <div style={{ margin: '40px 0', display: 'inline-block' }} />
           <FinalResults mobile={isMobile} />
-          <NetIncome mobile={isMobile} />
+          <TotalBox
+            label='Total Income'
+            monthlyValue={0}
+            annualValue={0}
+            mobile={isMobile}
+          />
+          <TotalBox
+            label='Total Expenses'
+            monthlyValue={0}
+            annualValue={0}
+            mobile={isMobile}
+            style={{ margin: '12px 0' }}
+          />
+          <TotalBox
+            label='Net Income'
+            monthlyValue={0}
+            annualValue={0}
+            mobile={isMobile}
+          />
           <Row style={{ display: 'flex', justifyContent: 'space-between', padding: '120px 0 60px 0' }}>
             <Col
               col={12}
