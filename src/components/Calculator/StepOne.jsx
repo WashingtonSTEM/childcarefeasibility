@@ -33,7 +33,7 @@ const MEDIAN_OR_75TH_PERCENTILE_OPTIONS = optionsType.medianOr75thPercentile
 
 const TYPE_FACILITY_OPTIONS = [
   { text: 'Licensed child care center', value: 'Licensed child care center' },
-  { text: 'FLicensed family child care homeCC', value: 'FCC' },
+  { text: 'Licensed family child care homeCC', value: 'FCC' },
   { text: 'Licensed school-age program', value: 'Licensed school-age program' }
 ]
 
