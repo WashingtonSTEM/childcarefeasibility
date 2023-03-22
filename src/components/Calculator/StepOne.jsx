@@ -5,6 +5,7 @@ import Dropdown from '@/components/Dropdown'
 import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
 import FormGroup from '@/components/FormGroup'
+import Tooltip from '@/components/Tooltip'
 import costData from '@/data/cost_data.json'
 import { isRequired, minInt } from '@/utils/validate'
 import { getMaximumNumberOfInfantsSupported, getMaximumNumberOfPreschoolers } from '@/helpers/formulas'
@@ -51,6 +52,11 @@ const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
   { text: 'Level 5', value: '5' },
 ]
 
+const ADDITIONAL_COST_OPTIONS = [
+  { text: 'As a percent of all cost', value: 'As a percent of all cost' },
+  { text: 'Dollar amount', value: 'Dollar amount' }
+]
+
 const colMd4Lg3 = { md: 4, lg: 3 }
 const colMd4Lg6 = { md: 4, lg: 6 }
 
@@ -61,6 +67,7 @@ export const validationRules = {
   earlyAchieversLevel: [isRequired],
   staffCompesantion: [isRequired],
   medianOr75thPercentile: [isRequired],
+  additinoalCost: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
@@ -162,6 +169,19 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             value={data.staffCompesantion}
             onChange={(value) => onDataChange('staffCompesantion', value)}
           />
+        </FormGroup>
+      </Row>
+      <Row>
+        <FormGroup {...colMd4Lg3} error={errors.additinoalCost}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Dropdown
+              label='Additional costs'
+              options={ADDITIONAL_COST_OPTIONS}
+              value={data.additinoalCost}
+              onChange={(value) => onDataChange('additinoalCost', value)}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Consider costs for curriculum, staff professional development, management and administration, and program enhancements, such as family conferences.' />
+          </div>
         </FormGroup>
       </Row>
     </>
