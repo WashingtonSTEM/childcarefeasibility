@@ -122,5 +122,140 @@ export const getEstimatedNumberOfChildCareAdministrators = (facilityType) => {
     return 1
   }
 
+<<<<<<< HEAD
   return 1
 }
+=======
+  return 1;
+};
+
+/*
+=+IF(
+  D5="Annually",
+  ((
+    SUMIFS(
+      'Salary Data Tab'!C:C,
+      'Salary Data Tab'!A:A,
+      'Simplified Calculator'!D2,
+      'Salary Data Tab'!B:B,
+      'Simplified Calculator'!D7
+    )
+  )),
+  ((SUMIFS('Salary Data Tab'!C:C,'Salary Data Tab'!A:A,'Simplified Calculator'!D2,'Salary Data Tab'!B:B,'Simplified Calculator'!D7)))/12
+)
+*/
+export const getExpectedSalary = (county, workerType, salaryType = 'Median') => {
+  let index = null;
+  switch (workerType) {
+    case 'Child Care Worker':
+      index = 'childcareWorkerMedianSalary';
+      break;
+    case 'Preschool Teacher':
+      index = 'preschoolTeacherMedianSalary'
+      break;
+    case 'Administrator':
+      index = 'administratorMedianSalary';
+      break;
+    default:
+      return null;
+  }
+
+  const salaries = require('../data/salary_data.json');
+
+  const salary = salaries.find((s) => {
+    return s.county === county
+      && s.medianOrLivingWage === salaryType;
+  });
+
+  if (!salary) {
+    return null;
+  }
+
+  return salary[index] || null;
+};
+
+/*
+=+IF(
+  D5="Monthly",
+  SUMIFS('Cost Data'!D:D,'Cost Data'!A:A,'Simplified Calculator'!D2,'Cost Data'!B:B,'Simplified Calculator'!D3,'Cost Data'!C:C,'Simplified Calculator'!D6),
+  SUMIFS('Cost Data'!D:D,'Cost Data'!A:A,'Simplified Calculator'!D2,'Cost Data'!B:B,'Simplified Calculator'!D3,'Cost Data'!C:C,'Simplified Calculator'!D6)*12
+)
+*/
+export const getExpectedSalaryRevenuePerChild = (county, child, facilityType, median = true) => {
+  switch (child) {
+    case 'Infant':
+      index = 'infantCost';
+      break;
+    case 'Toddler':
+      index = 'toddlerCost'
+      break;
+    case 'Pre School':
+      index = 'preschoolCost';
+      break;
+    case 'School Age':
+      index = 'schoolAgeCost';
+      break;
+    default:
+      return null;
+  }
+
+  const costs = require('../data/cost_data.json');
+
+  const row = costs.find((c) => {
+    return c.county === county
+      && c.fccOrCenterBased === facilityType
+      && c.medianOr75thPercentile === (median ? 'Median' : '75th Percentile');
+  });
+
+  if (!row) {
+    return null;
+  }
+
+  return row[index] || null;
+};
+
+export const getRegionByCounty = (county) => {
+  const regions = require('../data/region_converter.json');
+
+  const row = regions.find((r) => r.county === county);
+
+  if (!row) {
+    return null;
+  }
+
+  return row.region || null;
+};
+
+/*
+=+(IF(
+  D5="Monthly",
+  SUMIFS(
+    DCYFSubsidyRate!B:B,
+    DCYFSubsidyRate!A:A,
+    VLOOKUP('Simplified Calculator'!D2,'DCYF Region Converter'!A:B,2,FALSE)
+  )*22,
+  SUMIFS(
+    DCYFSubsidyRate!B:B,
+    DCYFSubsidyRate!A:A,
+    VLOOKUP('Simplified Calculator'!D2,'DCYF Region Converter'!A:B,2,FALSE)
+  )*22*12))*(SUMIFS(DCYFSubsidyRate!C21:C34,DCYFSubsidyRate!A21:A34,'Simplified Calculator'!D3,DCYFSubsidyRate!B21:B34,'Simplified Calculator'!D4)
+)
+*/
+export const getSubsidy = (county, child) => {
+  const region = getRegionByCounty(county);
+
+  if (region) {
+    return null;
+  }
+
+  const subsidyRates = require('../data/subsidy_rates.json');
+
+  const row = subsidyRates.find((s) => s.region === region);
+
+  if (!row) {
+    return null;
+  }
+
+  return (row[child] || 0) * 22 * 12;
+};
+>>>>>>> a0679e5a37f109dcc950b40ae5744d5d0fce1ec1
