@@ -3,7 +3,7 @@ export enum FacilityType {
   FCC = 'FCC',
   CenterBased = 'Center',
   NatureBased = 'Nature'
-};
+}
 
 export enum Child {
   Infant = 'Infant',
@@ -122,12 +122,8 @@ export const getEstimatedNumberOfChildCareAdministrators = (facilityType) => {
     return 1
   }
 
-<<<<<<< HEAD
   return 1
 }
-=======
-  return 1;
-};
 
 /*
 =+IF(
@@ -145,34 +141,35 @@ export const getEstimatedNumberOfChildCareAdministrators = (facilityType) => {
 )
 */
 export const getExpectedSalary = (county, workerType, salaryType = 'Median') => {
-  let index = null;
+  let index = null
+
   switch (workerType) {
-    case 'Child Care Worker':
-      index = 'childcareWorkerMedianSalary';
-      break;
-    case 'Preschool Teacher':
-      index = 'preschoolTeacherMedianSalary'
-      break;
-    case 'Administrator':
-      index = 'administratorMedianSalary';
-      break;
-    default:
-      return null;
+  case 'Child Care Worker':
+    index = 'childcareWorkerMedianSalary'
+    break
+  case 'Preschool Teacher':
+    index = 'preschoolTeacherMedianSalary'
+    break
+  case 'Administrator':
+    index = 'administratorMedianSalary'
+    break
+  default:
+    return null
   }
 
-  const salaries = require('../data/salary_data.json');
+  const salaries = require('../data/salary_data.json')
 
   const salary = salaries.find((s) => {
     return s.county === county
-      && s.medianOrLivingWage === salaryType;
-  });
+      && s.medianOrLivingWage === salaryType
+  })
 
   if (!salary) {
-    return null;
+    return null
   }
 
-  return salary[index] || null;
-};
+  return salary[index] || null
+}
 
 /*
 =+IF(
@@ -183,48 +180,48 @@ export const getExpectedSalary = (county, workerType, salaryType = 'Median') => 
 */
 export const getExpectedSalaryRevenuePerChild = (county, child, facilityType, median = true) => {
   switch (child) {
-    case 'Infant':
-      index = 'infantCost';
-      break;
-    case 'Toddler':
-      index = 'toddlerCost'
-      break;
-    case 'Pre School':
-      index = 'preschoolCost';
-      break;
-    case 'School Age':
-      index = 'schoolAgeCost';
-      break;
-    default:
-      return null;
+  case 'Infant':
+    index = 'infantCost'
+    break
+  case 'Toddler':
+    index = 'toddlerCost'
+    break
+  case 'Pre School':
+    index = 'preschoolCost'
+    break
+  case 'School Age':
+    index = 'schoolAgeCost'
+    break
+  default:
+    return null
   }
 
-  const costs = require('../data/cost_data.json');
+  const costs = require('../data/cost_data.json')
 
   const row = costs.find((c) => {
     return c.county === county
       && c.fccOrCenterBased === facilityType
-      && c.medianOr75thPercentile === (median ? 'Median' : '75th Percentile');
-  });
+      && c.medianOr75thPercentile === (median ? 'Median' : '75th Percentile')
+  })
 
   if (!row) {
-    return null;
+    return null
   }
 
-  return row[index] || null;
-};
+  return row[index] || null
+}
 
 export const getRegionByCounty = (county) => {
-  const regions = require('../data/region_converter.json');
+  const regions = require('../data/region_converter.json')
 
-  const row = regions.find((r) => r.county === county);
+  const row = regions.find((r) => r.county === county)
 
   if (!row) {
-    return null;
+    return null
   }
 
-  return row.region || null;
-};
+  return row.region || null
+}
 
 /*
 =+(IF(
@@ -242,20 +239,19 @@ export const getRegionByCounty = (county) => {
 )
 */
 export const getSubsidy = (county, child) => {
-  const region = getRegionByCounty(county);
+  const region = getRegionByCounty(county)
 
   if (region) {
-    return null;
+    return null
   }
 
-  const subsidyRates = require('../data/subsidy_rates.json');
+  const subsidyRates = require('../data/subsidy_rates.json')
 
-  const row = subsidyRates.find((s) => s.region === region);
+  const row = subsidyRates.find((s) => s.region === region)
 
   if (!row) {
-    return null;
+    return null
   }
 
-  return (row[child] || 0) * 22 * 12;
-};
->>>>>>> a0679e5a37f109dcc950b40ae5744d5d0fce1ec1
+  return (row[child] || 0) * 22 * 12
+}
