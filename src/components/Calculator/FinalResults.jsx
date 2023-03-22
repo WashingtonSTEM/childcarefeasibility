@@ -6,7 +6,7 @@ const finalResultsFields = [
   'Expected salaries',
   'Expected benefits',
   'Rent/mortgage cost',
-  'Additional costs as a percentage of all costs above',
+  'Additional costs',
   'Dollar amount',
 ]
 

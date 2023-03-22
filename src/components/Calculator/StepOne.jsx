@@ -33,13 +33,12 @@ const MEDIAN_OR_75TH_PERCENTILE_OPTIONS = optionsType.medianOr75thPercentile
 
 const TYPE_FACILITY_OPTIONS = [
   { text: 'Licensed child care center', value: 'Licensed child care center' },
-  { text: 'Licensed family child care homeCC', value: 'FCC' },
-  { text: 'Licensed school-age program', value: 'Licensed school-age program' }
+  { text: 'Licensed in-home child care center', value: 'FCC' },
 ]
 
 const STAFF_COST_OPTIONS = [
-  { text: 'Minimum', value: 'Minimum' },
-  { text: 'Median', value: 'Median' },
+  { text: 'Minimum wage', value: 'Minimum' },
+  { text: 'Median wage', value: 'Median' },
   { text: 'Living wage', value: 'Living wage' }
 ]
 
@@ -150,7 +149,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         </FormGroup>
         <FormGroup {...colMd4Lg6} error={errors.medianOr75thPercentile}>
           <Dropdown
-            label='Fees Median Per Child Tuition'
+            label='Per Child Tuition'
             options={MEDIAN_OR_75TH_PERCENTILE_OPTIONS}
             value={data.medianOr75thPercentile}
             onChange={(value) => onDataChange('medianOr75thPercentile', value)}

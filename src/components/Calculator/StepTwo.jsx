@@ -46,7 +46,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           <Input
             name='percentageBenefitsCost'
             type='number'
-            label='What % of salaries WILL your benefits cost?'
+            label='What % of salaries will your benefits cost?'
             disabled={!data.payBenefits}
             min={0}
             max={100}
@@ -96,7 +96,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               value={data.collectionsRate}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percent of students receiving the Working Connections Child Care Subsidy.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of fee reveneu ultimately collected' />
           </div>
         </FormGroup>
       </Row>

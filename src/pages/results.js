@@ -116,9 +116,6 @@ const ResultsPage = () => {
               <Text>$ 0000</Text>
             </Col>
           </Row>
-          <TextBox style={{ marginTop: 8, marginBottom: '1.5rem', fontStyle: 'italic', padding: '28px 18px' }}>** 00<br />Estimated # of child care workers.</TextBox>
-          <TextBox style={{ marginTop: 8, marginBottom: '1.5rem', fontStyle: 'italic', padding: '28px 18px' }}>** 00<br />Estimated # of preschool teachers.</TextBox>
-          <TextBox style={{ marginTop: 8, marginBottom: '1.5rem', fontStyle: 'italic', padding: '28px 18px' }}>** 00<br />Estimated # of child care administrators (center director of family child care owner).</TextBox>
           <div style={{ margin: '20px 0', display: 'inline-block' }} />
           <Row style={{ marginBottom: '1rem' }}>
             <Col col={4} lg={3}>

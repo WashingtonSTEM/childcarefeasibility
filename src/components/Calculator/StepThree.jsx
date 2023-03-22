@@ -105,7 +105,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfSchoolAgeChildren'
             type='number'
-            label='# of School-Age Children'
+            label='# of school-age children'
             min={0}
             value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
