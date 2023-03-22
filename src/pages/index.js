@@ -87,7 +87,10 @@ const Page = () => {
     if (!isValid) {
       return
     }
-    router.push('/results')
+    router.push({
+      pathname: '/results',
+      query: data,
+    })
   }
 
   return (
