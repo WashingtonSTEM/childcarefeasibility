@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import InfoButton from './InfoButton'
 import TextBox from './TextBox'
 
 const PortalContainer = styled.div`
@@ -15,6 +16,7 @@ const PortalContainer = styled.div`
 
 const Tooltip = ({ tooltipText, trigger, children }) => {
   const [show, setShow] = useState(false)
+  const divRef = useRef()
 
   const handleOnMouseOver = () => {
     setShow(true)
@@ -37,11 +39,13 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
 
   return (
     <>
-      <div {...containerProps}>
-        {children}
+      <div {...containerProps} style={{ fontStyle: 'italic' }}>
+        <div ref={divRef}>
+          {children || <InfoButton backgroundColor={show ? '#012846' : null} />}
+        </div>
       </div>
       {show && (
-        <PortalContainer>
+        <PortalContainer style={{ top: divRef.current?.offsetHeight + 8 }}>
           <TextBox>{tooltipText}</TextBox>
         </PortalContainer>
       )}

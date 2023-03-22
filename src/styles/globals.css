@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 @font-face {
   font-family: "Freight";
   src: url('../../public/fonts/Freight-Sans-Medium.otf');
@@ -31,4 +35,48 @@
   src: url('../../public/fonts/Roboto-Medium.ttf');
   font-weight: 600;
   font-style: normal;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group-error>.dropdown-control>button {
+  border: 1px solid #EF4444;
+  color: #EF4444;
+}
+
+.form-group-error>.dropdown-control>button::after {
+  filter: invert(40%) sepia(44%) saturate(4629%) hue-rotate(339deg) brightness(104%) contrast(87%);
+}
+
+.form-group-error .input-control {
+  border: 1px solid #EF4444;
+  color: #EF4444;
+}
+
+.input-control input:hover:not(:focus)::-webkit-outer-spin-button,
+.input-control input:hover:not(:focus)::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-control input:hover:not(:focus)[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-group-error .text-error {
+  display: block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #EF4444;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .text-error {
+    font-size: 16px;
+  }
 }

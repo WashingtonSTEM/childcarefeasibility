@@ -15,6 +15,7 @@ const Container = styled.label`
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  color: #012846;
   border-radius: 4px;
   transition: 300ms all;
   cursor: text;
@@ -40,16 +41,18 @@ const InputWraper = styled.div`
 
 const Text = styled.span`
   position: absolute;
-  top: 10px;
+  top: 0;
+  bottom: 0;
   left: ${props => props.align !== 'right' ? '10px' : null};
   right: ${props => props.align !== 'left' ? '10px' : null};
-  color: #012846;
   transition: 200ms all;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  line-height: 38px;
   @media (max-width: 768px) {
     top: 17px;
+    line-height: 18px;
   }
 `
 
@@ -67,6 +70,7 @@ const StyledInput = styled.input`
   color: #012846;
   &:focus {
     outline: none;
+    z-index: 1;
   }
   &:focus + ${Text} {
     opacity: 0%;
@@ -77,20 +81,21 @@ const StyledInput = styled.input`
   }
 `
 
-const Input = ({ sufix, type, disabled, ...props }) => {
+const Input = ({ sufix, type, disabled, value, ...props }) => {
   return (
-    <Container tabindex="1" disabled={disabled}>
+    <Container tabindex="1" disabled={disabled} className='input-control'>
       <InputWraper>
         <StyledInput
           sufix={sufix}
           inputmode={type}
           disabled={disabled}
-          type={type === 'text' ? type : null}
+          type={type}
+          value={value || ''}
           {...props}
         />
-        { (!props.value || props.value === '') && <Text>{props.label}</Text> }
+        { (!value || value === '') && <Text>{props.label}</Text> }
       </InputWraper>
-      {sufix && <Text align="right" style={{ marginLeft: 8 }}>{ sufix }</Text>}
+      {sufix && <Text align="right" hideOnFocus style={{ marginLeft: 8 }}>{ sufix }</Text>}
     </Container>
   )
 }
