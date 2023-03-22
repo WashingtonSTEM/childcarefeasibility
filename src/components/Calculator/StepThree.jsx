@@ -64,7 +64,13 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
   }
 
   const handleOnChange = ({ target }) => {
-    onDataChange?.(target.name, parseInt(target.value))
+    let value = parseInt(target.value)
+  
+    if (target.value === '') 
+    {
+      value = null
+    }
+    onDataChange?.(target.name, value)
   }
 
   return (
@@ -80,6 +86,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfInfants}
             onChange={handleOnChange}
           />
+          {data.numberOfInfants && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {data.numberOfInfants}
+                <br />
+                Estimated # of infants based on square footage
+              </>
+            </TextBox>
+          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfToddlers}>
           <Input
@@ -90,6 +105,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfToddlers}
             onChange={handleOnChange}
           />
+          {data.numberOfToddlers && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {data.numberOfToddlers}
+                <br />
+                Estimated # of toddlers based on square footage
+              </>
+            </TextBox>
+          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolers}>
           <Input
@@ -100,6 +124,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
           />
+          {data.numberOfPreschoolers && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {data.numberOfPreschoolers}
+                <br />
+                Estimated # of preschoolers based on square footage
+              </>
+            </TextBox>
+          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfSchoolAgeChildren}>
           <Input
@@ -110,6 +143,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
           />
+          {data.numberOfSchoolAgeChildren && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {data.numberOfSchoolAgeChildren}
+                <br />
+                Estimated # of school age children based on square footage
+              </>
+            </TextBox>
+          )}
         </FormGroup>
       </Row>
       <Row>
