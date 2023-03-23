@@ -90,7 +90,7 @@ const Input = ({ sufix, type, disabled, value, ...props }) => {
           inputmode={type}
           disabled={disabled}
           type={type}
-          value={value || ''}
+          value={value ?? ''}
           {...props}
         />
         { (!value || value === '') && <Text>{props.label}</Text> }

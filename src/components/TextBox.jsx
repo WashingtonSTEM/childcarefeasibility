@@ -7,7 +7,6 @@ const TextBox = styled.div`
   color: #F3F3F3;
   font-family: 'Roboto';
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   padding: 16px 10px;
   @media (max-width: 768px) {

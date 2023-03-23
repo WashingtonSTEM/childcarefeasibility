@@ -96,7 +96,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               value={data.collectionsRate}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of fee reveneu ultimately collected' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of fee reveneu ultimately collected.' />
           </div>
         </FormGroup>
       </Row>

@@ -33,7 +33,7 @@ const MEDIAN_OR_75TH_PERCENTILE_OPTIONS = optionsType.medianOr75thPercentile
   .map(mapToOptions)
 
 const TYPE_FACILITY_OPTIONS = [
-  { text: 'Licensed child care center', value: 'Licensed child care center' },
+  { text: 'Licensed child care center', value: 'Center-Based' },
   { text: 'Licensed in-home child care center', value: 'FCC' },
 ]
 
@@ -163,12 +163,22 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
           />
         </FormGroup>
         <FormGroup {...colMd4Lg3} error={errors.staffCompesantion}>
-          <Dropdown
-            label='Staff compensation'
-            options={STAFF_COST_OPTIONS}
-            value={data.staffCompesantion}
-            onChange={(value) => onDataChange('staffCompesantion', value)}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Dropdown
+              label='Staff compensation'
+              options={STAFF_COST_OPTIONS}
+              value={data.staffCompesantion}
+              onChange={(value) => onDataChange('staffCompesantion', value)}
+            />
+            <Tooltip
+              trigger={isMobile ? 'click' : 'hover'}
+              tooltipText={
+                <>
+                  &quot;Living Wage&quot; is defined by the <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu'>MIT Living Wage calculator.</a>
+                </>
+              }
+            />
+          </div>
         </FormGroup>
       </Row>
       <Row>

@@ -12,6 +12,7 @@ const PortalContainer = styled.div`
   right: 0;
   padding: inherit;
   box-sizing: border-box;
+  font-style: italic;
 `
 
 const Tooltip = ({ tooltipText, trigger, children }) => {

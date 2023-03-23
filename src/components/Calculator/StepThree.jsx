@@ -15,7 +15,7 @@ export const validationRules = {
   numberOfPreschoolers: [isRequired, minInt(0)],
   numberOfSchoolAgeChildren: [isRequired, minInt(0)],
   numberOfClassrooms: [isRequired, minInt(0)],
-  numberOfChildCaseWorkers: [isRequired, minInt(0)],
+  numberOfChildCareWorkers: [isRequired, minInt(0)],
   numberOfPreschoolTeachers: [isRequired, minInt(0)],
   numberOfChildCareAdministrators: [isRequired, minInt(0)],
 }
@@ -81,7 +81,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfInfants'
             type='number'
-            label='# of Infants'
+            label='# of infants'
             min={0}
             value={data.numberOfInfants}
             onChange={handleOnChange}
@@ -100,7 +100,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfToddlers'
             type='number'
-            label='# of Toddlers'
+            label='# of toddlers'
             min={0}
             value={data.numberOfToddlers}
             onChange={handleOnChange}
@@ -119,7 +119,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfPreschoolers'
             type='number'
-            label='# of Preschoolers'
+            label='# of preschoolers'
             min={0}
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
@@ -165,14 +165,14 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             onChange={handleOnChange}
           />
         </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfChildCaseWorkers}>
+        <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
             <Input
-              name='numberOfChildCaseWorkers'
+              name='numberOfChildCareWorkers'
               type='number'
               label='# of child care staff'
               min={0}
-              value={data.numberOfChildCaseWorkers}
+              value={data.numberOfChildCareWorkers}
               onChange={handleOnChange}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center aide, center assistant teacher, family home aide, family home assistant teacher, school-age child care assistant.' />

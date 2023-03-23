@@ -168,7 +168,7 @@ export const getExpectedSalary = (county, workerType, salaryType = 'Median') => 
     return null
   }
 
-  return salary[index] || null
+  return salary[index] / 12 || null
 }
 
 /*
@@ -179,6 +179,8 @@ export const getExpectedSalary = (county, workerType, salaryType = 'Median') => 
 )
 */
 export const getExpectedSalaryRevenuePerChild = (county, child, facilityType, median = true) => {
+  let index
+
   switch (child) {
   case 'Infant':
     index = 'infantCost'
@@ -203,7 +205,7 @@ export const getExpectedSalaryRevenuePerChild = (county, child, facilityType, me
       && c.fccOrCenterBased === facilityType
       && c.medianOr75thPercentile === (median ? 'Median' : '75th Percentile')
   })
-
+  
   if (!row) {
     return null
   }
@@ -241,10 +243,9 @@ export const getRegionByCounty = (county) => {
 export const getSubsidy = (county, child) => {
   const region = getRegionByCounty(county)
 
-  if (region) {
+  if (!region) {
     return null
   }
-
   const subsidyRates = require('../data/subsidy_rates.json')
 
   const row = subsidyRates.find((s) => s.region === region)

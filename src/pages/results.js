@@ -1,15 +1,21 @@
+import { useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 
 import Title from '@/components/Title'
 import Input from '@/components/Input'
-import TextBox from '@/components/TextBox'
 import Button from '@/components/Button'
 import Tooltip from '@/components/Tooltip'
 import FinalResults from '@/components/Calculator/FinalResults'
 import TotalBox from '@/components/Calculator/TotalBox'
 import useMediaQuery from '@/hooks/useMediaQuery'
+import useForm from '@/hooks/useForm'
+import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary } from '@/helpers/formulas'
+
+import { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
+import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
+import { validationRules as stepThreeRules } from '@/components/Calculator/StepThree'
 
 import styles from '@/styles/Calculator.module.css'
 
@@ -22,11 +28,95 @@ const Text = styled.span`
   color: #012846;
 `
 
+const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
+
 const ResultsPage = () => {
   const router = useRouter()
   const isMobile = useMediaQuery('(max-width: 768px)')
+  const { data, onDataChange, set: setData, validate } = useForm({})
+
+  useEffect(() => {
+    const data = {
+      ...router.query,
+    }
+
+    data.rentOrMortageCost = parseFloat(data.rentOrMortageCost)
+    data.percentageChildrenReceivingSubsidy = parseFloat(data.percentageChildrenReceivingSubsidy)
+    data.numberOfToddlers = parseInt(data.numberOfToddlers)
+    data.numberOfSchoolAgeChildren = parseInt(data.numberOfSchoolAgeChildren)
+    data.numberOfPreschoolers = parseInt(data.numberOfPreschoolers)
+    data.numberOfPreschoolTeachers = parseInt(data.numberOfPreschoolTeachers)
+    data.numberOfInfants = parseInt(data.numberOfInfants)
+    data.numberOfClassrooms = parseInt(data.numberOfClassrooms)
+    data.numberOfChildCaseWorkers = parseInt(data.numberOfChildCaseWorkers)
+    data.numberOfChildCareAdministrators = parseInt(data.numberOfChildCareAdministrators)
+    data.intendedFootage = parseFloat(data.intendedFootage)
+    data.collectionsRate = parseFloat(data.collectionsRate)
+    const isValid = validate(data, {
+      ...stepOneRules,
+      ...stepTwoRules,
+      ...stepThreeRules
+    })
+
+    if (!isValid) {
+      handleStartClick()
+    } else {
+      setData(data) 
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.query])
+
+  const expectedSalaryRevenue = useMemo(() => {
+    if (!data) {
+      return null
+    }
+    const infant = getExpectedSalaryRevenuePerChild(data.county, 'Infant', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const toddler = getExpectedSalaryRevenuePerChild(data.county, 'Toddler', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const preschool = getExpectedSalaryRevenuePerChild(data.county, 'Pre School', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const schoolAge = getExpectedSalaryRevenuePerChild(data.county, 'School Age', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+
+    return { infant, toddler, preschool, schoolAge }
+  }, [data])
+
+  const subsidy = useMemo(() => {
+    if (!data) {
+      return null
+    }
+    const infant = getSubsidy(data.county, 'infant') || 0
+    const toddler = getSubsidy(data.county, 'toddler') || 0
+    const preschool = getSubsidy(data.county, 'preschool') || 0
+    const schoolAge = getSubsidy(data.county, 'schoolAge') || 0
+
+    return { infant, toddler, preschool, schoolAge }
+  }, [data])
+
+  const expectedSalary = useMemo(() => {
+    if (!data) {
+      return null
+    }
+
+    const worker = getExpectedSalary(data.county, 'Child Care Worker', 'Median') || 0
+    const teacher = getExpectedSalary(data.county, 'Preschool Teacher', 'Median') || 0
+    const administrator = getExpectedSalary(data.county, 'Administrator', 'Median') || 0
+
+    return { worker, teacher, administrator }
+  }, [data])
 
   const handleStartClick = () => router.push('/')
+
+  const onInputChage = ({ target }) => {
+    let value = target.value
+
+    if (value === '') {
+      value = 0
+    }
+    
+    onDataChange(target.name, parseInt(value))
+  }
+
+  if (!data) {
+    return null
+  }
 
   return (
     <>
@@ -65,13 +155,19 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3} style={{ display: 'flex', alignItems: 'center' }}>
-              <Input />
+              <Input
+                name='numberOfInfants'
+                value={data.numberOfInfants}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalaryRevenue.infant)}</Text>
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(subsidy.infant)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
@@ -79,13 +175,19 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
-              <Input />
+              <Input
+                name='numberOfToddlers'
+                value={data.numberOfToddlers}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalaryRevenue.toddler)}</Text>
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(subsidy.toddler)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
@@ -93,13 +195,19 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
-              <Input />
+              <Input
+                name='numberOfPreschoolers'
+                value={data.numberOfPreschoolers}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalaryRevenue.preschool)}</Text>
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(subsidy.preschool)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
@@ -107,13 +215,19 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3} label='# of school-age children'>
-              <Input />
+              <Input
+                name='numberOfSchoolAgeChildren'
+                value={data.numberOfSchoolAgeChildren}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalaryRevenue.schoolAge)}</Text>
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(subsidy.schoolAge)}</Text>
             </Col>
           </Row>
           <div style={{ margin: '20px 0', display: 'inline-block' }} />
@@ -132,10 +246,16 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
-              <Input />
+              <Input
+                name='numberOfChildCareWorkers'
+                value={data.numberOfChildCareWorkers}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalary.worker)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
@@ -145,10 +265,16 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
-              <Input />
+              <Input
+                name='numberOfPreschoolTeachers'
+                value={data.numberOfPreschoolTeachers}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalary.teacher)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
@@ -158,10 +284,16 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
-              <Input />
+              <Input
+                name='numberOfChildCareAdministrators'
+                value={data.numberOfChildCareAdministrators}
+                onChange={onInputChage}
+                type='number'
+                min={0}
+              />
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>$ 0000</Text>
+              <Text>{moneyFormatter.format(expectedSalary.administrator)}</Text>
             </Col>
           </Row>
           <div style={{ margin: '40px 0', display: 'inline-block' }} />
@@ -206,8 +338,8 @@ const ResultsPage = () => {
               lg={6}
               style={{ marginBottom: 12 }}
             >
-              <Title style={{ margin: 0 }}>Thanks for using</Title>
-              <Title style={{ margin: 0, marginTop: 4, fontSize: 20 }}>the Child Care Business Feasibility Calculator</Title>
+              <Title style={{ margin: 0 }}>Thank you</Title>
+              <Title style={{ margin: 0, marginTop: 4, fontSize: 20 }}>for using the Child Care Business Feasibility Calculator</Title>
             </Col>
             <Col
               col={12}

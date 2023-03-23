@@ -28,7 +28,9 @@ const useForm = (defaultData = {}) => {
     setErrors({})
   }
 
-  return { data, onDataChange: handleOnChange, validate: validateData, errors, clean }
+  const set = (data) => setData({ ...data })
+
+  return { data, onDataChange: handleOnChange, validate: validateData, errors, clean, set }
 }
 
 export default useForm
