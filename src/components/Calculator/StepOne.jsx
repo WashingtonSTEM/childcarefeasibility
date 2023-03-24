@@ -71,7 +71,6 @@ export const validationRules = {
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
-  console.log(data)
   const maximumNumberOfInfantsSupported = useMemo(() => {
     const { typeOfFacility, intendedFootage } = data
 

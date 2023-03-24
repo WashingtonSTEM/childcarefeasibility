@@ -93,7 +93,7 @@ const Input = ({ sufix, type, disabled, value, ...props }) => {
           value={value ?? ''}
           {...props}
         />
-        { (!value || value === '') && <Text>{props.label}</Text> }
+        { (value === null || value === undefined || value === '') && <Text>{props.label}</Text> }
       </InputWraper>
       {sufix && <Text align="right" hideOnFocus style={{ marginLeft: 8 }}>{ sufix }</Text>}
     </Container>

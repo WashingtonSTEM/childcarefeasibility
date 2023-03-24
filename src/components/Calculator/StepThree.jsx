@@ -7,7 +7,13 @@ import Tooltip from '@/components/Tooltip'
 import FormGroup from '@/components/FormGroup'
 import Instructions from '@/components/Calculator/Instructions'
 import { isRequired, minInt } from '@/utils/validate'
-import { getEstimatedNumberOfChildCareAdministrators, getEstimatedNumberOfChildCareWorkers, getEstimatedNumberOfPreschoolTeachers } from '@/helpers/formulas'
+import {
+  getMaximumNumberOfInfantsSupported,
+  getMaximumNumberOfPreschoolers,
+  getEstimatedNumberOfChildCareAdministrators,
+  getEstimatedNumberOfChildCareWorkers,
+  getEstimatedNumberOfPreschoolTeachers
+} from '@/helpers/formulas'
 
 export const validationRules = {
   numberOfInfants: [isRequired, minInt(0)],
@@ -59,15 +65,34 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
     )
   }, [data, estimatedNumberOfChildCareAdministrators, estimatedNumberOfPreschoolTeachers])
 
+  const maximumNumberOfInfantsSupported = useMemo(() => {
+    const { typeOfFacility, intendedFootage } = data
+
+    if (!typeOfFacility || !intendedFootage) {
+      return null
+    }
+
+    return getMaximumNumberOfInfantsSupported(typeOfFacility, intendedFootage)
+  }, [data])
+
+  const maximumNumberOfPreschoolers = useMemo(() => {
+    const { typeOfFacility, intendedFootage } = data
+
+    if (!typeOfFacility || !intendedFootage) {
+      return null
+    }
+
+    return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
+  }, [data, maximumNumberOfInfantsSupported])
+
   if (!show) {
     return null
   }
 
   const handleOnChange = ({ target }) => {
     let value = parseInt(target.value)
-  
-    if (target.value === '') 
-    {
+
+    if (target.value === '') {
       value = null
     }
     onDataChange?.(target.name, value)
@@ -86,10 +111,10 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfInfants}
             onChange={handleOnChange}
           />
-          {data.numberOfInfants && (
+          {maximumNumberOfInfantsSupported && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {data.numberOfInfants}
+                {maximumNumberOfInfantsSupported}
                 <br />
                 Estimated # of infants based on square footage
               </>
@@ -105,10 +130,10 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfToddlers}
             onChange={handleOnChange}
           />
-          {data.numberOfToddlers && (
+          {maximumNumberOfInfantsSupported && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {data.numberOfToddlers}
+                {maximumNumberOfInfantsSupported}
                 <br />
                 Estimated # of toddlers based on square footage
               </>
@@ -124,10 +149,10 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
           />
-          {data.numberOfPreschoolers && (
+          {maximumNumberOfPreschoolers && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {data.numberOfPreschoolers}
+                {maximumNumberOfPreschoolers}
                 <br />
                 Estimated # of preschoolers based on square footage
               </>
@@ -143,10 +168,10 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
           />
-          {data.numberOfSchoolAgeChildren && (
+          {maximumNumberOfPreschoolers && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {data.numberOfSchoolAgeChildren}
+                {maximumNumberOfPreschoolers}
                 <br />
                 Estimated # of school age children based on square footage
               </>
