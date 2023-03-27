@@ -46,6 +46,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           <Input
             name='percentageBenefitsCost'
             type='number'
+            sufix='%'
             label='What % of salaries will your benefits cost?'
             disabled={!data.payBenefits}
             min={0}

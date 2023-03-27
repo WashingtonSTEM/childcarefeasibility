@@ -20,6 +20,13 @@ const Toggle = styled.button`
   text-align: left;
   padding: 0 10px;
   cursor: pointer;
+  span {
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: calc(100% - 18px);
+    white-space: nowrap;
+    overflow: hidden;
+  }
   &:after {
     content: '';
     position: absolute;
@@ -81,7 +88,9 @@ const Dropdown = ({ label, options, value, onChange, ...props }) => {
   return (
     <Container ref={containerRef} type={props.type} className="dropdown-control">
       <Toggle onClick={handleOnClick} show={show}>
-        {selectedOption || label}
+        <span>
+          {selectedOption || label}
+        </span>
       </Toggle>
       {props.type !== 'list' && show && (
         <Menu show={show}>

@@ -254,5 +254,11 @@ export const getSubsidy = (county, child) => {
     return null
   }
 
-  return (row[child] || 0) * 22 * 12
+  let multiplier = 20
+
+  if (child === 'infants') {
+    multiplier = 22
+  }
+
+  return (row[child] || 0) * multiplier
 }

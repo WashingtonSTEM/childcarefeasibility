@@ -55,7 +55,7 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
 }
 
 Tooltip.propTypes = {
-  tooltipText: PropTypes.string.isRequired,
+  tooltipText: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   boxWidth: PropTypes.number,
   trigger: PropTypes.oneOf(['hover', 'click']),
   position: PropTypes.oneOf(['left', 'right']),

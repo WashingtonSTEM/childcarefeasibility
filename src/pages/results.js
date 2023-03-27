@@ -82,12 +82,12 @@ const ResultsPage = () => {
     if (!data) {
       return null
     }
-    const infant = getSubsidy(data.county, 'infant') || 0
-    const toddler = getSubsidy(data.county, 'toddler') || 0
+    const infants = getSubsidy(data.county, 'infants') || 0
+    const toddlers = getSubsidy(data.county, 'toddlers') || 0
     const preschool = getSubsidy(data.county, 'preschool') || 0
     const schoolAge = getSubsidy(data.county, 'schoolAge') || 0
 
-    return { infant, toddler, preschool, schoolAge }
+    return { infants, toddlers, preschool, schoolAge }
   }, [data])
 
   const expectedSalary = useMemo(() => {
@@ -167,7 +167,7 @@ const ResultsPage = () => {
               <Text>{moneyFormatter.format(expectedSalaryRevenue.infant)}</Text>
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>{moneyFormatter.format(subsidy.infant)}</Text>
+              <Text>{moneyFormatter.format(subsidy.infants)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
@@ -187,7 +187,7 @@ const ResultsPage = () => {
               <Text>{moneyFormatter.format(expectedSalaryRevenue.toddler)}</Text>
             </Col>
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
-              <Text>{moneyFormatter.format(subsidy.toddler)}</Text>
+              <Text>{moneyFormatter.format(subsidy.toddlers)}</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
