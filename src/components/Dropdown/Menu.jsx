@@ -21,7 +21,6 @@ const Item = styled.a`
   display: block;
   color: #012846;
   cursor: pointer;
-  text-transform: capitalize;
   text-decoration: none;
   padding: 12px 10px;
   &:hover {

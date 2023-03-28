@@ -16,6 +16,9 @@ const Text = styled.span`
     text-transform: capitalize;
     color: #F3F3F3;
 `
+
+const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencySign: 'accounting' })
+
 const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
   if (mobile) {
     return (
@@ -35,10 +38,10 @@ const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
         </Row>
         <Row>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>$ {monthlyValue}</Text>
+            <Text style={{ color: 'white' }}>{moneyFormatter.format(monthlyValue || 0)}</Text>
           </Col>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>$ {annualValue}</Text>
+            <Text style={{ color: 'white' }}>{moneyFormatter.format(annualValue || 0)}</Text>
           </Col>
         </Row>
       </Box>
@@ -49,13 +52,13 @@ const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
     <Box {...props}>
       <Row style={{ padding: '30px 0' }}>
         <Col col={12} lg={6}>
-          <Text style={{ fontWeight: '600', color: 'white' }}>{label}</Text>
+          <Text style={{ fontWeight: '600', color: 'white' }}>{(label)}</Text>
         </Col>
         <Col col={4} lg={3} style={{ textAlign: 'center' }}>
-          <Text style={{ color: 'white' }}>$ {monthlyValue}</Text>
+          <Text style={{ color: 'white' }}>{moneyFormatter.format(monthlyValue || 0)}</Text>
         </Col>
         <Col col={4} lg={3} style={{ textAlign: 'center' }}>
-          <Text style={{ color: 'white' }}>$ {annualValue}</Text>
+          <Text style={{ color: 'white' }}>{moneyFormatter.format(annualValue || 0)}</Text>
         </Col>
       </Row>
     </Box>

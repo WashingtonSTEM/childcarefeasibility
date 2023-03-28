@@ -12,18 +12,24 @@ const PortalContainer = styled.div`
   right: 0;
   padding: inherit;
   box-sizing: border-box;
+  font-style: italic;
 `
+
+let timeout
 
 const Tooltip = ({ tooltipText, trigger, children }) => {
   const [show, setShow] = useState(false)
   const divRef = useRef()
 
   const handleOnMouseOver = () => {
+    clearTimeout(timeout)
     setShow(true)
   }
 
   const handleOnMouseLeve = () => {
-    setShow(false)
+    timeout = setTimeout(() => {
+      setShow(false)
+    }, 350)
   }
 
   const handleOnClick = () => {
@@ -38,8 +44,8 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
   })
 
   return (
-    <>
-      <div {...containerProps} style={{ fontStyle: 'italic' }}>
+    <div {...containerProps}>
+      <div style={{ fontStyle: 'italic' }}>
         <div ref={divRef}>
           {children || <InfoButton backgroundColor={show ? '#012846' : null} />}
         </div>
@@ -49,12 +55,12 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
           <TextBox>{tooltipText}</TextBox>
         </PortalContainer>
       )}
-    </>
+    </div>
   )
 }
 
 Tooltip.propTypes = {
-  tooltipText: PropTypes.string.isRequired,
+  tooltipText: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
   boxWidth: PropTypes.number,
   trigger: PropTypes.oneOf(['hover', 'click']),
   position: PropTypes.oneOf(['left', 'right']),

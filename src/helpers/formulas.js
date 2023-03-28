@@ -168,7 +168,7 @@ export const getExpectedSalary = (county, workerType, salaryType = 'Median') => 
     return null
   }
 
-  return salary[index] || null
+  return salary[index] / 12 || null
 }
 
 /*
@@ -179,6 +179,8 @@ export const getExpectedSalary = (county, workerType, salaryType = 'Median') => 
 )
 */
 export const getExpectedSalaryRevenuePerChild = (county, child, facilityType, median = true) => {
+  let index
+
   switch (child) {
   case 'Infant':
     index = 'infantCost'
@@ -241,10 +243,9 @@ export const getRegionByCounty = (county) => {
 export const getSubsidy = (county, child) => {
   const region = getRegionByCounty(county)
 
-  if (region) {
+  if (!region) {
     return null
   }
-
   const subsidyRates = require('../data/subsidy_rates.json')
 
   const row = subsidyRates.find((s) => s.region === region)
@@ -253,5 +254,37 @@ export const getSubsidy = (county, child) => {
     return null
   }
 
-  return (row[child] || 0) * 22 * 12
+  let multiplier = 20
+
+  if (child === 'infants') {
+    multiplier = 22
+  }
+
+  return (row[child] || 0) * multiplier
 }
+
+export const getExpectedFeeRevenue = (
+  numberOfInfants,
+  numberOfToddlers,
+  numberOfPreschoolers,
+  numberOfSchoolAgeChildren,
+  subsidyPerInfant,
+  subsidyPerToddler,
+  subsidyOfPreschoolers,
+  subsidyOfSchoolAgeChildren,
+  revenuePerInfant,
+  revenuePerToddler,
+  revenueOfPreschoolers,
+  revenueOfSchoolAgeChildren,
+  percentageChildrenReceivingSubsidy,
+  collectionsRate
+) => (
+  (numberOfInfants * percentageChildrenReceivingSubsidy * subsidyPerInfant) +
+  (numberOfToddlers * percentageChildrenReceivingSubsidy * subsidyPerToddler) +
+  (percentageChildrenReceivingSubsidy * numberOfPreschoolers * subsidyOfPreschoolers) +
+  (numberOfSchoolAgeChildren * percentageChildrenReceivingSubsidy * subsidyOfSchoolAgeChildren) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfInfants * revenuePerInfant) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfToddlers * revenuePerToddler) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfPreschoolers * revenueOfPreschoolers) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfSchoolAgeChildren * revenueOfSchoolAgeChildren)
+) * collectionsRate

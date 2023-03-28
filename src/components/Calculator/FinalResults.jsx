@@ -2,12 +2,12 @@ import { Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 
 const finalResultsFields = [
-  'Expected fee revenue',
-  'Expected salaries',
-  'Expected benefits',
-  'Rent/mortgage cost',
-  'Additional costs',
-  'Dollar amount',
+  { text: 'Expected fee revenue', value: 'expectedFeeRevenue' },
+  { text: 'Expected salaries', value: 'expectedSalaries' },
+  { text: 'Expected benefits', value: 'expectedBenefits' },
+  { text: 'Rent/mortgage cost', value: 'rentOrMortageCost' },
+  { text: 'Additional costs', value: 'additionalCost' },
+  { text: 'Dollar amount', value: 'dollarAmount' },
 ]
 
 const Text = styled.span`
@@ -18,7 +18,9 @@ const Text = styled.span`
   color: #534F4D;
 `
 
-const FinalResults = ({ mobile }) => {
+const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
+
+const FinalResults = ({ mobile, ...props }) => {
   if (mobile) {
     return (
       <>
@@ -29,25 +31,30 @@ const FinalResults = ({ mobile }) => {
         </Row>
         {finalResultsFields.map((field, index) => (
           <>
-            <Row key={`${field}-${index}`} style={{ padding: '28px 0 12px 0' }}>
+            <Row key={`${field.value}-${index}`} style={{ padding: '28px 0 12px 0' }}>
               <Col col={12}>
-                <Text>{field}</Text>
+                <Text>{field.text}</Text>
               </Col>
             </Row>
-            <Row key={`${field}-header-${index}`}>
+            <Row key={`${field.value}-header-${index}`}>
               <Col col={6}>
                 <Text style={{ fontWeight: 400, color: '#012846' }}>Monthly</Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>Annual</Text>
+                <Text style={{ fontWeight: 400, color: '#012846' }}>{field.value !== 'additionalCost' ? 'Annual' : ''}</Text>
               </Col>
             </Row>
-            <Row key={`${field}-result-${index}`} style={{ padding: '12px 0' }}>
+            <Row key={`${field.value}-result-${index}`} style={{ padding: `12px 0 ${index < 5 ? '12px' : '60px'} 0` }}>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
+                <Text style={{ fontWeight: 400, color: '#012846' }}>
+                  {field.value !== 'additionalCost' ?
+                    <>{moneyFormatter.format(props[field.value] || 0)}</>
+                    : <>{`${props[field.value]}%`}</>
+                  }
+                </Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
+                {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}
               </Col>
             </Row>
           </>
@@ -70,15 +77,20 @@ const FinalResults = ({ mobile }) => {
         </Col>
       </Row>
       {finalResultsFields.map((field, index) => (
-        <Row key={`${field}-${index}`} style={{ padding: '34px 0' }}>
+        <Row key={`${field.value}-${index}`} style={{ padding: '34px 0' }}>
           <Col md={4} lg={6}>
-            <Text style={{ fontWeight: 'bold' }}>{field}</Text>
+            <Text style={{ fontWeight: 'bold' }}>{field.text}</Text>
           </Col>
           <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            <Text>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
+            <Text>
+              {field.value !== 'additionalCost' ?
+                <>{moneyFormatter.format(props[field.value] || 0)}</>
+                : <>{`${props[field.value]}%`}</>
+              }
+            </Text>
           </Col>
           <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            <Text>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
+            {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}
           </Col>
         </Row>
       ))}
