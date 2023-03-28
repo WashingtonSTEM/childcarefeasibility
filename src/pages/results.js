@@ -33,7 +33,7 @@ const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', curre
 const ResultsPage = () => {
   const router = useRouter()
   const isMobile = useMediaQuery('(max-width: 768px)')
-  const { data, onDataChange, set: setData, validate } = useForm({})
+  const { data, onDataChange, set: setData, validate, errors } = useForm({})
 
   useEffect(() => {
     const data = {

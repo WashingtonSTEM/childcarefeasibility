@@ -15,7 +15,7 @@ export const validationRules = {
     }
 
     error = isRequired(key, value)
-    console.log(error)
+
     if (!error) {
       return minNumber(0)(key, value)
     }

@@ -111,7 +111,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfInfants}
             onChange={handleOnChange}
           />
-          {maximumNumberOfInfantsSupported && (
+          {maximumNumberOfInfantsSupported !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {maximumNumberOfInfantsSupported}
@@ -130,7 +130,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfToddlers}
             onChange={handleOnChange}
           />
-          {maximumNumberOfInfantsSupported && (
+          {maximumNumberOfInfantsSupported !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {maximumNumberOfInfantsSupported}
@@ -149,7 +149,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
           />
-          {maximumNumberOfPreschoolers && (
+          {maximumNumberOfPreschoolers !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {maximumNumberOfPreschoolers}
@@ -168,7 +168,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
           />
-          {maximumNumberOfPreschoolers && (
+          {maximumNumberOfPreschoolers !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {maximumNumberOfPreschoolers}

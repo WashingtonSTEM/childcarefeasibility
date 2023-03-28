@@ -73,7 +73,7 @@ const Page = () => {
     setStep(nextStep)
 
     if (nextStep > MAX_STEPS) {
-      router.push('/results')
+      handleSubmit()
     }
   }
 
