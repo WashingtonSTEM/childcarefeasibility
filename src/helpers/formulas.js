@@ -205,7 +205,7 @@ export const getExpectedSalaryRevenuePerChild = (county, child, facilityType, me
       && c.fccOrCenterBased === facilityType
       && c.medianOr75thPercentile === (median ? 'Median' : '75th Percentile')
   })
-  
+
   if (!row) {
     return null
   }
@@ -262,3 +262,29 @@ export const getSubsidy = (county, child) => {
 
   return (row[child] || 0) * multiplier
 }
+
+export const getExpectedFeeRevenue = (
+  numberOfInfants,
+  numberOfToddlers,
+  numberOfPreschoolers,
+  numberOfSchoolAgeChildren,
+  subsidyPerInfant,
+  subsidyPerToddler,
+  subsidyOfPreschoolers,
+  subsidyOfSchoolAgeChildren,
+  revenuePerInfant,
+  revenuePerToddler,
+  revenueOfPreschoolers,
+  revenueOfSchoolAgeChildren,
+  percentageChildrenReceivingSubsidy,
+  collectionsRate
+) => (
+  (numberOfInfants * percentageChildrenReceivingSubsidy * subsidyPerInfant) +
+  (numberOfToddlers * percentageChildrenReceivingSubsidy * subsidyPerToddler) +
+  (percentageChildrenReceivingSubsidy * numberOfPreschoolers * subsidyOfPreschoolers) +
+  (numberOfSchoolAgeChildren * percentageChildrenReceivingSubsidy * subsidyOfSchoolAgeChildren) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfInfants * revenuePerInfant) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfToddlers * revenuePerToddler) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfPreschoolers * revenueOfPreschoolers) +
+  ((1 - percentageChildrenReceivingSubsidy) * numberOfSchoolAgeChildren * revenueOfSchoolAgeChildren)
+) * collectionsRate

@@ -38,9 +38,9 @@ const TYPE_FACILITY_OPTIONS = [
 ]
 
 const STAFF_COST_OPTIONS = [
-  { text: 'Minimum wage', value: 'Minimum' },
-  { text: 'Median wage', value: 'Median' },
-  { text: 'Living wage', value: 'Living wage' }
+  { text: 'Minimum wage', value: 'Minimum Wage' },
+  { text: 'Median wage', value: 'Median Wage' },
+  { text: 'Living wage', value: 'Living Wage' }
 ]
 
 const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
@@ -50,11 +50,6 @@ const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
   { text: 'Level 3+', value: '3.5' },
   { text: 'Level 4', value: '4' },
   { text: 'Level 5', value: '5' },
-]
-
-const ADDITIONAL_COST_OPTIONS = [
-  { text: 'As a percent of all cost', value: 'As a percent of all cost' },
-  { text: 'Dollar amount', value: 'Dollar amount' }
 ]
 
 const colMd4Lg3 = { md: 4, lg: 3 }
@@ -67,7 +62,7 @@ export const validationRules = {
   earlyAchieversLevel: [isRequired],
   staffCompesantion: [isRequired],
   medianOr75thPercentile: [isRequired],
-  additinoalCost: [isRequired]
+  additionalCost: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
@@ -173,7 +168,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
               trigger={isMobile ? 'click' : 'hover'}
               tooltipText={
                 <>
-                  &quot;Living Wage&quot; is defined by the <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu'>MIT Living Wage calculator.</a>
+                  &quot;Living Wage&quot; is defined by the <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu' target='blank'>MIT Living Wage calculator.</a>
                 </>
               }
             />
@@ -181,13 +176,17 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         </FormGroup>
       </Row>
       <Row>
-        <FormGroup {...colMd4Lg3} error={errors.additinoalCost}>
+        <FormGroup {...colMd4Lg3} error={errors.additionalCost}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
-            <Dropdown
+            <Input
+              name='additionalCost'
+              type='number'
+              sufix='%'
               label='Additional costs'
-              options={ADDITIONAL_COST_OPTIONS}
-              value={data.additinoalCost}
-              onChange={(value) => onDataChange('additinoalCost', value)}
+              min={0}
+              max={100}
+              value={data.additionalCost}
+              onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Consider costs for curriculum, staff professional development, management and administration, and program enhancements, such as family conferences.' />
           </div>

@@ -6,7 +6,7 @@ import TextBox from '@/components/TextBox'
 import Tooltip from '@/components/Tooltip'
 import FormGroup from '@/components/FormGroup'
 import Instructions from '@/components/Calculator/Instructions'
-import { isRequired, minInt } from '@/utils/validate'
+import { isRequired, minInt, hasValue } from '@/utils/validate'
 import {
   getMaximumNumberOfInfantsSupported,
   getMaximumNumberOfPreschoolers,
@@ -50,7 +50,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
   const estimatedNumberOfChildCareWorkers = useMemo(() => {
     const { typeOfFacility, numberOfInfants, numberOfToddlers, numberOfPreschoolers, numberOfSchoolAgeChildren } = data
 
-    if (!typeOfFacility || !numberOfInfants || !numberOfToddlers || !numberOfPreschoolers || !numberOfSchoolAgeChildren) {
+    if (!typeOfFacility || !hasValue(numberOfInfants) || !hasValue(numberOfToddlers) || !hasValue(numberOfPreschoolers) || !hasValue(numberOfSchoolAgeChildren)) {
       return null
     }
 

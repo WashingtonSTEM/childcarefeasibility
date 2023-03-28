@@ -11,7 +11,7 @@ import FinalResults from '@/components/Calculator/FinalResults'
 import TotalBox from '@/components/Calculator/TotalBox'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import useForm from '@/hooks/useForm'
-import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary } from '@/helpers/formulas'
+import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary, getExpectedFeeRevenue } from '@/helpers/formulas'
 
 import { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
 import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
@@ -48,10 +48,12 @@ const ResultsPage = () => {
     data.numberOfPreschoolTeachers = parseInt(data.numberOfPreschoolTeachers)
     data.numberOfInfants = parseInt(data.numberOfInfants)
     data.numberOfClassrooms = parseInt(data.numberOfClassrooms)
-    data.numberOfChildCaseWorkers = parseInt(data.numberOfChildCaseWorkers)
+    data.numberOfChildCareWorkers = parseInt(data.numberOfChildCareWorkers)
     data.numberOfChildCareAdministrators = parseInt(data.numberOfChildCareAdministrators)
     data.intendedFootage = parseFloat(data.intendedFootage)
     data.collectionsRate = parseFloat(data.collectionsRate)
+    data.percentageBenefitsCost = parseFloat(data.percentageBenefitsCost)
+    data.additionalCost = parseFloat(data.additionalCost)
     const isValid = validate(data, {
       ...stepOneRules,
       ...stepTwoRules,
@@ -61,7 +63,7 @@ const ResultsPage = () => {
     if (!isValid) {
       handleStartClick()
     } else {
-      setData(data) 
+      setData(data)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query])
@@ -95,12 +97,41 @@ const ResultsPage = () => {
       return null
     }
 
-    const worker = getExpectedSalary(data.county, 'Child Care Worker', 'Median') || 0
-    const teacher = getExpectedSalary(data.county, 'Preschool Teacher', 'Median') || 0
-    const administrator = getExpectedSalary(data.county, 'Administrator', 'Median') || 0
+    const worker = getExpectedSalary(data.county, 'Child Care Worker', data.staffCompesantion) || 0
+    const teacher = getExpectedSalary(data.county, 'Preschool Teacher', data.staffCompesantion) || 0
+    const administrator = getExpectedSalary(data.county, 'Administrator', data.staffCompesantion) || 0
 
     return { worker, teacher, administrator }
   }, [data])
+
+  const expectedFeeRevenue = getExpectedFeeRevenue(
+    data.numberOfInfants,
+    data.numberOfToddlers,
+    data.numberOfPreschoolers,
+    data.numberOfSchoolAgeChildren,
+    subsidy.infants,
+    subsidy.toddlers,
+    subsidy.preschool,
+    subsidy.schoolAge,
+    expectedSalaryRevenue.infant,
+    expectedSalaryRevenue.toddler,
+    expectedSalaryRevenue.preschool,
+    expectedSalaryRevenue.schoolAge,
+    data.percentageChildrenReceivingSubsidy / 100,
+    data.collectionsRate / 100
+  )
+
+  const expectedSalaries = (data.numberOfChildCareWorkers * expectedSalary.worker) +
+    (data.numberOfPreschoolTeachers * expectedSalary.teacher) +
+    (data.numberOfChildCareAdministrators * expectedSalary.administrator)
+
+  const expectedBenefits = data.payBenefits === 'true' ? expectedSalaries * (data.percentageBenefitsCost / 100) : 0
+
+  const totalIncome = expectedFeeRevenue
+
+  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + ((data.additionalCost/100)*(expectedSalaries+expectedBenefits+data.rentOrMortageCost))
+
+  const netIncome = totalIncome - totalExpenses
 
   const handleStartClick = () => router.push('/')
 
@@ -110,7 +141,7 @@ const ResultsPage = () => {
     if (value === '') {
       value = 0
     }
-    
+
     onDataChange(target.name, parseInt(value))
   }
 
@@ -297,7 +328,15 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <div style={{ margin: '40px 0', display: 'inline-block' }} />
-          <FinalResults mobile={isMobile} />
+          <FinalResults
+            mobile={isMobile}
+            expectedFeeRevenue={expectedFeeRevenue}
+            expectedSalaries={expectedSalaries}
+            expectedBenefits={expectedBenefits}
+            rentOrMortageCost={data.rentOrMortageCost}
+            additionalCost={data.additionalCost}
+            dollarAmount={(data.additionalCost/100)*(expectedSalaries+expectedBenefits+data.rentOrMortageCost)}
+          />
           {!isMobile && (
             <Row style={{ margin: '60px 0 20px 0' }}>
               <Col offset={6} col={3} style={{ textAlign: 'center' }}>
@@ -314,21 +353,21 @@ const ResultsPage = () => {
           )}
           <TotalBox
             label='Total Income'
-            monthlyValue={0}
-            annualValue={0}
+            monthlyValue={totalIncome}
+            annualValue={totalIncome*12}
             mobile={isMobile}
           />
           <TotalBox
             label='Total Expenses'
-            monthlyValue={0}
-            annualValue={0}
+            monthlyValue={totalExpenses}
+            annualValue={totalExpenses*12}
             mobile={isMobile}
             style={{ margin: '12px 0' }}
           />
           <TotalBox
             label='Net Income'
-            monthlyValue={0}
-            annualValue={0}
+            monthlyValue={netIncome}
+            annualValue={netIncome*12}
             mobile={isMobile}
           />
           <Row style={{ display: 'flex', justifyContent: 'space-between', padding: '120px 0 60px 0' }}>
