@@ -41,15 +41,20 @@ const FinalResults = ({ mobile, ...props }) => {
                 <Text style={{ fontWeight: 400, color: '#012846' }}>Monthly</Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>Annual</Text>
+                <Text style={{ fontWeight: 400, color: '#012846' }}>{field.value !== 'additionalCost' ? 'Annual' : ''}</Text>
               </Col>
             </Row>
-            <Row key={`${field.value}-result-${index}`} style={{ padding: '12px 0' }}>
+            <Row key={`${field.value}-result-${index}`} style={{ padding: `12px 0 ${index < 5 ? '12px' : '60px'} 0` }}>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
+                <Text style={{ fontWeight: 400, color: '#012846' }}>
+                  {field.value !== 'additionalCost' ?
+                    <>{moneyFormatter.format(props[field.value] || 0)}</>
+                    : <>{`${props[field.value]}%`}</>
+                  }
+                </Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>{index < 5 && '$'} 0000 {index >= 5 && '%'}</Text>
+                {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}
               </Col>
             </Row>
           </>

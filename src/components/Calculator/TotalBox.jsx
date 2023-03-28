@@ -33,7 +33,7 @@ const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
             <Text style={{ color: 'white' }}>Monthly</Text>
           </Col>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>{Annual}</Text>
+            <Text style={{ color: 'white' }}>Annual</Text>
           </Col>
         </Row>
         <Row>
