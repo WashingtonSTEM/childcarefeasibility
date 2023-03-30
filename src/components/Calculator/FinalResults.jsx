@@ -1,6 +1,8 @@
 import { Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 
+import Input from '../Input'
+
 const finalResultsFields = [
   { text: 'Expected fee revenue', value: 'expectedFeeRevenue' },
   { text: 'Expected salaries', value: 'expectedSalaries' },
@@ -20,7 +22,7 @@ const Text = styled.span`
 
 const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 
-const FinalResults = ({ mobile, ...props }) => {
+const FinalResults = ({ mobile, onDataChange, ...props }) => {
   if (mobile) {
     return (
       <>
@@ -82,12 +84,21 @@ const FinalResults = ({ mobile, ...props }) => {
             <Text style={{ fontWeight: 'bold' }}>{field.text}</Text>
           </Col>
           <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            <Text>
-              {field.value !== 'additionalCost' ?
-                <>{moneyFormatter.format(props[field.value] || 0)}</>
-                : <>{`${props[field.value]}%`}</>
-              }
-            </Text>
+            {field.value !== 'additionalCost' ? (
+              <Text>{moneyFormatter.format(props[field.value] || 0)}</Text>
+            ) : (
+              <Input
+                name='additionalCost'
+                type='number'
+                sufix='%'
+                label='Additional costs'
+                min={0}
+                max={100}
+                value={props.additionalCost}
+                onChange={onDataChange}
+              />
+            )}
+
           </Col>
           <Col md={4} lg={3} style={{ textAlign: 'center' }}>
             {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}

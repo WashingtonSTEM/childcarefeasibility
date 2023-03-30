@@ -129,7 +129,7 @@ const ResultsPage = () => {
 
   const totalIncome = expectedFeeRevenue
 
-  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + ((data.additionalCost/100)*(expectedSalaries+expectedBenefits+data.rentOrMortageCost))
+  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + ((data.additionalCost / 100) * (expectedSalaries + expectedBenefits + data.rentOrMortageCost))
 
   const netIncome = totalIncome - totalExpenses
 
@@ -169,20 +169,23 @@ const ResultsPage = () => {
           <Row style={{ marginBottom: '1rem' }}>
             <Col col={4} lg={3}></Col>
             <Col col={4}>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
-                <Text>Revenue per child (monthly)</Text>
-                <Tooltip tooltipText='Expected monthly revenue per child' trigger={isMobile ? 'click' : 'hover'}><Text>?</Text></Tooltip>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Text style={{ fontWeight: 'bold' }}>Revenue per child (monthly)</Text>
+                <Tooltip tooltipText='Expected monthly revenue per child' trigger={isMobile ? 'click' : 'hover'} />
               </div>
             </Col>
             <Col col={4}>
-              <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
-                <Text>Subsidy</Text>
-                <Tooltip tooltipText='Working connections child care subsidy per month at 22 days per month' trigger={isMobile ? 'click' : 'hover'}><Text>?</Text></Tooltip>
+              <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <Text style={{ fontWeight: 'bold' }}>Subsidy per child (monthly)</Text>
+                <Tooltip
+                  trigger={isMobile ? 'click' : 'hover'}
+                  tooltipText="Working connections child care subsidy per month at 22 days per month"
+                />
               </div>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text style={{ fontWeight: 'bold' }}># of infants</Text></Col>
+            <Col col={12}><Text># of infants</Text></Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3} style={{ display: 'flex', alignItems: 'center' }}>
@@ -202,7 +205,7 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text style={{ fontWeight: 'bold' }}># of toddlers</Text></Col>
+            <Col col={12}><Text># of toddlers</Text></Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
@@ -222,7 +225,7 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text style={{ fontWeight: 'bold' }}># of preschoolers</Text></Col>
+            <Col col={12}><Text># of preschoolers</Text></Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
@@ -242,7 +245,7 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text style={{ fontWeight: 'bold' }}># of school-age children</Text></Col>
+            <Col col={12}><Text># of school-age children</Text></Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3} label='# of school-age children'>
@@ -263,16 +266,17 @@ const ResultsPage = () => {
           </Row>
           <div style={{ margin: '20px 0', display: 'inline-block' }} />
           <Row style={{ marginBottom: '1rem' }}>
-            <Col col={4} lg={3}>
-              <Text style={{ fontWeight: 'bold' }}></Text>
+            <Col col={4} lg={3} />
+            <Col col={4} >
+              <Text style={{ fontWeight: 'bold' }}>Expected monthly salary</Text>
             </Col>
-            <Col col={8} label=''>
-              <Text>Expected monthly salary</Text>
+            <Col col={4} >
+              <Text style={{ fontWeight: 'bold' }}>Expected annual salary</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
             <Col col={12}>
-              <Text style={{ fontWeight: 'bold' }}># of child care workers</Text>
+              <Text># of child care workers</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
@@ -288,10 +292,13 @@ const ResultsPage = () => {
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
               <Text>{moneyFormatter.format(expectedSalary.worker)}</Text>
             </Col>
+            <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
+              <Text>{moneyFormatter.format(expectedSalary.worker * 12)}</Text>
+            </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
             <Col col={12}>
-              <Text style={{ fontWeight: 'bold' }}># of preschool teachers</Text>
+              <Text># of preschool teachers</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
@@ -307,10 +314,13 @@ const ResultsPage = () => {
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
               <Text>{moneyFormatter.format(expectedSalary.teacher)}</Text>
             </Col>
+            <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
+              <Text>{moneyFormatter.format(expectedSalary.teacher * 12)}</Text>
+            </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
             <Col col={12}>
-              <Text style={{ fontWeight: 'bold' }}># of child care administrators</Text>
+              <Text># of child care administrators</Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
@@ -326,6 +336,9 @@ const ResultsPage = () => {
             <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
               <Text>{moneyFormatter.format(expectedSalary.administrator)}</Text>
             </Col>
+            <Col col={4} style={{ display: 'flex', alignItems: 'center' }}>
+              <Text>{moneyFormatter.format(expectedSalary.administrator * 12)}</Text>
+            </Col>
           </Row>
           <div style={{ margin: '40px 0', display: 'inline-block' }} />
           <FinalResults
@@ -335,7 +348,8 @@ const ResultsPage = () => {
             expectedBenefits={expectedBenefits}
             rentOrMortageCost={data.rentOrMortageCost}
             additionalCost={data.additionalCost}
-            dollarAmount={(data.additionalCost/100)*(expectedSalaries+expectedBenefits+data.rentOrMortageCost)}
+            dollarAmount={(data.additionalCost / 100) * (expectedSalaries + expectedBenefits + data.rentOrMortageCost)}
+            onDataChange={onInputChage}
           />
           {!isMobile && (
             <Row style={{ margin: '60px 0 20px 0' }}>
@@ -354,20 +368,20 @@ const ResultsPage = () => {
           <TotalBox
             label='Total Income'
             monthlyValue={totalIncome}
-            annualValue={totalIncome*12}
+            annualValue={totalIncome * 12}
             mobile={isMobile}
           />
           <TotalBox
             label='Total Expenses'
             monthlyValue={totalExpenses}
-            annualValue={totalExpenses*12}
+            annualValue={totalExpenses * 12}
             mobile={isMobile}
             style={{ margin: '12px 0' }}
           />
           <TotalBox
             label='Net Income'
             monthlyValue={netIncome}
-            annualValue={netIncome*12}
+            annualValue={netIncome * 12}
             mobile={isMobile}
           />
           <Row style={{ display: 'flex', justifyContent: 'space-between', padding: '120px 0 60px 0' }}>
