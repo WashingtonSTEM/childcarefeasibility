@@ -61,8 +61,7 @@ export const validationRules = {
   intendedFootage: [isRequired, minInt(1)],
   earlyAchieversLevel: [isRequired],
   staffCompesantion: [isRequired],
-  medianOr75thPercentile: [isRequired],
-  additionalCost: [isRequired]
+  medianOr75thPercentile: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
@@ -172,23 +171,6 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
                 </>
               }
             />
-          </div>
-        </FormGroup>
-      </Row>
-      <Row>
-        <FormGroup {...colMd4Lg3} error={errors.additionalCost}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
-            <Input
-              name='additionalCost'
-              type='number'
-              sufix='%'
-              label='Additional costs'
-              min={0}
-              max={100}
-              value={data.additionalCost}
-              onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Consider costs for curriculum, staff professional development, management and administration, and program enhancements, such as family conferences.' />
           </div>
         </FormGroup>
       </Row>
