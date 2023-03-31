@@ -69,7 +69,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               value={data.percentageChildrenReceivingSubsidy}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percent of students receiving the Working Connections Child Care Subsidy.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of students receiving the Working Connections Child Care Subsidy.' />
           </div>
         </FormGroup>
       </Row>
@@ -97,7 +97,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               value={data.collectionsRate}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of fee reveneu ultimately collected.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of fee revenue ultimately collected.' />
           </div>
         </FormGroup>
       </Row>

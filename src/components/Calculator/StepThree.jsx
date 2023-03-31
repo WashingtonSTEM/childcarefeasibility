@@ -33,7 +33,7 @@ const Text = styled.span`
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: #948A85;
+  font-size: 14px;
   margin: 18px 0;
 `
 
@@ -192,14 +192,17 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       </Row>
       <Row>
         <FormGroup lg={3} error={errors.numberOfClassrooms}>
-          <Input
-            name='numberOfClassrooms'
-            type='number'
-            label='# of classrooms'
-            min={0}
-            value={data.numberOfClassrooms}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Input
+              name='numberOfClassrooms'
+              type='number'
+              label='# of classrooms'
+              min={0}
+              value={data.numberOfClassrooms}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='' />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>

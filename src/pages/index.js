@@ -23,8 +23,6 @@ const Text = styled.div`
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 14px;
   color: #012846;
   margin: 6px 0;
 `
@@ -112,7 +110,6 @@ const Page = () => {
                   care business idea.' />
                 ) : (
                   <>
-                    <Text>Welcome</Text>
                     <Text style={{ maxWidth: 620 }}>
                       Welcome to the child care feasibility
                       calculator. Starting or expanding a child

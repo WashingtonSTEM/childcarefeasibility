@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import styled from 'styled-components'
 import { Row } from 'styled-bootstrap-grid'
 
 import Dropdown from '@/components/Dropdown'
@@ -9,6 +10,17 @@ import Tooltip from '@/components/Tooltip'
 import costData from '@/data/cost_data.json'
 import { isRequired, minInt } from '@/utils/validate'
 import { getMaximumNumberOfInfantsSupported, getMaximumNumberOfPreschoolers } from '@/helpers/formulas'
+
+const Text = styled.span`
+  display: block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 0 15px 18px;
+`
 
 const optionsType = costData
   .reduce((prev, { county, medianOr75thPercentile }) => {
@@ -92,6 +104,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
   return (
     <>
       <Row>
+        <Text>Please fill out each fill to the best of your knowledge. Blue fields provider recommendations primarily based on state law. Orange icons provide additional information.</Text>
         <FormGroup {...colMd4Lg3} error={errors.county}>
           <Dropdown
             label='County'
@@ -110,29 +123,25 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
           />
         </FormGroup>
         <FormGroup {...colMd4Lg6} error={errors.intendedFootage}>
-          <Input
-            name='intendedFootage'
-            type='number'
-            label='Square footage intended for children'
-            min={0}
-            value={data.intendedFootage}
-            onChange={({ target }) => onDataChange(target.name, parseInt(target.value))}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Input
+              name='intendedFootage'
+              type='number'
+              label='Square footage intended for children'
+              min={0}
+              value={data.intendedFootage}
+              onChange={({ target }) => onDataChange(target.name, parseInt(target.value))}
+            />
+            <Tooltip
+              trigger={isMobile ? 'click' : 'hover'}
+              tooltipText="For infant/toddlers at least 50 sq. ft. per child required by law. For preschoolers/school age, must have 35 sq. ft. per child required by law."
+            />
+          </div>
           {maximumNumberOfInfantsSupported !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                ** {maximumNumberOfInfantsSupported}
-                <br />
-                Maximum # of infant/toddlers supported (must have at least 50 sq. ft. per child)
-              </>
-            </TextBox>
-          )}
-          {maximumNumberOfPreschoolers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                ** {maximumNumberOfPreschoolers}
-                <br />
-                Maximum # of preschoolers/school age supported (must have at least 35 sq. ft. per child)
+                {maximumNumberOfInfantsSupported} is the maximum # of infant/toddlers supported.
+                { data.typeOfFacility === 'FCC' ? ' And' : ' Or,' } {maximumNumberOfPreschoolers} is the maximum # of preschoolers/school age supported.
               </>
             </TextBox>
           )}
@@ -167,7 +176,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
               trigger={isMobile ? 'click' : 'hover'}
               tooltipText={
                 <>
-                  &quot;Living Wage&quot; is defined by the <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu' target='blank'>MIT Living Wage calculator.</a>
+                  &quot;Living Wage&quot; is two adults (one working), with one child, as defined by <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu' target='blank'>MIT Living Wage calculator.</a>
                 </>
               }
             />

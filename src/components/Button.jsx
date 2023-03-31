@@ -14,9 +14,10 @@ const Button = styled.button.attrs(props => ({
   color: ${props => props.variant === 'primary' ? '#F4F4F4' : '#DF6020'};
   text-transform: uppercase;
   font-family: 'Freight';
-  font-weight: 300;
+  font-weight: normal;
   font-style: normal;
   text-align: ${props => props.textAlign};
+  font-size: 14px;
   cursor: pointer;
   &:hover:not([disabled]) {
     background: #FC864A;
