@@ -1,11 +1,11 @@
 import { useMemo } from 'react'
 import { Row } from 'styled-bootstrap-grid'
+import styled from 'styled-components'
 
 import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
 import Tooltip from '@/components/Tooltip'
 import FormGroup from '@/components/FormGroup'
-import Instructions from '@/components/Calculator/Instructions'
 import { isRequired, minInt, hasValue } from '@/utils/validate'
 import {
   getMaximumNumberOfInfantsSupported,
@@ -25,6 +25,17 @@ export const validationRules = {
   numberOfPreschoolTeachers: [isRequired, minInt(0)],
   numberOfChildCareAdministrators: [isRequired, minInt(0)],
 }
+
+const Text = styled.span`
+  display: block;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  margin: 18px 0;
+`
 
 const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
   const estimatedNumberOfChildCareAdministrators = useMemo(() => {
@@ -100,7 +111,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
-      <Instructions text='Enter below how many children, classrooms, and staff you plan to have in your program. Remember staffing ratio requirements for each age group when you enter the number of staff you intend to hire.' />
+      <Text>Instructions: Enter below how many children, classrooms, and staff you plan to have in your program. Remember staffing ratio requirements for each age group when you enter the number of staff you intend to hire.</Text>
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
           <Input
@@ -181,14 +192,17 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       </Row>
       <Row>
         <FormGroup lg={3} error={errors.numberOfClassrooms}>
-          <Input
-            name='numberOfClassrooms'
-            type='number'
-            label='# of classrooms'
-            min={0}
-            value={data.numberOfClassrooms}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+            <Input
+              name='numberOfClassrooms'
+              type='number'
+              label='# of classrooms'
+              min={0}
+              value={data.numberOfClassrooms}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='' />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
