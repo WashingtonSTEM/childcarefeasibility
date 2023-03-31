@@ -176,7 +176,7 @@ const ResultsPage = () => {
             </Col>
             <Col col={4}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={{ fontWeight: 'bold' }}>Subsidy per child (monthly)</Text>
+                <Text style={{ fontWeight: 'bold' }}>Subsidy rate per child (monthly)</Text>
                 <Tooltip
                   trigger={isMobile ? 'click' : 'hover'}
                   tooltipText="Working connections child care subsidy per month at 22 days per month"
@@ -354,12 +354,12 @@ const ResultsPage = () => {
           {!isMobile && (
             <Row style={{ margin: '60px 0 20px 0' }}>
               <Col offset={6} col={3} style={{ textAlign: 'center' }}>
-                <Text style={{ fontSize: 16 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
                   Monthly
                 </Text>
               </Col>
               <Col col={3} style={{ textAlign: 'center' }}>
-                <Text style={{ fontSize: 16 }}>
+                <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
                   Annual
                 </Text>
               </Col>
@@ -400,7 +400,7 @@ const ResultsPage = () => {
               lg={6}
               style={{ display: 'flex', justifyContent: 'flex-end' }}
             >
-              <Button textAlign='center' onClick={handleStartClick}>
+              <Button textAlign='center' onClick={handleStartClick} style={{ fontSize: 16 }}>
                 Start again
               </Button>
             </Col>

@@ -8,8 +8,8 @@ const finalResultsFields = [
   { text: 'Expected salaries', value: 'expectedSalaries' },
   { text: 'Expected benefits', value: 'expectedBenefits' },
   { text: 'Rent/mortgage cost', value: 'rentOrMortageCost' },
-  { text: 'Additional costs', value: 'additionalCost' },
-  { text: 'Dollar amount', value: 'dollarAmount' },
+  { text: 'Additional costs as a percentage of all other costs', value: 'additionalCost' },
+  { text: 'Dollar amount of additional costs', value: 'dollarAmount' },
 ]
 
 const Text = styled.span`
@@ -40,15 +40,15 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
             </Row>
             <Row key={`${field.value}-header-${index}`}>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>Monthly</Text>
+                <Text style={{ fontWeight: 'bold' }}>Monthly</Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>{field.value !== 'additionalCost' ? 'Annual' : ''}</Text>
+                <Text style={{ fontWeight: 'bold' }}>{field.value !== 'additionalCost' ? 'Annual' : ''}</Text>
               </Col>
             </Row>
             <Row key={`${field.value}-result-${index}`} style={{ padding: `12px 0 ${index < 5 ? '12px' : '60px'} 0` }}>
               <Col col={6}>
-                <Text style={{ fontWeight: 400, color: '#012846' }}>
+                <Text style={{ fontWeight: '400' }}>
                   {field.value !== 'additionalCost' ?
                     <>{moneyFormatter.format(props[field.value] || 0)}</>
                     : <>{`${props[field.value]}%`}</>
