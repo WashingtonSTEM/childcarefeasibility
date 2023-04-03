@@ -102,8 +102,7 @@ const Page = () => {
               <Col xs lg="8">
                 <Title>Child Care Business Feasibility Calculator</Title>
                 {isMobile ? (
-                  <Instructions text='Welcome to the child care feasibility
-                  calculator. Starting or expanding a child
+                  <Instructions text='Starting or expanding a child
                   care business can be a challenging
                   process. This tool is designed to help
                   you determine the feasibility of your child
@@ -111,8 +110,7 @@ const Page = () => {
                 ) : (
                   <>
                     <Text style={{ maxWidth: 620 }}>
-                      Welcome to the child care feasibility
-                      calculator. Starting or expanding a child
+                      Starting or expanding a child
                       care business can be a challenging
                       process. This tool is designed to help
                       you determine the feasibility of your child
