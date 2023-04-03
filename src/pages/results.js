@@ -391,7 +391,7 @@ const ResultsPage = () => {
               lg={6}
               style={{ marginBottom: 12 }}
             >
-              <Title style={{ margin: 0 }}>Thank you,</Title>
+              <Title style={{ margin: 0 }}>Thank you</Title>
               <Title style={{ margin: 0, marginTop: 4, fontSize: 20 }}>for using the Child Care Business Feasibility Calculator</Title>
             </Col>
             <Col
