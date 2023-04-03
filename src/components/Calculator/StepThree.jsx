@@ -201,7 +201,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfClassrooms}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='In child care centers, each age group must have its own classroom.  In family-home child care, ages may be combined in one or more classroom areas.' />
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>

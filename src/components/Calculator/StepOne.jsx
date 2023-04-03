@@ -50,7 +50,6 @@ const TYPE_FACILITY_OPTIONS = [
 ]
 
 const STAFF_COST_OPTIONS = [
-  { text: 'Minimum wage', value: 'Minimum Wage' },
   { text: 'Median wage', value: 'Median Wage' },
   { text: 'Living wage', value: 'Living Wage' }
 ]
@@ -176,9 +175,16 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             <Tooltip
               trigger={isMobile ? 'click' : 'hover'}
               tooltipText={
-                <>
-                  &quot;Living Wage&quot; is two adults (one working), with one child, as defined by <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu' target='blank'>MIT Living Wage calculator.</a>
-                </>
+                data.staffCompesantion === 'Living Wage' ?
+                  (
+                    <>
+                      &quot;Living Wage&quot; is two adults (one working), with one child, as defined by <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu' target='blank'>MIT Living Wage calculator.</a>
+                    </>
+                  ) : (
+                    <>
+                      &quot;Median Wage&quot; as defined by WA Employment Security Department per child care staff in each county
+                    </>
+                  )
               }
             />
           </div>
