@@ -161,7 +161,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
                 { intl.formatMessage({ id: 'S1_FOOTAGE_RECOMENDATION' }, {
                   maximumNumberOfInfantsSupported,
                   maximumNumberOfPreschoolers,
-                  and_or: data.typeOfFacility === 'FCC' ? ' And' : ' Or,'
+                  and_or: data.typeOfFacility === 'FCC' ? ` ${ intl.formatMessage({ id: 'S1_AND' }) }` : ` ${ intl.formatMessage({ id: 'S1_OR' }) },`
                 }) }
               </>
             </TextBox>
