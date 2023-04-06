@@ -1,4 +1,5 @@
 import { Row } from 'styled-bootstrap-grid'
+import { useIntl } from 'react-intl'
 
 import Input from '@/components/Input'
 import Toggle from '@/components/Toggle'
@@ -28,6 +29,8 @@ export const validationRules = {
 }
 
 const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
+  const intl = useIntl()
+
   if (!show) {
     return null
   }
@@ -40,14 +43,14 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
     <>
       <Row>
         <FormGroup lg={4}>
-          <Toggle label='Do you plan to pay benefits?' checked={!!data.payBenefits} onChange={({ target }) => onDataChange?.('payBenefits', target.checked)} />
+          <Toggle label={ intl.formatMessage({ id: 'S2_PAY_BENEFITS' }) } checked={!!data.payBenefits} onChange={({ target }) => onDataChange?.('payBenefits', target.checked)} />
         </FormGroup>
         <FormGroup lg={8} error={errors.percentageBenefitsCost}>
           <Input
             name='percentageBenefitsCost'
             type='number'
             sufix='%'
-            label='What % of salaries will your benefits cost?'
+            label={ intl.formatMessage({ id: 'S2_BENEFITS_COST' }) }
             disabled={!data.payBenefits}
             min={0}
             max={100}
@@ -63,13 +66,13 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               name='percentageChildrenReceivingSubsidy'
               type='number'
               sufix='%'
-              label='Percentage of subsidy students'
+              label={ intl.formatMessage({ id: 'S2_SUBSIDY' }) }
               min={0}
               max={100}
               value={data.percentageChildrenReceivingSubsidy}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of students receiving the Working Connections Child Care Subsidy.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={ intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' }) } />
           </div>
         </FormGroup>
       </Row>
@@ -79,7 +82,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             name='rentOrMortageCost'
             type='number'
             sufix='$'
-            label='Monthly rent/mortgage cost, if known'
+            label={ intl.formatMessage({ id: 'S2_RENT_COST' }) }
             min={0}
             value={data.rentOrMortageCost}
             onChange={handleInputChange}
@@ -91,13 +94,13 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               name='collectionsRate'
               type='number'
               sufix='%'
-              label='Collections rate'
+              label={ intl.formatMessage({ id: 'S2_COLLECTIONS_RATE' }) }
               min={0}
               max={100}
               value={data.collectionsRate}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Percentage of fee revenue ultimately collected.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={ intl.formatMessage({ id: 'S2_COLLECTIONS_RATE_TOOLTIP' }) } />
           </div>
         </FormGroup>
       </Row>

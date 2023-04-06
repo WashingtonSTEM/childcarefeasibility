@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
+import { useIntl } from 'react-intl'
 
 import Title from '@/components/Title'
 import Button from '@/components/Button'
@@ -34,6 +35,7 @@ const validationRules = {
 }
 
 const Page = () => {
+  const intl = useIntl()
   const router = useRouter()
   const { data, onDataChange, validate, errors, clean } = useForm({})
   const isMobile = useMediaQuery('(max-width: 768px)')
@@ -100,21 +102,13 @@ const Page = () => {
           <Container style={{ padding: '0 30px' }}>
             <Row className="justify-content-md-center">
               <Col xs lg="8">
-                <Title>Child Care Business Feasibility Calculator</Title>
+                <Title>{ intl.formatMessage({ id: 'TITLE' }) }</Title>
                 {isMobile ? (
-                  <Instructions text='Starting or expanding a child
-                  care business can be a challenging
-                  process. This tool is designed to help
-                  you determine the feasibility of your child
-                  care business idea.' />
+                  <Instructions text={ intl.formatMessage({ id: 'INTRODUCTION' }) } />
                 ) : (
                   <>
                     <Text style={{ maxWidth: 620 }}>
-                      Starting or expanding a child
-                      care business can be a challenging
-                      process. This tool is designed to help
-                      you determine the feasibility of your child
-                      care business idea.
+                      { intl.formatMessage({ id: 'INTRODUCTION' }) }
                     </Text>
                   </>
                 )}
@@ -151,8 +145,12 @@ const Page = () => {
           />
           {!isMobile ? (
             <div style={{ marginTop: 100, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
-              <Button type='button' variant='secondary' onClick={clean}>Cancel</Button>
-              <Button type='button' textAlign='center' onClick={handleSubmit}>View Results</Button>
+              <Button type='button' variant='secondary' onClick={clean}>
+                { intl.formatMessage({ id: 'CANCEL' }) }
+              </Button>
+              <Button type='button' textAlign='center' onClick={handleSubmit}>
+                { intl.formatMessage({ id: 'VIEW_RESULTS' }) }
+              </Button>
             </div>
           ) : (
             <div style={{ marginTop: 25, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
