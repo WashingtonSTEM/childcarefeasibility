@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { Row } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
@@ -38,6 +39,8 @@ const Text = styled.span`
 `
 
 const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
+  const intl = useIntl()
+
   const estimatedNumberOfChildCareAdministrators = useMemo(() => {
     const { typeOfFacility } = data
 
@@ -111,13 +114,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
-      <Text>Instructions: Enter below how many children, classrooms, and staff you plan to have in your program. Remember staffing ratio requirements for each age group when you enter the number of staff you intend to hire.</Text>
+      <Text>
+        <FormattedMessage id="S3_INSTRUCTIONS" />
+      </Text>
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
           <Input
             name='numberOfInfants'
             type='number'
-            label='# of infants'
+            label={intl.formatMessage({ 'id': 'S3_#_INFANTS' })}
             min={0}
             value={data.numberOfInfants}
             onChange={handleOnChange}
@@ -127,7 +132,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               <>
                 {maximumNumberOfInfantsSupported}
                 <br />
-                Estimated # of infants based on square footage
+                <FormattedMessage id='S3_#_INFANTS_RECOMENDATION' />
               </>
             </TextBox>
           )}
@@ -136,7 +141,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfToddlers'
             type='number'
-            label='# of toddlers'
+            label={intl.formatMessage({ 'id': 'S3_#_TODDLERS' })}
             min={0}
             value={data.numberOfToddlers}
             onChange={handleOnChange}
@@ -146,7 +151,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               <>
                 {maximumNumberOfInfantsSupported}
                 <br />
-                Estimated # of toddlers based on square footage
+                <FormattedMessage id='S3_#_TODDLERS_RECOMENDATION' />
               </>
             </TextBox>
           )}
@@ -155,7 +160,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfPreschoolers'
             type='number'
-            label='# of preschoolers'
+            label={intl.formatMessage({ 'id': 'S3_#_PRESCHOOLERS' })}
             min={0}
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
@@ -165,7 +170,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               <>
                 {maximumNumberOfPreschoolers}
                 <br />
-                Estimated # of preschoolers based on square footage
+                <FormattedMessage id='S3_#_PRESCHOOLERS_RECOMENDATION' />
               </>
             </TextBox>
           )}
@@ -174,7 +179,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           <Input
             name='numberOfSchoolAgeChildren'
             type='number'
-            label='# of school-age children'
+            label={intl.formatMessage({ 'id': 'S3_#_SAC' })}
             min={0}
             value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
@@ -184,7 +189,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               <>
                 {maximumNumberOfPreschoolers}
                 <br />
-                Estimated # of school age children based on square footage
+                <FormattedMessage id='S3_#_SAC_RECOMENDATION' />
               </>
             </TextBox>
           )}
@@ -196,12 +201,12 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='numberOfClassrooms'
               type='number'
-              label='# of classrooms'
+              label={intl.formatMessage({ id: 'S3_#_CLASSROOMS' })}
               min={0}
               value={data.numberOfClassrooms}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='In child care centers, each age group must have its own classroom.  In family-home child care, ages may be combined in one or more classroom areas.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CLASSROOMS_TOOLTIP' })} />
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
@@ -209,19 +214,19 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='numberOfChildCareWorkers'
               type='number'
-              label='# of child care staff'
+              label={intl.formatMessage({ id: 'S3_#_CCS' })}
               min={0}
               value={data.numberOfChildCareWorkers}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center aide, center assistant teacher, family home aide, family home assistant teacher, school-age child care assistant.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCS_TOOLTIP' })} />
           </div>
           {estimatedNumberOfChildCareWorkers !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {estimatedNumberOfChildCareWorkers}
                 <br />
-                Estimated # of child care staff
+                <FormattedMessage id='S3_#_CCS_RECOMENDATION' />
               </>
             </TextBox>
           )}
@@ -231,19 +236,19 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='numberOfPreschoolTeachers'
               type='number'
-              label='# of preschool teachers'
+              label={intl.formatMessage({ id: 'S3_#_PST' })}
               min={0}
               value={data.numberOfPreschoolTeachers}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center lead teacher, family home lead teacher, school-age lead staff or group leader.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PST_TOOLTIP' })} />
           </div>
           {estimatedNumberOfPreschoolTeachers !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {estimatedNumberOfPreschoolTeachers}
                 <br />
-                Estimated # of preschool teachers
+                <FormattedMessage id='S3_#_PST_RECOMENDATION' />
               </>
             </TextBox>
           )}
@@ -253,19 +258,19 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='numberOfChildCareAdministrators'
               type='number'
-              label='# of child care administrators'
+              label={intl.formatMessage({ id: 'S3_#_CCA' })}
               min={0}
               value={data.numberOfChildCareAdministrators}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='This could include center program supervisor, center director, family home owner, school-age assistant director, school-age program director, school-age site coordinator.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCA_TOOLTIP' })} />
           </div>
           {estimatedNumberOfChildCareAdministrators !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {estimatedNumberOfChildCareAdministrators}
                 <br />
-                Estimated # of child care administrators (center director of family child care owner)
+                <FormattedMessage id='S3_#_CCA_RECOMENDATION' />
               </>
             </TextBox>
           )}

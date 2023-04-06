@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import Title from '@/components/Title'
 import Input from '@/components/Input'
@@ -32,6 +33,7 @@ const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', curre
 
 const ResultsPage = () => {
   const router = useRouter()
+  const intl = useIntl()
   const isMobile = useMediaQuery('(max-width: 768px)')
   const { data, onDataChange, set: setData, validate, errors } = useForm({})
 
@@ -158,7 +160,9 @@ const ResultsPage = () => {
           <Container style={{ padding: '0 30px' }}>
             <Row className="justify-content-md-center">
               <Col xs lg="8">
-                <Title>Results</Title>
+                <Title>
+                  <FormattedMessage id="RESULTS_TITLE" />
+                </Title>
               </Col>
             </Row>
           </Container>
@@ -170,22 +174,30 @@ const ResultsPage = () => {
             <Col col={4} lg={3}></Col>
             <Col col={4}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={{ fontWeight: 'bold' }}>Revenue per child (monthly)</Text>
-                <Tooltip tooltipText='Expected monthly revenue per child' trigger={isMobile ? 'click' : 'hover'} />
+                <Text style={{ fontWeight: 'bold' }}>
+                  <FormattedMessage id="R_RPC" />
+                </Text>
+                <Tooltip tooltipText={intl.formatMessage({ id: 'R_RPC_TOOLTIP' })} trigger={isMobile ? 'click' : 'hover'} />
               </div>
             </Col>
             <Col col={4}>
               <div style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Text style={{ fontWeight: 'bold' }}>Subsidy rate per child (monthly)</Text>
+                <Text style={{ fontWeight: 'bold' }}>
+                  <FormattedMessage id="R_SRPC" />
+                </Text>
                 <Tooltip
                   trigger={isMobile ? 'click' : 'hover'}
-                  tooltipText="Working connections child care subsidy per month at 22 days per month"
+                  tooltipText={intl.formatMessage({ id: 'R_SRPC_TOOLTIP' })}
                 />
               </div>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text># of infants</Text></Col>
+            <Col col={12}>
+              <Text>
+                <FormattedMessage id="S3_#_INFANTS" />
+              </Text>
+            </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3} style={{ display: 'flex', alignItems: 'center' }}>
@@ -205,7 +217,11 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text># of toddlers</Text></Col>
+            <Col col={12}>
+              <Text>
+                <FormattedMessage id="S3_#_TODDLERS" />
+              </Text>
+            </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
@@ -225,7 +241,11 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text># of preschoolers</Text></Col>
+            <Col col={12}>
+              <Text>
+                <FormattedMessage id="S3_#_PRESCHOOLERS" />
+              </Text>
+            </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3}>
@@ -245,7 +265,11 @@ const ResultsPage = () => {
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
-            <Col col={12}><Text># of school-age children</Text></Col>
+            <Col col={12}>
+              <Text>
+                <FormattedMessage id="S3_#_SAC" />
+              </Text>
+            </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
             <Col col={4} lg={3} label='# of school-age children'>
@@ -268,15 +292,21 @@ const ResultsPage = () => {
           <Row style={{ marginBottom: '1rem' }}>
             <Col col={4} lg={3} />
             <Col col={4} >
-              <Text style={{ fontWeight: 'bold' }}>Expected monthly salary</Text>
+              <Text style={{ fontWeight: 'bold' }}>
+                <FormattedMessage id="R_EMS" />
+              </Text>
             </Col>
             <Col col={4} >
-              <Text style={{ fontWeight: 'bold' }}>Expected annual salary</Text>
+              <Text style={{ fontWeight: 'bold' }}>
+                <FormattedMessage id="R_EAS" />
+              </Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
             <Col col={12}>
-              <Text># of child care workers</Text>
+              <Text>
+                <FormattedMessage id="S3_#_CCS" />
+              </Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
@@ -298,7 +328,9 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
             <Col col={12}>
-              <Text># of preschool teachers</Text>
+              <Text>
+                <FormattedMessage id="S3_#_PST" />
+              </Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
@@ -320,7 +352,9 @@ const ResultsPage = () => {
           </Row>
           <Row style={{ marginBottom: '0.5rem' }}>
             <Col col={12}>
-              <Text># of child care administrators</Text>
+              <Text>
+                <FormattedMessage id="S3_#_CCA" />
+              </Text>
             </Col>
           </Row>
           <Row style={{ marginBottom: '1.5rem' }}>
@@ -355,31 +389,31 @@ const ResultsPage = () => {
             <Row style={{ margin: '60px 0 20px 0' }}>
               <Col offset={6} col={3} style={{ textAlign: 'center' }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
-                  Monthly
+                  <FormattedMessage id='R_MONTHLY' />
                 </Text>
               </Col>
               <Col col={3} style={{ textAlign: 'center' }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
-                  Annual
+                  <FormattedMessage id='R_ANNUAL' />
                 </Text>
               </Col>
             </Row>
           )}
           <TotalBox
-            label='Total Income'
+            label={intl.formatMessage({ 'id': 'R_TOTAL_INCOME' })}
             monthlyValue={totalIncome}
             annualValue={totalIncome * 12}
             mobile={isMobile}
           />
           <TotalBox
-            label='Total Expenses'
+            label={intl.formatMessage({ 'id': 'R_TOTAL_EXPENSES' })}
             monthlyValue={totalExpenses}
             annualValue={totalExpenses * 12}
             mobile={isMobile}
             style={{ margin: '12px 0' }}
           />
           <TotalBox
-            label='Net Income'
+            label={intl.formatMessage({ 'id': 'R_NET_INCOME' })}
             monthlyValue={netIncome}
             annualValue={netIncome * 12}
             mobile={isMobile}
@@ -391,8 +425,12 @@ const ResultsPage = () => {
               lg={6}
               style={{ marginBottom: 12 }}
             >
-              <Title style={{ margin: 0 }}>Thank you</Title>
-              <Title style={{ margin: 0, marginTop: 4, fontSize: 20 }}>for using the Child Care Business Feasibility Calculator</Title>
+              <Title style={{ margin: 0 }}>
+                <FormattedMessage id='R_THANKS' />
+              </Title>
+              <Title style={{ margin: 0, marginTop: 4, fontSize: 20 }}>
+                <FormattedMessage id='R_THANKS_USE' />
+              </Title>
             </Col>
             <Col
               col={12}
@@ -401,7 +439,7 @@ const ResultsPage = () => {
               style={{ display: 'flex', justifyContent: 'flex-end' }}
             >
               <Button textAlign='center' onClick={handleStartClick} style={{ fontSize: 16 }}>
-                Start again
+                <FormattedMessage id='R_START_AGAIN' />
               </Button>
             </Col>
           </Row>
