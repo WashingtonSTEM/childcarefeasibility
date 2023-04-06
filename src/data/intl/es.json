@@ -15,7 +15,7 @@
   "S1_FOOTAGE_TOOLTIP": "Para infantes/niños pequeños, se requieren por ley al menos 50 pies cuadrados por niño. Para niños en edad preescolar/escolare, se requieren por ley al menos 35 pies cuadrados.",
   "S1_FOOTAGE_RECOMENDATION": "{maximumNumberOfInfantsSupported} es el número máximo de bebés/niños pequeños admitidos.<br />{and_or} {maximumNumberOfPreschoolers} es el número máximo de niños en edad preescolar/escolares admitidos.",
   "S1_LEVEL": "Nivel de logros tempranos",
-  "S1_LEVEL_OPT": "Nivel ${level}",
+  "S1_LEVEL_OPT": "Nivel {level}",
   "S1_PCT": "Matrícula por niño",
   "S1_PCT_MEDIAN": "Median",
   "S1_PCT_75TH": "75th Percentile",

@@ -15,7 +15,7 @@
   "S1_FOOTAGE_TOOLTIP": "For infant/toddlers at least 50 sq. ft. per child required by law. For preschoolers/school age, must have 35 sq. ft. per child required by law.",
   "S1_FOOTAGE_RECOMENDATION": "{maximumNumberOfInfantsSupported} is the maximum # of infant/toddlers supported.<br />{and_or} {maximumNumberOfPreschoolers} is the maximum # of preschoolers/school age supported.",
   "S1_LEVEL": "Early Achievers level",
-  "S1_LEVEL_OPT": "Level ${level}",
+  "S1_LEVEL_OPT": "Level {level}",
   "S1_PCT": "Per child tuition",
   "S1_PCT_MEDIAN": "Median",
   "S1_PCT_75TH": "75th Percentile",
