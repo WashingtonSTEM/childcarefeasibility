@@ -1,4 +1,5 @@
 import { useMemo } from 'react'
+import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import { Row } from 'styled-bootstrap-grid'
 
@@ -41,28 +42,6 @@ const COUNTY_OPTIONS = optionsType.county
   .sort()
   .map(mapToOptions)
 
-const MEDIAN_OR_75TH_PERCENTILE_OPTIONS = optionsType.medianOr75thPercentile
-  .map(mapToOptions)
-
-const TYPE_FACILITY_OPTIONS = [
-  { text: 'Licensed child care center', value: 'Center-Based' },
-  { text: 'Licensed in-home child care center', value: 'FCC' },
-]
-
-const STAFF_COST_OPTIONS = [
-  { text: 'Median wage', value: 'Median Wage' },
-  { text: 'Living wage', value: 'Living Wage' }
-]
-
-const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
-  { text: 'Level 1', value: '1' },
-  { text: 'Level 2', value: '2' },
-  { text: 'Level 3', value: '3' },
-  { text: 'Level 3+', value: '3.5' },
-  { text: 'Level 4', value: '4' },
-  { text: 'Level 5', value: '5' },
-]
-
 const colMd4Lg3 = { md: 4, lg: 3 }
 const colMd4Lg6 = { md: 4, lg: 6 }
 
@@ -77,6 +56,7 @@ export const validationRules = {
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
+  const intl = useIntl()
   const maximumNumberOfInfantsSupported = useMemo(() => {
     const { typeOfFacility, intendedFootage } = data
 
@@ -97,6 +77,44 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
     return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
   }, [data, maximumNumberOfInfantsSupported])
 
+  const TYPE_FACILITY_OPTIONS = [
+    { text: intl.formatMessage({ id: 'S1_TOF_CB' }), value: 'Center-Based' },
+    { text: intl.formatMessage({ id: 'S1_TOF_FCC' }), value: 'FCC' },
+  ]
+
+  const STAFF_COST_OPTIONS = [
+    { text: intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MEDIAN' }), value: 'Median Wage' },
+    { text: intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_LIVING' }), value: 'Living Wage' }
+  ]
+
+  const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '1' }), value: '1' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '2' }), value: '2' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '3' }), value: '3' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '3.5' } ), value: '3.5' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '4' }), value: '4' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '5' }), value: '5' },
+  ]
+
+  const MEDIAN_OR_75TH_PERCENTILE_OPTIONS = optionsType.medianOr75thPercentile
+    .map(mapToOptions)
+    .map((o) => {
+      if (o.text === 'Median') {
+        return {
+          ...o,
+          text: intl.formatMessage({ id: 'S1_PCT_MEDIAN' })
+        }
+      }
+      if (o.text === '75th Percentile') {
+        return {
+          ...o,
+          text: intl.formatMessage({ id: 'S1_PCT_75TH' })
+        }
+      }
+
+      return o
+    })
+
   if (!show) {
     return null
   }
@@ -104,10 +122,10 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
   return (
     <>
       <Row>
-        <Text>Please fill out each fill to the best of your knowledge. Blue fields provider recommendations primarily based on state law. Orange icons provide additional information.</Text>
+        <Text>{ intl.formatMessage({ id: 'S1_INSTRUCTION' }) }</Text>
         <FormGroup {...colMd4Lg3} error={errors.county}>
           <Dropdown
-            label='County'
+            label={ intl.formatMessage({ id: 'S1_COUNTY' }) }
             type={isMobile ? 'list' : 'menu'}
             options={COUNTY_OPTIONS}
             value={data.county}
@@ -116,7 +134,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         </FormGroup>
         <FormGroup {...colMd4Lg3} error={errors.typeOfFacility}>
           <Dropdown
-            label='Type of facility'
+            label={ intl.formatMessage({ id: 'S1_TOF' }) }
             options={TYPE_FACILITY_OPTIONS}
             value={data.typeOfFacility}
             onChange={(value) => onDataChange('typeOfFacility', value)}
@@ -127,21 +145,24 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             <Input
               name='intendedFootage'
               type='number'
-              label='Square footage intended for children'
+              label={ intl.formatMessage({ id: 'S1_FOOTAGE' }) }
               min={0}
               value={data.intendedFootage}
               onChange={({ target }) => onDataChange(target.name, parseInt(target.value))}
             />
             <Tooltip
               trigger={isMobile ? 'click' : 'hover'}
-              tooltipText="For infant/toddlers at least 50 sq. ft. per child required by law. For preschoolers/school age, must have 35 sq. ft. per child required by law."
+              tooltipText={ intl.formatMessage({ id: 'S1_FOOTAGE_TOOLTIP' }) }
             />
           </div>
           {maximumNumberOfInfantsSupported !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {maximumNumberOfInfantsSupported} is the maximum # of infant/toddlers supported.
-                { data.typeOfFacility === 'FCC' ? ' And' : ' Or,' } {maximumNumberOfPreschoolers} is the maximum # of preschoolers/school age supported.
+                { intl.formatMessage({ id: 'S1_FOOTAGE_RECOMENDATION' }, {
+                  maximumNumberOfInfantsSupported,
+                  maximumNumberOfPreschoolers,
+                  and_or: data.typeOfFacility === 'FCC' ? ' And' : ' Or,'
+                }) }
               </>
             </TextBox>
           )}
@@ -150,7 +171,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
       <Row>
         <FormGroup {...colMd4Lg3} error={errors.earlyAchieversLevel}>
           <Dropdown
-            label='Early Achievers level'
+            label={ intl.formatMessage({ id: 'S1_LEVEL' }) }
             options={EARLY_ACHIEVERS_LEVEL_OPTIONS}
             value={data.earlyAchieversLevel}
             onChange={(value) => onDataChange('earlyAchieversLevel', value)}
@@ -158,7 +179,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         </FormGroup>
         <FormGroup {...colMd4Lg6} error={errors.medianOr75thPercentile}>
           <Dropdown
-            label='Per Child Tuition'
+            label={ intl.formatMessage({ id: 'S1_PCT' }) }
             options={MEDIAN_OR_75TH_PERCENTILE_OPTIONS}
             value={data.medianOr75thPercentile}
             onChange={(value) => onDataChange('medianOr75thPercentile', value)}
@@ -167,7 +188,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         <FormGroup {...colMd4Lg3} error={errors.staffCompesantion}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
             <Dropdown
-              label='Staff compensation'
+              label={ intl.formatMessage({ id: 'S1_PCT_STAFF_COMP' }) }
               options={STAFF_COST_OPTIONS}
               value={data.staffCompesantion}
               onChange={(value) => onDataChange('staffCompesantion', value)}
@@ -178,11 +199,11 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
                 data.staffCompesantion === 'Living Wage' ?
                   (
                     <>
-                      &quot;Living Wage&quot; is two adults (one working), with one child, as defined by <a style={{ color: 'inherit' }} href='https://livingwage.mit.edu' target='blank'>MIT Living Wage calculator.</a>
+                      { intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_LIVING_TOOLTIP' }) }
                     </>
                   ) : (
                     <>
-                      &quot;Median Wage&quot; as defined by WA Employment Security Department per child care staff in each county
+                      { intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MEDIAN_TOOLTIP' }) }
                     </>
                   )
               }
@@ -197,13 +218,13 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
               name='additionalCost'
               type='number'
               sufix='%'
-              label='Additional costs'
+              label={ intl.formatMessage({ id: 'S1_ADDITIONAL_COST' }) }
               min={0}
               max={100}
               value={data.additionalCost}
               onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText='Consider costs for curriculum, staff professional development, management and administration, and program enhancements, such as family conferences.' />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={ intl.formatMessage({ id: 'S1_ADDITIONAL_COST_TOOLTIP' }) } />
           </div>
         </FormGroup>
       </Row>
