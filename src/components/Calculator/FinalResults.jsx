@@ -1,16 +1,8 @@
 import { Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 import Input from '../Input'
-
-const finalResultsFields = [
-  { text: 'Expected fee revenue', value: 'expectedFeeRevenue' },
-  { text: 'Expected salaries', value: 'expectedSalaries' },
-  { text: 'Expected benefits', value: 'expectedBenefits' },
-  { text: 'Rent/mortgage cost', value: 'rentOrMortageCost' },
-  { text: 'Additional costs as a percentage of all other costs', value: 'additionalCost' },
-  { text: 'Dollar amount of additional costs', value: 'dollarAmount' },
-]
 
 const Text = styled.span`
   font-family: 'Roboto';
@@ -23,12 +15,25 @@ const Text = styled.span`
 const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 
 const FinalResults = ({ mobile, onDataChange, ...props }) => {
+  const intl = useIntl()
+
+  const finalResultsFields = [
+    { text: intl.formatMessage({ id: 'R_E_FEE_REVENUE' }), value: 'expectedFeeRevenue' },
+    { text: intl.formatMessage({ id: 'R_E_SALARIES' }), value: 'expectedSalaries' },
+    { text: intl.formatMessage({ id: 'R_E_BENEFITS' }), value: 'expectedBenefits' },
+    { text: intl.formatMessage({ id: 'R_RENT_COST' }), value: 'rentOrMortageCost' },
+    { text: intl.formatMessage({ id: 'R_ADDITIONAL_COSR' }), value: 'additionalCost' },
+    { text: intl.formatMessage({ id: 'R_DOLLAR_AMOUNT' }), value: 'dollarAmount' },
+  ]
+
   if (mobile) {
     return (
       <>
         <Row style={{ marginBottom: 16 }}>
           <Col col={12}>
-            <Text>Final results</Text>
+            <Text>
+              <FormattedMessage id="R_FINAL" />
+            </Text>
           </Col>
         </Row>
         {finalResultsFields.map((field, index) => (
@@ -40,10 +45,12 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
             </Row>
             <Row key={`${field.value}-header-${index}`}>
               <Col col={6}>
-                <Text style={{ fontWeight: 'bold' }}>Monthly</Text>
+                <Text style={{ fontWeight: 'bold' }}>
+                  <FormattedMessage id="R_MONTHLY" />
+                </Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 'bold' }}>{field.value !== 'additionalCost' ? 'Annual' : ''}</Text>
+                <Text style={{ fontWeight: 'bold' }}>{field.value !== 'additionalCost' ? intl.formatMessage({ id: 'R_ANNUAL' }) : ''}</Text>
               </Col>
             </Row>
             <Row key={`${field.value}-result-${index}`} style={{ padding: `12px 0 ${index < 5 ? '12px' : '60px'} 0` }}>
@@ -69,13 +76,17 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
     <>
       <Row style={{ marginBottom: 60 }}>
         <Col md={4} lg={6}>
-          <Text style={{ fontWeight: 'bold', fontSize: 30 }}>Final Results</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 30 }}><FormattedMessage id="R_FINAL" /></Text>
         </Col>
         <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-          <Text>Monthly</Text>
+          <Text>
+            <FormattedMessage id="R_MONTHLY" />
+          </Text>
         </Col>
         <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-          <Text>Annual</Text>
+          <Text>
+            <FormattedMessage id="R_ANNUAL" />
+          </Text>
         </Col>
       </Row>
       {finalResultsFields.map((field, index) => (
