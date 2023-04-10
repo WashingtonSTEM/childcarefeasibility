@@ -5,7 +5,10 @@ export const isRequired = (key, value) => {
     return null // no error
   }
 
-  return 'This field is required'
+  return {
+    message: 'This field is required',
+    code: 'REQUIRED'
+  }
 }
 
 export const minNumber = (min) => (key, value) => {
@@ -13,7 +16,10 @@ export const minNumber = (min) => (key, value) => {
     return null // no error
   }
 
-  return `Min. acepted value is ${min}`
+  return {
+    message: `Min. acepted value is ${min}`,
+    code: 'MIN_VALUE'
+  }
 }
 
 export const minInt = (min) => (key, value) => {
@@ -21,7 +27,11 @@ export const minInt = (min) => (key, value) => {
     return null // no error
   }
 
-  return `Min. acepted value is ${min}`
+  return {
+    message: `Min. acepted value is ${min}`,
+    code: 'MIN_VALUE',
+    min,
+  }
 }
 
 export const maxNumber = (max) => (key, value) => {
@@ -29,10 +39,14 @@ export const maxNumber = (max) => (key, value) => {
     return null // no error
   }
 
-  return `Max. acepted value is ${min}`
+  return {
+    message: `Max. acepted value is ${max}`,
+    code: 'MAX_VALUE',
+    max,
+  }
 }
 
-const validate = (data, rules) => {
+const validate = (data, rules, intl) => {
   if (typeof data !== 'object' || Array.isArray(data)) {
     return false
   }

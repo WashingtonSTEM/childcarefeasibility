@@ -41,12 +41,12 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.form-group-error>.dropdown-control>button {
+.form-group-error .dropdown-control>button {
   border: 1px solid #EF4444;
   color: #EF4444;
 }
 
-.form-group-error>.dropdown-control>button::after {
+.form-group-error .dropdown-control>button::after {
   filter: invert(40%) sepia(44%) saturate(4629%) hue-rotate(339deg) brightness(104%) contrast(87%);
 }
 

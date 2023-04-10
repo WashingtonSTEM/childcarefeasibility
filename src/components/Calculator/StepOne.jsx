@@ -9,7 +9,7 @@ import TextBox from '@/components/TextBox'
 import FormGroup from '@/components/FormGroup'
 import Tooltip from '@/components/Tooltip'
 import costData from '@/data/cost_data.json'
-import { isRequired, minInt } from '@/utils/validate'
+import { isRequired, minInt, maxNumber } from '@/utils/validate'
 import { getMaximumNumberOfInfantsSupported, getMaximumNumberOfPreschoolers } from '@/helpers/formulas'
 
 const Text = styled.span`
@@ -52,7 +52,7 @@ export const validationRules = {
   earlyAchieversLevel: [isRequired],
   staffCompesantion: [isRequired],
   medianOr75thPercentile: [isRequired],
-  additionalCost: [isRequired]
+  additionalCost: [isRequired, maxNumber(100)]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {

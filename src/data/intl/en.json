@@ -77,5 +77,8 @@
   "R_NET_INCOME": "Net Income",
   "R_START_AGAIN": "START AGAIN",
   "R_THANKS": "Thank you",
-  "R_THANKS_USE": "for using the Child Care Business Feasibility Calculator"
+  "R_THANKS_USE": "for using the Child Care Business Feasibility Calculator",
+  "REQUIRED": "This field is required",
+  "MIN_VALUE": "Min. acepted value is {min}",
+  "MAX_VALUE": "Max. acepted value is {min}"
 }
