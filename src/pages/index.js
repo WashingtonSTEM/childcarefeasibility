@@ -87,6 +87,9 @@ const Page = () => {
     if (!isValid) {
       return
     }
+
+    data.language = intl.locale;
+
     router.push({
       pathname: '/results',
       query: data,
