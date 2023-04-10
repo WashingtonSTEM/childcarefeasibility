@@ -135,7 +135,14 @@ const ResultsPage = () => {
 
   const netIncome = totalIncome - totalExpenses
 
-  const handleStartClick = () => router.push('/')
+  const handleStartClick = () => {
+    router.push({
+      pathname: '/',
+      query: {
+        language: intl.locale || intl.defaultLocale
+      }
+    })
+  }
 
   const onInputChage = ({ target }) => {
     let value = target.value
