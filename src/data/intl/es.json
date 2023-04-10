@@ -77,5 +77,8 @@
   "R_NET_INCOME": "Ingreso Neto",
   "R_START_AGAIN": "REINICIAR",
   "R_THANKS": "Gracias",
-  "R_THANKS_USE": "por usar la Calculadora de Factibilidad Comercial de Cuidado Infantil"
+  "R_THANKS_USE": "por usar la Calculadora de Factibilidad Comercial de Cuidado Infantil",
+  "REQUIRED": "Requerido",
+  "MIN_VALUE": "Min. valor permitido {min}",
+  "MAX_VALUE": "Max. valor permitido {max}"
 }

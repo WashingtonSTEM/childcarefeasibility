@@ -1,5 +1,6 @@
 import { Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
+import { FormattedMessage } from 'react-intl'
 
 const Label = styled.label`
   width: 100%;
@@ -17,7 +18,11 @@ const FormGroup = ({ error, children, ...props }) => (
   <Col {...props} className={`form-group${error ? ' form-group-error' : ''}`}>
     {props.label && <Label>{props.label}</Label>}
     {children}
-    {error && <small className='text-error'>{error}</small>}
+    {error && (
+      <small className='text-error'>
+        <FormattedMessage id={error.code} values={error} />
+      </small>
+    )}
   </Col>
 )
 
