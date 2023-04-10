@@ -88,7 +88,7 @@ const Page = () => {
       return
     }
 
-    data.language = intl.locale;
+    data.language = intl.locale || intl.defaultLocale;
 
     router.push({
       pathname: '/results',
