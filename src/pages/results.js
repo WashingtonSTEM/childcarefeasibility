@@ -161,22 +161,11 @@ const ResultsPage = () => {
   return (
     <>
       <BaseCSS />
-      <header className={styles.header}>
-        <div className={styles['header-image']} />
-        <div className={styles['header-text']}>
-          <Container style={{ padding: '0 30px' }}>
-            <Row className="justify-content-md-center">
-              <Col xs lg="8">
-                <Title>
-                  <FormattedMessage id="RESULTS_TITLE" />
-                </Title>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </header>
       <main className={styles.main}>
         <Container style={{ padding: '0 30px' }}>
+          <Title>
+            <FormattedMessage id="RESULTS_TITLE" />
+          </Title>
           <Row style={{ marginBottom: '1rem' }}>
             <Col col={4} lg={3}></Col>
             <Col col={4}>

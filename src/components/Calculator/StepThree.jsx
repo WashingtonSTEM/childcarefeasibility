@@ -265,15 +265,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCA_TOOLTIP' })} />
           </div>
-          {estimatedNumberOfChildCareAdministrators !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {estimatedNumberOfChildCareAdministrators}
-                <br />
-                <FormattedMessage id='S3_#_CCA_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
       </Row>
     </>

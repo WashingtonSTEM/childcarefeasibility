@@ -83,20 +83,26 @@ const StyledInput = styled.input`
 
 const Input = ({ sufix, type, disabled, value, ...props }) => {
   return (
-    <Container tabindex="1" disabled={disabled} className='input-control'>
-      <InputWraper>
-        <StyledInput
-          sufix={sufix}
-          inputmode={type}
-          disabled={disabled}
-          type={type}
-          value={value ?? ''}
-          {...props}
-        />
-        { (value === null || value === undefined || value === '') && <Text>{props.label}</Text> }
-      </InputWraper>
-      {sufix && <Text align="right" hideOnFocus style={{ marginLeft: 8 }}>{ sufix }</Text>}
-    </Container>
+    <div>
+      <div>
+        {props.label}
+      </div>
+      <Container tabindex="1" disabled={disabled} className='input-control'>
+        <InputWraper>
+          <StyledInput
+            sufix={sufix}
+            inputmode={type}
+            disabled={disabled}
+            type={type}
+            value={value ?? ''}
+            {...props}
+          />
+          {(value === null || value === undefined || value === '')}
+        </InputWraper>
+        {sufix && <Text align="right" hideOnFocus style={{ marginLeft: 8 }}>{sufix}</Text>}
+      </Container>
+    </div>
+
   )
 }
 

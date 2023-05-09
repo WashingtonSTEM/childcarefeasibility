@@ -87,9 +87,10 @@ const Dropdown = ({ label, options, value, onChange, ...props }) => {
 
   return (
     <Container ref={containerRef} type={props.type} className="dropdown-control">
+      <label>{label}</label>
       <Toggle onClick={handleOnClick} show={show}>
         <span>
-          {selectedOption || label}
+          {selectedOption}
         </span>
       </Toggle>
       {props.type !== 'list' && show && (

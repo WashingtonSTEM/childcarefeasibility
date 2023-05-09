@@ -99,27 +99,6 @@ const Page = () => {
   return (
     <>
       <BaseCSS />
-      <header className={styles.header}>
-        <div className={styles['header-image']} />
-        <div className={`${styles['header-text']}${isMobile ? ` ${styles['header-text-mobile']}` : ''}`}>
-          <Container style={{ padding: '0 30px' }}>
-            <Row className="justify-content-md-center">
-              <Col xs lg="8">
-                <Title>{ intl.formatMessage({ id: 'TITLE' }) }</Title>
-                {isMobile ? (
-                  <Instructions text={ intl.formatMessage({ id: 'INTRODUCTION' }) } />
-                ) : (
-                  <>
-                    <Text style={{ maxWidth: 620 }}>
-                      { intl.formatMessage({ id: 'INTRODUCTION' }) }
-                    </Text>
-                  </>
-                )}
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </header>
       {isMobile && <StepBar step={step} steps={MAX_STEPS} />}
       <main className={styles.main}>
         <Container as='form' style={{ padding: '0 30px' }} onSubmit={(e) => e.preventDefault()}>

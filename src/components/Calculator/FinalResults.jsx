@@ -75,26 +75,26 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
   return (
     <>
       <Row style={{ marginBottom: 60 }}>
-        <Col md={4} lg={6}>
+        <Col md={4} lg={1.5}>
           <Text style={{ fontWeight: 'bold', fontSize: 30 }}><FormattedMessage id="R_FINAL" /></Text>
         </Col>
-        <Col md={4} lg={3} style={{ textAlign: 'center' }}>
+        <Col md={4} lg={4} style={{ textAlign: 'center' }}>
           <Text>
             <FormattedMessage id="R_MONTHLY" />
           </Text>
         </Col>
-        <Col md={4} lg={3} style={{ textAlign: 'center' }}>
+        <Col md={4} lg={4} style={{ textAlign: 'center' }}>
           <Text>
             <FormattedMessage id="R_ANNUAL" />
           </Text>
         </Col>
       </Row>
       {finalResultsFields.map((field, index) => (
-        <Row key={`${field.value}-${index}`} style={{ padding: '34px 0' }}>
-          <Col md={4} lg={6}>
+        <Row key={`${field.value}-${index}`} style={{ padding: '30px 0' }}>
+          <Col md={4} lg={3}>
             <Text style={{ fontWeight: 'bold' }}>{field.text}</Text>
           </Col>
-          <Col md={4} lg={3} style={{ textAlign: 'center' }}>
+          <Col md={4} lg={4} style={{ textAlign: 'left' }}>
             {field.value !== 'additionalCost' ? (
               <Text>{moneyFormatter.format(props[field.value] || 0)}</Text>
             ) : (
@@ -111,7 +111,7 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
             )}
 
           </Col>
-          <Col md={4} lg={3} style={{ textAlign: 'center' }}>
+          <Col md={4} lg={3} style={{ textAlign: 'left' }}>
             {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}
           </Col>
         </Row>
