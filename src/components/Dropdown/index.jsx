@@ -41,7 +41,7 @@ const Toggle = styled.button`
 }
 `
 
-const Container = styled.div`
+const InputContainer = styled.div`
   position: relative;
   width: 100%;
   height: 40px;
@@ -49,6 +49,25 @@ const Container = styled.div`
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  @media (max-width: 768px) {
+    height: 55px;
+    font-size: 17px;
+  }
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`
+
+const Label = styled.label`
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #012846;
   @media (max-width: 768px) {
     height: 55px;
     font-size: 17px;
@@ -86,27 +105,29 @@ const Dropdown = ({ label, options, value, onChange, ...props }) => {
   }
 
   return (
-    <Container ref={containerRef} type={props.type} className="dropdown-control">
-      <label>{label}</label>
-      <Toggle onClick={handleOnClick} show={show}>
-        <span>
-          {selectedOption}
-        </span>
-      </Toggle>
-      {props.type !== 'list' && show && (
-        <Menu show={show}>
-          {options.map(({ text, value }, index) => (
-            <MenuItem key={`item-${index}`} value={value} onClick={handleSelection}>{text}</MenuItem>
-          ))}
-        </Menu>
-      )}
-      {props.type === 'list' && show && (
-        <List show={show} onClose={close}>
-          {options.map(({ text, value }, index) => (
-            <ListItem key={`item-${index}`} value={value} onClick={handleSelection}>{text}</ListItem>
-          ))}
-        </List>
-      )}
+    <Container>
+      <Label>{ label }</Label>
+      <InputContainer ref={containerRef} type={props.type} className="dropdown-control">
+        <Toggle onClick={handleOnClick} show={show}>
+          <span>
+            {selectedOption}
+          </span>
+        </Toggle>
+        {props.type !== 'list' && show && (
+          <Menu show={show}>
+            {options.map(({ text, value }, index) => (
+              <MenuItem key={`item-${index}`} value={value} onClick={handleSelection}>{text}</MenuItem>
+            ))}
+          </Menu>
+        )}
+        {props.type === 'list' && show && (
+          <List show={show} onClose={close}>
+            {options.map(({ text, value }, index) => (
+              <ListItem key={`item-${index}`} value={value} onClick={handleSelection}>{text}</ListItem>
+            ))}
+          </List>
+        )}
+      </InputContainer>
     </Container>
   )
 }

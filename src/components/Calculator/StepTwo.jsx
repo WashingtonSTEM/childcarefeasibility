@@ -64,7 +64,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
       </Row>
       <Row>
         <FormGroup lg={5} error={errors.percentageChildrenReceivingSubsidy}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='percentageChildrenReceivingSubsidy'
               type='number'
@@ -79,7 +79,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           </div>
         </FormGroup>
         <FormGroup lg={5} error={errors.educationProgramExpenses}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='educationProgramExpenses'
               type='number'
@@ -110,7 +110,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
       </Row>
       <Row>
         <FormGroup lg={5} error={errors.rentOrMortageCost}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='rentOrMortageCost'
               type='number'
@@ -139,7 +139,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
 
         </FormGroup>
         <FormGroup lg={5} error={errors.collectionsRate}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='collectionsRate'
               type='number'
@@ -157,7 +157,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
 
       <Row>
         <FormGroup lg={12} error={errors.programManagementChild}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='programManagementChild'
               type='number'

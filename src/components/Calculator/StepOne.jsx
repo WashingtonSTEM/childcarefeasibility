@@ -143,7 +143,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
           />
         </FormGroup>
         <FormGroup {...colMd4Lg6} error={errors.intendedFootage}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='intendedFootage'
               type='number'
@@ -199,7 +199,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
           />
         </FormGroup>
         <FormGroup {...colMd4Lg3} error={errors.staffCompesantion}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Dropdown
               label={intl.formatMessage({ id: 'S1_PCT_STAFF_COMP' })}
               options={STAFF_COST_OPTIONS}
@@ -226,7 +226,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
       </Row>
       <Row>
         <FormGroup {...colMd4Lg3} error={errors.additionalCost}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='additionalCost'
               type='number'
