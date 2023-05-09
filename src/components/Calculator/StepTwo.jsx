@@ -45,8 +45,12 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
   return (
     <>
       <Row>
-        <FormGroup lg={4}>
-          <Toggle label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })} checked={!!data.payBenefits} onChange={({ target }) => onDataChange?.('payBenefits', target.checked)} />
+        <FormGroup lg={4} style={ { display: 'flex' } }>
+          <Toggle
+            label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })}
+            checked={!!data.payBenefits}
+            onChange={({ target }) => onDataChange?.('payBenefits', target.checked)}
+          />
         </FormGroup>
         <FormGroup lg={8} error={errors.percentageBenefitsCost}>
           <Input

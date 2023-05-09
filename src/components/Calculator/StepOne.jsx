@@ -225,7 +225,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         </FormGroup>
       </Row>
       <Row>
-        <FormGroup {...colMd4Lg3} error={errors.additionalCost}>
+        <FormGroup {...colMd4Lg6} error={errors.additionalCost}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='additionalCost'
