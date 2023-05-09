@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Container = styled.label`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`
+
+const InputContainer = styled.label`
   display: flex;
   position: relative;
   box-sizing: border-box;
@@ -81,13 +87,24 @@ const StyledInput = styled.input`
   }
 `
 
+const Label = styled.label`
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: #012846;
+  @media (max-width: 768px) {
+    height: 55px;
+    font-size: 17px;
+  }
+`
+
 const Input = ({ sufix, type, disabled, value, ...props }) => {
   return (
-    <div>
-      <div>
-        {props.label}
-      </div>
-      <Container tabindex="1" disabled={disabled} className='input-control'>
+    <Container>
+      <Label>{ props.label }</Label>
+      <InputContainer tabindex="1" disabled={disabled} className='input-control'>
         <InputWraper>
           <StyledInput
             sufix={sufix}
@@ -97,12 +114,11 @@ const Input = ({ sufix, type, disabled, value, ...props }) => {
             value={value ?? ''}
             {...props}
           />
-          {(value === null || value === undefined || value === '')}
+          { (value === null || value === undefined || value === '') && <Text>{props.label}</Text> }
         </InputWraper>
         {sufix && <Text align="right" hideOnFocus style={{ marginLeft: 8 }}>{sufix}</Text>}
-      </Container>
-    </div>
-
+      </InputContainer>
+    </Container>
   )
 }
 

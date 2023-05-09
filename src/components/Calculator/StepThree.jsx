@@ -197,7 +197,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       </Row>
       <Row>
         <FormGroup lg={3} error={errors.numberOfClassrooms}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfClassrooms'
               type='number'
@@ -210,7 +210,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfChildCareWorkers'
               type='number'
@@ -232,7 +232,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolTeachers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfPreschoolTeachers'
               type='number'
@@ -254,7 +254,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfChildCareAdministrators'
               type='number'
