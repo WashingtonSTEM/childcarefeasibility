@@ -44,7 +44,7 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
   })
 
   return (
-    <div {...containerProps}>
+    <div {...containerProps} style={ { marginBottom: 3 } }>
       <div style={{ fontStyle: 'italic' }}>
         <div ref={divRef}>
           {children || <InfoButton backgroundColor={show ? '#012846' : null} />}

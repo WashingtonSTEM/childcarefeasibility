@@ -117,6 +117,11 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       <Text>
         <FormattedMessage id="S3_INSTRUCTIONS" />
       </Text>
+      { data.typeOfFacility === 'FCC' && (
+        <Text>
+          <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
+        </Text>
+      ) }
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
           <Input
@@ -197,7 +202,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       </Row>
       <Row>
         <FormGroup lg={3} error={errors.numberOfClassrooms}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfClassrooms'
               type='number'
@@ -210,7 +215,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfChildCareWorkers'
               type='number'
@@ -232,7 +237,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolTeachers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfPreschoolTeachers'
               type='number'
@@ -254,7 +259,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 4 }}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfChildCareAdministrators'
               type='number'
@@ -265,15 +270,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCA_TOOLTIP' })} />
           </div>
-          {estimatedNumberOfChildCareAdministrators !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {estimatedNumberOfChildCareAdministrators}
-                <br />
-                <FormattedMessage id='S3_#_CCA_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
       </Row>
     </>
