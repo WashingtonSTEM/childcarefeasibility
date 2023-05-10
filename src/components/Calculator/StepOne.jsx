@@ -89,7 +89,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
   ]
 
   const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
-    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT_1' }, { level: '0' }), value: 'S1_LEVEL_OPT_1' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT_1' }, { level: '0' }), value: '0' },
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '1' }), value: '1' },
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '2' }), value: '2' },
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '3' }), value: '3' },
