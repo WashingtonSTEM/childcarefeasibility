@@ -77,6 +77,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               max={100}
               value={data.percentageChildrenReceivingSubsidy}
               onChange={handleInputChange}
+              disabled={data.earlyAchieversLevel === '0'}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>
