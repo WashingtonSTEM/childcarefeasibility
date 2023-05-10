@@ -177,7 +177,6 @@ const ResultsPage = () => {
                 <Text style={{ fontWeight: 'bold' }}>
                   <FormattedMessage id="R_RPC" />
                 </Text>
-                <Tooltip tooltipText={intl.formatMessage({ id: 'R_RPC_TOOLTIP' })} trigger={isMobile ? 'click' : 'hover'} />
               </div>
             </Col>
             <Col col={4}>
@@ -185,10 +184,6 @@ const ResultsPage = () => {
                 <Text style={{ fontWeight: 'bold' }}>
                   <FormattedMessage id="R_SRPC" />
                 </Text>
-                <Tooltip
-                  trigger={isMobile ? 'click' : 'hover'}
-                  tooltipText={intl.formatMessage({ id: 'R_SRPC_TOOLTIP' })}
-                />
               </div>
             </Col>
           </Row>

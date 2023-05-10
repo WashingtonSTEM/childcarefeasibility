@@ -51,8 +51,7 @@ export const validationRules = {
   intendedFootage: [isRequired, minInt(1)],
   earlyAchieversLevel: [isRequired],
   staffCompesantion: [isRequired],
-  medianOr75thPercentile: [isRequired],
-  additionalCost: [isRequired]
+  medianOr75thPercentile: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
