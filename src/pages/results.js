@@ -38,6 +38,13 @@ const ResultsPage = () => {
   const { data, onDataChange, set: setData, validate, errors } = useForm({})
 
   useEffect(() => {
+    // Automatic Static Optimization
+    // returns router.query as an empty object on first render
+    // We need to make sure it's ready before trying to use these values
+    if (!router.isReady) {
+      return
+    }
+
     const data = {
       ...router.query,
     }
@@ -68,7 +75,7 @@ const ResultsPage = () => {
       setData(data)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.query])
+  }, [router])
 
   const expectedSalaryRevenue = useMemo(() => {
     if (!data) {
@@ -86,10 +93,12 @@ const ResultsPage = () => {
     if (!data) {
       return null
     }
-    const infants = getSubsidy(data.county, 'infants') || 0
-    const toddlers = getSubsidy(data.county, 'toddlers') || 0
-    const preschool = getSubsidy(data.county, 'preschool') || 0
-    const schoolAge = getSubsidy(data.county, 'schoolAge') || 0
+    const { county, typeOfFacility } = data
+
+    const infants = getSubsidy(typeOfFacility, county, 'infants') || 0
+    const toddlers = getSubsidy(typeOfFacility, county, 'toddlers') || 0
+    const preschool = getSubsidy(typeOfFacility, county, 'preschool') || 0
+    const schoolAge = getSubsidy(typeOfFacility, county, 'schoolAge') || 0
 
     return { infants, toddlers, preschool, schoolAge }
   }, [data])

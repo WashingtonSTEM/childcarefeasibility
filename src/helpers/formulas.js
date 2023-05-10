@@ -240,15 +240,18 @@ export const getRegionByCounty = (county) => {
   )*22*12))*(SUMIFS(DCYFSubsidyRate!C21:C34,DCYFSubsidyRate!A21:A34,'Simplified Calculator'!D3,DCYFSubsidyRate!B21:B34,'Simplified Calculator'!D4)
 )
 */
-export const getSubsidy = (county, child) => {
+export const getSubsidy = (typeOfFacility, county, child) => {
   const region = getRegionByCounty(county)
 
   if (!region) {
     return null
   }
+
   const subsidyRates = require('../data/subsidy_rates.json')
 
-  const row = subsidyRates.find((s) => s.region === region)
+  const row = subsidyRates.find((s) =>
+    s.region === region && s.typeOfFacility === typeOfFacility
+  )
 
   if (!row) {
     return null

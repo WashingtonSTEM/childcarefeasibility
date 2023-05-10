@@ -1,5 +1,6 @@
 [
   {
+    "facilityType": "Center",
     "region": "Region 1",
     "infants": 48.02,
     "toddlers": 43.50,
@@ -7,6 +8,7 @@
     "schoolAge": 39.15
   },
   {
+    "facilityType": "Center",
     "region": "Spokane",
     "infants": 68.54,
     "toddlers": 55.37,
@@ -14,6 +16,7 @@
     "schoolAge": 40.59
   },
   {
+    "facilityType": "Center",
     "region": "Region 2",
     "infants": 55.68,
     "toddlers": 42.44,
@@ -21,6 +24,7 @@
     "schoolAge": 31.74
   },
   {
+    "facilityType": "Center",
     "region": "Region 3",
     "infants": 88.58,
     "toddlers": 79.36,
@@ -28,6 +32,7 @@
     "schoolAge": 50.62
   },
   {
+    "facilityType": "Center",
     "region": "Region 4",
     "infants": 111.05,
     "toddlers": 92.28,
@@ -35,6 +40,7 @@
     "schoolAge": 52.20
   },
   {
+    "facilityType": "Center",
     "region": "Region 5",
     "infants": 72.56,
     "toddlers": 62.80,
@@ -42,10 +48,67 @@
     "schoolAge": 40.60
   },
   {
+    "facilityType": "Center",
     "region": "Region 6",
     "infants": 66.12,
     "toddlers": 59.16,
     "preschool": 54.52,
     "schoolAge": 41.66
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Region 1",
+    "infants": 40.00,
+    "toddlers": 35.00,
+    "preschool": 32.00,
+    "schoolAge": 30.00
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Spokane",
+    "infants": 42.00,
+    "toddlers": 40.00,
+    "preschool": 37.00,
+    "schoolAge": 36.00
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Region 2",
+    "infants": 45.00,
+    "toddlers": 37.50,
+    "preschool": 35.00,
+    "schoolAge": 32.00
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Region 3",
+    "infants": 55.00,
+    "toddlers": 48.86,
+    "preschool": 48.00,
+    "schoolAge": 40.00
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Region 4",
+    "infants": 68.18,
+    "toddlers": 63.64,
+    "preschool": 59.09,
+    "schoolAge": 40.00
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Region 5",
+    "infants": 48.86,
+    "toddlers": 42.00,
+    "preschool": 39.09,
+    "schoolAge": 35.71
+  },
+  {
+    "facilityType": "FCC",
+    "region": "Region 6",
+    "infants": 45.00,
+    "toddlers": 43.18,
+    "preschool": 38.00,
+    "schoolAge": 32.50
   }
 ]
