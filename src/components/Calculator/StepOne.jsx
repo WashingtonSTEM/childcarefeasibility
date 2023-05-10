@@ -52,7 +52,7 @@ export const validationRules = {
   earlyAchieversLevel: [isRequired],
   staffCompesantion: [isRequired],
   medianOr75thPercentile: [isRequired],
-  additionalCost: [isRequired, maxNumber(100)]
+  additionalCost: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
@@ -233,8 +233,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
               sufix='$'
               label={intl.formatMessage({ id: 'S1_ADDITIONAL_COST' })}
               min={0}
-              max={100}
-              value={data.additionalCost}
+              value={data.additionalCost || 0}
               onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S1_ADDITIONAL_COST_TOOLTIP' })} />

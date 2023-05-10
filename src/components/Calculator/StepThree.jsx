@@ -117,6 +117,11 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       <Text>
         <FormattedMessage id="S3_INSTRUCTIONS" />
       </Text>
+      { data.typeOfFacility === 'FCC' && (
+        <Text>
+          <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
+        </Text>
+      ) }
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
           <Input
