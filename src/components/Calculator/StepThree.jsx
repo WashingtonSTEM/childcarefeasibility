@@ -7,6 +7,7 @@ import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
 import Tooltip from '@/components/Tooltip'
 import FormGroup from '@/components/FormGroup'
+import Instructions from './Instructions'
 import { isRequired, minInt, hasValue } from '@/utils/validate'
 import {
   getMaximumNumberOfInfantsSupported,
@@ -114,14 +115,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
-      <Text>
-        <FormattedMessage id="S3_INSTRUCTIONS" />
-      </Text>
-      { data.typeOfFacility === 'FCC' && (
+      <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+        <Instructions text={intl.formatMessage({ id: 'S3_INSTRUCTIONS' })} />
+      </div>
+   
+      {data.typeOfFacility === 'FCC' && (
         <Text>
           <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
         </Text>
-      ) }
+      )}
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
           <Input
