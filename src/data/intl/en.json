@@ -65,7 +65,7 @@
   "R_RPC": "Tuition revenue per child (monthly)",
   "R_RPC_TOOLTIP": "Expected monthly revenue per child",
   "R_SRPC": "Subsidy revenue per child (monthly)",
-  "R_SRPC_TTOLTIP": "Working connections child care subsidy per month at 22 days per month",
+  "R_SRPC_TOOLTIP": "Working connections child care subsidy per month at 22 days per month",
   "R_EMS": "Expected monthly salary",
   "R_EAS": "Expected annual salary",
   "R_FINAL": "Final Results",
