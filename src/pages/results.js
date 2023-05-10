@@ -56,6 +56,8 @@ const ResultsPage = () => {
     data.collectionsRate = parseFloat(data.collectionsRate)
     data.percentageBenefitsCost = parseFloat(data.percentageBenefitsCost)
     data.additionalCost = parseFloat(data.additionalCost)
+    data.programManagementChild = parseFloat(data.programManagementChild)
+    data.educationProgramExpenses = parseFloat(data.educationProgramExpenses)
     const isValid = validate(data, {
       ...stepOneRules,
       ...stepTwoRules,
@@ -86,10 +88,10 @@ const ResultsPage = () => {
     if (!data) {
       return null
     }
-    const infants = getSubsidy(data.county, 'infants') || 0
-    const toddlers = getSubsidy(data.county, 'toddlers') || 0
-    const preschool = getSubsidy(data.county, 'preschool') || 0
-    const schoolAge = getSubsidy(data.county, 'schoolAge') || 0
+    const infants = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'infants') || 0
+    const toddlers = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'toddlers') || 0
+    const preschool = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'preschool') || 0
+    const schoolAge = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'schoolAge') || 0
 
     return { infants, toddlers, preschool, schoolAge }
   }, [data])
@@ -129,9 +131,11 @@ const ResultsPage = () => {
 
   const expectedBenefits = data.payBenefits === 'true' ? expectedSalaries * (data.percentageBenefitsCost / 100) : 0
 
+  const totalChildren = data.numberOfInfants + data.numberOfToddlers + data.numberOfPreschoolers + data.numberOfSchoolAgeChildren
+
   const totalIncome = expectedFeeRevenue
 
-  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + ((data.additionalCost / 100) * (expectedSalaries + expectedBenefits + data.rentOrMortageCost))
+  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren
 
   const netIncome = totalIncome - totalExpenses
 
@@ -173,7 +177,6 @@ const ResultsPage = () => {
                 <Text style={{ fontWeight: 'bold' }}>
                   <FormattedMessage id="R_RPC" />
                 </Text>
-                <Tooltip tooltipText={intl.formatMessage({ id: 'R_RPC_TOOLTIP' })} trigger={isMobile ? 'click' : 'hover'} />
               </div>
             </Col>
             <Col col={4}>
@@ -181,10 +184,6 @@ const ResultsPage = () => {
                 <Text style={{ fontWeight: 'bold' }}>
                   <FormattedMessage id="R_SRPC" />
                 </Text>
-                <Tooltip
-                  trigger={isMobile ? 'click' : 'hover'}
-                  tooltipText={intl.formatMessage({ id: 'R_SRPC_TOOLTIP' })}
-                />
               </div>
             </Col>
           </Row>
@@ -377,8 +376,9 @@ const ResultsPage = () => {
             expectedSalaries={expectedSalaries}
             expectedBenefits={expectedBenefits}
             rentOrMortageCost={data.rentOrMortageCost}
-            additionalCost={data.additionalCost}
-            dollarAmount={(data.additionalCost / 100) * (expectedSalaries + expectedBenefits + data.rentOrMortageCost)}
+            additionalCost={totalChildren * data.additionalCost}
+            educationProgramExpenses={totalChildren * data.educationProgramExpenses}
+            managementAndAdministration={totalChildren * data.programManagementChild}
             onDataChange={onInputChage}
           />
           {!isMobile && (

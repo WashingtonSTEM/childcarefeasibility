@@ -1,51 +1,104 @@
-[
-  {
-    "region": "Region 1",
-    "infants": 48.02,
-    "toddlers": 43.50,
-    "preschool": 39.67,
-    "schoolAge": 39.15
-  },
-  {
-    "region": "Spokane",
-    "infants": 68.54,
-    "toddlers": 55.37,
-    "preschool": 52.14,
-    "schoolAge": 40.59
-  },
-  {
-    "region": "Region 2",
-    "infants": 55.68,
-    "toddlers": 42.44,
-    "preschool": 42.34,
-    "schoolAge": 31.74
-  },
-  {
-    "region": "Region 3",
-    "infants": 88.58,
-    "toddlers": 79.36,
-    "preschool": 66.89,
-    "schoolAge": 50.62
-  },
-  {
-    "region": "Region 4",
-    "infants": 111.05,
-    "toddlers": 92.28,
-    "preschool": 83.31,
-    "schoolAge": 52.20
-  },
-  {
-    "region": "Region 5",
-    "infants": 72.56,
-    "toddlers": 62.80,
-    "preschool": 55.77,
-    "schoolAge": 40.60
-  },
-  {
-    "region": "Region 6",
-    "infants": 66.12,
-    "toddlers": 59.16,
-    "preschool": 54.52,
-    "schoolAge": 41.66
-  }
-]
+{
+  "Center-Based": [
+    {
+      "region": "Region 1",
+      "infants": 48.02,
+      "toddlers": 43.50,
+      "preschool": 39.67,
+      "schoolAge": 39.15
+    },
+    {
+      "region": "Spokane",
+      "infants": 68.54,
+      "toddlers": 55.37,
+      "preschool": 52.14,
+      "schoolAge": 40.59
+    },
+    {
+      "region": "Region 2",
+      "infants": 55.68,
+      "toddlers": 42.44,
+      "preschool": 42.34,
+      "schoolAge": 31.74
+    },
+    {
+      "region": "Region 3",
+      "infants": 88.58,
+      "toddlers": 79.36,
+      "preschool": 66.89,
+      "schoolAge": 50.62
+    },
+    {
+      "region": "Region 4",
+      "infants": 111.05,
+      "toddlers": 92.28,
+      "preschool": 83.31,
+      "schoolAge": 52.20
+    },
+    {
+      "region": "Region 5",
+      "infants": 72.56,
+      "toddlers": 62.80,
+      "preschool": 55.77,
+      "schoolAge": 40.60
+    },
+    {
+      "region": "Region 6",
+      "infants": 66.12,
+      "toddlers": 59.16,
+      "preschool": 54.52,
+      "schoolAge": 41.66
+    }
+  ],
+  "FCC": [
+    {
+      "region": "Region 1",
+      "infants": 40.00,
+      "toddlers": 35.00,
+      "preschool": 32.00,
+      "schoolAge": 30.00
+    },
+    {
+      "region": "Spokane",
+      "infants": 42.00,
+      "toddlers": 40.00,
+      "preschool": 37.00,
+      "schoolAge": 36.00
+    },
+    {
+      "region": "Region 2",
+      "infants": 45.00,
+      "toddlers": 37.50,
+      "preschool": 35.00,
+      "schoolAge": 32.00
+    },
+    {
+      "region": "Region 3",
+      "infants": 55.00,
+      "toddlers": 48.86,
+      "preschool": 48.00,
+      "schoolAge": 40.00
+    },
+    {
+      "region": "Region 4",
+      "infants": 68.18,
+      "toddlers": 63.64,
+      "preschool": 59.09,
+      "schoolAge": 40.00
+    },
+    {
+      "region": "Region 5",
+      "infants": 48.86,
+      "toddlers": 42.00,
+      "preschool": 39.09,
+      "schoolAge": 35.71
+    },
+    {
+      "region": "Region 6",
+      "infants": 45.00,
+      "toddlers": 43.18,
+      "preschool": 38.00,
+      "schoolAge": 32.50
+    }
+  ]
+}

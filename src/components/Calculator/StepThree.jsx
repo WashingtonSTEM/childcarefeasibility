@@ -132,15 +132,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfInfants}
             onChange={handleOnChange}
           />
-          {maximumNumberOfInfantsSupported !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {maximumNumberOfInfantsSupported}
-                <br />
-                <FormattedMessage id='S3_#_INFANTS_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfToddlers}>
           <Input
@@ -151,15 +142,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfToddlers}
             onChange={handleOnChange}
           />
-          {maximumNumberOfInfantsSupported !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {maximumNumberOfInfantsSupported}
-                <br />
-                <FormattedMessage id='S3_#_TODDLERS_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolers}>
           <Input
@@ -170,15 +152,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfPreschoolers}
             onChange={handleOnChange}
           />
-          {maximumNumberOfPreschoolers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {maximumNumberOfPreschoolers}
-                <br />
-                <FormattedMessage id='S3_#_PRESCHOOLERS_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfSchoolAgeChildren}>
           <Input
@@ -189,15 +162,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             value={data.numberOfSchoolAgeChildren}
             onChange={handleOnChange}
           />
-          {maximumNumberOfPreschoolers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {maximumNumberOfPreschoolers}
-                <br />
-                <FormattedMessage id='S3_#_SAC_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
       </Row>
       <Row>

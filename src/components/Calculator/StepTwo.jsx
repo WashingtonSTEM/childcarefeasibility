@@ -26,6 +26,8 @@ export const validationRules = {
   percentageChildrenReceivingSubsidy: [isRequired, minNumber(0), maxNumber(100)],
   rentOrMortageCost: [isRequired, minNumber(0)],
   collectionsRate: [isRequired, minNumber(0), maxNumber(100)],
+  educationProgramExpenses: [isRequired, minNumber(0)],
+  programManagementChild: [isRequired, minNumber(0)]
 }
 
 const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
@@ -75,6 +77,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               max={100}
               value={data.percentageChildrenReceivingSubsidy}
               onChange={handleInputChange}
+              disabled={data.earlyAchieversLevel === '0'}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>

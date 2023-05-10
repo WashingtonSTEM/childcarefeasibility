@@ -43,6 +43,9 @@ const Page = () => {
 
   const handleOnChange = (name, value) => {
     onDataChange(name, value)
+    if (name === 'earlyAchieversLevel' && parseFloat(value) === 0) {
+      onDataChange('percentageChildrenReceivingSubsidy', 0)
+    }
     if (errors[name]) {
       if (isMobile) {
         validate(data, validationRules[`step${step}`])
