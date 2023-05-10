@@ -45,8 +45,12 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
   return (
     <>
       <Row>
-        <FormGroup lg={4}>
-          <Toggle label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })} checked={!!data.payBenefits} onChange={({ target }) => onDataChange?.('payBenefits', target.checked)} />
+        <FormGroup lg={4} style={ { display: 'flex' } }>
+          <Toggle
+            label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })}
+            checked={!!data.payBenefits}
+            onChange={({ target }) => onDataChange?.('payBenefits', target.checked)}
+          />
         </FormGroup>
         <FormGroup lg={8} error={errors.percentageBenefitsCost}>
           <Input
@@ -63,7 +67,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
         </FormGroup>
       </Row>
       <Row>
-        <FormGroup lg={5} error={errors.percentageChildrenReceivingSubsidy}>
+        <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='percentageChildrenReceivingSubsidy'
@@ -78,7 +82,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>
         </FormGroup>
-        <FormGroup lg={5} error={errors.educationProgramExpenses}>
+        <FormGroup lg={6} error={errors.educationProgramExpenses}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='educationProgramExpenses'
@@ -109,7 +113,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
         </FormGroup>
       </Row>
       <Row>
-        <FormGroup lg={5} error={errors.rentOrMortageCost}>
+        <FormGroup lg={6} error={errors.rentOrMortageCost}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='rentOrMortageCost'
@@ -138,7 +142,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           </div>
 
         </FormGroup>
-        <FormGroup lg={5} error={errors.collectionsRate}>
+        <FormGroup lg={6} error={errors.collectionsRate}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='collectionsRate'
