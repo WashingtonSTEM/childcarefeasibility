@@ -240,27 +240,28 @@ export const getRegionByCounty = (county) => {
   )*22*12))*(SUMIFS(DCYFSubsidyRate!C21:C34,DCYFSubsidyRate!A21:A34,'Simplified Calculator'!D3,DCYFSubsidyRate!B21:B34,'Simplified Calculator'!D4)
 )
 */
-export const getSubsidy = (county, child) => {
+export const getSubsidy = (typeOfFacility, county, earlyAchieversLevel, child) => {
   const region = getRegionByCounty(county)
 
   if (!region) {
     return null
   }
   const subsidyRates = require('../data/subsidy_rates.json')
+  const subsidyRateIncreases = require('../data/subsidy_rate_increases.json')
 
-  const row = subsidyRates.find((s) => s.region === region)
+  const row =  subsidyRates[typeOfFacility].find((s) => s.region === region)
 
   if (!row) {
     return null
   }
 
-  let multiplier = 20
+  let multiplier = 22
 
-  if (child === 'infants') {
-    multiplier = 22
+  if (child === 'schoolAge') {
+    multiplier = typeOfFacility === 'Center-Based' ? 13.5 : 17.75
   }
 
-  return (row[child] || 0) * multiplier
+  return (row[child] || 0) * multiplier * subsidyRateIncreases[typeOfFacility][earlyAchieversLevel]
 }
 
 export const getExpectedFeeRevenue = (

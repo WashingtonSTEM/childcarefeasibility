@@ -26,6 +26,8 @@ export const validationRules = {
   percentageChildrenReceivingSubsidy: [isRequired, minNumber(0), maxNumber(100)],
   rentOrMortageCost: [isRequired, minNumber(0)],
   collectionsRate: [isRequired, minNumber(0), maxNumber(100)],
+  educationProgramExpenses: [isRequired, minNumber(0)],
+  programManagementChild: [isRequired, minNumber(0)]
 }
 
 const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false }) => {

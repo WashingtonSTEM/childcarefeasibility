@@ -56,6 +56,8 @@ const ResultsPage = () => {
     data.collectionsRate = parseFloat(data.collectionsRate)
     data.percentageBenefitsCost = parseFloat(data.percentageBenefitsCost)
     data.additionalCost = parseFloat(data.additionalCost)
+    data.programManagementChild = parseFloat(data.programManagementChild)
+    data.educationProgramExpenses = parseFloat(data.educationProgramExpenses)
     const isValid = validate(data, {
       ...stepOneRules,
       ...stepTwoRules,
@@ -86,10 +88,10 @@ const ResultsPage = () => {
     if (!data) {
       return null
     }
-    const infants = getSubsidy(data.county, 'infants') || 0
-    const toddlers = getSubsidy(data.county, 'toddlers') || 0
-    const preschool = getSubsidy(data.county, 'preschool') || 0
-    const schoolAge = getSubsidy(data.county, 'schoolAge') || 0
+    const infants = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'infants') || 0
+    const toddlers = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'toddlers') || 0
+    const preschool = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'preschool') || 0
+    const schoolAge = getSubsidy(data.typeOfFacility, data.county, data.earlyAchieversLevel, 'schoolAge') || 0
 
     return { infants, toddlers, preschool, schoolAge }
   }, [data])
