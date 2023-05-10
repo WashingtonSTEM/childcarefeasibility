@@ -99,6 +99,9 @@ const Page = () => {
   return (
     <>
       <BaseCSS />
+      <header className={styles.header}>
+        <div className={styles['header-image']} />
+      </header>
       {isMobile && <StepBar step={step} steps={MAX_STEPS} />}
       <main className={styles.main}>
         <Container as='form' style={{ padding: '0 30px' }} onSubmit={(e) => e.preventDefault()}>
