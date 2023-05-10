@@ -233,7 +233,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
               sufix='$'
               label={intl.formatMessage({ id: 'S1_ADDITIONAL_COST' })}
               min={0}
-              value={data.additionalCost || 0}
+              value={data.additionalCost}
               onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S1_ADDITIONAL_COST_TOOLTIP' })} />
