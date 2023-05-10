@@ -131,9 +131,11 @@ const ResultsPage = () => {
 
   const expectedBenefits = data.payBenefits === 'true' ? expectedSalaries * (data.percentageBenefitsCost / 100) : 0
 
+  const totalChildren = data.numberOfInfants + data.numberOfToddlers + data.numberOfPreschoolers + data.numberOfSchoolAgeChildren
+
   const totalIncome = expectedFeeRevenue
 
-  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + ((data.additionalCost / 100) * (expectedSalaries + expectedBenefits + data.rentOrMortageCost))
+  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren
 
   const netIncome = totalIncome - totalExpenses
 
@@ -379,8 +381,9 @@ const ResultsPage = () => {
             expectedSalaries={expectedSalaries}
             expectedBenefits={expectedBenefits}
             rentOrMortageCost={data.rentOrMortageCost}
-            additionalCost={data.additionalCost}
-            dollarAmount={(data.additionalCost / 100) * (expectedSalaries + expectedBenefits + data.rentOrMortageCost)}
+            additionalCost={totalChildren * data.additionalCost}
+            educationProgramExpenses={totalChildren * data.educationProgramExpenses}
+            managementAndAdministration={totalChildren * data.programManagementChild}
             onDataChange={onInputChage}
           />
           {!isMobile && (
