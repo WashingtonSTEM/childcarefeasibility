@@ -18,7 +18,6 @@ const Instructions = ({ text }) => {
   return (
     <div style={{  margin: '18px 0' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Text>Instructions</Text>
         <InfoButton onClick={() => setShow((prev) => !prev)} />
       </div>
       {show && (
