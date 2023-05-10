@@ -93,12 +93,12 @@ const ResultsPage = () => {
     if (!data) {
       return null
     }
-    const { county, typeOfFacility } = data
+    const { county, typeOfFacility, earlyAchieversLevel } = data
 
-    const infants = getSubsidy(typeOfFacility, county, 'infants') || 0
-    const toddlers = getSubsidy(typeOfFacility, county, 'toddlers') || 0
-    const preschool = getSubsidy(typeOfFacility, county, 'preschool') || 0
-    const schoolAge = getSubsidy(typeOfFacility, county, 'schoolAge') || 0
+    const infants = getSubsidy(typeOfFacility, county, earlyAchieversLevel, 'infants') || 0
+    const toddlers = getSubsidy(typeOfFacility, county, earlyAchieversLevel, 'toddlers') || 0
+    const preschool = getSubsidy(typeOfFacility, county, earlyAchieversLevel, 'preschool') || 0
+    const schoolAge = getSubsidy(typeOfFacility, county, earlyAchieversLevel, 'schoolAge') || 0
 
     return { infants, toddlers, preschool, schoolAge }
   }, [data])

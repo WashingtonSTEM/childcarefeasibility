@@ -1,0 +1,62 @@
+[
+  {
+    "facilityType": "Center",
+    "earlyAchieversLevel": "1",
+    "rate": 1
+  },
+  {
+    "facilityType": "Center",
+    "earlyAchieversLevel": "2",
+    "rate": 1.02
+  },
+  {
+    "facilityType": "Center",
+    "earlyAchieversLevel": "3",
+    "rate": 1.08
+  },
+  {
+    "facilityType": "Center",
+    "earlyAchieversLevel": "3.5",
+    "rate": 1.08
+  },
+  {
+    "facilityType": "Center",
+    "earlyAchieversLevel": "4",
+    "rate": 1.15
+  },
+  {
+    "facilityType": "Center",
+    "earlyAchieversLevel": "5",
+    "rate": 1.2
+  },
+  {
+    "facilityType": "FCC",
+    "earlyAchieversLevel": "1",
+    "rate": 1
+  },
+  {
+    "facilityType": "FCC",
+    "earlyAchieversLevel": "2",
+    "rate": 1.02
+  },
+  {
+    "facilityType": "FCC",
+    "earlyAchieversLevel": "3",
+    "rate": 1.12
+  },
+  {
+    "facilityType": "FCC",
+    "earlyAchieversLevel": "3.5",
+    "rate": 1.15
+  },
+  {
+    "facilityType": "FCC",
+    "earlyAchieversLevel": "4",
+    "rate": 1.17
+  },
+  {
+    "facilityType": "FCC",
+    "earlyAchieversLevel": "5",
+    "rate": 1.2
+  }
+]
