@@ -22,8 +22,9 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
     { text: intl.formatMessage({ id: 'R_E_SALARIES' }), value: 'expectedSalaries' },
     { text: intl.formatMessage({ id: 'R_E_BENEFITS' }), value: 'expectedBenefits' },
     { text: intl.formatMessage({ id: 'R_RENT_COST' }), value: 'rentOrMortageCost' },
+    { text: intl.formatMessage({ id: 'R_EDUCATIONAL_PROGRAM_EXPENSES' }), value: 'educationProgramExpenses' },
+    { text: intl.formatMessage({ id: 'R_MANAGEMENT_ADMINISTRATION' }), value: 'managementAndAdministration' },
     { text: intl.formatMessage({ id: 'R_ADDITIONAL_COSR' }), value: 'additionalCost' },
-    { text: intl.formatMessage({ id: 'R_DOLLAR_AMOUNT' }), value: 'dollarAmount' },
   ]
 
   if (mobile) {
@@ -56,14 +57,11 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
             <Row key={`${field.value}-result-${index}`} style={{ padding: `12px 0 ${index < 5 ? '12px' : '60px'} 0` }}>
               <Col col={6}>
                 <Text style={{ fontWeight: '400' }}>
-                  {field.value !== 'additionalCost' ?
-                    <>{moneyFormatter.format(props[field.value] || 0)}</>
-                    : <>{`${props[field.value]}%`}</>
-                  }
+                  {moneyFormatter.format(props[field.value] || 0)}
                 </Text>
               </Col>
               <Col col={6}>
-                {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}
+                <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>
               </Col>
             </Row>
           </>
@@ -75,44 +73,30 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
   return (
     <>
       <Row style={{ marginBottom: 60 }}>
-        <Col md={4} lg={6}>
+        <Col md={4} lg={1.5}>
           <Text style={{ fontWeight: 'bold', fontSize: 30 }}><FormattedMessage id="R_FINAL" /></Text>
         </Col>
-        <Col md={4} lg={3} style={{ textAlign: 'center' }}>
+        <Col md={4} lg={4} style={{ textAlign: 'center' }}>
           <Text>
             <FormattedMessage id="R_MONTHLY" />
           </Text>
         </Col>
-        <Col md={4} lg={3} style={{ textAlign: 'center' }}>
+        <Col md={4} lg={4} style={{ textAlign: 'center' }}>
           <Text>
             <FormattedMessage id="R_ANNUAL" />
           </Text>
         </Col>
       </Row>
       {finalResultsFields.map((field, index) => (
-        <Row key={`${field.value}-${index}`} style={{ padding: '34px 0' }}>
-          <Col md={4} lg={6}>
+        <Row key={`${field.value}-${index}`} style={{ padding: '30px 0' }}>
+          <Col md={4} lg={3}>
             <Text style={{ fontWeight: 'bold' }}>{field.text}</Text>
           </Col>
-          <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            {field.value !== 'additionalCost' ? (
-              <Text>{moneyFormatter.format(props[field.value] || 0)}</Text>
-            ) : (
-              <Input
-                name='additionalCost'
-                type='number'
-                sufix='%'
-                label='Additional costs'
-                min={0}
-                max={100}
-                value={props.additionalCost}
-                onChange={onDataChange}
-              />
-            )}
-
+          <Col md={4} lg={4} style={{ textAlign: 'left' }}>
+            <Text>{moneyFormatter.format(props[field.value] || 0)}</Text>
           </Col>
-          <Col md={4} lg={3} style={{ textAlign: 'center' }}>
-            {field.value !== 'additionalCost' && <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>}
+          <Col md={4} lg={3} style={{ textAlign: 'left' }}>
+            <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>
           </Col>
         </Row>
       ))}
