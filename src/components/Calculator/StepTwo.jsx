@@ -39,9 +39,6 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
     onDataChange?.(target.name, target.value)
   }
 
-
-  console.log(data.typeOfFacility)
-
   return (
     <>
       <Row>
