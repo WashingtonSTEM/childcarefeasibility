@@ -91,18 +91,17 @@ export const getEstimatedNumberOfChildCareWorkers = (
   const total = infants + toddlers + preschoolers + schoolAgeChildren
 
   if (facilityType === 'FCC') {
-    return (Math.ceil(total / 4) - estimatedNumberOfChildCareAdministrators - estimatedNumberOfPreschoolTeachers)
+    return Math.ceil(total / 4)
   }
 
-  // This might be on a different route
-  const rates = require('../data/childcare_staff_ratios.json')
-
+  const _facilityType = 'Center'
   const estimated =
-    Math.ceil(infants / getRatioForFacilityAndChildren(facilityType, 'Infant'))
-    + Math.ceil(toddlers / getRatioForFacilityAndChildren(facilityType, 'Toddler'))
-    + Math.ceil(preschoolers / getRatioForFacilityAndChildren(facilityType, 'Preschooler'))
-    + Math.ceil(schoolAgeChildren / getRatioForFacilityAndChildren(facilityType, 'School Age'))
-    - estimatedNumberOfPreschoolTeachers
+    Math.ceil(
+      (infants / getRatioForFacilityAndChildren(_facilityType, 'Infant')) +
+      (toddlers / getRatioForFacilityAndChildren(_facilityType, 'Toddler')) +
+      (preschoolers / getRatioForFacilityAndChildren(_facilityType, 'Preschooler')) +
+      (schoolAgeChildren / getRatioForFacilityAndChildren(_facilityType, 'School Age'))
+    )
 
   if (estimated < 0) {
     return 0

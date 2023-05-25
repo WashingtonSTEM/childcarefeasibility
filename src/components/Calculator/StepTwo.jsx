@@ -44,7 +44,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
   return (
     <>
       <Row>
-        <FormGroup lg={4} style={ { display: 'flex' } }>
+        <FormGroup lg={4} style={{ display: 'flex' }}>
           <Toggle
             label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })}
             checked={!!data.payBenefits}
@@ -52,17 +52,24 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           />
         </FormGroup>
         <FormGroup lg={8} error={errors.percentageBenefitsCost}>
-          <Input
-            name='percentageBenefitsCost'
-            type='number'
-            sufix='%'
-            label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
-            disabled={!data.payBenefits}
-            min={0}
-            max={100}
-            value={data.percentageBenefitsCost}
-            onChange={handleInputChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+
+            <Input
+              name='percentageBenefitsCost'
+              type='number'
+              prefix='%'
+              label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
+              disabled={!data.payBenefits}
+              min={0}
+              max={100}
+              value={data.percentageBenefitsCost}
+              onChange={handleInputChange}
+            />
+            <Tooltip
+              trigger={isMobile ? 'click' : 'hover'}
+              tooltipText={intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP' })}
+            />
+          </div>
         </FormGroup>
       </Row>
       <Row>
@@ -71,7 +78,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             <Input
               name='percentageChildrenReceivingSubsidy'
               type='number'
-              sufix='%'
+              prefix='%'
               label={intl.formatMessage({ id: 'S2_SUBSIDY' })}
               min={0}
               max={100}
@@ -82,12 +89,12 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>
         </FormGroup>
-        <FormGroup lg={6} error={errors.educationProgramExpenses}>
+        <FormGroup lg={6} error={errors.educationProgramExpenses} description={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION' })}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='educationProgramExpenses'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES' })}
               min={0}
               max={100}
@@ -113,12 +120,12 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
         </FormGroup>
       </Row>
       <Row>
-        <FormGroup lg={6} error={errors.rentOrMortageCost}>
+        <FormGroup lg={6} error={errors.rentOrMortageCost} description={intl.formatMessage({ id: 'S2_RENT_COST_DESCRIPTION' })}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='rentOrMortageCost'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ id: 'S2_RENT_COST' })}
               min={0}
               value={data.rentOrMortageCost}
@@ -126,18 +133,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             />
             <Tooltip
               trigger={isMobile ? 'click' : 'hover'}
-              tooltipText={
-                data.typeOfFacility === 'Center-Based' ?
-                  (
-                    <>
-                      {intl.formatMessage({ id: 'S2_RENT_COST_TOOLTIP_1' })}
-                    </>
-                  ) : (
-                    <>
-                      {intl.formatMessage({ id: 'S2_RENT_COST_TOOLTIP_2' })}
-                    </>
-                  )
-              }
+              tooltipText={intl.formatMessage({ id: 'S2_RENT_COST_TOOLTIP' })}
             />
           </div>
 
@@ -147,7 +143,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             <Input
               name='collectionsRate'
               type='number'
-              sufix='%'
+              prefix='%'
               label={intl.formatMessage({ id: 'S2_COLLECTIONS_RATE' })}
               min={0}
               max={100}
@@ -160,12 +156,12 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
       </Row>
 
       <Row>
-        <FormGroup lg={12} error={errors.programManagementChild}>
+        <FormGroup lg={6} error={errors.programManagementChild} description={intl.formatMessage({ id: 'S2_MANAGEMENT_CHILD_DESCRIPTION' })}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='programManagementChild'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ id: 'S2_MANAGEMENT_CHILD' })}
               min={0}
               value={data.programManagementChild}
@@ -187,7 +183,29 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
               }
             />
           </div>
-
+        </FormGroup>
+        <FormGroup lg={6} error={errors.additionalCost} description={intl.formatMessage({ id: 'S2_ADDITIONAL_COST_DESCRIPTION' })}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='additionalCost'
+              type='number'
+              prefix='$'
+              label={intl.formatMessage({ id: 'S2_ADDITIONAL_COST' })}
+              min={0}
+              value={data.additionalCost}
+              onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
+            />
+            <Tooltip
+              trigger={isMobile ? 'click' : 'hover'}
+              tooltipText={
+                intl.formatMessage(
+                  { id: 'S2_ADDITIONAL_COST_TOOLTIP' },
+                  {
+                    a_href: <a target="blank" style={{ color: 'inherit' }} href='https://deptofcommerce.app.box.com/s/yqq2lsvhuvfr1n2xty7ymptym9lmd95z#:~:text=13-,Family%20Child%20Care%20Homes,-Nonpersonnel'>
+                      {intl.formatMessage({ id: 'S2_ADDITIONAL_COST_LINK_TEXT_TOOLTIP' })}
+                    </a>
+                  })} />
+          </div>
         </FormGroup>
       </Row>
     </>

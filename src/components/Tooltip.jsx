@@ -15,21 +15,22 @@ const PortalContainer = styled.div`
   font-style: italic;
 `
 
-let timeout
-
-const Tooltip = ({ tooltipText, trigger, children }) => {
+const Tooltip = ({ tooltipText, trigger, disabled, children }) => {
   const [show, setShow] = useState(false)
   const divRef = useRef()
+  const timeoutRef = useRef()
 
   const handleOnMouseOver = () => {
-    clearTimeout(timeout)
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+    }
     setShow(true)
   }
 
   const handleOnMouseLeve = () => {
-    timeout = setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       setShow(false)
-    }, 350)
+    }, 150)
   }
 
   const handleOnClick = () => {
@@ -47,11 +48,11 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
     <div {...containerProps} style={ { marginBottom: 3 } }>
       <div style={{ fontStyle: 'italic' }}>
         <div ref={divRef}>
-          {children || <InfoButton backgroundColor={show ? '#012846' : null} />}
+          {children || <InfoButton disabled={disabled} backgroundColor={show ? '#012846' : null} />}
         </div>
       </div>
-      {show && (
-        <PortalContainer style={{ top: divRef.current?.offsetHeight + 8 }}>
+      {(show && !disabled) && (
+        <PortalContainer style={{ top: divRef.current?.offsetHeight + 30 }}>
           <TextBox>{tooltipText}</TextBox>
         </PortalContainer>
       )}
@@ -60,16 +61,18 @@ const Tooltip = ({ tooltipText, trigger, children }) => {
 }
 
 Tooltip.propTypes = {
-  tooltipText: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+  tooltipText: PropTypes.any.isRequired,
   boxWidth: PropTypes.number,
   trigger: PropTypes.oneOf(['hover', 'click']),
   position: PropTypes.oneOf(['left', 'right']),
+  disabled: PropTypes.bool,
 }
 
 Tooltip.defaultProps = {
   boxWidth: 200,
   trigger: 'hover',
-  position: 'left'
+  position: 'left',
+  disabled: false,
 }
 
 export default Tooltip

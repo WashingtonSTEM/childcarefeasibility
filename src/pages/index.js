@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
 import { useIntl } from 'react-intl'
@@ -37,9 +37,18 @@ const validationRules = {
 const Page = () => {
   const intl = useIntl()
   const router = useRouter()
-  const { data, onDataChange, validate, errors, clean } = useForm({})
+  const { data, set: setData, onDataChange, validate, errors, clean } = useForm({})
   const isMobile = useMediaQuery('(max-width: 768px)')
   const [step, setStep] = useState(1)
+
+  useEffect(() => {
+    if (!router.isReady) return
+
+    const _data = { ...router.query }
+
+    setData(_data)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.query])
 
   const handleOnChange = (name, value) => {
     onDataChange(name, value)

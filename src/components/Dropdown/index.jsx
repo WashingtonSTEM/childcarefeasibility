@@ -68,8 +68,8 @@ const Label = styled.label`
   font-weight: 400;
   line-height: 20px;
   color: #012846;
+  margin-bottom: 4px;
   @media (max-width: 768px) {
-    height: 55px;
     font-size: 17px;
   }
 `
