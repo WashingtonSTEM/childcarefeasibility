@@ -104,5 +104,6 @@
   "S2_MANAGEMENT_CHILD": "Gestión y administración del programa",
   "S2_MANAGEMENT_CHILD_DESCRIPTION": "Monto por niño, por mes",
   "S2_MANAGEMENT_CHILD_TOOLTIP_CB": "Para Centros con Licencia, $30 por niño, según estimaciones del Departamento de Comercio.",
-  "S2_MANAGEMENT_CHILD_TOOLTIP_FCC": "Para hogar familiar con licencia, $45 por niño, según estimaciones del Departamento de Comercio."
+  "S2_MANAGEMENT_CHILD_TOOLTIP_FCC": "Para hogar familiar con licencia, $45 por niño, según estimaciones del Departamento de Comercio.",
+  "R_LICENSING_FEE": "Tarifa de licencia de cuidado de niños"
 }

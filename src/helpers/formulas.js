@@ -288,3 +288,14 @@ export const getExpectedFeeRevenue = (
   ((1 - percentageChildrenReceivingSubsidy) * numberOfPreschoolers * revenueOfPreschoolers) +
   ((1 - percentageChildrenReceivingSubsidy) * numberOfSchoolAgeChildren * revenueOfSchoolAgeChildren)
 ) * collectionsRate
+
+export const getChildcareLicensingFee = (typeOfFacility, totalChildren) => {
+  if (typeOfFacility === 'FCC') {
+    return 2.5
+  }
+  if (totalChildren > 12) {
+    return 10.4166666666667 + ((totalChildren) - 12)
+  }
+
+  return 125/12
+}

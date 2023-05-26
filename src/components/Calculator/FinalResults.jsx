@@ -23,6 +23,7 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
     { text: intl.formatMessage({ id: 'R_E_SALARIES' }), value: 'expectedSalaries' },
     { text: intl.formatMessage({ id: 'R_E_BENEFITS' }), value: 'expectedBenefits' },
     { text: intl.formatMessage({ id: 'R_RENT_COST' }), value: 'rentOrMortageCost' },
+    { text: intl.formatMessage({ id: 'R_LICENSING_FEE' }), value: 'childcareLicensingFee' },
     { text: intl.formatMessage({ id: 'R_EDUCATIONAL_PROGRAM_EXPENSES' }), value: 'educationProgramExpenses' },
     { text: intl.formatMessage({ id: 'R_MANAGEMENT_ADMINISTRATION' }), value: 'managementAndAdministration' },
     { text: intl.formatMessage({ id: 'R_ADDITIONAL_COSR' }), value: 'additionalCost' },

@@ -12,7 +12,7 @@ import FinalResults from '@/components/Calculator/FinalResults'
 import TotalBox from '@/components/Calculator/TotalBox'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import useForm from '@/hooks/useForm'
-import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary, getExpectedFeeRevenue } from '@/helpers/formulas'
+import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary, getExpectedFeeRevenue, getChildcareLicensingFee } from '@/helpers/formulas'
 
 import { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
 import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
@@ -137,9 +137,11 @@ const ResultsPage = () => {
 
   const totalChildren = data.numberOfInfants + data.numberOfToddlers + data.numberOfPreschoolers + data.numberOfSchoolAgeChildren
 
+  const childcareLicensingFee = getChildcareLicensingFee(data.typeOfFacility, totalChildren)
+
   const totalIncome = expectedFeeRevenue
 
-  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren
+  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren + childcareLicensingFee
 
   const netIncome = totalIncome - totalExpenses
 
@@ -387,6 +389,7 @@ const ResultsPage = () => {
             expectedBenefits={expectedBenefits}
             rentOrMortageCost={data.rentOrMortageCost}
             additionalCost={totalChildren * data.additionalCost}
+            childcareLicensingFee={childcareLicensingFee}
             educationProgramExpenses={totalChildren * data.educationProgramExpenses}
             managementAndAdministration={totalChildren * data.programManagementChild}
             onDataChange={onInputChage}
