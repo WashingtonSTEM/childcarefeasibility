@@ -75,6 +75,15 @@ body {
   margin-top: 4px;
 }
 
+.text-secondary {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  color: gray;
+  margin-top: 4px;
+}
+
 @media (max-width: 768px) {
   .text-error {
     font-size: 16px;

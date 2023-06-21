@@ -26,6 +26,12 @@ const IconButton = styled(Button)`
     `
     : ''
 }
+@media (max-width: 768px) {
+  width: 50px;
+  max-width: 50px;
+  min-width: 50px;
+  height: 50px;
+}
 `
 
 IconButton.propTypes = {

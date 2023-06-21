@@ -115,10 +115,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
-      <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-        <Instructions text={intl.formatMessage({ id: 'S3_INSTRUCTIONS' })} />
-      </div>
-   
+      <Text>{intl.formatMessage({ id: 'S3_INSTRUCTIONS' })}</Text>
       {data.typeOfFacility === 'FCC' && (
         <Text>
           <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
@@ -126,44 +123,56 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       )}
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
-          <Input
-            name='numberOfInfants'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_INFANTS' })}
-            min={0}
-            value={data.numberOfInfants}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfInfants'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_INFANTS' })}
+              min={0}
+              value={data.numberOfInfants}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_INFANTS_TOOLTIP' })} />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfToddlers}>
-          <Input
-            name='numberOfToddlers'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_TODDLERS' })}
-            min={0}
-            value={data.numberOfToddlers}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfToddlers'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_TODDLERS' })}
+              min={0}
+              value={data.numberOfToddlers}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TODDLERS_TOOLTIP' })} />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolers}>
-          <Input
-            name='numberOfPreschoolers'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_PRESCHOOLERS' })}
-            min={0}
-            value={data.numberOfPreschoolers}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfPreschoolers'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_PRESCHOOLERS' })}
+              min={0}
+              value={data.numberOfPreschoolers}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PRESCHOOLERS_TOOLTIP' })} />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfSchoolAgeChildren}>
-          <Input
-            name='numberOfSchoolAgeChildren'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_SAC' })}
-            min={0}
-            value={data.numberOfSchoolAgeChildren}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfSchoolAgeChildren'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_SAC' })}
+              min={0}
+              value={data.numberOfSchoolAgeChildren}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_SAC_TOOLTIP' })} />
+          </div>
         </FormGroup>
       </Row>
       <Row>
@@ -194,11 +203,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
           {estimatedNumberOfChildCareWorkers !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {estimatedNumberOfChildCareWorkers}
-                <br />
-                <FormattedMessage id='S3_#_CCS_RECOMENDATION' />
-              </>
+              {intl.formatMessage({ id: 'S3_#_CCS_RECOMENDATION' }, { number: estimatedNumberOfChildCareWorkers })}
             </TextBox>
           )}
         </FormGroup>
@@ -214,15 +219,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PST_TOOLTIP' })} />
           </div>
-          {estimatedNumberOfPreschoolTeachers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {estimatedNumberOfPreschoolTeachers}
-                <br />
-                <FormattedMessage id='S3_#_PST_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
