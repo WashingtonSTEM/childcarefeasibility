@@ -121,10 +121,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
-      <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-        <Instructions text={intl.formatMessage({ id: 'S3_INSTRUCTIONS' })} />
-      </div>
-   
+      <Text>{intl.formatMessage({ id: 'S3_INSTRUCTIONS' })}</Text>
       {data.typeOfFacility === 'FCC' && (
         <Text>
           <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
@@ -141,7 +138,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfInfants}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC' })} />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_INFANTS_TOOLTIP' })} />
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfToddlers}>
@@ -154,7 +151,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfToddlers}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC' })} />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TODDLERS_TOOLTIP' })} />
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolers}>
@@ -167,7 +164,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfPreschoolers}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC' })} />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PRESCHOOLERS_TOOLTIP' })} />
           </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfSchoolAgeChildren}>
@@ -180,7 +177,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               value={data.numberOfSchoolAgeChildren}
               onChange={handleOnChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC_EXTENDED' })} />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_SAC_TOOLTIP' })} />
           </div>
         </FormGroup>
       </Row>
@@ -329,11 +326,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
           {estimatedNumberOfChildCareWorkers !== null && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {estimatedNumberOfChildCareWorkers}
-                <br />
-                <FormattedMessage id='S3_#_CCS_RECOMENDATION' />
-              </>
+              {intl.formatMessage({ id: 'S3_#_CCS_RECOMENDATION' }, { number: estimatedNumberOfChildCareWorkers })}
             </TextBox>
           )}
         </FormGroup>
@@ -349,15 +342,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PST_TOOLTIP' })} />
           </div>
-          {estimatedNumberOfPreschoolTeachers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {estimatedNumberOfPreschoolTeachers}
-                <br />
-                <FormattedMessage id='S3_#_PST_RECOMENDATION' />
-              </>
-            </TextBox>
-          )}
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>

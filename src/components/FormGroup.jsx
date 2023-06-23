@@ -14,7 +14,7 @@ const Label = styled.label`
   color: #534F4D;
 `
 
-const FormGroup = ({ error, children, ...props }) => (
+const FormGroup = ({ description, error, children, ...props }) => (
   <Col {...props} className={`form-group${error ? ' form-group-error' : ''}`}>
     {props.label && <Label>{props.label}</Label>}
     {children}
@@ -22,6 +22,11 @@ const FormGroup = ({ error, children, ...props }) => (
       <small className='text-error'>
         <FormattedMessage id={error.code} values={error} />
       </small>
+    )}
+    {!error && description && (
+      <small className='text-secondary'>
+        {description}
+      </small>    
     )}
   </Col>
 )

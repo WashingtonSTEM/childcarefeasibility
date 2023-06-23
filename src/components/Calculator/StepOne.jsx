@@ -64,7 +64,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
     return getMaximumNumberOfInfantsSupported(typeOfFacility, intendedFootage)
   }, [data])
 
-  const maximumNumberOfPreschoolers = useMemo(() => {
+  /* const maximumNumberOfPreschoolers = useMemo(() => {
     const { typeOfFacility, intendedFootage } = data
 
     if (!typeOfFacility || !intendedFootage) {
@@ -72,7 +72,21 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
     }
 
     return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
-  }, [data, maximumNumberOfInfantsSupported])
+  }, [data, maximumNumberOfInfantsSupported]) */
+
+  const staffCompesantionTooltipText = () => {
+    if (data.staffCompesantion === 'Living Wage') {
+      return intl.formatMessage({
+        id: 'S1_PCT_STAFF_COMP_LIVING_TOOLTIP'
+      }, { 
+        a_href: <a href="https://livingwage.mit.edu" style={{ color: 'inherit' }} target="blank">{intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_LIVING_TOOLTIP_MIT' })}</a>
+      })
+    } else if (data.staffCompesantion === 'Median Wage') {
+      return intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MEDIAN_TOOLTIP' })
+    }
+
+    return intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MINIMUN_TOOLTIP' })
+  }
 
   const TYPE_FACILITY_OPTIONS = [
     { text: intl.formatMessage({ id: 'S1_TOF_CB' }), value: 'Center-Based' },
@@ -157,31 +171,9 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             />
             <Tooltip
               trigger={isMobile ? 'click' : 'hover'}
-              tooltipText={
-                data.typeOfFacility === 'FCC' ?
-                  (
-                    <>
-                      {intl.formatMessage({ id: 'S1_FOOTAGE_TOOLTIP_FCC' })}
-                    </>
-                  ) : (
-                    <>
-                      {intl.formatMessage({ id: 'S1_FOOTAGE_TOOLTIP' })}
-                    </>
-                  )
-              }
+              tooltipText={intl.formatMessage({ id: 'S1_FOOTAGE_TOOLTIP' })}
             />
           </div>
-          {maximumNumberOfInfantsSupported !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {intl.formatMessage({ id: 'S1_FOOTAGE_RECOMENDATION' }, {
-                  maximumNumberOfInfantsSupported,
-                  maximumNumberOfPreschoolers,
-                  and_or: data.typeOfFacility === 'FCC' ? ` ${intl.formatMessage({ id: 'S1_AND' })}` : ` ${intl.formatMessage({ id: 'S1_OR' })},`
-                })}
-              </>
-            </TextBox>
-          )}
         </FormGroup>
       </Row>
       <Row>

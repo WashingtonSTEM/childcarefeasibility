@@ -45,21 +45,14 @@ const InputWraper = styled.div`
   height: 100%;
 `
 
-const Text = styled.span`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: ${props => props.align !== 'right' ? '10px' : null};
-  right: ${props => props.align !== 'left' ? '10px' : null};
+const Text = styled.div`
+  margin-left: ${props => props.align !== 'right' ? '10px' : '-5px'};
+  margin-right: ${props => props.align !== 'left' ? '10px' : '-5px'};
   transition: 200ms all;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 38px;
-  @media (max-width: 768px) {
-    top: 17px;
-    line-height: 18px;
-  }
+  align-self: center;
 `
 
 const StyledInput = styled.input`
@@ -94,17 +87,18 @@ const Label = styled.label`
   font-weight: 400;
   line-height: 20px;
   color: #012846;
+  margin-bottom: 4px;
   @media (max-width: 768px) {
-    height: 55px;
     font-size: 17px;
   }
 `
 
-const Input = ({ sufix, type, disabled, value, ...props }) => {
+const Input = ({ prefix, sufix, type, disabled, value, ...props }) => {
   return (
     <Container>
       <Label>{ props.label }</Label>
       <InputContainer tabindex="1" disabled={disabled} className='input-control'>
+        {prefix && <Text align="left" hideOnFocus>{prefix}</Text>} 
         <InputWraper>
           <StyledInput
             sufix={sufix}
@@ -116,7 +110,7 @@ const Input = ({ sufix, type, disabled, value, ...props }) => {
           />
           { (value === null || value === undefined || value === '')}
         </InputWraper>
-        {sufix && <Text align="right" hideOnFocus style={{ marginLeft: 8 }}>{sufix}</Text>}
+        {sufix && <Text align="right" hideOnFocus>{sufix}</Text>}
       </InputContainer>
     </Container>
   )

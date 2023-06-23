@@ -11,7 +11,7 @@ import FinalResults from '@/components/Calculator/FinalResults'
 import TotalBox from '@/components/Calculator/TotalBox'
 import useMediaQuery from '@/hooks/useMediaQuery'
 import useForm from '@/hooks/useForm'
-import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary, getExpectedFeeRevenue } from '@/helpers/formulas'
+import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary, getExpectedFeeRevenue, getChildcareLicensingFee } from '@/helpers/formulas'
 
 import { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
 import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
@@ -38,30 +38,30 @@ const ResultsPage = () => {
   const router = useRouter()
   const intl = useIntl()
   const isMobile = useMediaQuery('(max-width: 768px)')
-  const { data, onDataChange, set: setData, validate, errors } = useForm({})
+  const { data, onDataChange, set: setData, validate, errors } = useForm(null)
 
   useEffect(() => {
-    const data = {
-      ...router.query,
-    }
+    if (!router.isReady) return
 
-    data.rentOrMortageCost = parseFloat(data.rentOrMortageCost)
-    data.percentageChildrenReceivingSubsidy = parseFloat(data.percentageChildrenReceivingSubsidy)
-    data.numberOfToddlers = parseInt(data.numberOfToddlers)
-    data.numberOfSchoolAgeChildren = parseInt(data.numberOfSchoolAgeChildren)
-    data.numberOfPreschoolers = parseInt(data.numberOfPreschoolers)
-    data.numberOfPreschoolTeachers = parseInt(data.numberOfPreschoolTeachers)
-    data.numberOfInfants = parseInt(data.numberOfInfants)
-    data.numberOfClassrooms = parseInt(data.numberOfClassrooms)
-    data.numberOfChildCareWorkers = parseInt(data.numberOfChildCareWorkers)
-    data.numberOfChildCareAdministrators = parseInt(data.numberOfChildCareAdministrators)
-    data.intendedFootage = parseFloat(data.intendedFootage)
-    data.collectionsRate = parseFloat(data.collectionsRate)
-    data.percentageBenefitsCost = parseFloat(data.percentageBenefitsCost)
-    data.additionalCost = parseFloat(data.additionalCost)
-    data.programManagementChild = parseFloat(data.programManagementChild)
-    data.educationProgramExpenses = parseFloat(data.educationProgramExpenses)
-    const isValid = validate(data, {
+    const _data = { ...router.query }
+
+    _data.rentOrMortageCost = parseFloat(_data.rentOrMortageCost)
+    _data.percentageChildrenReceivingSubsidy = parseFloat(_data.percentageChildrenReceivingSubsidy)
+    _data.numberOfToddlers = parseInt(_data.numberOfToddlers)
+    _data.numberOfSchoolAgeChildren = parseInt(_data.numberOfSchoolAgeChildren)
+    _data.numberOfPreschoolers = parseInt(_data.numberOfPreschoolers)
+    _data.numberOfPreschoolTeachers = parseInt(_data.numberOfPreschoolTeachers)
+    _data.numberOfInfants = parseInt(_data.numberOfInfants)
+    _data.numberOfClassrooms = parseInt(_data.numberOfClassrooms)
+    _data.numberOfChildCareWorkers = parseInt(_data.numberOfChildCareWorkers)
+    _data.numberOfChildCareAdministrators = parseInt(_data.numberOfChildCareAdministrators)
+    _data.intendedFootage = parseFloat(_data.intendedFootage)
+    _data.collectionsRate = parseFloat(_data.collectionsRate)
+    _data.percentageBenefitsCost = parseFloat(_data.percentageBenefitsCost)
+    _data.additionalCost = parseFloat(_data.additionalCost)
+    _data.programManagementChild = parseFloat(_data.programManagementChild)
+    _data.educationProgramExpenses = parseFloat(_data.educationProgramExpenses)
+    const isValid = validate(_data, {
       ...stepOneRules,
       ...stepTwoRules,
       ...stepThreeRules
@@ -70,7 +70,7 @@ const ResultsPage = () => {
     if (!isValid) {
       handleStartClick()
     } else {
-      setData(data)
+      setData(_data)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query])
@@ -111,6 +111,10 @@ const ResultsPage = () => {
     return { worker, teacher, administrator }
   }, [data])
 
+  if (!data) {
+    return null
+  }
+
   const expectedFeeRevenue = getExpectedFeeRevenue(
     data.numberOfInfants,
     data.numberOfToddlers,
@@ -136,9 +140,11 @@ const ResultsPage = () => {
 
   const totalChildren = data.numberOfInfants + data.numberOfToddlers + data.numberOfPreschoolers + data.numberOfSchoolAgeChildren
 
+  const childcareLicensingFee = getChildcareLicensingFee(data.typeOfFacility, totalChildren)
+
   const totalIncome = expectedFeeRevenue
 
-  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren
+  const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren + childcareLicensingFee
 
   const netIncome = totalIncome - totalExpenses
 
@@ -147,12 +153,18 @@ const ResultsPage = () => {
 const educationProgramExpenses = totalChildren * data.educationProgramExpenses
 const managementAndAdministration = totalChildren * data.programManagementChild
 
-  const handleStartClick = () => {
+  const handleStartClick = (edit = false) => {
+    let query = {
+      language: intl.locale || intl.defaultLocale
+    }
+
+    if (edit === true) {
+      query = router.query
+    }
+
     router.push({
       pathname: '/',
-      query: {
-        language: intl.locale || intl.defaultLocale
-      }
+      query
     })
   }
 
@@ -524,16 +536,17 @@ const managementAndAdministration = totalChildren * data.programManagementChild
             additionalCost={additionalCost}
             educationProgramExpenses={educationProgramExpenses}
             managementAndAdministration={managementAndAdministration}
+            childcareLicensingFee={childcareLicensingFee}
             onDataChange={onInputChage}
           />
           {!isMobile && (
             <Row style={{ margin: '60px 0 20px 0' }}>
-              <Col offset={6} col={3} style={{ textAlign: 'center' }}>
+              <Col offset={2} col={3} style={{ textAlign: 'center' }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
                   <FormattedMessage id='R_MONTHLY' />
                 </Text>
               </Col>
-              <Col col={3} style={{ textAlign: 'center' }}>
+              <Col offset={1} col={3} style={{ textAlign: 'center' }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
                   <FormattedMessage id='R_ANNUAL' />
                 </Text>
@@ -584,7 +597,15 @@ const managementAndAdministration = totalChildren * data.programManagementChild
                 <img style={{ position: "relative", top: 4, marginRight: 5 }} width={20} src="https://upload.wikimedia.org/wikipedia/commons/f/f3/.xlsx_icon.svg" />
                 Export to excel
               </Button>
-              <Button textAlign='center' onClick={handleStartClick} style={{ fontSize: 16 }}>
+              <Button
+                variant="secondary"
+                textAlign='center'
+                onClick={() => handleStartClick(true)}
+                style={{ fontSize: 16 }}
+              >
+                <FormattedMessage id='R_PREVIOUS_PAGE' />
+              </Button>
+              <Button textAlign='center' onClick={() => handleStartClick()} style={{ marginLeft: 8, fontSize: 16 }}>
                 <FormattedMessage id='R_START_AGAIN' />
               </Button>
             </Col>

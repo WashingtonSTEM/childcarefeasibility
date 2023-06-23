@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FormattedMessage, useIntl } from 'react-intl'
 
 import Input from '../Input'
+import React from 'react'
 
 const Text = styled.span`
   font-family: 'Roboto';
@@ -27,6 +28,7 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
     { text: intl.formatMessage({ id: 'R_E_SALARIES' }), value: 'expectedSalaries' },
     { text: intl.formatMessage({ id: 'R_E_BENEFITS' }), value: 'expectedBenefits' },
     { text: intl.formatMessage({ id: 'R_RENT_COST' }), value: 'rentOrMortageCost' },
+    { text: intl.formatMessage({ id: 'R_LICENSING_FEE' }), value: 'childcareLicensingFee' },
     { text: intl.formatMessage({ id: 'R_EDUCATIONAL_PROGRAM_EXPENSES' }), value: 'educationProgramExpenses' },
     { text: intl.formatMessage({ id: 'R_MANAGEMENT_ADMINISTRATION' }), value: 'managementAndAdministration' },
     { text: intl.formatMessage({ id: 'R_ADDITIONAL_COSR' }), value: 'additionalCost' },
@@ -53,7 +55,7 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
           </Col>
         </Row>
         {finalResultsFields.map((field, index) => (
-          <>
+          <React.Fragment key={index}>
             <Row key={`${field.value}-${index}`} style={{ padding: '28px 0 12px 0' }}>
               <Col col={12}>
                 <Text>{field.text}</Text>
@@ -66,7 +68,9 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
                 </Text>
               </Col>
               <Col col={6}>
-                <Text style={{ fontWeight: 'bold' }}>{field.value !== 'additionalCost' ? intl.formatMessage({ id: 'R_ANNUAL' }) : ''}</Text>
+                <Text style={{ fontWeight: 'bold' }}>
+                  <FormattedMessage id="R_ANNUAL" />
+                </Text>
               </Col>
             </Row>
             <Row key={`${field.value}-result-${index}`} style={{ padding: `12px 0 ${index < 5 ? '12px' : '60px'} 0` }}>
@@ -79,7 +83,7 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
                 <Text>{moneyFormatter.format((props[field.value] || 0) * 12)}</Text>
               </Col>
             </Row>
-          </>
+          </ React.Fragment>
         ))}
 
         <Row  style={{ padding: '30px 0' }}>
