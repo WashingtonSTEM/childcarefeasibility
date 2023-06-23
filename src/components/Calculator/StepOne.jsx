@@ -6,11 +6,15 @@ import { Row } from 'styled-bootstrap-grid'
 import Dropdown from '@/components/Dropdown'
 import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
+import SubText from '@/components/SubText'
 import FormGroup from '@/components/FormGroup'
 import Tooltip from '@/components/Tooltip'
 import costData from '@/data/cost_data.json'
-import { isRequired, minInt, maxNumber } from '@/utils/validate'
+import { isRequired, minInt } from '@/utils/validate'
 import { getMaximumNumberOfInfantsSupported, getMaximumNumberOfPreschoolers } from '@/helpers/formulas'
+
+
+const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 
 const Text = styled.span`
   display: block;
@@ -24,17 +28,13 @@ const Text = styled.span`
 `
 
 const optionsType = costData
-  .reduce((prev, { county, medianOr75thPercentile }) => {
+  .reduce((prev, { county }) => {
     if (!prev.county.includes(county)) {
       prev.county.push(county)
     }
 
-    if (!prev.medianOr75thPercentile.includes(medianOr75thPercentile)) {
-      prev.medianOr75thPercentile.push(medianOr75thPercentile)
-    }
-
     return prev
-  }, { county: [], medianOr75thPercentile: [] })
+  }, { county: [] })
 
 const mapToOptions = (options) => ({ text: options, value: options })
 
@@ -50,8 +50,6 @@ export const validationRules = {
   typeOfFacility: [isRequired],
   intendedFootage: [isRequired, minInt(1)],
   earlyAchieversLevel: [isRequired],
-  staffCompesantion: [isRequired],
-  medianOr75thPercentile: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
@@ -81,15 +79,10 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
     { text: intl.formatMessage({ id: 'S1_TOF_FCC' }), value: 'FCC' },
   ]
 
-  const STAFF_COST_OPTIONS = [
-    { text: intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MINIMUM' }), value: 'Minimum Wage' },
-    { text: intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MEDIAN' }), value: 'Median Wage' },
-    { text: intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_LIVING' }), value: 'Living Wage' }
-  ]
 
   const EARLY_ACHIEVERS_LEVEL_OPTIONS = [
-    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT_1' }, { level: '0' }), value: '0' },
-    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '1' }), value: '1' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT_NOT' }, { level: '0' }), value: '0' },
+    { text: intl.formatMessage({ id: 'S1_LEVEL_OPT_1' }, { level: '1' }), value: '1' },
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '2' }), value: '2' },
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '3' }), value: '3' },
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '3.5' }), value: '3.5' },
@@ -97,24 +90,35 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
     { text: intl.formatMessage({ id: 'S1_LEVEL_OPT' }, { level: '5' }), value: '5' },
   ]
 
-  const MEDIAN_OR_75TH_PERCENTILE_OPTIONS = optionsType.medianOr75thPercentile
-    .map(mapToOptions)
-    .map((o) => {
-      if (o.text === 'Median') {
-        return {
-          ...o,
-          text: intl.formatMessage({ id: 'S1_PCT_MEDIAN' })
-        }
-      }
-      if (o.text === '75th Percentile') {
-        return {
-          ...o,
-          text: intl.formatMessage({ id: 'S1_PCT_75TH' })
-        }
-      }
 
-      return o
-    })
+  const earlyAcrhiversReactiveBoxes = {
+    'Center-Based': {
+      message: 'S1_LEVEL_CENTER_RB',
+      data: {
+        "3": 5000,
+        "3.5": 5000,
+        "4": 7500,
+        "5": 9000
+      }
+    },
+    FCC: {
+      message: 'S1_LEVEL_FAMILY_RB',
+      data: {
+        "2": 1000,
+        "3": 2750,
+        "3.5": 2750,
+        "4": 3000,
+        "5": 3250
+      }
+    }
+  }
+
+
+  const earlyAchieversActiveRB = earlyAcrhiversReactiveBoxes[data.typeOfFacility] ? 
+        earlyAcrhiversReactiveBoxes[data.typeOfFacility].data[data.earlyAchieversLevel] ? 
+          earlyAcrhiversReactiveBoxes[data.typeOfFacility] 
+          : null
+        : null 
 
   if (!show) {
     return null
@@ -181,49 +185,30 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
         </FormGroup>
       </Row>
       <Row>
-        <FormGroup {...colMd4Lg3} error={errors.earlyAchieversLevel}>
+        <FormGroup {...{ lg: 6 }} error={errors.earlyAchieversLevel}>
           <Dropdown
             label={intl.formatMessage({ id: 'S1_LEVEL' })}
             options={EARLY_ACHIEVERS_LEVEL_OPTIONS}
             value={data.earlyAchieversLevel}
             onChange={(value) => onDataChange('earlyAchieversLevel', value)}
           />
-        </FormGroup>
-        <FormGroup {...colMd4Lg6} error={errors.medianOr75thPercentile}>
-          <Dropdown
-            label={intl.formatMessage({ id: 'S1_PCT' })}
-            options={MEDIAN_OR_75TH_PERCENTILE_OPTIONS}
-            value={data.medianOr75thPercentile}
-            onChange={(value) => onDataChange('medianOr75thPercentile', value)}
-          />
-        </FormGroup>
-        <FormGroup {...colMd4Lg3} error={errors.staffCompesantion}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Dropdown
-              label={intl.formatMessage({ id: 'S1_PCT_STAFF_COMP' })}
-              options={STAFF_COST_OPTIONS}
-              value={data.staffCompesantion}
-              onChange={(value) => onDataChange('staffCompesantion', value)}
-            />
-            <Tooltip
-              trigger={isMobile ? 'click' : 'hover'}
-              tooltipText={
-                data.staffCompesantion === 'Living Wage' ?
-                  (
-                    <>
-                      {intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_LIVING_TOOLTIP' })}
-                    </>
-                  ) : (
-                    <>
-                      {intl.formatMessage({ id: 'S1_PCT_STAFF_COMP_MEDIAN_TOOLTIP' })}
-                    </>
+          {earlyAchieversActiveRB && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage(
+                    { id: earlyAchieversActiveRB.message }, 
+                    { 
+                      level: data.earlyAchieversLevel, 
+                      amount:  moneyFormatter.format(earlyAchieversActiveRB.data[data.earlyAchieversLevel]) 
+                    }
                   )
-              }
-            />
-          </div>
+                }
+              </>
+            </TextBox>
+          )}
         </FormGroup>
-      </Row>
-      <Row>
+      
+
         <FormGroup {...colMd4Lg6} error={errors.additionalCost}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
@@ -236,6 +221,37 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
               onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S1_ADDITIONAL_COST_TOOLTIP' })} />
+          </div>
+        </FormGroup>
+      </Row>
+
+      <Row>
+        <FormGroup {...{ lg: 6 }} error={errors.scholarshipsDiscounts}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='scholarshipsDiscounts'
+              type='number'
+              label={intl.formatMessage({ id: 'S1_SCHOLARSHIP' })}
+              min={0}
+              value={data.scholarshipsDiscounts}
+              onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S1_SCHOLARSHIP_TOOLTIP' })} />
+          </div>
+          <SubText>{intl.formatMessage({ id: 'S1_SCHOLARSHIP_SUB_TEXT' })}</SubText>
+        </FormGroup>
+
+        <FormGroup {...{ lg: 6 }} error={errors.annualRegistration}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='annualRegistration'
+              type='number'
+              sufix='$'
+              label={intl.formatMessage({ id: 'S1_ANNUAL_REG' })}
+              min={0}
+              value={data.annualRegistration}
+              onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
+            />
           </div>
         </FormGroup>
       </Row>

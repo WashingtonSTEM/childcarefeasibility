@@ -3,6 +3,7 @@ import { useIntl } from 'react-intl'
 
 import Input from '@/components/Input'
 import Toggle from '@/components/Toggle'
+import TextBox from '@/components/TextBox'
 import FormGroup from '@/components/FormGroup'
 import Tooltip from '../Tooltip'
 import { isRequired, minNumber, maxNumber } from '@/utils/validate'
@@ -44,28 +45,6 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
   return (
     <>
       <Row>
-        <FormGroup lg={4} style={ { display: 'flex' } }>
-          <Toggle
-            label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })}
-            checked={!!data.payBenefits}
-            onChange={({ target }) => onDataChange?.('payBenefits', target.checked)}
-          />
-        </FormGroup>
-        <FormGroup lg={8} error={errors.percentageBenefitsCost}>
-          <Input
-            name='percentageBenefitsCost'
-            type='number'
-            sufix='%'
-            label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
-            disabled={!data.payBenefits}
-            min={0}
-            max={100}
-            value={data.percentageBenefitsCost}
-            onChange={handleInputChange}
-          />
-        </FormGroup>
-      </Row>
-      <Row>
         <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
@@ -81,6 +60,13 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>
+          {data.earlyAchieversLevel === '0' && (
+          <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+            <>
+              {intl.formatMessage({ id: 'S2_SUBSIDY_RB' })}
+            </>
+          </TextBox>
+          )}
         </FormGroup>
         <FormGroup lg={6} error={errors.educationProgramExpenses}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>

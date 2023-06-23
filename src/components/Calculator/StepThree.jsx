@@ -17,6 +17,9 @@ import {
   getEstimatedNumberOfPreschoolTeachers
 } from '@/helpers/formulas'
 
+import monthlyChildcarePrice from "@/data/monthly_childcare_price.json"
+
+
 export const validationRules = {
   numberOfInfants: [isRequired, minInt(0)],
   numberOfToddlers: [isRequired, minInt(0)],
@@ -100,6 +103,9 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
     return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
   }, [data, maximumNumberOfInfantsSupported])
 
+
+  const monthlyCCPricePerCounty = monthlyChildcarePrice[data.county] ? monthlyChildcarePrice[data.county][data.typeOfFacility] || {} : {}
+
   if (!show) {
     return null
   }
@@ -126,46 +132,175 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       )}
       <Row>
         <FormGroup lg={3} error={errors.numberOfInfants}>
-          <Input
-            name='numberOfInfants'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_INFANTS' })}
-            min={0}
-            value={data.numberOfInfants}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfInfants'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_INFANTS' })}
+              min={0}
+              value={data.numberOfInfants}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC' })} />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfToddlers}>
-          <Input
-            name='numberOfToddlers'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_TODDLERS' })}
-            min={0}
-            value={data.numberOfToddlers}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfToddlers'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_TODDLERS' })}
+              min={0}
+              value={data.numberOfToddlers}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC' })} />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfPreschoolers}>
-          <Input
-            name='numberOfPreschoolers'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_PRESCHOOLERS' })}
-            min={0}
-            value={data.numberOfPreschoolers}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfPreschoolers'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_PRESCHOOLERS' })}
+              min={0}
+              value={data.numberOfPreschoolers}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC' })} />
+          </div>
         </FormGroup>
         <FormGroup lg={3} error={errors.numberOfSchoolAgeChildren}>
-          <Input
-            name='numberOfSchoolAgeChildren'
-            type='number'
-            label={intl.formatMessage({ 'id': 'S3_#_SAC' })}
-            min={0}
-            value={data.numberOfSchoolAgeChildren}
-            onChange={handleOnChange}
-          />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfSchoolAgeChildren'
+              type='number'
+              label={intl.formatMessage({ 'id': 'S3_#_SAC' })}
+              min={0}
+              value={data.numberOfSchoolAgeChildren}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_TOOLTIP_MIN_LIC_EXTENDED' })} />
+          </div>
         </FormGroup>
       </Row>
+      
+      <Row>
+        <FormGroup lg={3} error={errors.ptcNumberOfInfants}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='ptcNumberOfInfants'
+              type='number'
+              sufix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_INFANTS' })}
+              min={0}
+              value={data.ptcNumberOfInfants}
+              onChange={handleOnChange}
+            />
+          </div>
+            {
+              (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Infant && data.ptcNumberOfInfants) && 
+              <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage(
+                  { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                  { median: 
+                    monthlyCCPricePerCounty.Infant['Median Cost'], 
+                    percent: monthlyCCPricePerCounty.Infant['75th Percentile Cost'] 
+                  }
+                )}
+              </>
+            </TextBox>
+          }
+          
+        </FormGroup>
+        <FormGroup lg={3} error={errors.pctNumberOfToddlers}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfToddlers'
+              type='number'
+              sufix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_TODDLERS' })}
+              min={0}
+              value={data.pctNumberOfToddlers}
+              onChange={handleOnChange}
+            />
+          </div>
+            {
+                (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Toddler && data.pctNumberOfToddlers) && 
+                <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+                <>
+                  {intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { median: 
+                      monthlyCCPricePerCounty.Toddler['Median Cost'], 
+                      percent: monthlyCCPricePerCounty.Toddler['75th Percentile Cost'] 
+                    }
+                  )}
+                </>
+              </TextBox>
+            }
+          
+        </FormGroup>
+        <FormGroup lg={3} error={errors.pctNumberOfPreschoolers}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfPreschoolers'
+              type='number'
+              sufix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_PRESCHOOLERS' })}
+              min={0}
+              value={data.pctNumberOfPreschoolers}
+              onChange={handleOnChange}
+            />
+          </div>
+
+            {
+                (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Preschool && data.pctNumberOfPreschoolers) && 
+                <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+                <>
+                  {intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { median: 
+                      monthlyCCPricePerCounty.Preschool['Median Cost'], 
+                      percent: monthlyCCPricePerCounty.Preschool['75th Percentile Cost'] 
+                    }
+                  )}
+                </>
+              </TextBox>
+            }
+
+        </FormGroup>
+        <FormGroup lg={3} error={errors.pctNumberOfSchoolAgeChildren}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfSchoolAgeChildren'
+              type='number'
+              sufix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_SAC' })}
+              min={0}
+              value={data.pctNumberOfSchoolAgeChildren}
+              onChange={handleOnChange}
+            />
+          </div>
+            {
+              (monthlyCCPricePerCounty && monthlyCCPricePerCounty["School Age"] && data.pctNumberOfSchoolAgeChildren) && 
+                <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+                <>
+                  {intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { median: 
+                      monthlyCCPricePerCounty["School Age"]['Median Cost'], 
+                      percent: monthlyCCPricePerCounty["School Age"]['75th Percentile Cost'] 
+                    }
+                  )}
+                </>
+              </TextBox>
+            }
+        </FormGroup>
+      </Row>
+
+
       <Row>
         <FormGroup lg={3} error={errors.numberOfClassrooms}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>

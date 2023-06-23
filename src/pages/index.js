@@ -1,20 +1,19 @@
 import { useRouter } from 'next/router'
-import { useState } from 'react'
-import styled from 'styled-components'
-import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
+import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
+import { BaseCSS, Container } from 'styled-bootstrap-grid'
+import styled from 'styled-components'
 
-import Title from '@/components/Title'
 import Button from '@/components/Button'
 import Divider from '@/components/Divider'
 import StepBar from '@/components/StepBar'
 import useForm from '@/hooks/useForm'
 import useMediaQuery from '@/hooks/useMediaQuery'
-import Instructions from '@/components/Calculator/Instructions'
 
+import StepFour, { validationRules as stepFourRules } from '@/components/Calculator/StepFour'
 import StepOne, { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
-import StepTwo, { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 import StepThree, { validationRules as stepThreeRules } from '@/components/Calculator/StepThree'
+import StepTwo, { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 
 import styles from '@/styles/Calculator.module.css'
 
@@ -53,7 +52,8 @@ const Page = () => {
         validate(data, {
           ...stepOneRules,
           ...stepTwoRules,
-          ...stepThreeRules
+          ...stepThreeRules,
+          ...stepFourRules
         })
       }
     }
@@ -81,10 +81,13 @@ const Page = () => {
   }
 
   const handleSubmit = () => {
+    console.log(data)
+    console.log(errors)
     const isValid = validate(data, {
       ...stepOneRules,
       ...stepTwoRules,
-      ...stepThreeRules
+      ...stepThreeRules,
+      ...stepFourRules
     })
 
     if (!isValid) {
@@ -131,6 +134,16 @@ const Page = () => {
             isMobile={isMobile}
             show={!isMobile || step === 3}
           />
+
+          {!isMobile && <Divider style={{ margin: '72px 0 72px 0' }} />}
+            <StepFour
+              data={data}
+              errors={errors}
+              onDataChange={handleOnChange}
+              isMobile={isMobile}
+              show={!isMobile || step === 4}
+            />
+            
           {!isMobile ? (
             <div style={{ marginTop: 100, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
               <Button type='button' variant='secondary' onClick={clean}>
