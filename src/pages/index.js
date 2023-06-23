@@ -145,13 +145,13 @@ const Page = () => {
           />
 
           {!isMobile && <Divider style={{ margin: '72px 0 72px 0' }} />}
-            <StepFour
-              data={data}
-              errors={errors}
-              onDataChange={handleOnChange}
-              isMobile={isMobile}
-              show={!isMobile || step === 4}
-            />
+          <StepFour
+            data={data}
+            errors={errors}
+            onDataChange={handleOnChange}
+            isMobile={isMobile}
+            show={!isMobile || step === 4}
+          />
             
           {!isMobile ? (
             <div style={{ marginTop: 100, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>

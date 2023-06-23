@@ -61,11 +61,11 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>
           {data.earlyAchieversLevel === '0' && (
-          <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-            <>
-              {intl.formatMessage({ id: 'S2_SUBSIDY_RB' })}
-            </>
-          </TextBox>
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage({ id: 'S2_SUBSIDY_RB' })}
+              </>
+            </TextBox>
           )}
         </FormGroup>
         <FormGroup lg={6} error={errors.educationProgramExpenses} description={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION' })}>

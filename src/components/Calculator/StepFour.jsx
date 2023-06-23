@@ -129,7 +129,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
 
 
       {data.county && (
-        <Text>{intl.formatMessage({ id: 'S4_INSTRUCTIONS_WAGE' }, { value: "XX" })}</Text>        
+        <Text>{intl.formatMessage({ id: 'S4_INSTRUCTIONS_WAGE' }, { value: 'XX' })}</Text>        
       )}
    
       {data.typeOfFacility === 'FCC' && (
@@ -147,25 +147,25 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           />
         </FormGroup>
         <FormGroup lg={8} error={errors.percentageBenefitsCost}>
-        <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-          <Input
-            name='percentageBenefitsCost'
-            type='number'
-            sufix='$'
-            label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
-            disabled={!data.payBenefits}
-            min={0}
-            max={100}
-            value={data.percentageBenefitsCost}
-            onChange={handleInputChange}
-          />
-          <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP' })} />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='percentageBenefitsCost'
+              type='number'
+              sufix='$'
+              label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
+              disabled={!data.payBenefits}
+              min={0}
+              max={100}
+              value={data.percentageBenefitsCost}
+              onChange={handleInputChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP' })} />
           </div>
         </FormGroup>
       </Row> 
 
       <Row>
-        <FormGroup lg={4} style={ { display: 'flex', flexDirection: "column"  } }>
+        <FormGroup lg={4} style={ { display: 'flex', flexDirection: 'column'  } }>
           <Input
             name='childCareWage'
             type='number'
@@ -175,16 +175,16 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
             onChange={handleInputChange}
           />
           {data.childCareWage && salary && (
-          <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-            <>
-              {intl.formatMessage({ id: 'S4_CHILD_STAFF_BOX' }, { value:  moneyFormatter.format(salary.childcareWorkerMedianSalary) })}
-            </>
-          </TextBox>
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage({ id: 'S4_CHILD_STAFF_BOX' }, { value:  moneyFormatter.format(salary.childcareWorkerMedianSalary) })}
+              </>
+            </TextBox>
           )}
         </FormGroup>
   
   
-        <FormGroup lg={4} style={ { display: 'flex', flexDirection: "column" } }>
+        <FormGroup lg={4} style={ { display: 'flex', flexDirection: 'column' } }>
           <Input
             name='preSchoolTeacherWage'
             type='number'
@@ -194,15 +194,15 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
             onChange={handleInputChange}
           />
           {data.preSchoolTeacherWage && salary && (
-          <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-            <>
-              {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.preschoolTeacherMedianSalary) })}
-            </>
-          </TextBox>
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.preschoolTeacherMedianSalary) })}
+              </>
+            </TextBox>
           )}
         </FormGroup>
 
-        <FormGroup lg={4} style={ { display: 'flex', flexDirection: "column"  } }>
+        <FormGroup lg={4} style={ { display: 'flex', flexDirection: 'column'  } }>
           <Input
             name='centerAdminWage'
             type='number'
@@ -211,18 +211,18 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
             value={data.centerAdminWage}
             onChange={handleInputChange}
           />
-           {data.centerAdminWage && salary && (
-          <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-            <>
-              {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.administratorMedianSalary) })}
-            </>
-          </TextBox>
+          {data.centerAdminWage && salary && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.administratorMedianSalary) })}
+              </>
+            </TextBox>
           )}
         </FormGroup>
       </Row>
 
       <Row>
-        <FormGroup lg={6} style={ { display: 'flex', flexDirection: "column"  } }>
+        <FormGroup lg={6} style={ { display: 'flex', flexDirection: 'column'  } }>
           <Input
             name='qualityImprovementAward'
             type='number'

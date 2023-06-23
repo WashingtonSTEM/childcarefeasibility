@@ -109,30 +109,30 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
     'Center-Based': {
       message: 'S1_LEVEL_CENTER_RB',
       data: {
-        "3": 5000,
-        "3.5": 5000,
-        "4": 7500,
-        "5": 9000
+        '3': 5000,
+        '3.5': 5000,
+        '4': 7500,
+        '5': 9000
       }
     },
     FCC: {
       message: 'S1_LEVEL_FAMILY_RB',
       data: {
-        "2": 1000,
-        "3": 2750,
-        "3.5": 2750,
-        "4": 3000,
-        "5": 3250
+        '2': 1000,
+        '3': 2750,
+        '3.5': 2750,
+        '4': 3000,
+        '5': 3250
       }
     }
   }
 
 
   const earlyAchieversActiveRB = earlyAcrhiversReactiveBoxes[data.typeOfFacility] ? 
-        earlyAcrhiversReactiveBoxes[data.typeOfFacility].data[data.earlyAchieversLevel] ? 
-          earlyAcrhiversReactiveBoxes[data.typeOfFacility] 
-          : null
-        : null 
+    earlyAcrhiversReactiveBoxes[data.typeOfFacility].data[data.earlyAchieversLevel] ? 
+      earlyAcrhiversReactiveBoxes[data.typeOfFacility] 
+      : null
+    : null 
 
   if (!show) {
     return null
@@ -188,12 +188,12 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage(
-                    { id: earlyAchieversActiveRB.message }, 
-                    { 
-                      level: data.earlyAchieversLevel, 
-                      amount:  moneyFormatter.format(earlyAchieversActiveRB.data[data.earlyAchieversLevel]) 
-                    }
-                  )
+                  { id: earlyAchieversActiveRB.message }, 
+                  { 
+                    level: data.earlyAchieversLevel, 
+                    amount:  moneyFormatter.format(earlyAchieversActiveRB.data[data.earlyAchieversLevel]) 
+                  }
+                )
                 }
               </>
             </TextBox>
