@@ -17,7 +17,7 @@ import { validationRules as stepOneRules } from '@/components/Calculator/StepOne
 import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 import { validationRules as stepThreeRules } from '@/components/Calculator/StepThree'
 
-import childCareFeasibilityData from "@/data/childcare_feasibility_data.json"
+import childCareFeasibilityData from '@/data/childcare_feasibility_data.json'
 
 import styles from '@/styles/Calculator.module.css'
 import XlsxPopulate from 'xlsx-populate'
