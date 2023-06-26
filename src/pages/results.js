@@ -17,11 +17,13 @@ import { validationRules as stepOneRules } from '@/components/Calculator/StepOne
 import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 import { validationRules as stepThreeRules } from '@/components/Calculator/StepThree'
 
+import childCareFeasibilityData from "@/data/childcare_feasibility_data.json"
+
 import styles from '@/styles/Calculator.module.css'
 import XlsxPopulate from 'xlsx-populate'
 import { saveAs } from 'file-saver'
 
-
+const HOURS_IN_YEAR = 2080
 
 const Text = styled.span`
   display: block;
@@ -75,6 +77,7 @@ const ResultsPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.query])
 
+
   const expectedSalaryRevenue = useMemo(() => {
     if (!data) {
       return null
@@ -104,9 +107,9 @@ const ResultsPage = () => {
       return null
     }
 
-    const worker = getExpectedSalary(data.county, 'Child Care Worker', data.staffCompesantion) || 0
-    const teacher = getExpectedSalary(data.county, 'Preschool Teacher', data.staffCompesantion) || 0
-    const administrator = getExpectedSalary(data.county, 'Administrator', data.staffCompesantion) || 0
+    const worker = data.childCareWage * HOURS_IN_YEAR
+    const teacher = data.preSchoolTeacherWage * HOURS_IN_YEAR
+    const administrator = data.centerAdminWage * HOURS_IN_YEAR
 
     return { worker, teacher, administrator }
   }, [data])
@@ -178,6 +181,9 @@ const ResultsPage = () => {
     onDataChange(target.name, parseInt(value))
   }
 
+  const qualityImprovementAward = childCareFeasibilityData[data.typeOfFacility][data.earlyAchieversLevel] / 12
+
+  const annualRegistration = data.annualRegistration / 12
 
   const handleExportClick = () => {
 
@@ -538,11 +544,13 @@ const ResultsPage = () => {
             expectedFeeRevenue={expectedFeeRevenue}
             expectedSalaries={expectedSalaries}
             expectedBenefits={expectedBenefits}
+            annualRegistration={annualRegistration}
             rentOrMortageCost={data.rentOrMortageCost}
             additionalCost={additionalCost}
             educationProgramExpenses={educationProgramExpenses}
             managementAndAdministration={managementAndAdministration}
             childcareLicensingFee={childcareLicensingFee}
+            qualityImprovementAward={qualityImprovementAward}
             onDataChange={onInputChage}
           />
           {!isMobile && (

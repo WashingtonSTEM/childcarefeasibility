@@ -2,7 +2,6 @@ import { Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 import { FormattedMessage, useIntl } from 'react-intl'
 
-import Input from '../Input'
 import React from 'react'
 
 const Text = styled.span`

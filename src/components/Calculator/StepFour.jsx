@@ -1,23 +1,23 @@
 import { useMemo } from 'react'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { Row } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
-import { FormattedMessage, useIntl } from 'react-intl'
 
+import FormGroup from '@/components/FormGroup'
 import Input from '@/components/Input'
+import TextBox from '@/components/TextBox'
 import Toggle from '@/components/Toggle'
 import Tooltip from '@/components/Tooltip'
-import TextBox from '@/components/TextBox'
-import FormGroup from '@/components/FormGroup'
-import Instructions from './Instructions'
-import { isRequired, minInt, hasValue } from '@/utils/validate'
+import salaryData from '@/data/salary_data.json'
 import {
-  getMaximumNumberOfInfantsSupported,
-  getMaximumNumberOfPreschoolers,
   getEstimatedNumberOfChildCareAdministrators,
   getEstimatedNumberOfChildCareWorkers,
-  getEstimatedNumberOfPreschoolTeachers
+  getEstimatedNumberOfPreschoolTeachers,
+  getMaximumNumberOfInfantsSupported,
+  getMaximumNumberOfPreschoolers
 } from '@/helpers/formulas'
-import salaryData from '@/data/salary_data.json'
+import { hasValue } from '@/utils/validate'
+import Instructions from './Instructions'
 
 export const validationRules = {
   
@@ -25,6 +25,7 @@ export const validationRules = {
 
 const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 
+const HOURS_IN_YEAR = 2080
 
 const Text = styled.span`
   display: block;
@@ -101,8 +102,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
 
   const salary = salaryData.find(e => e.county === data.county)
 
-  console.log(salary)
-
+  
   if (!show) {
     return null
   }
@@ -126,11 +126,6 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
       <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
         <Instructions text={intl.formatMessage({ id: 'S4_INSTRUCTIONS' })} />
       </div>
-
-
-      {data.county && (
-        <Text>{intl.formatMessage({ id: 'S4_INSTRUCTIONS_WAGE' }, { value: 'XX' })}</Text>        
-      )}
    
       {data.typeOfFacility === 'FCC' && (
         <Text>
@@ -177,7 +172,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           {data.childCareWage && salary && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {intl.formatMessage({ id: 'S4_CHILD_STAFF_BOX' }, { value:  moneyFormatter.format(salary.childcareWorkerMedianSalary) })}
+                {intl.formatMessage({ id: 'S4_CHILD_STAFF_BOX' }, { value:  moneyFormatter.format(salary.childcareWorkerMedianSalary / HOURS_IN_YEAR ) })}
               </>
             </TextBox>
           )}
@@ -196,7 +191,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           {data.preSchoolTeacherWage && salary && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.preschoolTeacherMedianSalary) })}
+                {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.preschoolTeacherMedianSalary / HOURS_IN_YEAR) })}
               </>
             </TextBox>
           )}
@@ -214,23 +209,10 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           {data.centerAdminWage && salary && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.administratorMedianSalary) })}
+                {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.administratorMedianSalary / HOURS_IN_YEAR) })}
               </>
             </TextBox>
           )}
-        </FormGroup>
-      </Row>
-
-      <Row>
-        <FormGroup lg={6} style={ { display: 'flex', flexDirection: 'column'  } }>
-          <Input
-            name='qualityImprovementAward'
-            type='number'
-            sufix='$'
-            label={intl.formatMessage({ id: 'S4_QUALITY_IMPR' })}
-            value={data.qualityImprovementAward}
-            onChange={handleInputChange}
-          />
         </FormGroup>
       </Row>
     </>
