@@ -188,7 +188,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='ptcNumberOfInfants'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ 'id': 'S3_#_PCT_INFANTS' })}
               min={0}
               value={data.ptcNumberOfInfants}
@@ -196,7 +196,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
           </div>
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Infant && data.ptcNumberOfInfants) && 
+            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Infant) && 
               <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
                 <>
                   {intl.formatMessage(
@@ -216,7 +216,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='pctNumberOfToddlers'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ 'id': 'S3_#_PCT_TODDLERS' })}
               min={0}
               value={data.pctNumberOfToddlers}
@@ -224,7 +224,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
           </div>
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Toddler && data.pctNumberOfToddlers) && 
+            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Toddler) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage(
@@ -244,7 +244,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='pctNumberOfPreschoolers'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ 'id': 'S3_#_PCT_PRESCHOOLERS' })}
               min={0}
               value={data.pctNumberOfPreschoolers}
@@ -253,7 +253,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
 
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Preschool && data.pctNumberOfPreschoolers) && 
+            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Preschool) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage(
@@ -273,7 +273,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             <Input
               name='pctNumberOfSchoolAgeChildren'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ 'id': 'S3_#_PCT_SAC' })}
               min={0}
               value={data.pctNumberOfSchoolAgeChildren}
@@ -281,7 +281,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
           </div>
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty['School Age'] && data.pctNumberOfSchoolAgeChildren) && 
+            (monthlyCCPricePerCounty && monthlyCCPricePerCounty['School Age']) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage(

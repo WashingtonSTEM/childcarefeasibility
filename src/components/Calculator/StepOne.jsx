@@ -206,7 +206,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             <Input
               name='additionalCost'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ id: 'S1_ADDITIONAL_COST' })}
               min={0}
               value={data.additionalCost}
@@ -238,7 +238,7 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             <Input
               name='annualRegistration'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ id: 'S1_ANNUAL_REG' })}
               min={0}
               value={data.annualRegistration}

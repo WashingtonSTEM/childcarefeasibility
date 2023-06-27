@@ -123,16 +123,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
 
   return (
     <>
-      <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-        <Instructions text={intl.formatMessage({ id: 'S4_INSTRUCTIONS' })} />
-      </div>
-   
-      {data.typeOfFacility === 'FCC' && (
-        <Text>
-          <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
-        </Text>
-      )}
-
+      <Text>{intl.formatMessage({ id: 'S4_INSTRUCTIONS' })}</Text>
       <Row>
         <FormGroup lg={4} style={ { display: 'flex' } }>
           <Toggle
@@ -146,7 +137,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
             <Input
               name='percentageBenefitsCost'
               type='number'
-              sufix='$'
+              prefix='$'
               label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
               disabled={!data.payBenefits}
               min={0}
@@ -164,12 +155,12 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           <Input
             name='childCareWage'
             type='number'
-            sufix='$'
+            prefix='$'
             label={intl.formatMessage({ id: 'S4_CHILD_STAFF' })}
             value={data.childCareWage}
             onChange={handleInputChange}
           />
-          {data.childCareWage && salary && (
+          {salary && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage({ id: 'S4_CHILD_STAFF_BOX' }, { value:  moneyFormatter.format(salary.childcareWorkerMedianSalary / HOURS_IN_YEAR ) })}
@@ -183,12 +174,12 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           <Input
             name='preSchoolTeacherWage'
             type='number'
-            sufix='$'
+            prefix='$'
             label={intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER' })}
             value={data.preSchoolTeacherWage}
             onChange={handleInputChange}
           />
-          {data.preSchoolTeacherWage && salary && (
+          {salary && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.preschoolTeacherMedianSalary / HOURS_IN_YEAR) })}
@@ -201,12 +192,12 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           <Input
             name='centerAdminWage'
             type='number'
-            sufix='$'
+            prefix='$'
             label={intl.formatMessage({ id: 'S4_CENTER_ADMIN' })}
             value={data.centerAdminWage}
             onChange={handleInputChange}
           />
-          {data.centerAdminWage && salary && (
+          {salary && (
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
                 {intl.formatMessage({ id: 'S4_PRESCHOOL_TEACHER_BOX' }, { value:  moneyFormatter.format(salary.administratorMedianSalary / HOURS_IN_YEAR) })}
