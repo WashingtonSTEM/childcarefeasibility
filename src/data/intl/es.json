@@ -130,7 +130,7 @@
   "S2_EDUCATION_PROGRAM_EXPENSES": "Gastos del programa educativo",
   "S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION": "Monto por niño, por mes",
   "S2_EDUCATION_PROGRAM_EXPENSES_TOOLTIP_CB": "Esta cantidad no incluye los costos de transporte para las excursiones. Agregue por separado.",
-  "S2_EDUCATION_PROGRAM_EXPENSES_TOOLTIP_FCC": "Para hogar familiar con licencia, $90 por niño, según estimaciones del Departamento de Comercio.",
+  "S2_EDUCATION_PROGRAM_EXPENSES_TOOLTIP_FCC": "Esta cantidad no incluye los costos de transporte para las excursiones. Agregue por separado.",
   "S2_MANAGEMENT_CHILD": "Gestión y administración del programa",
   "S2_MANAGEMENT_CHILD_DESCRIPTION": "Monto por niño, por mes",
   "S2_MANAGEMENT_CHILD_TOOLTIP_CB": "Para Centros con Licencia, $30 por niño, según estimaciones del Departamento de Comercio.",
