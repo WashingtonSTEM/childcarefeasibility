@@ -30,7 +30,8 @@ const Text = styled.div`
 const validationRules = {
   'step1': stepOneRules,
   'step2': stepTwoRules,
-  'step3': stepThreeRules
+  'step3': stepThreeRules,
+  'step4': stepFourRules
 }
 
 const Page = () => {
@@ -58,6 +59,12 @@ const Page = () => {
       if (isMobile) {
         validate(data, validationRules[`step${step}`])
       } else {
+        console.log({
+          ...stepOneRules,
+          ...stepTwoRules,
+          ...stepThreeRules,
+          ...stepFourRules
+        })
         validate(data, {
           ...stepOneRules,
           ...stepTwoRules,

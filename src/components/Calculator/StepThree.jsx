@@ -7,17 +7,16 @@ import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
 import Tooltip from '@/components/Tooltip'
 import FormGroup from '@/components/FormGroup'
-import Instructions from './Instructions'
-import { isRequired, minInt, hasValue } from '@/utils/validate'
+import { isRequired, minInt } from '@/utils/validate'
 import {
   getMaximumNumberOfInfantsSupported,
   getMaximumNumberOfPreschoolers,
   getEstimatedNumberOfChildCareAdministrators,
-  getEstimatedNumberOfChildCareWorkers,
   getEstimatedNumberOfPreschoolTeachers
 } from '@/helpers/formulas'
 
 import monthlyChildcarePrice from '@/data/monthly_childcare_price.json'
+import Title from '../Title'
 
 
 export const validationRules = {
@@ -29,6 +28,10 @@ export const validationRules = {
   numberOfChildCareWorkers: [isRequired, minInt(0)],
   numberOfPreschoolTeachers: [isRequired, minInt(0)],
   numberOfChildCareAdministrators: [isRequired, minInt(0)],
+  ptcNumberOfInfants: [isRequired, minInt(0)],
+  pctNumberOfToddlers: [isRequired, minInt(0)],
+  pctNumberOfPreschoolers: [isRequired, minInt(0)],
+  pctNumberOfSchoolAgeChildren: [isRequired, minInt(0)],
 }
 
 const Text = styled.span`
@@ -65,23 +68,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
     return getEstimatedNumberOfPreschoolTeachers(typeOfFacility, numberOfClassrooms)
   }, [data])
 
-  const estimatedNumberOfChildCareWorkers = useMemo(() => {
-    const { typeOfFacility, numberOfInfants, numberOfToddlers, numberOfPreschoolers, numberOfSchoolAgeChildren } = data
 
-    if (!typeOfFacility || !hasValue(numberOfInfants) || !hasValue(numberOfToddlers) || !hasValue(numberOfPreschoolers) || !hasValue(numberOfSchoolAgeChildren)) {
-      return null
-    }
-
-    return getEstimatedNumberOfChildCareWorkers(
-      typeOfFacility,
-      estimatedNumberOfPreschoolTeachers,
-      estimatedNumberOfChildCareAdministrators,
-      numberOfInfants,
-      numberOfToddlers,
-      numberOfPreschoolers,
-      numberOfSchoolAgeChildren
-    )
-  }, [data, estimatedNumberOfChildCareAdministrators, estimatedNumberOfPreschoolTeachers])
 
   const maximumNumberOfInfantsSupported = useMemo(() => {
     const { typeOfFacility, intendedFootage } = data
@@ -121,6 +108,9 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
+      <Title>
+        {intl.formatMessage({ id: 'S3_TITLE' })}
+      </Title>
       <Text>{intl.formatMessage({ id: 'S3_INSTRUCTIONS' })}</Text>
       {data.typeOfFacility === 'FCC' && (
         <Text>
@@ -310,50 +300,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               onChange={handleOnChange}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CLASSROOMS_TOOLTIP' })} />
-          </div>
-        </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='numberOfChildCareWorkers'
-              type='number'
-              label={intl.formatMessage({ id: 'S3_#_CCS' })}
-              min={0}
-              value={data.numberOfChildCareWorkers}
-              onChange={handleOnChange}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCS_TOOLTIP' })} />
-          </div>
-          {estimatedNumberOfChildCareWorkers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              {intl.formatMessage({ id: 'S3_#_CCS_RECOMENDATION' }, { number: estimatedNumberOfChildCareWorkers })}
-            </TextBox>
-          )}
-        </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfPreschoolTeachers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='numberOfPreschoolTeachers'
-              type='number'
-              label={intl.formatMessage({ id: 'S3_#_PST' })}
-              min={0}
-              value={data.numberOfPreschoolTeachers}
-              onChange={handleOnChange}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PST_TOOLTIP' })} />
-          </div>
-        </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='numberOfChildCareAdministrators'
-              type='number'
-              label={intl.formatMessage({ id: 'S3_#_CCA' })}
-              min={0}
-              value={data.numberOfChildCareAdministrators}
-              onChange={handleOnChange}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCA_TOOLTIP' })} />
           </div>
         </FormGroup>
       </Row>

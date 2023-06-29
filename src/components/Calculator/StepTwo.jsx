@@ -1,12 +1,12 @@
-import { Row } from 'styled-bootstrap-grid'
 import { useIntl } from 'react-intl'
+import { Row } from 'styled-bootstrap-grid'
 
-import Input from '@/components/Input'
-import Toggle from '@/components/Toggle'
-import TextBox from '@/components/TextBox'
 import FormGroup from '@/components/FormGroup'
+import Input from '@/components/Input'
+import TextBox from '@/components/TextBox'
+import { isRequired, maxNumber, minNumber } from '@/utils/validate'
+import Title from '../Title'
 import Tooltip from '../Tooltip'
-import { isRequired, minNumber, maxNumber } from '@/utils/validate'
 
 export const validationRules = {
   percentageBenefitsCost: [(key, value, data) => {
@@ -28,7 +28,8 @@ export const validationRules = {
   rentOrMortageCost: [isRequired, minNumber(0)],
   collectionsRate: [isRequired, minNumber(0), maxNumber(100)],
   educationProgramExpenses: [isRequired, minNumber(0)],
-  programManagementChild: [isRequired, minNumber(0)]
+  programManagementChild: [isRequired, minNumber(0)],
+  additionalCost: [isRequired, minNumber(0)]
 }
 
 const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
@@ -44,6 +45,9 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
 
   return (
     <>
+      <Title>
+        {intl.formatMessage({ id: 'S2_TITLE' })}
+      </Title>
       <Row>
         <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>

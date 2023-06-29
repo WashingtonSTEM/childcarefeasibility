@@ -12,6 +12,7 @@ import Tooltip from '@/components/Tooltip'
 import costData from '@/data/cost_data.json'
 import { isRequired, minInt } from '@/utils/validate'
 import { getMaximumNumberOfInfantsSupported, getMaximumNumberOfPreschoolers } from '@/helpers/formulas'
+import Title from '../Title'
 
 
 const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
@@ -50,6 +51,8 @@ export const validationRules = {
   typeOfFacility: [isRequired],
   intendedFootage: [isRequired, minInt(1)],
   earlyAchieversLevel: [isRequired],
+  annualRegistration: [isRequired],
+  scholarshipsDiscounts: [isRequired]
 }
 
 const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = {} }) => {
@@ -140,6 +143,9 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
 
   return (
     <>
+      <Title>
+        {intl.formatMessage({ id: 'S1_TITLE' })}
+      </Title>
       <Row>
         <Text>{intl.formatMessage({ id: 'S1_INSTRUCTION' })}</Text>
         <FormGroup {...colMd4Lg3} error={errors.county}>
@@ -199,21 +205,21 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             </TextBox>
           )}
         </FormGroup>
-      
 
-        <FormGroup {...colMd4Lg6} error={errors.additionalCost}>
+        
+        <FormGroup {...{ lg: 6 }} error={errors.annualRegistration}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
-              name='additionalCost'
+              name='annualRegistration'
               type='number'
               prefix='$'
-              label={intl.formatMessage({ id: 'S1_ADDITIONAL_COST' })}
+              label={intl.formatMessage({ id: 'S1_ANNUAL_REG' })}
               min={0}
-              value={data.additionalCost}
+              value={data.annualRegistration}
               onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S1_ADDITIONAL_COST_TOOLTIP' })} />
           </div>
+          <SubText>{intl.formatMessage({ id: 'S1_ANNUAL_REG_TEXT' })}</SubText>
         </FormGroup>
       </Row>
 
@@ -231,20 +237,6 @@ const StepOne = ({ data, onDataChange, isMobile = false, show = false, errors = 
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S1_SCHOLARSHIP_TOOLTIP' })} />
           </div>
           <SubText>{intl.formatMessage({ id: 'S1_SCHOLARSHIP_SUB_TEXT' })}</SubText>
-        </FormGroup>
-
-        <FormGroup {...{ lg: 6 }} error={errors.annualRegistration}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='annualRegistration'
-              type='number'
-              prefix='$'
-              label={intl.formatMessage({ id: 'S1_ANNUAL_REG' })}
-              min={0}
-              value={data.annualRegistration}
-              onChange={({ target }) => onDataChange(target.name, parseFloat(target.value))}
-            />
-          </div>
         </FormGroup>
       </Row>
     </>

@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { FormattedMessage, useIntl } from 'react-intl'
+import { useIntl } from 'react-intl'
 import { Row } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 
@@ -16,11 +16,13 @@ import {
   getMaximumNumberOfInfantsSupported,
   getMaximumNumberOfPreschoolers
 } from '@/helpers/formulas'
-import { hasValue } from '@/utils/validate'
-import Instructions from './Instructions'
+import { hasValue, isRequired } from '@/utils/validate'
+import Title from '../Title'
 
 export const validationRules = {
-  
+  childCareWage: [isRequired],
+  preSchoolTeacherWage: [isRequired],
+  centerAdminWage: [isRequired]
 }
 
 const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
@@ -70,35 +72,12 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
 
     return getEstimatedNumberOfChildCareWorkers(
       typeOfFacility,
-      estimatedNumberOfPreschoolTeachers,
-      estimatedNumberOfChildCareAdministrators,
       numberOfInfants,
       numberOfToddlers,
       numberOfPreschoolers,
       numberOfSchoolAgeChildren
     )
   }, [data, estimatedNumberOfChildCareAdministrators, estimatedNumberOfPreschoolTeachers])
-
-  const maximumNumberOfInfantsSupported = useMemo(() => {
-    const { typeOfFacility, intendedFootage } = data
-
-    if (!typeOfFacility || !intendedFootage) {
-      return null
-    }
-
-    return getMaximumNumberOfInfantsSupported(typeOfFacility, intendedFootage)
-  }, [data])
-
-  const maximumNumberOfPreschoolers = useMemo(() => {
-    const { typeOfFacility, intendedFootage } = data
-
-    if (!typeOfFacility || !intendedFootage) {
-      return null
-    }
-
-    return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
-  }, [data, maximumNumberOfInfantsSupported])
-
 
   const salary = salaryData.find(e => e.county === data.county)
 
@@ -120,10 +99,19 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
     onDataChange?.(target.name, target.value)
   }
 
-
   return (
     <>
+      <Title>{intl.formatMessage({ id: 'S4_TITLE' })}</Title>
       <Text>{intl.formatMessage({ id: 'S4_INSTRUCTIONS' })}</Text>
+      <Text>{intl.formatMessage({ id: 'S4_INSTRUCTIONS_EXTENDED' })}</Text>
+
+
+      {(data.typeOfFacility && estimatedNumberOfChildCareWorkers)  && (
+        <TextBox style={{ marginBottom: "1em", fontStyle: 'italic' }}>
+          {intl.formatMessage({ id: 'S4_MIN_STAFF' }, { value: estimatedNumberOfChildCareWorkers })}
+        </TextBox>
+      )}
+
       <Row>
         <FormGroup lg={4} style={ { display: 'flex' } }>
           <Toggle
@@ -151,7 +139,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
       </Row> 
 
       <Row>
-        <FormGroup lg={4} style={ { display: 'flex', flexDirection: 'column'  } }>
+        <FormGroup lg={4}  error={errors.childCareWage} style={{ display: 'flex', flexDirection: 'column'  } }>
           <Input
             name='childCareWage'
             type='number'
@@ -170,7 +158,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
         </FormGroup>
   
   
-        <FormGroup lg={4} style={ { display: 'flex', flexDirection: 'column' } }>
+        <FormGroup lg={4} error={errors.preSchoolTeacherWage} style={ { display: 'flex', flexDirection: 'column' } }>
           <Input
             name='preSchoolTeacherWage'
             type='number'
@@ -188,7 +176,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
           )}
         </FormGroup>
 
-        <FormGroup lg={4} style={ { display: 'flex', flexDirection: 'column'  } }>
+        <FormGroup lg={4} error={errors.preSchoolTeacherWage} style={ { display: 'flex', flexDirection: 'column'  } }>
           <Input
             name='centerAdminWage'
             type='number'
@@ -204,6 +192,47 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
               </>
             </TextBox>
           )}
+        </FormGroup>
+      </Row>
+      <Row>
+      <FormGroup lg={4} error={errors.numberOfChildCareWorkers}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfChildCareWorkers'
+              type='number'
+              label={intl.formatMessage({ id: 'S3_#_CCS' })}
+              min={0}
+              value={data.numberOfChildCareWorkers}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCS_TOOLTIP' })} />
+          </div>
+        </FormGroup>
+        <FormGroup lg={4} error={errors.numberOfPreschoolTeachers}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfPreschoolTeachers'
+              type='number'
+              label={intl.formatMessage({ id: 'S3_#_PST' })}
+              min={0}
+              value={data.numberOfPreschoolTeachers}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PST_TOOLTIP' })} />
+          </div>
+        </FormGroup>
+        <FormGroup lg={4} error={errors.numberOfChildCareAdministrators}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='numberOfChildCareAdministrators'
+              type='number'
+              label={intl.formatMessage({ id: 'S3_#_CCA' })}
+              min={0}
+              value={data.numberOfChildCareAdministrators}
+              onChange={handleOnChange}
+            />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCA_TOOLTIP' })} />
+          </div>
         </FormGroup>
       </Row>
     </>
