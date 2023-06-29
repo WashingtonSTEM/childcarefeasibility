@@ -16,7 +16,7 @@ const Template = (args) => (
 
 export const Default = Template.bind({})
 Default.args = {
-  text: 'Child Care Business Feasibility Calculator',
+  text: 'Child Care Business Feasibility Estimator',
 }
 
 export default Story

@@ -23,7 +23,7 @@ import styles from '@/styles/Calculator.module.css'
 import XlsxPopulate from 'xlsx-populate'
 import { saveAs } from 'file-saver'
 
-const HOURS_IN_YEAR = 2080
+const HOURS_IN_A_MONTH = 176
 
 const Text = styled.span`
   display: block;
@@ -82,10 +82,10 @@ const ResultsPage = () => {
     if (!data) {
       return null
     }
-    const infant = getExpectedSalaryRevenuePerChild(data.county, 'Infant', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
-    const toddler = getExpectedSalaryRevenuePerChild(data.county, 'Toddler', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
-    const preschool = getExpectedSalaryRevenuePerChild(data.county, 'Pre School', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
-    const schoolAge = getExpectedSalaryRevenuePerChild(data.county, 'School Age', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const infant = data.pctNumberOfInfants//getExpectedSalaryRevenuePerChild(data.county, 'Infant', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const toddler = data.pctNumberOfToddlers//getExpectedSalaryRevenuePerChild(data.county, 'Toddler', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const preschool = data.pctNumberOfPreschoolers//getExpectedSalaryRevenuePerChild(data.county, 'Pre School', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
+    const schoolAge = data.pctNumberOfSchoolAgeChildren//getExpectedSalaryRevenuePerChild(data.county, 'School Age', data.typeOfFacility, data.medianOr75thPercentile === 'Median') || 0
 
     return { infant, toddler, preschool, schoolAge }
   }, [data])
@@ -107,9 +107,9 @@ const ResultsPage = () => {
       return null
     }
 
-    const worker = data.childCareWage * HOURS_IN_YEAR
-    const teacher = data.preSchoolTeacherWage * HOURS_IN_YEAR
-    const administrator = data.centerAdminWage * HOURS_IN_YEAR
+    const worker = data.childCareWage * HOURS_IN_A_MONTH
+    const teacher = data.preSchoolTeacherWage * HOURS_IN_A_MONTH
+    const administrator = data.centerAdminWage * HOURS_IN_A_MONTH
 
     return { worker, teacher, administrator }
   }, [data])

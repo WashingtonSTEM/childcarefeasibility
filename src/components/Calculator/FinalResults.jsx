@@ -128,24 +128,24 @@ const FinalResults = ({ mobile, onDataChange, ...props }) => {
   return (
     <>
       <Row style={{ marginBottom: 60 }}>
-        <Col md={4} lg={1.5}>
+        <Col md={4} lg={6}>
           <Text style={{ fontWeight: 'bold', fontSize: 30 }}><FormattedMessage id="R_FINAL" /></Text>
-        </Col>
-        <Col md={4} lg={4} style={{ textAlign: 'center' }}>
-          <Text>
-            <FormattedMessage id="R_MONTHLY" />
-          </Text>
-        </Col>
-        <Col md={4} lg={4} style={{ textAlign: 'center' }}>
-          <Text>
-            <FormattedMessage id="R_ANNUAL" />
-          </Text>
         </Col>
       </Row>
       <Row  style={{ padding: '30px 0' }}>
         <Col md={4} lg={3}>
           <Text style={{ fontWeight: 'bold' }}>
             <FormattedMessage id="R_REVENUE" />
+          </Text>
+        </Col>
+        <Col md={4} lg={4} >
+          <Text>
+            <FormattedMessage id="R_MONTHLY" />
+          </Text>
+        </Col>
+        <Col md={4} lg={4} >
+          <Text>
+            <FormattedMessage id="R_ANNUAL" />
           </Text>
         </Col>
       </Row>

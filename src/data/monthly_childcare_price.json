@@ -2,20 +2,20 @@
     "Adams": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Preschool": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       },
       "FCC": {
@@ -58,20 +58,20 @@
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Preschool": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       }
     },
@@ -230,37 +230,37 @@
     "Columbia": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       }
@@ -318,7 +318,7 @@
           "75th Percentile Cost": "$780.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       },
@@ -356,8 +356,8 @@
           "75th Percentile Cost": "$544.00"
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       },
       "FCC": {
@@ -420,37 +420,37 @@
     "Garfield": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       }
@@ -534,8 +534,8 @@
     "Island": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
           "Median Cost": "$938.00",
@@ -914,37 +914,37 @@
     "Pend Oreille": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       }
@@ -1008,19 +1008,19 @@
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "NA",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       }
@@ -1256,38 +1256,38 @@
     "Wahkiakum": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Preschool": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Preschool": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       }
     },
@@ -1388,20 +1388,20 @@
       },
       "FCC": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Preschool": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       }
     },
@@ -1446,20 +1446,20 @@
     "Jefferson": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Toddler": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "Preschool": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         },
         "School Age": {
-          "Median Cost": "NA",
-          "75th Percentile Cost": "NA"
+          "Median Cost": "",
+          "75th Percentile Cost": ""
         }
       },
       "FCC": {

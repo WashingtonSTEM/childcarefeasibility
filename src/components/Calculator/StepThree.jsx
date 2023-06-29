@@ -28,7 +28,7 @@ export const validationRules = {
   numberOfChildCareWorkers: [isRequired, minInt(0)],
   numberOfPreschoolTeachers: [isRequired, minInt(0)],
   numberOfChildCareAdministrators: [isRequired, minInt(0)],
-  ptcNumberOfInfants: [isRequired, minInt(0)],
+  pctNumberOfInfants: [isRequired, minInt(0)],
   pctNumberOfToddlers: [isRequired, minInt(0)],
   pctNumberOfPreschoolers: [isRequired, minInt(0)],
   pctNumberOfSchoolAgeChildren: [isRequired, minInt(0)],
@@ -173,15 +173,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       </Row>
       
       <Row>
-        <FormGroup lg={3} error={errors.ptcNumberOfInfants}>
+        <FormGroup lg={3} error={errors.pctNumberOfInfants}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
-              name='ptcNumberOfInfants'
+              name='pctNumberOfInfants'
               type='number'
               prefix='$'
               label={intl.formatMessage({ 'id': 'S3_#_PCT_INFANTS' })}
               min={0}
-              value={data.ptcNumberOfInfants}
+              value={data.pctNumberOfInfants}
               onChange={handleOnChange}
             />
           </div>
@@ -189,17 +189,18 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Infant) && 
               <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
                 <>
-                  {intl.formatMessage(
-                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                    { median: 
-                    monthlyCCPricePerCounty.Infant['Median Cost'], 
-                    percent: monthlyCCPricePerCounty.Infant['75th Percentile Cost'] 
-                    }
-                  )}
+                  {(!monthlyCCPricePerCounty.Infant['Median Cost'] && !monthlyCCPricePerCounty.Infant['75th Percentile Cost']) ? 
+                    intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                    intl.formatMessage(
+                      { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                      { 
+                        median: monthlyCCPricePerCounty.Infant['Median Cost'], 
+                        percent: monthlyCCPricePerCounty.Infant['75th Percentile Cost'] 
+                      }
+                    )}
                 </>
               </TextBox>
           }
-          
         </FormGroup>
         <FormGroup lg={3} error={errors.pctNumberOfToddlers}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
@@ -217,13 +218,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Toddler) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {intl.formatMessage(
-                  { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                  { median: 
-                      monthlyCCPricePerCounty.Toddler['Median Cost'], 
-                  percent: monthlyCCPricePerCounty.Toddler['75th Percentile Cost'] 
-                  }
-                )}
+                {(!monthlyCCPricePerCounty.Toddler['Median Cost'] && !monthlyCCPricePerCounty.Toddler['75th Percentile Cost']) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { 
+                      median: monthlyCCPricePerCounty.Toddler['Median Cost'], 
+                      percent: monthlyCCPricePerCounty.Toddler['75th Percentile Cost'] 
+                    }
+                  )}
               </>
             </TextBox>
           }
@@ -246,13 +249,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Preschool) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {intl.formatMessage(
-                  { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                  { median: 
+                {(!monthlyCCPricePerCounty.Preschool['Median Cost'] && !monthlyCCPricePerCounty.Preschool['75th Percentile Cost']) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { median: 
                       monthlyCCPricePerCounty.Preschool['Median Cost'], 
-                  percent: monthlyCCPricePerCounty.Preschool['75th Percentile Cost'] 
-                  }
-                )}
+                    percent: monthlyCCPricePerCounty.Preschool['75th Percentile Cost'] 
+                    }
+                  )}
               </>
             </TextBox>
           }
@@ -274,13 +279,15 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             (monthlyCCPricePerCounty && monthlyCCPricePerCounty['School Age']) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {intl.formatMessage(
-                  { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                  { median: 
+                {(!monthlyCCPricePerCounty['School Age']['Median Cost'] && !monthlyCCPricePerCounty['School Age']['75th Percentile Cost']) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { median: 
                       monthlyCCPricePerCounty['School Age']['Median Cost'], 
-                  percent: monthlyCCPricePerCounty['School Age']['75th Percentile Cost'] 
-                  }
-                )}
+                    percent: monthlyCCPricePerCounty['School Age']['75th Percentile Cost'] 
+                    }
+                  )}
               </>
             </TextBox>
           }
