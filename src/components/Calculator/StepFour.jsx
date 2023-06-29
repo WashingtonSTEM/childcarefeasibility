@@ -107,7 +107,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
 
 
       {(data.typeOfFacility && estimatedNumberOfChildCareWorkers)  && (
-        <TextBox style={{ marginBottom: "1em", fontStyle: 'italic' }}>
+        <TextBox style={{ marginBottom: '1em', fontStyle: 'italic' }}>
           {intl.formatMessage({ id: 'S4_MIN_STAFF' }, { value: estimatedNumberOfChildCareWorkers })}
         </TextBox>
       )}
@@ -195,7 +195,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
         </FormGroup>
       </Row>
       <Row>
-      <FormGroup lg={4} error={errors.numberOfChildCareWorkers}>
+        <FormGroup lg={4} error={errors.numberOfChildCareWorkers}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='numberOfChildCareWorkers'
