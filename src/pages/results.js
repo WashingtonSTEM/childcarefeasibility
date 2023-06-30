@@ -1,29 +1,30 @@
-import { useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
-import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
-import styled from 'styled-components'
+import { useEffect, useMemo } from 'react'
 import { FormattedMessage, useIntl } from 'react-intl'
+import { BaseCSS, Col, Container, Row } from 'styled-bootstrap-grid'
+import styled from 'styled-components'
 
-import Title from '@/components/Title'
-import Input from '@/components/Input'
 import Button from '@/components/Button'
 import FinalResults from '@/components/Calculator/FinalResults'
 import TotalBox from '@/components/Calculator/TotalBox'
-import useMediaQuery from '@/hooks/useMediaQuery'
+import Input from '@/components/Input'
+import Title from '@/components/Title'
+import { getChildcareLicensingFee, getExpectedFeeRevenue, getSubsidy } from '@/helpers/formulas'
 import useForm from '@/hooks/useForm'
-import { getExpectedSalaryRevenuePerChild, getSubsidy, getExpectedSalary, getExpectedFeeRevenue, getChildcareLicensingFee } from '@/helpers/formulas'
+import useMediaQuery from '@/hooks/useMediaQuery'
 
 import { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
-import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 import { validationRules as stepThreeRules } from '@/components/Calculator/StepThree'
+import { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 
 import childCareFeasibilityData from '@/data/childcare_feasibility_data.json'
 
 import styles from '@/styles/Calculator.module.css'
-import XlsxPopulate from 'xlsx-populate'
 import { saveAs } from 'file-saver'
+import XlsxPopulate from 'xlsx-populate'
 
-const HOURS_IN_A_MONTH = 176
+const WORKING_HOURS_IN_A_YEAR = 2080
+const HOURS_IN_A_MONTH = WORKING_HOURS_IN_A_YEAR / 12
 
 const Text = styled.span`
   display: block;
@@ -139,13 +140,21 @@ const ResultsPage = () => {
     (data.numberOfPreschoolTeachers * expectedSalary.teacher) +
     (data.numberOfChildCareAdministrators * expectedSalary.administrator)
 
-  const expectedBenefits = data.payBenefits === 'true' ? expectedSalaries * (data.percentageBenefitsCost / 100) : 0
+  const expectedBenefits = data.payBenefits === 'true' ? (data.percentageBenefitsCost * (
+    data.numberOfChildCareWorkers + data.numberOfPreschoolTeachers + data.numberOfChildCareAdministrators
+  )) / 12: 0
 
   const totalChildren = data.numberOfInfants + data.numberOfToddlers + data.numberOfPreschoolers + data.numberOfSchoolAgeChildren
 
   const childcareLicensingFee = getChildcareLicensingFee(data.typeOfFacility, totalChildren)
+ 
+  const expectedAnnualRegistration = Number(data.annualRegistration) * totalChildren
 
-  const totalIncome = expectedFeeRevenue
+  const qualityImprovementAward = childCareFeasibilityData[data.typeOfFacility][data.earlyAchieversLevel] / 12
+
+  const annualRegistration = (expectedAnnualRegistration / 12) 
+
+  const totalIncome = expectedFeeRevenue + expectedAnnualRegistration + qualityImprovementAward
 
   const totalExpenses = expectedSalaries + expectedBenefits + data.rentOrMortageCost + data.additionalCost * totalChildren + data.educationProgramExpenses * totalChildren + data.programManagementChild * totalChildren + childcareLicensingFee
 
@@ -181,9 +190,6 @@ const ResultsPage = () => {
     onDataChange(target.name, parseInt(value))
   }
 
-  const qualityImprovementAward = childCareFeasibilityData[data.typeOfFacility][data.earlyAchieversLevel] / 12
-
-  const annualRegistration = data.annualRegistration / 12
 
   const handleExportClick = () => {
 
@@ -256,6 +262,11 @@ const ResultsPage = () => {
 
     const exceldata3 = [
       { Description: intl.formatMessage({ id: 'R_E_FEE_REVENUE' }), Monthly: expectedFeeRevenue , Annual: expectedFeeRevenue * 12 },
+      { Description: intl.formatMessage({ id: 'R_E_REGISTRATION' }),  Monthly: annualRegistration, Annual:annualRegistration * 12 },
+      { Description: intl.formatMessage({ id: 'R_QUALITY_IMP' }), Monthly: qualityImprovementAward, Annual:qualityImprovementAward * 12 },
+      { Description: intl.formatMessage({ id: 'R_E_FEE_REVENUE' }), Monthly: expectedFeeRevenue , Annual: expectedFeeRevenue * 12 },
+      { Description: intl.formatMessage({ id: 'R_E_FEE_REVENUE' }), Monthly: expectedFeeRevenue , Annual: expectedFeeRevenue * 12 },
+
       { Description: intl.formatMessage({ id: 'R_E_SALARIES' }), Monthly: expectedSalaries , Annual: expectedSalaries * 12 },
       { Description: intl.formatMessage({ id: 'R_E_BENEFITS' }), Monthly: expectedBenefits , Annual: expectedBenefits * 12 },
       { Description: intl.formatMessage({ id: 'R_RENT_COST' }), Monthly: data.rentOrMortageCost, Annual: data.rentOrMortageCost * 12 },
@@ -322,7 +333,7 @@ const ResultsPage = () => {
       sheet1.range('A25:' + endColumn4 + '25').style('border', true)
 
       return workbook.outputAsync().then((res) => {
-        saveAs(res, 'file.xlsx')
+        saveAs(res, 'child-care-business-feasibility-estimator.xlsx')
       })
     })
   }
@@ -545,12 +556,12 @@ const ResultsPage = () => {
             expectedSalaries={expectedSalaries}
             expectedBenefits={expectedBenefits}
             annualRegistration={annualRegistration}
+            qualityImprovementAward={qualityImprovementAward}
             rentOrMortageCost={data.rentOrMortageCost}
             additionalCost={additionalCost}
             educationProgramExpenses={educationProgramExpenses}
             managementAndAdministration={managementAndAdministration}
             childcareLicensingFee={childcareLicensingFee}
-            qualityImprovementAward={qualityImprovementAward}
             onDataChange={onInputChage}
           />
           {!isMobile && (

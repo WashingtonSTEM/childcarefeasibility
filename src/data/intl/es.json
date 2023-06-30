@@ -36,7 +36,7 @@
   "S1_ADDITIONAL_COST": "Costos adicionales por actividades de calidad por niño",
   "S1_ADDITIONAL_COST_TOOLTIP": "Considere los costos del plan de estudios, el desarrollo profesional del personal, la gestión y administración, y las mejoras del programa, como las conferencias familiares.",
   "S1_ANNUAL_REG": "Tarifa de Registro Anual",
-  "S1_ANNUAL_REG_TEXT": "Por familia",
+  "S1_ANNUAL_REG_TEXT": "Por niño",
   "S1_SCHOLARSHIP": "Becas y descuentos",
   "S1_SCHOLARSHIP_SUB_TEXT": "Cantidad por niño, por mes",
   "S1_SCHOLARSHIP_TOOLTIP": "Cálculo mensual del costo de proporcionar becas o descuento",
@@ -78,7 +78,8 @@
   "S3_#_PCT_TODDLERS": "Matrícula por niño, niño pequeño",
   "S3_#_PCT_PRESCHOOLERS": "Matrícula por niño, preescolar",
   "S3_#_PCT_SAC": "Colegiatura por niño, edad escolar",
-  "S3_#_PCT_TOOLTIP_MIN_LIC": "La tasa de matrícula promedio y percentil 75 mensual para su condado son {median} y {percent}, respectivamente.",
+  "S3_#_PCT_TOOLTIP_MIN_LIC": "La tasa de matrícula promedio y percentil 75 mensual para su condado son {median} y {percent}, respectivamente. Asume que el niño asiste 22 días completos al mes.",
+  "S3_#_PCT_TOOLTIP_MIN_LIC_EXTENDED": "La tasa de matrícula promedio y percentil 75 mensual para su condado son {median} y {percent}, respectivamente. Para los Centros, esto supone que un niño en edad escolar asiste 5 días completos y 17 medios días (50%) por mes. Para Family Home, se supone que un niño en edad escolar asiste 5 días completos y 17 días parciales (75%) por mes.",
   "S3_#_CLASSROOMS": "# de aulas",
   "S3_#_CLASSROOMS_TOOLTIP": "En los centros de cuidado infantil, cada grupo de edad debe tener su propio salón de clases. En hogar familiar, los grupos pueden combinarse en el salón de clases en una o más áreas. Las estimaciones son para inscritos a tiempo completo.",
   "S3_#_CCS": "# de empleados de cuidado infantil",
@@ -144,8 +145,8 @@
   "S2_MANAGEMENT_CHILD_TOOLTIP_CB": "Para Centros con Licencia, $30 por niño, según estimaciones del Departamento de Comercio.",
   "S2_MANAGEMENT_CHILD_TOOLTIP_FCC": "Para hogar familiar con licencia, $45 por niño, según estimaciones del Departamento de Comercio.",
   "R_LICENSING_FEE": "Tarifa de licencia de cuidado de niños",
-  "S3_#_INFANTS_TOOLTIP": "Infantes, de 0 a 11 meses de edad. Supone que el niño asiste 22 días completos al mes",
-  "S3_#_TODDLERS_TOOLTIP": "Niños pequeños, de 12 a 29 meses de edad. Establece el personal para cubrir las horas de funcionamiento de tu negocio. Supone que el niño asiste 22 días completos al mes.",
-  "S3_#_PRESCHOOLERS_TOOLTIP": "Preescolares, de 30 meses a 6 años, no inscritos en la escuela. Supone que el niño asiste 22 días completos al mes",
-  "S3_#_SAC_TOOLTIP": "Niños en edad escolar, de 15 a 12 años, matriculados en la escuela. Para los Centros, esto asume que un niño en edad escolar asiste 5 días completos y 17 medios días (50%) por mes. Para Hogar familiar, asume que un niño en edad escolar asiste 5 días completos y 17 días parciales (75%) por mes"
+  "S3_#_INFANTS_TOOLTIP": "Infantes, de 0 a 11 meses de edad.",
+  "S3_#_TODDLERS_TOOLTIP": "Niños pequeños, de 12 a 29 meses de edad.",
+  "S3_#_PRESCHOOLERS_TOOLTIP": "Preescolares, de 30 meses a 6 años, no inscritos en la escuela.",
+  "S3_#_SAC_TOOLTIP": "Niños en edad escolar, de 15 a 12 años, matriculados en la escuela."
 }

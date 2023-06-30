@@ -282,7 +282,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
                 {(!monthlyCCPricePerCounty['School Age']['Median Cost'] && !monthlyCCPricePerCounty['School Age']['75th Percentile Cost']) ? 
                   intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
                   intl.formatMessage(
-                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC_EXTENDED' }, 
                     { median: 
                       monthlyCCPricePerCounty['School Age']['Median Cost'], 
                     percent: monthlyCCPricePerCounty['School Age']['75th Percentile Cost'] 
