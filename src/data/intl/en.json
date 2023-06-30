@@ -139,7 +139,7 @@
   "R_THANKS_USE": "for using the Child Care Business Feasibility Estimator",
   "REQUIRED": "This field is required",
   "MIN_VALUE": "Min. acepted value is {min}",
-  "MAX_VALUE": "Max. acepted value is {min}",
+  "MAX_VALUE": "Max. acepted value is {max}",
   "S2_EDUCATION_PROGRAM_EXPENSES": "Education Program Expenses",
   "S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION": "Amount per child, per month",
   "S2_EDUCATION_PROGRAM_EXPENSES_TOOLTIP_CB": "This amount does not include transportation costs for field trips. Please add separately.",

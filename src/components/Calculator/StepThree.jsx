@@ -25,9 +25,6 @@ export const validationRules = {
   numberOfPreschoolers: [isRequired, minInt(0)],
   numberOfSchoolAgeChildren: [isRequired, minInt(0)],
   numberOfClassrooms: [isRequired, minInt(0)],
-  numberOfChildCareWorkers: [isRequired, minInt(0)],
-  numberOfPreschoolTeachers: [isRequired, minInt(0)],
-  numberOfChildCareAdministrators: [isRequired, minInt(0)],
   pctNumberOfInfants: [isRequired, minInt(0)],
   pctNumberOfToddlers: [isRequired, minInt(0)],
   pctNumberOfPreschoolers: [isRequired, minInt(0)],
@@ -48,27 +45,6 @@ const Text = styled.span`
 const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
   const intl = useIntl()
 
-  const estimatedNumberOfChildCareAdministrators = useMemo(() => {
-    const { typeOfFacility } = data
-
-    if (!typeOfFacility) {
-      return null
-    }
-
-    return getEstimatedNumberOfChildCareAdministrators(typeOfFacility)
-  }, [data])
-
-  const estimatedNumberOfPreschoolTeachers = useMemo(() => {
-    const { typeOfFacility, numberOfClassrooms } = data
-
-    if (!typeOfFacility || !numberOfClassrooms) {
-      return null
-    }
-
-    return getEstimatedNumberOfPreschoolTeachers(typeOfFacility, numberOfClassrooms)
-  }, [data])
-
-
 
   const maximumNumberOfInfantsSupported = useMemo(() => {
     const { typeOfFacility, intendedFootage } = data
@@ -79,17 +55,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
     return getMaximumNumberOfInfantsSupported(typeOfFacility, intendedFootage)
   }, [data])
-
-  const maximumNumberOfPreschoolers = useMemo(() => {
-    const { typeOfFacility, intendedFootage } = data
-
-    if (!typeOfFacility || !intendedFootage) {
-      return null
-    }
-
-    return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
-  }, [data, maximumNumberOfInfantsSupported])
-
 
   const monthlyCCPricePerCounty = monthlyChildcarePrice[data.county] ? monthlyChildcarePrice[data.county][data.typeOfFacility] || {} : {}
 

@@ -150,7 +150,9 @@ const ResultsPage = () => {
  
   const expectedAnnualRegistration = Number(data.annualRegistration) * totalChildren
 
-  const qualityImprovementAward = childCareFeasibilityData[data.typeOfFacility][data.earlyAchieversLevel] / 12
+  const qualityImprovementAwardValue = childCareFeasibilityData[data.typeOfFacility][data.earlyAchieversLevel]
+
+  const qualityImprovementAward = qualityImprovementAwardValue ? Number(qualityImprovementAwardValue) / 12 : 0
 
   const annualRegistration = (expectedAnnualRegistration / 12) 
 
@@ -616,26 +618,50 @@ const ResultsPage = () => {
               col={12}
               md={6}
               lg={6}
-              style={{ display: 'flex', justifyContent: 'flex-end' }}
+              style={{ display: 'flex', justifyContent: 'flex-end', }}
             >
-              <Button variant={'secondary'}
-                textAlign='center'
-                onClick={handleExportClick}
-                style={{ fontSize: 16, marginRight: '1em' }}>
-                <img style={{ position: 'relative', top: 4, marginRight: 5 }} width={20} src="https://upload.wikimedia.org/wikipedia/commons/f/f3/.xlsx_icon.svg" />
-                Export to excel
-              </Button>
-              <Button
-                variant="secondary"
-                textAlign='center'
-                onClick={() => handleStartClick(true)}
-                style={{ fontSize: 16 }}
-              >
-                <FormattedMessage id='R_PREVIOUS_PAGE' />
-              </Button>
-              <Button textAlign='center' onClick={() => handleStartClick()} style={{ marginLeft: 8, fontSize: 16 }}>
-                <FormattedMessage id='R_START_AGAIN' />
-              </Button>
+              <Row style={{ paddingTop: '1em' }}>
+                <Col col={12}
+                  md={4}
+                  style={{ paddingBottom: '0.5em' }}>
+                  <Button
+                    variant={'secondary'}
+                    textAlign="center"
+                    onClick={handleExportClick}
+                    style={{ fontSize: 16, marginRight: '1em', width: '100%' }}
+                  >
+                    <img
+                      style={{ position: 'relative', top: 4, marginRight: 5 }}
+                      width={20}
+                      src="https://upload.wikimedia.org/wikipedia/commons/f/f3/.xlsx_icon.svg"
+                    />
+                    Export to excel
+                  </Button>
+                </Col>
+                <Col col={12}
+                  md={4}
+                  style={{ paddingBottom: '0.5em' }}>
+                  <Button
+                    variant="secondary"
+                    textAlign="center"
+                    onClick={() => handleStartClick(true)}
+                    style={{ fontSize: 16, width: '100%' }}
+                  >
+                    <FormattedMessage id="R_PREVIOUS_PAGE" />
+                  </Button>
+                </Col>
+                <Col col={12}
+                  md={4}
+                  style={{ paddingBottom: '0.5em' }}>
+                  <Button
+                    textAlign="center"
+                    onClick={() => handleStartClick()}
+                    style={{ fontSize: 16, width: '100%' }}
+                  >
+                    <FormattedMessage id="R_START_AGAIN" />
+                  </Button>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>

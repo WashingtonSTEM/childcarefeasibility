@@ -120,7 +120,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
             onChange={({ target }) => onDataChange?.('payBenefits', target.checked)}
           />
         </FormGroup>
-        <FormGroup lg={8} error={errors.percentageBenefitsCost}>
+        <FormGroup lg={8} error={errors.percentageBenefitsCost}  errorMessageProps={{ min: 0, max: 100 }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='percentageBenefitsCost'

@@ -49,7 +49,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
         {intl.formatMessage({ id: 'S2_TITLE' })}
       </Title>
       <Row>
-        <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy}>
+        <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy} errorMessageProps={{ min: 0, max: 100 }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='percentageChildrenReceivingSubsidy'
@@ -72,7 +72,10 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             </TextBox>
           )}
         </FormGroup>
-        <FormGroup lg={6} error={errors.educationProgramExpenses} description={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION' })}>
+        <FormGroup lg={6}
+          error={errors.educationProgramExpenses}
+          errorMessageProps={{ min: 0, max: 100 }}
+          description={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION' })}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='educationProgramExpenses'
@@ -121,7 +124,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           </div>
 
         </FormGroup>
-        <FormGroup lg={6} error={errors.collectionsRate}>
+        <FormGroup lg={6} error={errors.collectionsRate} errorMessageProps={{ min: 0, max: 100 }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='collectionsRate'

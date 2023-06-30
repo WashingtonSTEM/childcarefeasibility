@@ -17,7 +17,7 @@ import StepTwo, { validationRules as stepTwoRules } from '@/components/Calculato
 
 import styles from '@/styles/Calculator.module.css'
 
-const MAX_STEPS = 3
+const MAX_STEPS = 4
 
 const Text = styled.div`
   font-family: 'Roboto';
@@ -178,7 +178,7 @@ const Page = () => {
               >
                 {step === 1 ? 'Cancel' : 'Back'}
               </Button>
-              <Button type='button' textAlign='center' onClick={() => handleStepDirection(1)}>{step < 3 ? 'Next' : 'Finish'}</Button>
+              <Button type='button' textAlign='center' onClick={() => handleStepDirection(1)}>{step < MAX_STEPS ? 'Next' : 'Finish'}</Button>
             </div>
           )}
         </Container>
