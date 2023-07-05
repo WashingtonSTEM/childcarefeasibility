@@ -107,7 +107,7 @@
   "S4_CENTER_ADMIN": "Center Administrator hourly wage ",
   "S4_CENTER_ADMIN_BOX": "The median wage for this position in your county is {value}.",
   "S4_QUALITY_IMPR": "Quality Improvement Award",
-  "S4_MIN_STAFF": "We estimate {value} adult(s) working with children are needed in order to maintain legally mandated staff-to-child ratios. This is the minimum per licensing requirements. Set staffing to cover the operating hours of your business",
+  "S4_MIN_STAFF": "We estimate {value} adult(s) working with children are needed in order to maintain legally mandated staff-to-child ratios. This is the minimum per licensing requirements. Set staffing to cover the operating hours of your business.",
   "RESULTS_TITLE": "Inputs Summary",
   "R_RPC": "Tuition revenue per child (monthly)",
   "R_RPC_TOOLTIP": "Expected monthly revenue per child",

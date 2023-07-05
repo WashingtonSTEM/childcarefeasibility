@@ -686,7 +686,7 @@
     "Klickitat": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
@@ -762,19 +762,19 @@
     "Lincoln": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       },
@@ -1066,19 +1066,19 @@
     "Skamania": {
       "Center-Based": {
         "Infant": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Toddler": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "Preschool": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         },
         "School Age": {
-          "Median Cost": "No Rates Ava",
+          "Median Cost": "",
           "75th Percentile Cost": "$0.00"
         }
       },
