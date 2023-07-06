@@ -1,0 +1,1172 @@
+{
+    "Chelan": {
+        "FCC": {
+            "Median": {
+                "Infant": 971,
+                "Toddler": 841,
+                "Preschool": 758,
+                "School Age": 325
+            },
+            "75th Percentile": {
+                "Infant": 1170,
+                "Toddler": 1083,
+                "Preschool": 975,
+                "School Age": 542
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 825,
+                "Preschool": 808,
+                "School Age": 595
+            },
+            "75th Percentile": {
+                "Infant": 1148,
+                "Toddler": 888,
+                "Preschool": 863,
+                "School Age": 980
+            }
+        }
+    },
+    "Okanogan": {
+        "FCC": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 888,
+                "Preschool": 758,
+                "School Age": 325
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 1083,
+                "Preschool": 1029,
+                "School Age": 567
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 897,
+                "Toddler": 813,
+                "Preschool": 741,
+                "School Age": 650
+            },
+            "75th Percentile": {
+                "Infant": 944,
+                "Toddler": 840,
+                "Preschool": 769,
+                "School Age": 775
+            }
+        }
+    },
+    "Douglas": {
+        "FCC": {
+            "Median": {
+                "Infant": 867,
+                "Toddler": 758,
+                "Preschool": 758,
+                "School Age": 303
+            },
+            "75th Percentile": {
+                "Infant": 986,
+                "Toddler": 868,
+                "Preschool": 867,
+                "School Age": 433
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 458,
+                "Toddler": 800,
+                "Preschool": 735,
+                "School Age": 644.67
+            },
+            "75th Percentile": {
+                "Infant": 679,
+                "Toddler": 813,
+                "Preschool": 780,
+                "School Age": 844
+            }
+        }
+    },
+    "Grant": {
+        "FCC": {
+            "Median": {
+                "Infant": 867,
+                "Toddler": 758,
+                "Preschool": 714,
+                "School Age": 325
+            },
+            "75th Percentile": {
+                "Infant": 1001,
+                "Toddler": 918,
+                "Preschool": 867,
+                "School Age": 536
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 911,
+                "Toddler": 848,
+                "Preschool": 800,
+                "School Age": 700
+            },
+            "75th Percentile": {
+                "Infant": 963,
+                "Toddler": 875,
+                "Preschool": 819,
+                "School Age": 867
+            }
+        }
+    },
+    "Garfield": {
+        "FCC": {
+            "Median": {
+                "Infant": 891.56,
+                "Toddler": 790.67,
+                "Preschool": 740.11,
+                "School Age": 358.22
+            },
+            "75th Percentile": {
+                "Infant": 976.56,
+                "Toddler": 924,
+                "Preschool": 860.11,
+                "School Age": 462.11
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 841.63,
+                "Toddler": 808,
+                "Preschool": 732.38,
+                "School Age": 644.67
+            },
+            "75th Percentile": {
+                "Infant": 925.88,
+                "Toddler": 848,
+                "Preschool": 775,
+                "School Age": 844
+            }
+        }
+    },
+    "Asotin": {
+        "FCC": {
+            "Median": {
+                "Infant": 891.56,
+                "Toddler": 790.67,
+                "Preschool": 740.11,
+                "School Age": 358.22
+            },
+            "75th Percentile": {
+                "Infant": 976.56,
+                "Toddler": 924,
+                "Preschool": 860.11,
+                "School Age": 462.11
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 793,
+                "Toddler": 749,
+                "Preschool": 695,
+                "School Age": 455
+            },
+            "75th Percentile": {
+                "Infant": 849,
+                "Toddler": 796,
+                "Preschool": 754,
+                "School Age": 737
+            }
+        }
+    },
+    "Adams": {
+        "FCC": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 867,
+                "Preschool": 802,
+                "School Age": 325
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 1062,
+                "Preschool": 948,
+                "School Age": 336
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 841.63,
+                "Toddler": 808,
+                "Preschool": 732.38,
+                "School Age": 644.67
+            },
+            "75th Percentile": {
+                "Infant": 925.88,
+                "Toddler": 848,
+                "Preschool": 775,
+                "School Age": 844
+            }
+        }
+    },
+    "Lincoln": {
+        "FCC": {
+            "Median": {
+                "Infant": 823,
+                "Toddler": 823,
+                "Preschool": 737,
+                "School Age": 672
+            },
+            "75th Percentile": {
+                "Infant": 823,
+                "Toddler": 823,
+                "Preschool": 737,
+                "School Age": 672
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 841.63,
+                "Toddler": 808,
+                "Preschool": 732.38,
+                "School Age": 644.67
+            },
+            "75th Percentile": {
+                "Infant": 925.88,
+                "Toddler": 848,
+                "Preschool": 775,
+                "School Age": 844
+            }
+        }
+    },
+    "Spokane": {
+        "FCC": {
+            "Median": {
+                "Infant": 900,
+                "Toddler": 795,
+                "Preschool": 758,
+                "School Age": 325
+            },
+            "75th Percentile": {
+                "Infant": 976,
+                "Toddler": 952,
+                "Preschool": 867,
+                "School Age": 395
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1175,
+                "Toddler": 1000,
+                "Preschool": 900,
+                "School Age": 585
+            },
+            "75th Percentile": {
+                "Infant": 1300,
+                "Toddler": 1100,
+                "Preschool": 982,
+                "School Age": 711
+            }
+        }
+    },
+    "Pend Orielle": {
+        "FCC": {
+            "Median": {
+                "Infant": 891.56,
+                "Toddler": 790.67,
+                "Preschool": 740.11,
+                "School Age": 358.22
+            },
+            "75th Percentile": {
+                "Infant": 976.56,
+                "Toddler": 924,
+                "Preschool": 860.11,
+                "School Age": 462.11
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 841.63,
+                "Toddler": 808,
+                "Preschool": 732.38,
+                "School Age": 644.67
+            },
+            "75th Percentile": {
+                "Infant": 925.88,
+                "Toddler": 848,
+                "Preschool": 775,
+                "School Age": 844
+            }
+        }
+    },
+    "Stevens": {
+        "FCC": {
+            "Median": {
+                "Infant": 779,
+                "Toddler": 628,
+                "Preschool": 683,
+                "School Age": 390
+            },
+            "75th Percentile": {
+                "Infant": 800,
+                "Toddler": 769,
+                "Preschool": 758,
+                "School Age": 444
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 759,
+                "Toddler": 726,
+                "Preschool": 636,
+                "School Age": 883
+            },
+            "75th Percentile": {
+                "Infant": 759,
+                "Toddler": 769,
+                "Preschool": 689,
+                "School Age": 994
+            }
+        }
+    },
+    "Ferry": {
+        "FCC": {
+            "Median": {
+                "Infant": 867,
+                "Toddler": 758,
+                "Preschool": 693,
+                "School Age": 234
+            },
+            "75th Percentile": {
+                "Infant": 867,
+                "Toddler": 758,
+                "Preschool": 693,
+                "School Age": 234
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 765,
+                "Toddler": 703,
+                "Preschool": 544,
+                "School Age": 644.67
+            },
+            "75th Percentile": {
+                "Infant": 765,
+                "Toddler": 703,
+                "Preschool": 544,
+                "School Age": 844
+            }
+        }
+    },
+    "Yakima": {
+        "FCC": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 813,
+                "Preschool": 758,
+                "School Age": 303
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 975,
+                "Preschool": 867,
+                "School Age": 433
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1078,
+                "Toddler": 823,
+                "Preschool": 791,
+                "School Age": 593
+            },
+            "75th Percentile": {
+                "Infant": 1192,
+                "Toddler": 939,
+                "Preschool": 867,
+                "School Age": 646
+            }
+        }
+    },
+    "Kittitas": {
+        "FCC": {
+            "Median": {
+                "Infant": 910,
+                "Toddler": 802,
+                "Preschool": 802,
+                "School Age": 255
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 939,
+                "Preschool": 865,
+                "School Age": 349
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1050,
+                "Toddler": 921,
+                "Preschool": 873,
+                "School Age": 464
+            },
+            "75th Percentile": {
+                "Infant": 1073,
+                "Toddler": 960,
+                "Preschool": 895,
+                "School Age": 485
+            }
+        }
+    },
+    "Franklin": {
+        "FCC": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 867,
+                "Preschool": 800,
+                "School Age": 325
+            },
+            "75th Percentile": {
+                "Infant": 1288,
+                "Toddler": 1083,
+                "Preschool": 1083,
+                "School Age": 482
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1048,
+                "Toddler": 1050,
+                "Preschool": 850,
+                "School Age": 628
+            },
+            "75th Percentile": {
+                "Infant": 1077,
+                "Toddler": 1240,
+                "Preschool": 977,
+                "School Age": 731
+            }
+        }
+    },
+    "Columbia": {
+        "FCC": {
+            "Median": {
+                "Infant": 953.33,
+                "Toddler": 827.33,
+                "Preschool": 786.67,
+                "School Age": 294.33
+            },
+            "75th Percentile": {
+                "Infant": 1151.33,
+                "Toddler": 999,
+                "Preschool": 938.33,
+                "School Age": 421.33
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1058.67,
+                "Toddler": 931.33,
+                "Preschool": 838,
+                "School Age": 561.67
+            },
+            "75th Percentile": {
+                "Infant": 1114,
+                "Toddler": 1046.33,
+                "Preschool": 913,
+                "School Age": 620.67
+            }
+        }
+    },
+    "San Juan": {
+        "FCC": {
+            "Median": {
+                "Infant": 1044.4,
+                "Toddler": 923.6,
+                "Preschool": 878,
+                "School Age": 554.6
+            },
+            "75th Percentile": {
+                "Infant": 1193.6,
+                "Toddler": 1090.2,
+                "Preschool": 1040,
+                "School Age": 659.2
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1387,
+                "Toddler": 1213,
+                "Preschool": 1040,
+                "School Age": 282
+            },
+            "75th Percentile": {
+                "Infant": 1387,
+                "Toddler": 1326,
+                "Preschool": 1209,
+                "School Age": 282
+            }
+        }
+    },
+    "Whatcom": {
+        "FCC": {
+            "Median": {
+                "Infant": 1083,
+                "Toddler": 1011,
+                "Preschool": 939,
+                "School Age": 542
+            },
+            "75th Percentile": {
+                "Infant": 1210,
+                "Toddler": 1083,
+                "Preschool": 1051,
+                "School Age": 618
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1460,
+                "Toddler": 1413,
+                "Preschool": 1181,
+                "School Age": 628
+            },
+            "75th Percentile": {
+                "Infant": 1668,
+                "Toddler": 1517,
+                "Preschool": 1300,
+                "School Age": 689
+            }
+        }
+    },
+    "Island": {
+        "FCC": {
+            "Median": {
+                "Infant": 1083,
+                "Toddler": 845,
+                "Preschool": 845,
+                "School Age": 650
+            },
+            "75th Percentile": {
+                "Infant": 1138,
+                "Toddler": 1083,
+                "Preschool": 1040,
+                "School Age": 728
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1489.2,
+                "Toddler": 938,
+                "Preschool": 840,
+                "School Age": 542
+            },
+            "75th Percentile": {
+                "Infant": 1599.2,
+                "Toddler": 1036,
+                "Preschool": 1120,
+                "School Age": 555
+            }
+        }
+    },
+    "Skagit": {
+        "FCC": {
+            "Median": {
+                "Infant": 997,
+                "Toddler": 867,
+                "Preschool": 867,
+                "School Age": 550
+            },
+            "75th Percentile": {
+                "Infant": 1150,
+                "Toddler": 1060,
+                "Preschool": 1040,
+                "School Age": 650
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1363,
+                "Toddler": 1062,
+                "Preschool": 888,
+                "School Age": 452
+            },
+            "75th Percentile": {
+                "Infant": 1474,
+                "Toddler": 1190,
+                "Preschool": 1057,
+                "School Age": 620
+            }
+        }
+    },
+    "Snohomish": {
+        "FCC": {
+            "Median": {
+                "Infant": 1192,
+                "Toddler": 1083,
+                "Preschool": 975,
+                "School Age": 500
+            },
+            "75th Percentile": {
+                "Infant": 1387,
+                "Toddler": 1250,
+                "Preschool": 1192,
+                "School Age": 650
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1620,
+                "Toddler": 1365,
+                "Preschool": 1200,
+                "School Age": 520
+            },
+            "75th Percentile": {
+                "Infant": 1799,
+                "Toddler": 1604,
+                "Preschool": 1365,
+                "School Age": 744
+            }
+        }
+    },
+    "Clark": {
+        "FCC": {
+            "Median": {
+                "Infant": 867,
+                "Toddler": 812,
+                "Preschool": 764,
+                "School Age": 531
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 975,
+                "Preschool": 877,
+                "School Age": 650
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1616,
+                "Toddler": 1369,
+                "Preschool": 1133,
+                "School Age": 585
+            },
+            "75th Percentile": {
+                "Infant": 1668,
+                "Toddler": 1495,
+                "Preschool": 1262,
+                "School Age": 693
+            }
+        }
+    },
+    "King": {
+        "FCC": {
+            "Median": {
+                "Infant": 1300,
+                "Toddler": 1200,
+                "Preschool": 1062,
+                "School Age": 433
+            },
+            "75th Percentile": {
+                "Infant": 1500,
+                "Toddler": 1408,
+                "Preschool": 1300,
+                "School Age": 650
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1905,
+                "Toddler": 1677,
+                "Preschool": 1425,
+                "School Age": 531
+            },
+            "75th Percentile": {
+                "Infant": 2209,
+                "Toddler": 1958,
+                "Preschool": 1657,
+                "School Age": 718
+            }
+        }
+    },
+    "Kitsap": {
+        "FCC": {
+            "Median": {
+                "Infant": 1036,
+                "Toddler": 867,
+                "Preschool": 812,
+                "School Age": 520
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 1034,
+                "Preschool": 995,
+                "School Age": 594
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1440,
+                "Toddler": 1192,
+                "Preschool": 966,
+                "School Age": 490
+            },
+            "75th Percentile": {
+                "Infant": 1495,
+                "Toddler": 1326,
+                "Preschool": 1144,
+                "School Age": 610
+            }
+        }
+    },
+    "Pierce": {
+        "FCC": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 867,
+                "Preschool": 823,
+                "School Age": 433
+            },
+            "75th Percentile": {
+                "Infant": 1171,
+                "Toddler": 1030,
+                "Preschool": 963,
+                "School Age": 650
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1300,
+                "Toddler": 1077,
+                "Preschool": 953,
+                "School Age": 542
+            },
+            "75th Percentile": {
+                "Infant": 1484,
+                "Toddler": 1270,
+                "Preschool": 1111,
+                "School Age": 622
+            }
+        }
+    },
+    "Clallam": {
+        "FCC": {
+            "Median": {
+                "Infant": 1018,
+                "Toddler": 883,
+                "Preschool": 850,
+                "School Age": 510
+            },
+            "75th Percentile": {
+                "Infant": 1192,
+                "Toddler": 994,
+                "Preschool": 950,
+                "School Age": 569
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1268,
+                "Toddler": 1127,
+                "Preschool": 1018,
+                "School Age": 477
+            },
+            "75th Percentile": {
+                "Infant": 1316,
+                "Toddler": 1131,
+                "Preschool": 1045,
+                "School Age": 514
+            }
+        }
+    },
+    "Jefferson": {
+        "FCC": {
+            "Median": {
+                "Infant": 1094,
+                "Toddler": 997,
+                "Preschool": 997,
+                "School Age": 539
+            },
+            "75th Percentile": {
+                "Infant": 1143,
+                "Toddler": 1094,
+                "Preschool": 1094,
+                "School Age": 659
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1184.3,
+                "Toddler": 1054.18,
+                "Preschool": 907.27,
+                "School Age": 574.55
+            },
+            "75th Percentile": {
+                "Infant": 1262.2,
+                "Toddler": 1109.18,
+                "Preschool": 1000.73,
+                "School Age": 646
+            }
+        }
+    },
+    "Grays Harbor": {
+        "FCC": {
+            "Median": {
+                "Infant": 945,
+                "Toddler": 850,
+                "Preschool": 798,
+                "School Age": 697
+            },
+            "75th Percentile": {
+                "Infant": 975,
+                "Toddler": 936,
+                "Preschool": 823,
+                "School Age": 790
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1235,
+                "Toddler": 1105,
+                "Preschool": 902,
+                "School Age": 501
+            },
+            "75th Percentile": {
+                "Infant": 1235,
+                "Toddler": 1105,
+                "Preschool": 1018,
+                "School Age": 615
+            }
+        }
+    },
+    "Mason": {
+        "FCC": {
+            "Median": {
+                "Infant": 830,
+                "Toddler": 750,
+                "Preschool": 700,
+                "School Age": 563
+            },
+            "75th Percentile": {
+                "Infant": 865,
+                "Toddler": 800,
+                "Preschool": 738,
+                "School Age": 574
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1050,
+                "Toddler": 958,
+                "Preschool": 885,
+                "School Age": 704
+            },
+            "75th Percentile": {
+                "Infant": 1086,
+                "Toddler": 973,
+                "Preschool": 914,
+                "School Age": 707
+            }
+        }
+    },
+    "Thurston": {
+        "FCC": {
+            "Median": {
+                "Infant": 975,
+                "Toddler": 900,
+                "Preschool": 788,
+                "School Age": 477
+            },
+            "75th Percentile": {
+                "Infant": 1113,
+                "Toddler": 970,
+                "Preschool": 873,
+                "School Age": 574
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1283,
+                "Toddler": 1133,
+                "Preschool": 1039,
+                "School Age": 600
+            },
+            "75th Percentile": {
+                "Infant": 1493,
+                "Toddler": 1240,
+                "Preschool": 1148,
+                "School Age": 691
+            }
+        }
+    },
+    "Pacific": {
+        "FCC": {
+            "Median": {
+                "Infant": 812,
+                "Toddler": 779,
+                "Preschool": 779,
+                "School Age": 704
+            },
+            "75th Percentile": {
+                "Infant": 834,
+                "Toddler": 817,
+                "Preschool": 817,
+                "School Age": 785
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1073,
+                "Toddler": 932,
+                "Preschool": 542,
+                "School Age": 672
+            },
+            "75th Percentile": {
+                "Infant": 1073,
+                "Toddler": 932,
+                "Preschool": 688,
+                "School Age": 672
+            }
+        }
+    },
+    "Lewis": {
+        "FCC": {
+            "Median": {
+                "Infant": 780,
+                "Toddler": 650,
+                "Preschool": 593,
+                "School Age": 353
+            },
+            "75th Percentile": {
+                "Infant": 850,
+                "Toddler": 688,
+                "Preschool": 637,
+                "School Age": 415
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1016,
+                "Toddler": 886,
+                "Preschool": 805,
+                "School Age": 585
+            },
+            "75th Percentile": {
+                "Infant": 1067,
+                "Toddler": 975,
+                "Preschool": 888,
+                "School Age": 701
+            }
+        }
+    },
+    "Wahkiakum": {
+        "FCC": {
+            "Median": {
+                "Infant": 895,
+                "Toddler": 811.42,
+                "Preschool": 767.33,
+                "School Age": 515.58
+            },
+            "75th Percentile": {
+                "Infant": 1005.75,
+                "Toddler": 915.5,
+                "Preschool": 828.42,
+                "School Age": 621.75
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1184.3,
+                "Toddler": 1054.18,
+                "Preschool": 907.27,
+                "School Age": 574.55
+            },
+            "75th Percentile": {
+                "Infant": 1262.2,
+                "Toddler": 1109.18,
+                "Preschool": 1000.73,
+                "School Age": 646
+            }
+        }
+    },
+    "Cowlitz": {
+        "FCC": {
+            "Median": {
+                "Infant": 758,
+                "Toddler": 758,
+                "Preschool": 758,
+                "School Age": 477
+            },
+            "75th Percentile": {
+                "Infant": 910,
+                "Toddler": 846,
+                "Preschool": 800,
+                "School Age": 663
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1160,
+                "Toddler": 1050,
+                "Preschool": 960,
+                "School Age": 567
+            },
+            "75th Percentile": {
+                "Infant": 1235,
+                "Toddler": 1105,
+                "Preschool": 1018,
+                "School Age": 646
+            }
+        }
+    },
+    "Skamania": {
+        "FCC": {
+            "Median": {
+                "Infant": 650,
+                "Toddler": 650,
+                "Preschool": 550,
+                "School Age": 650
+            },
+            "75th Percentile": {
+                "Infant": 704,
+                "Toddler": 704,
+                "Preschool": 600,
+                "School Age": 953
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1184.3,
+                "Toddler": 1054.18,
+                "Preschool": 907.27,
+                "School Age": 574.55
+            },
+            "75th Percentile": {
+                "Infant": 1262.2,
+                "Toddler": 1109.18,
+                "Preschool": 1000.73,
+                "School Age": 646
+            }
+        }
+    },
+    "Klickitat": {
+        "FCC": {
+            "Median": {
+                "Infant": 1100,
+                "Toddler": 900,
+                "Preschool": 900,
+                "School Age": 600
+            },
+            "75th Percentile": {
+                "Infant": 1100,
+                "Toddler": 900,
+                "Preschool": 900,
+                "School Age": 600
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1184.3,
+                "Toddler": 1018,
+                "Preschool": 1018,
+                "School Age": 433
+            },
+            "75th Percentile": {
+                "Infant": 1262.2,
+                "Toddler": 1018,
+                "Preschool": 1018,
+                "School Age": 440
+            }
+        }
+    },
+    "Benton": {
+        "FCC": {
+            "Median": {
+                "Infant": 880,
+                "Toddler": 775,
+                "Preschool": 737,
+                "School Age": 303
+            },
+            "75th Percentile": {
+                "Infant": 1083,
+                "Toddler": 975,
+                "Preschool": 842,
+                "School Age": 477
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1221,
+                "Toddler": 1062,
+                "Preschool": 889,
+                "School Age": 595
+            },
+            "75th Percentile": {
+                "Infant": 1325,
+                "Toddler": 1125,
+                "Preschool": 999,
+                "School Age": 801
+            }
+        }
+    },
+    "Walla Walla": {
+        "FCC": {
+            "Median": {
+                "Infant": 898,
+                "Toddler": 845,
+                "Preschool": 758,
+                "School Age": 314
+            },
+            "75th Percentile": {
+                "Infant": 1300,
+                "Toddler": 1262,
+                "Preschool": 867,
+                "School Age": 402
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1135,
+                "Toddler": 1107,
+                "Preschool": 867,
+                "School Age": 722
+            },
+            "75th Percentile": {
+                "Infant": 1249,
+                "Toddler": 1203,
+                "Preschool": 1067,
+                "School Age": 736
+            }
+        }
+    },
+    "Whitman": {
+        "FCC": {
+            "Median": {
+                "Infant": 895,
+                "Toddler": 811.42,
+                "Preschool": 767.33,
+                "School Age": 515.58
+            },
+            "75th Percentile": {
+                "Infant": 1005.75,
+                "Toddler": 915.5,
+                "Preschool": 828.42,
+                "School Age": 621.75
+            }
+        },
+        "Center-Based": {
+            "Median": {
+                "Infant": 1402,
+                "Toddler": 1218,
+                "Preschool": 1055,
+                "School Age": 464
+            },
+            "75th Percentile": {
+                "Infant": 1543,
+                "Toddler": 1394,
+                "Preschool": 1205,
+                "School Age": 583
+            }
+        }
+    }
+}

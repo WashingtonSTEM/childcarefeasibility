@@ -1,3434 +1,1484 @@
-[
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 867,
-        "75thPercentileCost": 1062,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 802,
-        "75thPercentileCost": 948,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Adams",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 325,
-        "75thPercentileCost": 336,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 793,
-        "75thPercentileCost": 849,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 749,
-        "75thPercentileCost": 796,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 695,
-        "75thPercentileCost": 754,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 455,
-        "75thPercentileCost": 737,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Asotin",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1221,
-        "75thPercentileCost": 1325,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1062,
-        "75thPercentileCost": 1125,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 889,
-        "75thPercentileCost": 999,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 595,
-        "75thPercentileCost": 801,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 880,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 775,
-        "75thPercentileCost": 975,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 737,
-        "75thPercentileCost": 842,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Benton",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 303,
-        "75thPercentileCost": 477,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 5,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1148,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 825,
-        "75thPercentileCost": 888,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 808,
-        "75thPercentileCost": 863,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 595,
-        "75thPercentileCost": 980,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 971,
-        "75thPercentileCost": 1170,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 841,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 975,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Chelan",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 325,
-        "75thPercentileCost": 542,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1268,
-        "75thPercentileCost": 1316,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 27,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1127,
-        "75thPercentileCost": 1131,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1018,
-        "75thPercentileCost": 1045,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 477,
-        "75thPercentileCost": 514,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1018,
-        "75thPercentileCost": 1192,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 883,
-        "75thPercentileCost": 994,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 850,
-        "75thPercentileCost": 950,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Clallam",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 510,
-        "75thPercentileCost": 569,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1616,
-        "75thPercentileCost": 1668,
-        "staetSubsidyRate": 1654,
-        "medianCostAsAPercentageOfMedianIncome": 25,
-        "stateSubsidyRate": 1654
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1369,
-        "75thPercentileCost": 1495,
-        "staetSubsidyRate": 1482,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 1482
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1133,
-        "75thPercentileCost": 1262,
-        "staetSubsidyRate": 1249,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1249
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 585,
-        "75thPercentileCost": 693,
-        "staetSubsidyRate": 946,
-        "medianCostAsAPercentageOfMedianIncome": 9,
-        "stateSubsidyRate": 946
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 867,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 812,
-        "75thPercentileCost": 975,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 764,
-        "75thPercentileCost": 877,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Clark",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 531,
-        "75thPercentileCost": 650,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 8,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 793,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 793
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 791,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 791
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 593,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 593
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Columbia",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1160,
-        "75thPercentileCost": 1235,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 26,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1050,
-        "75thPercentileCost": 1105,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 960,
-        "75thPercentileCost": 1018,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 567,
-        "75thPercentileCost": 646,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 758,
-        "75thPercentileCost": 910,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 758,
-        "75thPercentileCost": 846,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 800,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Cowlitz",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 477,
-        "75thPercentileCost": 663,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 458,
-        "75thPercentileCost": 679,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 9,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 800,
-        "75thPercentileCost": 813,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 735,
-        "75thPercentileCost": 780,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 867,
-        "75thPercentileCost": 986,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 758,
-        "75thPercentileCost": 868,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Douglas",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 303,
-        "75thPercentileCost": 433,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 765,
-        "75thPercentileCost": 765,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 703,
-        "75thPercentileCost": 703,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 544,
-        "75thPercentileCost": 544,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 867,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 758,
-        "75thPercentileCost": 758,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 693,
-        "75thPercentileCost": 693,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Ferry",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 234,
-        "75thPercentileCost": 234,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1048,
-        "75thPercentileCost": 1077,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1050,
-        "75thPercentileCost": 1240,
-        "staetSubsidyRate": 793,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 793
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 850,
-        "75thPercentileCost": 977,
-        "staetSubsidyRate": 791,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 791
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 628,
-        "75thPercentileCost": 731,
-        "staetSubsidyRate": 593,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 593
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1288,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 867,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 800,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Franklin",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 325,
-        "75thPercentileCost": 482,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Garfield",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 911,
-        "75thPercentileCost": 963,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 848,
-        "75thPercentileCost": 875,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 800,
-        "75thPercentileCost": 819,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 700,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 867,
-        "75thPercentileCost": 1001,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 758,
-        "75thPercentileCost": 918,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 714,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Grant",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 325,
-        "75thPercentileCost": 536,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1235,
-        "75thPercentileCost": 1235,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 27,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1105,
-        "75thPercentileCost": 1105,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 902,
-        "75thPercentileCost": 1018,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 501,
-        "75thPercentileCost": 615,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 945,
-        "75thPercentileCost": 975,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 850,
-        "75thPercentileCost": 936,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 798,
-        "75thPercentileCost": 823,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Grays Harbor",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 697,
-        "75thPercentileCost": 790,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1654,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1654
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 938,
-        "75thPercentileCost": 1036,
-        "staetSubsidyRate": 1482,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1482
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 840,
-        "75thPercentileCost": 1120,
-        "staetSubsidyRate": 1249,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1249
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 542,
-        "75thPercentileCost": 555,
-        "staetSubsidyRate": 946,
-        "medianCostAsAPercentageOfMedianIncome": 9,
-        "stateSubsidyRate": 946
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1083,
-        "75thPercentileCost": 1138,
-        "staetSubsidyRate": 1192,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1192
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 845,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 845,
-        "75thPercentileCost": 1040,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Island",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 650,
-        "75thPercentileCost": 728,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1905,
-        "75thPercentileCost": 2209,
-        "staetSubsidyRate": 2074,
-        "medianCostAsAPercentageOfMedianIncome": 23,
-        "stateSubsidyRate": 2074
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1677,
-        "75thPercentileCost": 1958,
-        "staetSubsidyRate": 1724,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1724
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1425,
-        "75thPercentileCost": 1657,
-        "staetSubsidyRate": 1556,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1556
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 531,
-        "75thPercentileCost": 718,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1300,
-        "75thPercentileCost": 1500,
-        "staetSubsidyRate": 1477,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1477
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 1200,
-        "75thPercentileCost": 1408,
-        "staetSubsidyRate": 1372,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 1372
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 1062,
-        "75thPercentileCost": 1300,
-        "staetSubsidyRate": 1280,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 1280
-    },
-    {
-        "year": "2021",
-        "county": "King",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 433,
-        "75thPercentileCost": 650,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 5,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1440,
-        "75thPercentileCost": 1495,
-        "staetSubsidyRate": 1355,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 1355
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1192,
-        "75thPercentileCost": 1326,
-        "staetSubsidyRate": 1173,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1173
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 966,
-        "75thPercentileCost": 1144,
-        "staetSubsidyRate": 1042,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1042
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 490,
-        "75thPercentileCost": 610,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 8,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1036,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 867,
-        "75thPercentileCost": 1034,
-        "staetSubsidyRate": 910,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 910
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 812,
-        "75thPercentileCost": 995,
-        "staetSubsidyRate": 847,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 847
-    },
-    {
-        "year": "2021",
-        "county": "Kitsap",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 520,
-        "75thPercentileCost": 594,
-        "staetSubsidyRate": 774,
-        "medianCostAsAPercentageOfMedianIncome": 8,
-        "stateSubsidyRate": 774
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1050,
-        "75thPercentileCost": 1073,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 921,
-        "75thPercentileCost": 960,
-        "staetSubsidyRate": 793,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 793
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 873,
-        "75thPercentileCost": 895,
-        "staetSubsidyRate": 791,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 791
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 464,
-        "75thPercentileCost": 485,
-        "staetSubsidyRate": 593,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 593
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 910,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 802,
-        "75thPercentileCost": 939,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 802,
-        "75thPercentileCost": 865,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Kittitas",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 255,
-        "75thPercentileCost": 349,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 5,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1018,
-        "75thPercentileCost": 1018,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1018,
-        "75thPercentileCost": 1018,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 433,
-        "75thPercentileCost": 440,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 8,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1100,
-        "75thPercentileCost": 1100,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 900,
-        "75thPercentileCost": 900,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 900,
-        "75thPercentileCost": 900,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Klickitat",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 600,
-        "75thPercentileCost": 600,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1016,
-        "75thPercentileCost": 1067,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 886,
-        "75thPercentileCost": 975,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 805,
-        "75thPercentileCost": 888,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 585,
-        "75thPercentileCost": 701,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 780,
-        "75thPercentileCost": 850,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 650,
-        "75thPercentileCost": 688,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 593,
-        "75thPercentileCost": 637,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Lewis",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 353,
-        "75thPercentileCost": 415,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 823,
-        "75thPercentileCost": 823,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 823,
-        "75thPercentileCost": 823,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 737,
-        "75thPercentileCost": 737,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Lincoln",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 672,
-        "75thPercentileCost": 672,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1050,
-        "75thPercentileCost": 1086,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 958,
-        "75thPercentileCost": 973,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 885,
-        "75thPercentileCost": 914,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 704,
-        "75thPercentileCost": 707,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 830,
-        "75thPercentileCost": 865,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 750,
-        "75thPercentileCost": 800,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 700,
-        "75thPercentileCost": 738,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Mason",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 563,
-        "75thPercentileCost": 574,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 897,
-        "75thPercentileCost": 944,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 813,
-        "75thPercentileCost": 840,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 741,
-        "75thPercentileCost": 769,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 650,
-        "75thPercentileCost": 775,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 27,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 888,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 1029,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Okanogan",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 325,
-        "75thPercentileCost": 567,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 9,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1073,
-        "75thPercentileCost": 1073,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 26,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 932,
-        "75thPercentileCost": 932,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 23,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 542,
-        "75thPercentileCost": 688,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 672,
-        "75thPercentileCost": 672,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 812,
-        "75thPercentileCost": 834,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 779,
-        "75thPercentileCost": 817,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 779,
-        "75thPercentileCost": 817,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Pacific",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 704,
-        "75thPercentileCost": 785,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Pend Oreille",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1300,
-        "75thPercentileCost": 1484,
-        "staetSubsidyRate": 1355,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 1355
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1077,
-        "75thPercentileCost": 1270,
-        "staetSubsidyRate": 1173,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1173
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 953,
-        "75thPercentileCost": 1111,
-        "staetSubsidyRate": 1042,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1042
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 542,
-        "75thPercentileCost": 622,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 9,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1171,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 867,
-        "75thPercentileCost": 1030,
-        "staetSubsidyRate": 910,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 910
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 823,
-        "75thPercentileCost": 963,
-        "staetSubsidyRate": 847,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 847
-    },
-    {
-        "year": "2021",
-        "county": "Pierce",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 433,
-        "75thPercentileCost": 650,
-        "staetSubsidyRate": 774,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 774
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1387,
-        "75thPercentileCost": 1387,
-        "staetSubsidyRate": 1654,
-        "medianCostAsAPercentageOfMedianIncome": 23,
-        "stateSubsidyRate": 1654
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1213,
-        "75thPercentileCost": 1326,
-        "staetSubsidyRate": 1482,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 1482
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1040,
-        "75thPercentileCost": 1209,
-        "staetSubsidyRate": 1249,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 1249
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 282,
-        "75thPercentileCost": 282,
-        "staetSubsidyRate": 946,
-        "medianCostAsAPercentageOfMedianIncome": 5,
-        "stateSubsidyRate": 946
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1192,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1192
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "San Juan",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1363,
-        "75thPercentileCost": 1474,
-        "staetSubsidyRate": 1654,
-        "medianCostAsAPercentageOfMedianIncome": 26,
-        "stateSubsidyRate": 1654
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1062,
-        "75thPercentileCost": 1190,
-        "staetSubsidyRate": 1482,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 1482
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 888,
-        "75thPercentileCost": 1057,
-        "staetSubsidyRate": 1249,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1249
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 452,
-        "75thPercentileCost": 620,
-        "staetSubsidyRate": 946,
-        "medianCostAsAPercentageOfMedianIncome": 9,
-        "stateSubsidyRate": 946
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 997,
-        "75thPercentileCost": 1150,
-        "staetSubsidyRate": 1192,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1192
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 867,
-        "75thPercentileCost": 1060,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 867,
-        "75thPercentileCost": 1040,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Skagit",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 550,
-        "75thPercentileCost": 650,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 650,
-        "75thPercentileCost": 704,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 650,
-        "75thPercentileCost": 704,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 550,
-        "75thPercentileCost": 600,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Skamania",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 650,
-        "75thPercentileCost": 953,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 12,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1620,
-        "75thPercentileCost": 1799,
-        "staetSubsidyRate": 1654,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 1654
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1365,
-        "75thPercentileCost": 1604,
-        "staetSubsidyRate": 1482,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1482
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1200,
-        "75thPercentileCost": 1365,
-        "staetSubsidyRate": 1249,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1249
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 520,
-        "75thPercentileCost": 744,
-        "staetSubsidyRate": 946,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 946
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1192,
-        "75thPercentileCost": 1387,
-        "staetSubsidyRate": 1192,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 1192
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 1083,
-        "75thPercentileCost": 1250,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 975,
-        "75thPercentileCost": 1192,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Snohomish",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 500,
-        "75thPercentileCost": 650,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1175,
-        "75thPercentileCost": 1300,
-        "staetSubsidyRate": 1280,
-        "medianCostAsAPercentageOfMedianIncome": 25,
-        "stateSubsidyRate": 1280
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1000,
-        "75thPercentileCost": 1100,
-        "staetSubsidyRate": 1034,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 1034
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 900,
-        "75thPercentileCost": 982,
-        "staetSubsidyRate": 974,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 974
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 585,
-        "75thPercentileCost": 711,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 900,
-        "75thPercentileCost": 976,
-        "staetSubsidyRate": 910,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 910
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 795,
-        "75thPercentileCost": 952,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 802,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 802
-    },
-    {
-        "year": "2021",
-        "county": "Spokane",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 325,
-        "75thPercentileCost": 395,
-        "staetSubsidyRate": 780,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 780
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 759,
-        "75thPercentileCost": 759,
-        "staetSubsidyRate": 897,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 897
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 726,
-        "75thPercentileCost": 769,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 636,
-        "75thPercentileCost": 689,
-        "staetSubsidyRate": 741,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 741
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 883,
-        "75thPercentileCost": 994,
-        "staetSubsidyRate": 731,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 731
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 779,
-        "75thPercentileCost": 800,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 20,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 628,
-        "75thPercentileCost": 769,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 683,
-        "75thPercentileCost": 758,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Stevens",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 390,
-        "75thPercentileCost": 444,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1283,
-        "75thPercentileCost": 1493,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1133,
-        "75thPercentileCost": 1240,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1039,
-        "75thPercentileCost": 1148,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 600,
-        "75thPercentileCost": 691,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1113,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 900,
-        "75thPercentileCost": 970,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 14,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 788,
-        "75thPercentileCost": 873,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Thurston",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 477,
-        "75thPercentileCost": 574,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 8,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Wahkiakum",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 704
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1135,
-        "75thPercentileCost": 1249,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 23,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1107,
-        "75thPercentileCost": 1203,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 23,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 867,
-        "75thPercentileCost": 1067,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 722,
-        "75thPercentileCost": 736,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 15,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 898,
-        "75thPercentileCost": 1300,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 845,
-        "75thPercentileCost": 1262,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 16,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Walla Walla",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 314,
-        "75thPercentileCost": 402,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 6,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1460,
-        "75thPercentileCost": 1668,
-        "staetSubsidyRate": 1654,
-        "medianCostAsAPercentageOfMedianIncome": 26,
-        "stateSubsidyRate": 1654
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1413,
-        "75thPercentileCost": 1517,
-        "staetSubsidyRate": 1482,
-        "medianCostAsAPercentageOfMedianIncome": 25,
-        "stateSubsidyRate": 1482
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1181,
-        "75thPercentileCost": 1300,
-        "staetSubsidyRate": 1249,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 1249
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 628,
-        "75thPercentileCost": 689,
-        "staetSubsidyRate": 946,
-        "medianCostAsAPercentageOfMedianIncome": 11,
-        "stateSubsidyRate": 946
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1083,
-        "75thPercentileCost": 1210,
-        "staetSubsidyRate": 1192,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 1192
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 1011,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 1059,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 1059
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 939,
-        "75thPercentileCost": 1051,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Whatcom",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 542,
-        "75thPercentileCost": 618,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1402,
-        "75thPercentileCost": 1543,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": 31,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 1218,
-        "75thPercentileCost": 1394,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": 27,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 1055,
-        "75thPercentileCost": 1205,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 464,
-        "75thPercentileCost": 583,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 867,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 867
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Whitman",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 650,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 650
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": 1078,
-        "75thPercentileCost": 1192,
-        "staetSubsidyRate": 1040,
-        "medianCostAsAPercentageOfMedianIncome": 24,
-        "stateSubsidyRate": 1040
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": 823,
-        "75thPercentileCost": 939,
-        "staetSubsidyRate": 793,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 793
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": 791,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 791,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 791
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": 593,
-        "75thPercentileCost": 646,
-        "staetSubsidyRate": 593,
-        "medianCostAsAPercentageOfMedianIncome": 13,
-        "stateSubsidyRate": 593
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 975,
-        "75thPercentileCost": 1083,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 22,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 813,
-        "75thPercentileCost": 975,
-        "staetSubsidyRate": 813,
-        "medianCostAsAPercentageOfMedianIncome": 18,
-        "stateSubsidyRate": 813
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 758,
-        "75thPercentileCost": 867,
-        "staetSubsidyRate": 758,
-        "medianCostAsAPercentageOfMedianIncome": 17,
-        "stateSubsidyRate": 758
-    },
-    {
-        "year": "2021",
-        "county": "Yakima",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 303,
-        "75thPercentileCost": 433,
-        "staetSubsidyRate": 693,
-        "medianCostAsAPercentageOfMedianIncome": 7,
-        "stateSubsidyRate": 693
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "Center-based",
-        "ageGroup": "Infant",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1235,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1235
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "Center-based",
-        "ageGroup": "Toddler",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1105,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1105
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "Center-based",
-        "ageGroup": "Preschool",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 1018,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 1018
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "Center-based",
-        "ageGroup": "School Age",
-        "medianCost": null,
-        "75thPercentileCost": null,
-        "staetSubsidyRate": 778,
-        "medianCostAsAPercentageOfMedianIncome": null,
-        "stateSubsidyRate": 778
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "FCC",
-        "ageGroup": "Infant",
-        "medianCost": 1094,
-        "75thPercentileCost": 1143,
-        "staetSubsidyRate": 975,
-        "medianCostAsAPercentageOfMedianIncome": 21,
-        "stateSubsidyRate": 975
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "FCC",
-        "ageGroup": "Toddler",
-        "medianCost": 997,
-        "75thPercentileCost": 1094,
-        "staetSubsidyRate": 936,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 936
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "FCC",
-        "ageGroup": "Preschool",
-        "medianCost": 997,
-        "75thPercentileCost": 1094,
-        "staetSubsidyRate": 823,
-        "medianCostAsAPercentageOfMedianIncome": 19,
-        "stateSubsidyRate": 823
-    },
-    {
-        "year": "2021",
-        "county": "Jefferson",
-        "careType": "FCC",
-        "ageGroup": "School Age",
-        "medianCost": 539,
-        "75thPercentileCost": 659,
-        "staetSubsidyRate": 704,
-        "medianCostAsAPercentageOfMedianIncome": 10,
-        "stateSubsidyRate": 704
+{
+    "Adams": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,062.00"
+        },
+        "Preschool": {
+          "Median Cost": "$802.00",
+          "75th Percentile Cost": "$948.00"
+        },
+        "School Age": {
+          "Median Cost": "$325.00",
+          "75th Percentile Cost": "$336.00"
+        }
+      }
+    },
+    "Asotin": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$793.00",
+          "75th Percentile Cost": "$849.00"
+        },
+        "Toddler": {
+          "Median Cost": "$749.00",
+          "75th Percentile Cost": "$796.00"
+        },
+        "Preschool": {
+          "Median Cost": "$695.00",
+          "75th Percentile Cost": "$754.00"
+        },
+        "School Age": {
+          "Median Cost": "$455.00",
+          "75th Percentile Cost": "$737.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      }
+    },
+    "Benton": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,221.00",
+          "75th Percentile Cost": "$1,325.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,062.00",
+          "75th Percentile Cost": "$1,125.00"
+        },
+        "Preschool": {
+          "Median Cost": "$889.00",
+          "75th Percentile Cost": "$999.00"
+        },
+        "School Age": {
+          "Median Cost": "$595.00",
+          "75th Percentile Cost": "$801.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$880.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$775.00",
+          "75th Percentile Cost": "$975.00"
+        },
+        "Preschool": {
+          "Median Cost": "$737.00",
+          "75th Percentile Cost": "$842.00"
+        },
+        "School Age": {
+          "Median Cost": "$303.00",
+          "75th Percentile Cost": "$477.00"
+        }
+      }
+    },
+    "Chelan": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,148.00"
+        },
+        "Toddler": {
+          "Median Cost": "$825.00",
+          "75th Percentile Cost": "$888.00"
+        },
+        "Preschool": {
+          "Median Cost": "$808.00",
+          "75th Percentile Cost": "$863.00"
+        },
+        "School Age": {
+          "Median Cost": "$595.00",
+          "75th Percentile Cost": "$980.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$971.00",
+          "75th Percentile Cost": "$1,170.00"
+        },
+        "Toddler": {
+          "Median Cost": "$841.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$975.00"
+        },
+        "School Age": {
+          "Median Cost": "$325.00",
+          "75th Percentile Cost": "$542.00"
+        }
+      }
+    },
+    "Clallam": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,268.00",
+          "75th Percentile Cost": "$1,316.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,127.00",
+          "75th Percentile Cost": "$1,131.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,018.00",
+          "75th Percentile Cost": "$1,045.00"
+        },
+        "School Age": {
+          "Median Cost": "$477.00",
+          "75th Percentile Cost": "$514.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,018.00",
+          "75th Percentile Cost": "$1,192.00"
+        },
+        "Toddler": {
+          "Median Cost": "$883.00",
+          "75th Percentile Cost": "$994.00"
+        },
+        "Preschool": {
+          "Median Cost": "$850.00",
+          "75th Percentile Cost": "$950.00"
+        },
+        "School Age": {
+          "Median Cost": "$510.00",
+          "75th Percentile Cost": "$569.00"
+        }
+      }
+    },
+    "Clark": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,616.00",
+          "75th Percentile Cost": "$1,668.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,369.00",
+          "75th Percentile Cost": "$1,495.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,133.00",
+          "75th Percentile Cost": "$1,262.00"
+        },
+        "School Age": {
+          "Median Cost": "$585.00",
+          "75th Percentile Cost": "$693.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$812.00",
+          "75th Percentile Cost": "$975.00"
+        },
+        "Preschool": {
+          "Median Cost": "$764.00",
+          "75th Percentile Cost": "$877.00"
+        },
+        "School Age": {
+          "Median Cost": "$531.00",
+          "75th Percentile Cost": "$650.00"
+        }
+      }
+    },
+    "Columbia": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      }
+    },
+    "Cowlitz": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,160.00",
+          "75th Percentile Cost": "$1,235.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,050.00",
+          "75th Percentile Cost": "$1,105.00"
+        },
+        "Preschool": {
+          "Median Cost": "$960.00",
+          "75th Percentile Cost": "$1,018.00"
+        },
+        "School Age": {
+          "Median Cost": "$567.00",
+          "75th Percentile Cost": "$646.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$910.00"
+        },
+        "Toddler": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$846.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$800.00"
+        },
+        "School Age": {
+          "Median Cost": "$477.00",
+          "75th Percentile Cost": "$663.00"
+        }
+      }
+    },
+    "Douglas": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$458.00",
+          "75th Percentile Cost": "$679.00"
+        },
+        "Toddler": {
+          "Median Cost": "$800.00",
+          "75th Percentile Cost": "$813.00"
+        },
+        "Preschool": {
+          "Median Cost": "$735.00",
+          "75th Percentile Cost": "$780.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$986.00"
+        },
+        "Toddler": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$868.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "School Age": {
+          "Median Cost": "$303.00",
+          "75th Percentile Cost": "$433.00"
+        }
+      }
+    },
+    "Ferry": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$765.00",
+          "75th Percentile Cost": "$765.00"
+        },
+        "Toddler": {
+          "Median Cost": "$703.00",
+          "75th Percentile Cost": "$703.00"
+        },
+        "Preschool": {
+          "Median Cost": "$544.00",
+          "75th Percentile Cost": "$544.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "Toddler": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$758.00"
+        },
+        "Preschool": {
+          "Median Cost": "$693.00",
+          "75th Percentile Cost": "$693.00"
+        },
+        "School Age": {
+          "Median Cost": "$234.00",
+          "75th Percentile Cost": "$234.00"
+        }
+      }
+    },
+    "Franklin": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,048.00",
+          "75th Percentile Cost": "$1,077.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,050.00",
+          "75th Percentile Cost": "$1,240.00"
+        },
+        "Preschool": {
+          "Median Cost": "$850.00",
+          "75th Percentile Cost": "$977.00"
+        },
+        "School Age": {
+          "Median Cost": "$628.00",
+          "75th Percentile Cost": "$731.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,288.00"
+        },
+        "Toddler": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Preschool": {
+          "Median Cost": "$800.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "School Age": {
+          "Median Cost": "$325.00",
+          "75th Percentile Cost": "$482.00"
+        }
+      }
+    },
+    "Garfield": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      }
+    },
+    "Grant": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$911.00",
+          "75th Percentile Cost": "$963.00"
+        },
+        "Toddler": {
+          "Median Cost": "$848.00",
+          "75th Percentile Cost": "$875.00"
+        },
+        "Preschool": {
+          "Median Cost": "$800.00",
+          "75th Percentile Cost": "$819.00"
+        },
+        "School Age": {
+          "Median Cost": "$700.00",
+          "75th Percentile Cost": "$867.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,001.00"
+        },
+        "Toddler": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$918.00"
+        },
+        "Preschool": {
+          "Median Cost": "$714.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "School Age": {
+          "Median Cost": "$325.00",
+          "75th Percentile Cost": "$536.00"
+        }
+      }
+    },
+    "Grays Harbor": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,235.00",
+          "75th Percentile Cost": "$1,235.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,105.00",
+          "75th Percentile Cost": "$1,105.00"
+        },
+        "Preschool": {
+          "Median Cost": "$902.00",
+          "75th Percentile Cost": "$1,018.00"
+        },
+        "School Age": {
+          "Median Cost": "$501.00",
+          "75th Percentile Cost": "$615.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$945.00",
+          "75th Percentile Cost": "$975.00"
+        },
+        "Toddler": {
+          "Median Cost": "$850.00",
+          "75th Percentile Cost": "$936.00"
+        },
+        "Preschool": {
+          "Median Cost": "$798.00",
+          "75th Percentile Cost": "$823.00"
+        },
+        "School Age": {
+          "Median Cost": "$697.00",
+          "75th Percentile Cost": "$790.00"
+        }
+      }
+    },
+    "Island": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "$938.00",
+          "75th Percentile Cost": "$1,036.00"
+        },
+        "Preschool": {
+          "Median Cost": "$840.00",
+          "75th Percentile Cost": "$1,120.00"
+        },
+        "School Age": {
+          "Median Cost": "$542.00",
+          "75th Percentile Cost": "$555.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,083.00",
+          "75th Percentile Cost": "$1,138.00"
+        },
+        "Toddler": {
+          "Median Cost": "$845.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Preschool": {
+          "Median Cost": "$845.00",
+          "75th Percentile Cost": "$1,040.00"
+        },
+        "School Age": {
+          "Median Cost": "$650.00",
+          "75th Percentile Cost": "$728.00"
+        }
+      }
+    },
+    "King": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,905.00",
+          "75th Percentile Cost": "$2,209.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,677.00",
+          "75th Percentile Cost": "$1,958.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,425.00",
+          "75th Percentile Cost": "$1,657.00"
+        },
+        "School Age": {
+          "Median Cost": "$531.00",
+          "75th Percentile Cost": "$718.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,300.00",
+          "75th Percentile Cost": "$1,500.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,200.00",
+          "75th Percentile Cost": "$1,408.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,062.00",
+          "75th Percentile Cost": "$1,300.00"
+        },
+        "School Age": {
+          "Median Cost": "$433.00",
+          "75th Percentile Cost": "$650.00"
+        }
+      }
+    },
+    "Kitsap": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,440.00",
+          "75th Percentile Cost": "$1,495.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,192.00",
+          "75th Percentile Cost": "$1,326.00"
+        },
+        "Preschool": {
+          "Median Cost": "$966.00",
+          "75th Percentile Cost": "$1,144.00"
+        },
+        "School Age": {
+          "Median Cost": "$490.00",
+          "75th Percentile Cost": "$610.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,036.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,034.00"
+        },
+        "Preschool": {
+          "Median Cost": "$812.00",
+          "75th Percentile Cost": "$995.00"
+        },
+        "School Age": {
+          "Median Cost": "$520.00",
+          "75th Percentile Cost": "$594.00"
+        }
+      }
+    },
+    "Kittitas": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,050.00",
+          "75th Percentile Cost": "$1,073.00"
+        },
+        "Toddler": {
+          "Median Cost": "$921.00",
+          "75th Percentile Cost": "$960.00"
+        },
+        "Preschool": {
+          "Median Cost": "$873.00",
+          "75th Percentile Cost": "$895.00"
+        },
+        "School Age": {
+          "Median Cost": "$464.00",
+          "75th Percentile Cost": "$485.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$910.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$802.00",
+          "75th Percentile Cost": "$939.00"
+        },
+        "Preschool": {
+          "Median Cost": "$802.00",
+          "75th Percentile Cost": "$865.00"
+        },
+        "School Age": {
+          "Median Cost": "$255.00",
+          "75th Percentile Cost": "$349.00"
+        }
+      }
+    },
+    "Klickitat": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,018.00",
+          "75th Percentile Cost": "$1,018.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,018.00",
+          "75th Percentile Cost": "$1,018.00"
+        },
+        "School Age": {
+          "Median Cost": "$433.00",
+          "75th Percentile Cost": "$440.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,100.00",
+          "75th Percentile Cost": "$1,100.00"
+        },
+        "Toddler": {
+          "Median Cost": "$900.00",
+          "75th Percentile Cost": "$900.00"
+        },
+        "Preschool": {
+          "Median Cost": "$900.00",
+          "75th Percentile Cost": "$900.00"
+        },
+        "School Age": {
+          "Median Cost": "$600.00",
+          "75th Percentile Cost": "$600.00"
+        }
+      }
+    },
+    "Lewis": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,016.00",
+          "75th Percentile Cost": "$1,067.00"
+        },
+        "Toddler": {
+          "Median Cost": "$886.00",
+          "75th Percentile Cost": "$975.00"
+        },
+        "Preschool": {
+          "Median Cost": "$805.00",
+          "75th Percentile Cost": "$888.00"
+        },
+        "School Age": {
+          "Median Cost": "$585.00",
+          "75th Percentile Cost": "$701.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$780.00",
+          "75th Percentile Cost": "$850.00"
+        },
+        "Toddler": {
+          "Median Cost": "$650.00",
+          "75th Percentile Cost": "$688.00"
+        },
+        "Preschool": {
+          "Median Cost": "$593.00",
+          "75th Percentile Cost": "$637.00"
+        },
+        "School Age": {
+          "Median Cost": "$353.00",
+          "75th Percentile Cost": "$415.00"
+        }
+      }
+    },
+    "Lincoln": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$823.00",
+          "75th Percentile Cost": "$823.00"
+        },
+        "Toddler": {
+          "Median Cost": "$823.00",
+          "75th Percentile Cost": "$823.00"
+        },
+        "Preschool": {
+          "Median Cost": "$737.00",
+          "75th Percentile Cost": "$737.00"
+        },
+        "School Age": {
+          "Median Cost": "$672.00",
+          "75th Percentile Cost": "$672.00"
+        }
+      }
+    },
+    "Mason": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,050.00",
+          "75th Percentile Cost": "$1,086.00"
+        },
+        "Toddler": {
+          "Median Cost": "$958.00",
+          "75th Percentile Cost": "$973.00"
+        },
+        "Preschool": {
+          "Median Cost": "$885.00",
+          "75th Percentile Cost": "$914.00"
+        },
+        "School Age": {
+          "Median Cost": "$704.00",
+          "75th Percentile Cost": "$707.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$830.00",
+          "75th Percentile Cost": "$865.00"
+        },
+        "Toddler": {
+          "Median Cost": "$750.00",
+          "75th Percentile Cost": "$800.00"
+        },
+        "Preschool": {
+          "Median Cost": "$700.00",
+          "75th Percentile Cost": "$738.00"
+        },
+        "School Age": {
+          "Median Cost": "$563.00",
+          "75th Percentile Cost": "$574.00"
+        }
+      }
+    },
+    "Okanogan": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$897.00",
+          "75th Percentile Cost": "$944.00"
+        },
+        "Toddler": {
+          "Median Cost": "$813.00",
+          "75th Percentile Cost": "$840.00"
+        },
+        "Preschool": {
+          "Median Cost": "$741.00",
+          "75th Percentile Cost": "$769.00"
+        },
+        "School Age": {
+          "Median Cost": "$650.00",
+          "75th Percentile Cost": "$775.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$888.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$1,029.00"
+        },
+        "School Age": {
+          "Median Cost": "$325.00",
+          "75th Percentile Cost": "$567.00"
+        }
+      }
+    },
+    "Pacific": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,073.00",
+          "75th Percentile Cost": "$1,073.00"
+        },
+        "Toddler": {
+          "Median Cost": "$932.00",
+          "75th Percentile Cost": "$932.00"
+        },
+        "Preschool": {
+          "Median Cost": "$542.00",
+          "75th Percentile Cost": "$688.00"
+        },
+        "School Age": {
+          "Median Cost": "$672.00",
+          "75th Percentile Cost": "$672.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$812.00",
+          "75th Percentile Cost": "$834.00"
+        },
+        "Toddler": {
+          "Median Cost": "$779.00",
+          "75th Percentile Cost": "$817.00"
+        },
+        "Preschool": {
+          "Median Cost": "$779.00",
+          "75th Percentile Cost": "$817.00"
+        },
+        "School Age": {
+          "Median Cost": "$704.00",
+          "75th Percentile Cost": "$785.00"
+        }
+      }
+    },
+    "Pend Oreille": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      }
+    },
+    "Pierce": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,300.00",
+          "75th Percentile Cost": "$1,484.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,077.00",
+          "75th Percentile Cost": "$1,270.00"
+        },
+        "Preschool": {
+          "Median Cost": "$953.00",
+          "75th Percentile Cost": "$1,111.00"
+        },
+        "School Age": {
+          "Median Cost": "$542.00",
+          "75th Percentile Cost": "$622.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,171.00"
+        },
+        "Toddler": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,030.00"
+        },
+        "Preschool": {
+          "Median Cost": "$823.00",
+          "75th Percentile Cost": "$963.00"
+        },
+        "School Age": {
+          "Median Cost": "$433.00",
+          "75th Percentile Cost": "$650.00"
+        }
+      }
+    },
+    "San Juan": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,387.00",
+          "75th Percentile Cost": "$1,387.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,213.00",
+          "75th Percentile Cost": "$1,326.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,040.00",
+          "75th Percentile Cost": "$1,209.00"
+        },
+        "School Age": {
+          "Median Cost": "$282.00",
+          "75th Percentile Cost": "$282.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      }
+    },
+    "Skagit": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,363.00",
+          "75th Percentile Cost": "$1,474.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,062.00",
+          "75th Percentile Cost": "$1,190.00"
+        },
+        "Preschool": {
+          "Median Cost": "$888.00",
+          "75th Percentile Cost": "$1,057.00"
+        },
+        "School Age": {
+          "Median Cost": "$452.00",
+          "75th Percentile Cost": "$620.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$997.00",
+          "75th Percentile Cost": "$1,150.00"
+        },
+        "Toddler": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,060.00"
+        },
+        "Preschool": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,040.00"
+        },
+        "School Age": {
+          "Median Cost": "$550.00",
+          "75th Percentile Cost": "$650.00"
+        }
+      }
+    },
+    "Skamania": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": "$0.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$650.00",
+          "75th Percentile Cost": "$704.00"
+        },
+        "Toddler": {
+          "Median Cost": "$650.00",
+          "75th Percentile Cost": "$704.00"
+        },
+        "Preschool": {
+          "Median Cost": "$550.00",
+          "75th Percentile Cost": "$600.00"
+        },
+        "School Age": {
+          "Median Cost": "$650.00",
+          "75th Percentile Cost": "$953.00"
+        }
+      }
+    },
+    "Snohomish": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,620.00",
+          "75th Percentile Cost": "$1,799.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,365.00",
+          "75th Percentile Cost": "$1,604.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,200.00",
+          "75th Percentile Cost": "$1,365.00"
+        },
+        "School Age": {
+          "Median Cost": "$520.00",
+          "75th Percentile Cost": "$744.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,192.00",
+          "75th Percentile Cost": "$1,387.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,083.00",
+          "75th Percentile Cost": "$1,250.00"
+        },
+        "Preschool": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,192.00"
+        },
+        "School Age": {
+          "Median Cost": "$500.00",
+          "75th Percentile Cost": "$650.00"
+        }
+      }
+    },
+    "Spokane": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,175.00",
+          "75th Percentile Cost": "$1,300.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,000.00",
+          "75th Percentile Cost": "$1,100.00"
+        },
+        "Preschool": {
+          "Median Cost": "$900.00",
+          "75th Percentile Cost": "$982.00"
+        },
+        "School Age": {
+          "Median Cost": "$585.00",
+          "75th Percentile Cost": "$711.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$900.00",
+          "75th Percentile Cost": "$976.00"
+        },
+        "Toddler": {
+          "Median Cost": "$795.00",
+          "75th Percentile Cost": "$952.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "School Age": {
+          "Median Cost": "$325.00",
+          "75th Percentile Cost": "$395.00"
+        }
+      }
+    },
+    "Stevens": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$759.00",
+          "75th Percentile Cost": "$759.00"
+        },
+        "Toddler": {
+          "Median Cost": "$726.00",
+          "75th Percentile Cost": "$769.00"
+        },
+        "Preschool": {
+          "Median Cost": "$636.00",
+          "75th Percentile Cost": "$689.00"
+        },
+        "School Age": {
+          "Median Cost": "$883.00",
+          "75th Percentile Cost": "$994.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$779.00",
+          "75th Percentile Cost": "$800.00"
+        },
+        "Toddler": {
+          "Median Cost": "$628.00",
+          "75th Percentile Cost": "$769.00"
+        },
+        "Preschool": {
+          "Median Cost": "$683.00",
+          "75th Percentile Cost": "$758.00"
+        },
+        "School Age": {
+          "Median Cost": "$390.00",
+          "75th Percentile Cost": "$444.00"
+        }
+      }
+    },
+    "Thurston": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,283.00",
+          "75th Percentile Cost": "$1,493.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,133.00",
+          "75th Percentile Cost": "$1,240.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,039.00",
+          "75th Percentile Cost": "$1,148.00"
+        },
+        "School Age": {
+          "Median Cost": "$600.00",
+          "75th Percentile Cost": "$691.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,113.00"
+        },
+        "Toddler": {
+          "Median Cost": "$900.00",
+          "75th Percentile Cost": "$970.00"
+        },
+        "Preschool": {
+          "Median Cost": "$788.00",
+          "75th Percentile Cost": "$873.00"
+        },
+        "School Age": {
+          "Median Cost": "$477.00",
+          "75th Percentile Cost": "$574.00"
+        }
+      }
+    },
+    "Wahkiakum": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      }
+    },
+    "Walla Walla": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,135.00",
+          "75th Percentile Cost": "$1,249.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,107.00",
+          "75th Percentile Cost": "$1,203.00"
+        },
+        "Preschool": {
+          "Median Cost": "$867.00",
+          "75th Percentile Cost": "$1,067.00"
+        },
+        "School Age": {
+          "Median Cost": "$722.00",
+          "75th Percentile Cost": "$736.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$898.00",
+          "75th Percentile Cost": "$1,300.00"
+        },
+        "Toddler": {
+          "Median Cost": "$845.00",
+          "75th Percentile Cost": "$1,262.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "School Age": {
+          "Median Cost": "$314.00",
+          "75th Percentile Cost": "$402.00"
+        }
+      }
+    },
+    "Whatcom": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,460.00",
+          "75th Percentile Cost": "$1,668.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,413.00",
+          "75th Percentile Cost": "$1,517.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,181.00",
+          "75th Percentile Cost": "$1,300.00"
+        },
+        "School Age": {
+          "Median Cost": "$628.00",
+          "75th Percentile Cost": "$689.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,083.00",
+          "75th Percentile Cost": "$1,210.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,011.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Preschool": {
+          "Median Cost": "$939.00",
+          "75th Percentile Cost": "$1,051.00"
+        },
+        "School Age": {
+          "Median Cost": "$542.00",
+          "75th Percentile Cost": "$618.00"
+        }
+      }
+    },
+    "Whitman": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,402.00",
+          "75th Percentile Cost": "$1,543.00"
+        },
+        "Toddler": {
+          "Median Cost": "$1,218.00",
+          "75th Percentile Cost": "$1,394.00"
+        },
+        "Preschool": {
+          "Median Cost": "$1,055.00",
+          "75th Percentile Cost": "$1,205.00"
+        },
+        "School Age": {
+          "Median Cost": "$464.00",
+          "75th Percentile Cost": "$583.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      }
+    },
+    "Yakima": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "$1,078.00",
+          "75th Percentile Cost": "$1,192.00"
+        },
+        "Toddler": {
+          "Median Cost": "$823.00",
+          "75th Percentile Cost": "$939.00"
+        },
+        "Preschool": {
+          "Median Cost": "$791.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "School Age": {
+          "Median Cost": "$593.00",
+          "75th Percentile Cost": "$646.00"
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$975.00",
+          "75th Percentile Cost": "$1,083.00"
+        },
+        "Toddler": {
+          "Median Cost": "$813.00",
+          "75th Percentile Cost": "$975.00"
+        },
+        "Preschool": {
+          "Median Cost": "$758.00",
+          "75th Percentile Cost": "$867.00"
+        },
+        "School Age": {
+          "Median Cost": "$303.00",
+          "75th Percentile Cost": "$433.00"
+        }
+      }
+    },
+    "Jefferson": {
+      "Center-Based": {
+        "Infant": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Toddler": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "Preschool": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        },
+        "School Age": {
+          "Median Cost": "",
+          "75th Percentile Cost": ""
+        }
+      },
+      "FCC": {
+        "Infant": {
+          "Median Cost": "$1,094.00",
+          "75th Percentile Cost": "$1,143.00"
+        },
+        "Toddler": {
+          "Median Cost": "$997.00",
+          "75th Percentile Cost": "$1,094.00"
+        },
+        "Preschool": {
+          "Median Cost": "$997.00",
+          "75th Percentile Cost": "$1,094.00"
+        },
+        "School Age": {
+          "Median Cost": "$539.00",
+          "75th Percentile Cost": "$659.00"
+        }
+      }
     }
-]
+  }

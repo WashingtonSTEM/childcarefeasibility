@@ -27,7 +27,7 @@ Default.args = {
     value: 'none'
   },
   {
-    text: 'Level 1',
+    text: 'Level 1 - enrolled',
     value: '1'
   },
   {

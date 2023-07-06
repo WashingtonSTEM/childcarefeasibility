@@ -1,11 +1,12 @@
-import { Row } from 'styled-bootstrap-grid'
 import { useIntl } from 'react-intl'
+import { Row } from 'styled-bootstrap-grid'
 
-import Input from '@/components/Input'
-import Toggle from '@/components/Toggle'
 import FormGroup from '@/components/FormGroup'
+import Input from '@/components/Input'
+import TextBox from '@/components/TextBox'
+import { isRequired, maxNumber, minNumber } from '@/utils/validate'
+import Title from '../Title'
 import Tooltip from '../Tooltip'
-import { isRequired, minNumber, maxNumber } from '@/utils/validate'
 
 export const validationRules = {
   percentageBenefitsCost: [(key, value, data) => {
@@ -27,7 +28,8 @@ export const validationRules = {
   rentOrMortageCost: [isRequired, minNumber(0)],
   collectionsRate: [isRequired, minNumber(0), maxNumber(100)],
   educationProgramExpenses: [isRequired, minNumber(0)],
-  programManagementChild: [isRequired, minNumber(0)]
+  programManagementChild: [isRequired, minNumber(0)],
+  additionalCost: [isRequired, minNumber(0)]
 }
 
 const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
@@ -43,37 +45,11 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
 
   return (
     <>
+      <Title>
+        {intl.formatMessage({ id: 'S2_TITLE' })}
+      </Title>
       <Row>
-        <FormGroup lg={4} style={{ display: 'flex' }}>
-          <Toggle
-            label={intl.formatMessage({ id: 'S2_PAY_BENEFITS' })}
-            checked={!!data.payBenefits}
-            onChange={({ target }) => onDataChange?.('payBenefits', target.checked)}
-          />
-        </FormGroup>
-        <FormGroup lg={8} error={errors.percentageBenefitsCost}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-
-            <Input
-              name='percentageBenefitsCost'
-              type='number'
-              prefix='%'
-              label={intl.formatMessage({ id: 'S2_BENEFITS_COST' })}
-              disabled={!data.payBenefits}
-              min={0}
-              max={100}
-              value={data.percentageBenefitsCost}
-              onChange={handleInputChange}
-            />
-            <Tooltip
-              trigger={isMobile ? 'click' : 'hover'}
-              tooltipText={intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP' })}
-            />
-          </div>
-        </FormGroup>
-      </Row>
-      <Row>
-        <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy}>
+        <FormGroup lg={6} error={errors.percentageChildrenReceivingSubsidy} errorMessageProps={{ min: 0, max: 100 }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='percentageChildrenReceivingSubsidy'
@@ -88,8 +64,18 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_SUBSIDY_TOOLTIP' })} />
           </div>
+          {data.earlyAchieversLevel === '0' && (
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {intl.formatMessage({ id: 'S2_SUBSIDY_RB' })}
+              </>
+            </TextBox>
+          )}
         </FormGroup>
-        <FormGroup lg={6} error={errors.educationProgramExpenses} description={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION' })}>
+        <FormGroup lg={6}
+          error={errors.educationProgramExpenses}
+          errorMessageProps={{ min: 0, max: 100 }}
+          description={intl.formatMessage({ id: 'S2_EDUCATION_PROGRAM_EXPENSES_DESCRIPTION' })}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='educationProgramExpenses'
@@ -138,7 +124,7 @@ const StepTwo = ({ data, onDataChange, errors, isMobile = false, show = false })
           </div>
 
         </FormGroup>
-        <FormGroup lg={6} error={errors.collectionsRate}>
+        <FormGroup lg={6} error={errors.collectionsRate} errorMessageProps={{ min: 0, max: 100 }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
             <Input
               name='collectionsRate'
