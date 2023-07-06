@@ -186,18 +186,18 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           {
             (costDataPerMonth) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-            <>
-              {(!costDataPerMonth['Median']?.Toddler && !costDataPerMonth['75th Percentile']?.Toddler) ? 
-                intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
-                intl.formatMessage(
-                  { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                  { 
-                    median: moneyFormatter.format(costDataPerMonth['Median'].Toddler), 
-                    percent: moneyFormatter.format(costDataPerMonth['75th Percentile']?.Toddler) 
-                  }
-                )}
-            </>
-          </TextBox>
+              <>
+                {(!costDataPerMonth['Median']?.Toddler && !costDataPerMonth['75th Percentile']?.Toddler) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { 
+                      median: moneyFormatter.format(costDataPerMonth['Median'].Toddler), 
+                      percent: moneyFormatter.format(costDataPerMonth['75th Percentile']?.Toddler) 
+                    }
+                  )}
+              </>
+            </TextBox>
           }
           
         </FormGroup>
