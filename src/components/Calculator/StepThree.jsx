@@ -1,21 +1,18 @@
 import { useMemo } from 'react'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { Row } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
-import { FormattedMessage, useIntl } from 'react-intl'
 
+import FormGroup from '@/components/FormGroup'
 import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
 import Tooltip from '@/components/Tooltip'
-import FormGroup from '@/components/FormGroup'
-import { isRequired, minInt } from '@/utils/validate'
 import {
-  getMaximumNumberOfInfantsSupported,
-  getMaximumNumberOfPreschoolers,
-  getEstimatedNumberOfChildCareAdministrators,
-  getEstimatedNumberOfPreschoolTeachers
+  getMaximumNumberOfInfantsSupported
 } from '@/helpers/formulas'
+import { isRequired, minInt } from '@/utils/validate'
 
-import monthlyChildcarePrice from '@/data/monthly_childcare_price.json'
+import costData from '@/data/cost_data_updated.json'
 import Title from '../Title'
 
 
@@ -44,6 +41,7 @@ const Text = styled.span`
 
 const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
   const intl = useIntl()
+  const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 
 
   const maximumNumberOfInfantsSupported = useMemo(() => {
@@ -56,7 +54,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
     return getMaximumNumberOfInfantsSupported(typeOfFacility, intendedFootage)
   }, [data])
 
-  const monthlyCCPricePerCounty = monthlyChildcarePrice[data.county] ? monthlyChildcarePrice[data.county][data.typeOfFacility] || {} : {}
+  const costDataPerMonth = costData[data.county] ? costData[data.county][data.typeOfFacility] || undefined : undefined
 
   if (!show) {
     return null
@@ -80,6 +78,12 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
       {data.typeOfFacility === 'FCC' && (
         <Text>
           <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
+        </Text>
+      )}
+
+      {data.typeOfFacility === 'Center-Based' && (
+        <Text>
+          <FormattedMessage id="SQUARE_FOOTAGE_FOR_CB" values={{ value:maximumNumberOfInfantsSupported }} />
         </Text>
       )}
       <Row>
@@ -151,16 +155,16 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
           </div>
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Infant) && 
+            (costDataPerMonth) && 
               <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
                 <>
-                  {(!monthlyCCPricePerCounty.Infant['Median Cost'] && !monthlyCCPricePerCounty.Infant['75th Percentile Cost']) ? 
+                  {(!costDataPerMonth['Median']?.Infant && !costDataPerMonth['75th Percentile']?.Infant) ? 
                     intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
                     intl.formatMessage(
                       { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
                       { 
-                        median: monthlyCCPricePerCounty.Infant['Median Cost'], 
-                        percent: monthlyCCPricePerCounty.Infant['75th Percentile Cost'] 
+                        median: moneyFormatter.format(costDataPerMonth['Median'].Infant), 
+                        percent: moneyFormatter.format(costDataPerMonth['75th Percentile'].Infant) 
                       }
                     )}
                 </>
@@ -180,20 +184,20 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
           </div>
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Toddler) && 
+            (costDataPerMonth) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              <>
-                {(!monthlyCCPricePerCounty.Toddler['Median Cost'] && !monthlyCCPricePerCounty.Toddler['75th Percentile Cost']) ? 
-                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
-                  intl.formatMessage(
-                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                    { 
-                      median: monthlyCCPricePerCounty.Toddler['Median Cost'], 
-                      percent: monthlyCCPricePerCounty.Toddler['75th Percentile Cost'] 
-                    }
-                  )}
-              </>
-            </TextBox>
+            <>
+              {(!costDataPerMonth['Median']?.Toddler && !costDataPerMonth['75th Percentile']?.Toddler) ? 
+                intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                intl.formatMessage(
+                  { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                  { 
+                    median: moneyFormatter.format(costDataPerMonth['Median'].Toddler), 
+                    percent: moneyFormatter.format(costDataPerMonth['75th Percentile']?.Toddler) 
+                  }
+                )}
+            </>
+          </TextBox>
           }
           
         </FormGroup>
@@ -211,16 +215,16 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
 
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty.Preschool) && 
+            (costDataPerMonth) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {(!monthlyCCPricePerCounty.Preschool['Median Cost'] && !monthlyCCPricePerCounty.Preschool['75th Percentile Cost']) ? 
+                {(!costDataPerMonth['Median']?.Preschool && !costDataPerMonth['75th Percentile']?.Preschool) ? 
                   intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
                   intl.formatMessage(
                     { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
-                    { median: 
-                      monthlyCCPricePerCounty.Preschool['Median Cost'], 
-                    percent: monthlyCCPricePerCounty.Preschool['75th Percentile Cost'] 
+                    { median: moneyFormatter.format(
+                      costDataPerMonth['Median'].Preschool), 
+                    percent: moneyFormatter.format(costDataPerMonth['75th Percentile']?.Preschool) 
                     }
                   )}
               </>
@@ -241,16 +245,16 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
             />
           </div>
           {
-            (monthlyCCPricePerCounty && monthlyCCPricePerCounty['School Age']) && 
+            (costDataPerMonth) && 
             <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
               <>
-                {(!monthlyCCPricePerCounty['School Age']['Median Cost'] && !monthlyCCPricePerCounty['School Age']['75th Percentile Cost']) ? 
+                {(!(costDataPerMonth['Median'] ? costDataPerMonth['Median']['School Age'] : null) && !(costDataPerMonth['75th Percentile'] ? costDataPerMonth['75th Percentile']['School Age'] : null)) ? 
                   intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
                   intl.formatMessage(
                     { id: 'S3_#_PCT_TOOLTIP_MIN_LIC_EXTENDED' }, 
-                    { median: 
-                      monthlyCCPricePerCounty['School Age']['Median Cost'], 
-                    percent: monthlyCCPricePerCounty['School Age']['75th Percentile Cost'] 
+                    { median: moneyFormatter.format(
+                      costDataPerMonth['Median'] ? costDataPerMonth['Median']['School Age'] : 0 ), 
+                    percent: moneyFormatter.format(costDataPerMonth['75th Percentile'] ? costDataPerMonth['75th Percentile']['School Age'] : 0 )
                     }
                   )}
               </>

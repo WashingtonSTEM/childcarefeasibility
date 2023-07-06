@@ -133,7 +133,7 @@ const StepFour = ({ data, onDataChange, errors, isMobile = false, show = false }
               value={data.percentageBenefitsCost}
               onChange={handleInputChange}
             />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP' })} />
+            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP' })+" "+intl.formatMessage({ id: 'S2_BENEFITS_COST_TOOLTIP_EXTENDED' })} />
           </div>
         </FormGroup>
       </Row> 
