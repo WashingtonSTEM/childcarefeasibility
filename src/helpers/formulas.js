@@ -81,8 +81,6 @@ export const getRatioForFacilityAndChildren = (facilityType, child) => {
 
 export const getEstimatedNumberOfChildCareWorkers = (
   facilityType,
-  estimatedNumberOfPreschoolTeachers = 0,
-  estimatedNumberOfChildCareAdministrators = 0,
   infants = 0,
   toddlers = 0,
   preschoolers = 0,

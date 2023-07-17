@@ -1,21 +1,20 @@
 import { useMemo } from 'react'
+import { FormattedMessage, useIntl } from 'react-intl'
 import { Row } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
-import { FormattedMessage, useIntl } from 'react-intl'
 
+import FormGroup from '@/components/FormGroup'
 import Input from '@/components/Input'
 import TextBox from '@/components/TextBox'
 import Tooltip from '@/components/Tooltip'
-import FormGroup from '@/components/FormGroup'
-import Instructions from './Instructions'
-import { isRequired, minInt, hasValue } from '@/utils/validate'
 import {
-  getMaximumNumberOfInfantsSupported,
-  getMaximumNumberOfPreschoolers,
-  getEstimatedNumberOfChildCareAdministrators,
-  getEstimatedNumberOfChildCareWorkers,
-  getEstimatedNumberOfPreschoolTeachers
+  getMaximumNumberOfInfantsSupported
 } from '@/helpers/formulas'
+import { isRequired, minInt } from '@/utils/validate'
+
+import costData from '@/data/cost_data_updated.json'
+import Title from '../Title'
+
 
 export const validationRules = {
   numberOfInfants: [isRequired, minInt(0)],
@@ -23,9 +22,10 @@ export const validationRules = {
   numberOfPreschoolers: [isRequired, minInt(0)],
   numberOfSchoolAgeChildren: [isRequired, minInt(0)],
   numberOfClassrooms: [isRequired, minInt(0)],
-  numberOfChildCareWorkers: [isRequired, minInt(0)],
-  numberOfPreschoolTeachers: [isRequired, minInt(0)],
-  numberOfChildCareAdministrators: [isRequired, minInt(0)],
+  pctNumberOfInfants: [isRequired, minInt(0)],
+  pctNumberOfToddlers: [isRequired, minInt(0)],
+  pctNumberOfPreschoolers: [isRequired, minInt(0)],
+  pctNumberOfSchoolAgeChildren: [isRequired, minInt(0)],
 }
 
 const Text = styled.span`
@@ -41,44 +41,8 @@ const Text = styled.span`
 
 const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false }) => {
   const intl = useIntl()
+  const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' })
 
-  const estimatedNumberOfChildCareAdministrators = useMemo(() => {
-    const { typeOfFacility } = data
-
-    if (!typeOfFacility) {
-      return null
-    }
-
-    return getEstimatedNumberOfChildCareAdministrators(typeOfFacility)
-  }, [data])
-
-  const estimatedNumberOfPreschoolTeachers = useMemo(() => {
-    const { typeOfFacility, numberOfClassrooms } = data
-
-    if (!typeOfFacility || !numberOfClassrooms) {
-      return null
-    }
-
-    return getEstimatedNumberOfPreschoolTeachers(typeOfFacility, numberOfClassrooms)
-  }, [data])
-
-  const estimatedNumberOfChildCareWorkers = useMemo(() => {
-    const { typeOfFacility, numberOfInfants, numberOfToddlers, numberOfPreschoolers, numberOfSchoolAgeChildren } = data
-
-    if (!typeOfFacility || !hasValue(numberOfInfants) || !hasValue(numberOfToddlers) || !hasValue(numberOfPreschoolers) || !hasValue(numberOfSchoolAgeChildren)) {
-      return null
-    }
-
-    return getEstimatedNumberOfChildCareWorkers(
-      typeOfFacility,
-      estimatedNumberOfPreschoolTeachers,
-      estimatedNumberOfChildCareAdministrators,
-      numberOfInfants,
-      numberOfToddlers,
-      numberOfPreschoolers,
-      numberOfSchoolAgeChildren
-    )
-  }, [data, estimatedNumberOfChildCareAdministrators, estimatedNumberOfPreschoolTeachers])
 
   const maximumNumberOfInfantsSupported = useMemo(() => {
     const { typeOfFacility, intendedFootage } = data
@@ -90,15 +54,7 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
     return getMaximumNumberOfInfantsSupported(typeOfFacility, intendedFootage)
   }, [data])
 
-  const maximumNumberOfPreschoolers = useMemo(() => {
-    const { typeOfFacility, intendedFootage } = data
-
-    if (!typeOfFacility || !intendedFootage) {
-      return null
-    }
-
-    return getMaximumNumberOfPreschoolers(typeOfFacility, intendedFootage, maximumNumberOfInfantsSupported)
-  }, [data, maximumNumberOfInfantsSupported])
+  const costDataPerMonth = costData[data.county] ? costData[data.county][data.typeOfFacility] || undefined : undefined
 
   if (!show) {
     return null
@@ -115,10 +71,19 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
 
   return (
     <>
+      <Title>
+        {intl.formatMessage({ id: 'S3_TITLE' })}
+      </Title>
       <Text>{intl.formatMessage({ id: 'S3_INSTRUCTIONS' })}</Text>
       {data.typeOfFacility === 'FCC' && (
         <Text>
           <FormattedMessage id="S1_FOOTAGE_TOOLTIP_FCC" />
+        </Text>
+      )}
+
+      {data.typeOfFacility === 'Center-Based' && (
+        <Text>
+          <FormattedMessage id="SQUARE_FOOTAGE_FOR_CB" values={{ value:maximumNumberOfInfantsSupported }} />
         </Text>
       )}
       <Row>
@@ -175,6 +140,130 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
           </div>
         </FormGroup>
       </Row>
+      
+      <Row>
+        <FormGroup lg={3} error={errors.pctNumberOfInfants}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfInfants'
+              type='number'
+              prefix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_INFANTS' })}
+              min={0}
+              value={data.pctNumberOfInfants}
+              onChange={handleOnChange}
+            />
+          </div>
+          {
+            (costDataPerMonth) && 
+              <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+                <>
+                  {(!costDataPerMonth['Median']?.Infant && !costDataPerMonth['75th Percentile']?.Infant) ? 
+                    intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                    intl.formatMessage(
+                      { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                      { 
+                        median: moneyFormatter.format(costDataPerMonth['Median'].Infant), 
+                        percent: moneyFormatter.format(costDataPerMonth['75th Percentile'].Infant) 
+                      }
+                    )}
+                </>
+              </TextBox>
+          }
+        </FormGroup>
+        <FormGroup lg={3} error={errors.pctNumberOfToddlers}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfToddlers'
+              type='number'
+              prefix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_TODDLERS' })}
+              min={0}
+              value={data.pctNumberOfToddlers}
+              onChange={handleOnChange}
+            />
+          </div>
+          {
+            (costDataPerMonth) && 
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {(!costDataPerMonth['Median']?.Toddler && !costDataPerMonth['75th Percentile']?.Toddler) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { 
+                      median: moneyFormatter.format(costDataPerMonth['Median'].Toddler), 
+                      percent: moneyFormatter.format(costDataPerMonth['75th Percentile']?.Toddler) 
+                    }
+                  )}
+              </>
+            </TextBox>
+          }
+          
+        </FormGroup>
+        <FormGroup lg={3} error={errors.pctNumberOfPreschoolers}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfPreschoolers'
+              type='number'
+              prefix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_PRESCHOOLERS' })}
+              min={0}
+              value={data.pctNumberOfPreschoolers}
+              onChange={handleOnChange}
+            />
+          </div>
+
+          {
+            (costDataPerMonth) && 
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {(!costDataPerMonth['Median']?.Preschool && !costDataPerMonth['75th Percentile']?.Preschool) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC' }, 
+                    { median: moneyFormatter.format(
+                      costDataPerMonth['Median'].Preschool), 
+                    percent: moneyFormatter.format(costDataPerMonth['75th Percentile']?.Preschool) 
+                    }
+                  )}
+              </>
+            </TextBox>
+          }
+
+        </FormGroup>
+        <FormGroup lg={3} error={errors.pctNumberOfSchoolAgeChildren}>
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
+            <Input
+              name='pctNumberOfSchoolAgeChildren'
+              type='number'
+              prefix='$'
+              label={intl.formatMessage({ 'id': 'S3_#_PCT_SAC' })}
+              min={0}
+              value={data.pctNumberOfSchoolAgeChildren}
+              onChange={handleOnChange}
+            />
+          </div>
+          {
+            (costDataPerMonth) && 
+            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
+              <>
+                {(!(costDataPerMonth['Median'] ? costDataPerMonth['Median']['School Age'] : null) && !(costDataPerMonth['75th Percentile'] ? costDataPerMonth['75th Percentile']['School Age'] : null)) ? 
+                  intl.formatMessage({ id: 'S3_NO_DATA_COUNTY' }) : 
+                  intl.formatMessage(
+                    { id: 'S3_#_PCT_TOOLTIP_MIN_LIC_EXTENDED' }, 
+                    { median: moneyFormatter.format(
+                      costDataPerMonth['Median'] ? costDataPerMonth['Median']['School Age'] : 0 ), 
+                    percent: moneyFormatter.format(costDataPerMonth['75th Percentile'] ? costDataPerMonth['75th Percentile']['School Age'] : 0 )
+                    }
+                  )}
+              </>
+            </TextBox>
+          }
+        </FormGroup>
+      </Row>
+
+
       <Row>
         <FormGroup lg={3} error={errors.numberOfClassrooms}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
@@ -187,50 +276,6 @@ const StepThree = ({ data, onDataChange, errors, isMobile = false, show = false 
               onChange={handleOnChange}
             />
             <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CLASSROOMS_TOOLTIP' })} />
-          </div>
-        </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfChildCareWorkers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='numberOfChildCareWorkers'
-              type='number'
-              label={intl.formatMessage({ id: 'S3_#_CCS' })}
-              min={0}
-              value={data.numberOfChildCareWorkers}
-              onChange={handleOnChange}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCS_TOOLTIP' })} />
-          </div>
-          {estimatedNumberOfChildCareWorkers !== null && (
-            <TextBox style={{ marginTop: 4, fontStyle: 'italic' }}>
-              {intl.formatMessage({ id: 'S3_#_CCS_RECOMENDATION' }, { number: estimatedNumberOfChildCareWorkers })}
-            </TextBox>
-          )}
-        </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfPreschoolTeachers}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='numberOfPreschoolTeachers'
-              type='number'
-              label={intl.formatMessage({ id: 'S3_#_PST' })}
-              min={0}
-              value={data.numberOfPreschoolTeachers}
-              onChange={handleOnChange}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_PST_TOOLTIP' })} />
-          </div>
-        </FormGroup>
-        <FormGroup lg={3} error={errors.numberOfChildCareAdministrators}>
-          <div style={{ position: 'relative', display: 'flex', alignItems: 'flex-end', gap: 4 }}>
-            <Input
-              name='numberOfChildCareAdministrators'
-              type='number'
-              label={intl.formatMessage({ id: 'S3_#_CCA' })}
-              min={0}
-              value={data.numberOfChildCareAdministrators}
-              onChange={handleOnChange}
-            />
-            <Tooltip trigger={isMobile ? 'click' : 'hover'} tooltipText={intl.formatMessage({ id: 'S3_#_CCA_TOOLTIP' })} />
           </div>
         </FormGroup>
       </Row>

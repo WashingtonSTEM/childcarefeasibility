@@ -1,24 +1,23 @@
 import { useRouter } from 'next/router'
-import { useState, useEffect } from 'react'
-import styled from 'styled-components'
-import { BaseCSS, Container, Row, Col } from 'styled-bootstrap-grid'
+import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
+import { BaseCSS, Container } from 'styled-bootstrap-grid'
+import styled from 'styled-components'
 
-import Title from '@/components/Title'
 import Button from '@/components/Button'
 import Divider from '@/components/Divider'
 import StepBar from '@/components/StepBar'
 import useForm from '@/hooks/useForm'
 import useMediaQuery from '@/hooks/useMediaQuery'
-import Instructions from '@/components/Calculator/Instructions'
 
+import StepFour, { validationRules as stepFourRules } from '@/components/Calculator/StepFour'
 import StepOne, { validationRules as stepOneRules } from '@/components/Calculator/StepOne'
-import StepTwo, { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 import StepThree, { validationRules as stepThreeRules } from '@/components/Calculator/StepThree'
+import StepTwo, { validationRules as stepTwoRules } from '@/components/Calculator/StepTwo'
 
 import styles from '@/styles/Calculator.module.css'
 
-const MAX_STEPS = 3
+const MAX_STEPS = 4
 
 const Text = styled.div`
   font-family: 'Roboto';
@@ -31,7 +30,8 @@ const Text = styled.div`
 const validationRules = {
   'step1': stepOneRules,
   'step2': stepTwoRules,
-  'step3': stepThreeRules
+  'step3': stepThreeRules,
+  'step4': stepFourRules
 }
 
 const Page = () => {
@@ -59,10 +59,17 @@ const Page = () => {
       if (isMobile) {
         validate(data, validationRules[`step${step}`])
       } else {
+        console.log({
+          ...stepOneRules,
+          ...stepTwoRules,
+          ...stepThreeRules,
+          ...stepFourRules
+        })
         validate(data, {
           ...stepOneRules,
           ...stepTwoRules,
-          ...stepThreeRules
+          ...stepThreeRules,
+          ...stepFourRules
         })
       }
     }
@@ -90,10 +97,13 @@ const Page = () => {
   }
 
   const handleSubmit = () => {
+    console.log(data)
+    console.log(errors)
     const isValid = validate(data, {
       ...stepOneRules,
       ...stepTwoRules,
-      ...stepThreeRules
+      ...stepThreeRules,
+      ...stepFourRules
     })
 
     if (!isValid) {
@@ -140,6 +150,16 @@ const Page = () => {
             isMobile={isMobile}
             show={!isMobile || step === 3}
           />
+
+          {!isMobile && <Divider style={{ margin: '72px 0 72px 0' }} />}
+          <StepFour
+            data={data}
+            errors={errors}
+            onDataChange={handleOnChange}
+            isMobile={isMobile}
+            show={!isMobile || step === 4}
+          />
+            
           {!isMobile ? (
             <div style={{ marginTop: 100, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
               <Button type='button' variant='secondary' onClick={clean}>
@@ -158,7 +178,7 @@ const Page = () => {
               >
                 {step === 1 ? 'Cancel' : 'Back'}
               </Button>
-              <Button type='button' textAlign='center' onClick={() => handleStepDirection(1)}>{step < 3 ? 'Next' : 'Finish'}</Button>
+              <Button type='button' textAlign='center' onClick={() => handleStepDirection(1)}>{step < MAX_STEPS ? 'Next' : 'Finish'}</Button>
             </div>
           )}
         </Container>
