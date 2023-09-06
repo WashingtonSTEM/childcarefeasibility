@@ -567,13 +567,28 @@ const ResultsPage = () => {
             onDataChange={onInputChage}
           />
           {!isMobile && (
-            <Row style={{ margin: '60px 0 20px 0' }}>
-              <Col offset={2} col={3} style={{ textAlign: 'center' }}>
+            <Row style={{ margin: '60px 0px 20px 0px' }}>
+              <Col col={8}
+                lg={2}
+                md={3}
+                style={{ textAlign: 'center', }}
+              >
+              </Col>
+
+              <Col 
+                col={8}
+                lg={2}
+                md={3}
+                style={{ textAlign: 'center' }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
                   <FormattedMessage id='R_MONTHLY' />
                 </Text>
               </Col>
-              <Col offset={1} col={3} style={{ textAlign: 'center' }}>
+              <Col offset={1}
+                col={8}
+                lg={2}
+                md={3}
+                style={{ textAlign: 'center' }}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#534F4D' }}>
                   <FormattedMessage id='R_ANNUAL' />
                 </Text>
