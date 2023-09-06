@@ -7,7 +7,7 @@ const Button = styled.button.attrs(props => ({
 }))`
   background: ${props => props.variant === 'primary' ? '#DF6020' : '#F4F4F4'};
   border-radius: 4px;
-  min-width: 160px;
+  min-width: 145px;
   height: 55px;
   border: none;
   padding: 10px 20px;
