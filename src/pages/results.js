@@ -624,7 +624,7 @@ const ResultsPage = () => {
                     variant={'secondary'}
                     textAlign="center"
                     onClick={handleExportClick}
-                    style={{ fontSize: 16, marginRight: '1em', width: '100%', minwidth: '150px' }}
+                    style={{ fontSize: 16, marginRight: '1em', width: '100%' }}
                   >
                     <img
                       style={{ position: 'relative', top: 4, marginRight: 5 }}
@@ -641,7 +641,7 @@ const ResultsPage = () => {
                     variant="secondary"
                     textAlign="center"
                     onClick={() => handleStartClick(true)}
-                    style={{ fontSize: 16, width: '100%', minwidth: '150px' }}
+                    style={{ fontSize: 16, width: '100%' }}
                   >
                     <FormattedMessage id="R_PREVIOUS_PAGE" />
                   </Button>
@@ -652,7 +652,7 @@ const ResultsPage = () => {
                   <Button
                     textAlign="center"
                     onClick={() => handleStartClick()}
-                    style={{ fontSize: 16, width: '100%', minwidth: '150px !import' }}
+                    style={{ fontSize: 16, width: '100%' }}
                   >
                     <FormattedMessage id="R_START_AGAIN" />
                   </Button>
