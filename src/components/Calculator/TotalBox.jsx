@@ -51,16 +51,20 @@ const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
   return (
     <Box {...props}>
       <Row style={{ padding: '30px 0' }}>
-        <Col col={12} lg={2}>
+        <Col col={12} lg={2} md={3}>
           <Text style={{ fontWeight: '600', color: 'white' }}>{(label)}</Text>
         </Col>
-        <Col col={4} lg={3} style={{ textAlign: 'center' }}>
+        <Col col={12}
+          lg={3}
+          md={3}
+          style={{ textAlign: 'center' }}>
           <Text style={{ color: 'white' }}>{moneyFormatter.format(monthlyValue || 0)}</Text>
         </Col>
-        <Col 
-          col={4}
-          offset={1}
+        <Col
+          col={12}
           lg={3}
+          md={3}
+          offset={1}
           style={{ textAlign: 'center' }}
         >
           <Text style={{ color: 'white' }}>{moneyFormatter.format(annualValue || 0)}</Text>
