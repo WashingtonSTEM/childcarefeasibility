@@ -151,5 +151,6 @@
   "S2_MANAGEMENT_CHILD_DESCRIPTION": "Amount per child, per month",
   "S2_MANAGEMENT_CHILD_TOOLTIP_CB": "For Licensed Centers, $30 per child, according to Department of Commerce estimates.",
   "S2_MANAGEMENT_CHILD_TOOLTIP_FCC": "For Licensed Family Home, $45 per child, according to Department of Commerce estimates.",
-  "R_LICENSING_FEE": "Child Care Licensing Fee"
+  "R_LICENSING_FEE": "Child Care Licensing Fee",
+  "CLICK_VIEW_RESULTS":"Click here to see the detailed analysis result"
 }
