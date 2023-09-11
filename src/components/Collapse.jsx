@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const CustomCollapseButton = styled.button`
   background-color: #df6020;
@@ -13,7 +13,7 @@ const CustomCollapseButton = styled.button`
   &:hover {
     background-color: #00afda;
   }
-`;
+`
 
 const CustomCollapseContent = styled.div`
   overflow: hidden;
@@ -22,14 +22,14 @@ const CustomCollapseContent = styled.div`
   &.show {
     max-height: 1000px;
   }
-`;
+`
 
 function CustomCollapse({ title, children }) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
+    setIsCollapsed(!isCollapsed)
+  }
 
   return (
     <div>
@@ -40,7 +40,7 @@ function CustomCollapse({ title, children }) {
         <CustomCollapseContent>{children}</CustomCollapseContent>
       )}
     </div>
-  );
+  )
 }
 
-export default CustomCollapse;
+export default CustomCollapse
