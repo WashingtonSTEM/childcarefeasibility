@@ -31,9 +31,6 @@ function CustomCollapse({ title, children }) {
     setIsCollapsed(!isCollapsed);
   };
 
-
-
-
   return (
     <div>
       <CustomCollapseButton onClick={toggleCollapse} className="custom-collapse-button">
