@@ -3,21 +3,25 @@ import { Row, Col } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
 
 const Box = styled.div`
-  background: #00AFDA;
+  background: #00afda;
   border-radius: 4px;
   padding: 15px 22px;
 `
 
 const Text = styled.span`
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #F3F3F3;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #f3f3f3;
 `
 
-const moneyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', currencySign: 'accounting' })
+const moneyFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  currencySign: 'accounting',
+})
 
 const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
   if (mobile) {
@@ -38,10 +42,14 @@ const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
         </Row>
         <Row>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>{moneyFormatter.format(monthlyValue || 0)}</Text>
+            <Text style={{ color: 'white' }}>
+              {moneyFormatter.format(monthlyValue || 0)}
+            </Text>
           </Col>
           <Col col={6}>
-            <Text style={{ color: 'white' }}>{moneyFormatter.format(annualValue || 0)}</Text>
+            <Text style={{ color: 'white' }}>
+              {moneyFormatter.format(annualValue || 0)}
+            </Text>
           </Col>
         </Row>
       </Box>
@@ -51,25 +59,20 @@ const TotalBox = ({ label, monthlyValue, annualValue, mobile, ...props }) => {
   return (
     <Box {...props}>
       <Row style={{ padding: '30px 0' }}>
-        <Col col={8} lg={2} md={3}>
-          <Text style={{ fontWeight: '600', color: 'white' }}>{(label)}</Text>
-        </Col>
-        
-        <Col col={8}
-          lg={2}
-          md={3}
-          style={{ textAlign: 'center' }}>
-          <Text style={{ color: 'white' }}>{moneyFormatter.format(monthlyValue || 0)}</Text>
+        <Col lg={3} md={3}>
+          <Text style={{ fontWeight: '600', color: 'white' }}>{label}</Text>
         </Col>
 
-        <Col
-          col={8}
-          lg={2}
-          md={3}
-          offset={1}
-          style={{ textAlign: 'center' }}
-        >
-          <Text style={{ color: 'white' }}>{moneyFormatter.format(annualValue || 0)}</Text>
+        <Col lg={4} md={4}>
+          <Text style={{ color: 'white' }}>
+            {moneyFormatter.format(monthlyValue || 0)}
+          </Text>
+        </Col>
+
+        <Col lg={4} md={4}>
+          <Text style={{ color: 'white' }}>
+            {moneyFormatter.format(annualValue || 0)}
+          </Text>
         </Col>
       </Row>
     </Box>
@@ -80,7 +83,7 @@ TotalBox.propTypes = {
   label: PropTypes.string.isRequired,
   monthlyValue: PropTypes.number.isRequired,
   annualValue: PropTypes.number.isRequired,
-  mobile: PropTypes.bool
+  mobile: PropTypes.bool,
 }
 
 export default TotalBox
