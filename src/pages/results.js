@@ -191,10 +191,10 @@ const ResultsPage = () => {
   const expectedBenefits =
     data.payBenefits === 'true'
       ? (data.percentageBenefitsCost *
-          (data.numberOfChildCareWorkers +
-            data.numberOfPreschoolTeachers +
-            data.numberOfChildCareAdministrators)) /
-        12
+        (data.numberOfChildCareWorkers +
+          data.numberOfPreschoolTeachers +
+          data.numberOfChildCareAdministrators)) /
+      12
       : 0
 
   const totalChildren =
@@ -555,7 +555,7 @@ const ResultsPage = () => {
             style={{ margin: '12px 0' }}
           />
           <CustomCollapse title={<FormattedMessage id="CLICK_VIEW_RESULTS" />}>
-            <Row style={{ marginBottom: '1rem', margin: '20px' }}>
+            <Row style={{ marginBottom: '1rem', margin: '20px', marginLeft: '0' }}>
               <Col col={4} lg={3}></Col>
               <Col
                 col={4}
@@ -567,7 +567,7 @@ const ResultsPage = () => {
                   style={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'space-between',
+                    justifyContent: 'start',
                   }}
                 >
                   <Text style={{ fontWeight: 'bold' }}>
@@ -575,12 +575,17 @@ const ResultsPage = () => {
                   </Text>
                 </div>
               </Col>
-              <Col col={4}>
+              <Col
+                col={4}
+                style={{
+                  paddingLeft: '0px !important',
+                }}
+              >
                 <div
                   style={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'space-between',
+                    justifyContent: 'start',
                   }}
                 >
                   <Text style={{ fontWeight: 'bold' }}>
