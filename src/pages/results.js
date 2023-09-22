@@ -586,6 +586,7 @@ const ResultsPage = () => {
                     width: '100%',
                     display: 'flex',
                     justifyContent: 'start',
+                    paddingLeft: '12px'
                   }}
                 >
                   <Text style={{ fontWeight: 'bold' }}>
