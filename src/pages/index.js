@@ -127,60 +127,112 @@ const Page = () => {
       {isMobile && <StepBar step={step} steps={MAX_STEPS} />}
       <main className={styles.main}>
         <Container as='form' style={{ padding: '0 30px' }} onSubmit={(e) => e.preventDefault()}>
-          <StepOne
-            data={data}
-            errors={errors}
-            onDataChange={handleOnChange}
-            isMobile={isMobile}
-            show={!isMobile || step === 1}
-          />
-          {!isMobile && <Divider style={{ margin: '72px 0 72px 0' }} />}
-          <StepTwo
-            data={data}
-            errors={errors}
-            onDataChange={handleOnChange}
-            isMobile={isMobile}
-            show={!isMobile || step === 2}
-          />
-          {!isMobile && <Divider style={{ margin: '72px 0 72px 0' }} />}
-          <StepThree
-            data={data}
-            errors={errors}
-            onDataChange={handleOnChange}
-            isMobile={isMobile}
-            show={!isMobile || step === 3}
-          />
-
-          {!isMobile && <Divider style={{ margin: '72px 0 72px 0' }} />}
-          <StepFour
-            data={data}
-            errors={errors}
-            onDataChange={handleOnChange}
-            isMobile={isMobile}
-            show={!isMobile || step === 4}
-          />
-            
-          {!isMobile ? (
-            <div style={{ marginTop: 100, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
-              <Button type='button' variant='secondary' onClick={clean}>
-                { intl.formatMessage({ id: 'CANCEL' }) }
-              </Button>
-              <Button type='button' textAlign='center' onClick={handleSubmit}>
-                { intl.formatMessage({ id: 'VIEW_RESULTS' }) }
-              </Button>
-            </div>
+          {isMobile ? (
+            <>
+              <StepOne
+                data={data}
+                errors={errors}
+                onDataChange={handleOnChange}
+                isMobile={isMobile}
+                show={!isMobile || step === 1}
+              />
+              <Divider style={{ margin: '72px 0 72px 0' }} />
+              <StepTwo
+                data={data}
+                errors={errors}
+                onDataChange={handleOnChange}
+                isMobile={isMobile}
+                show={!isMobile || step === 2}
+              />
+              <StepThree
+                data={data}
+                errors={errors}
+                onDataChange={handleOnChange}
+                isMobile={isMobile}
+                show={!isMobile || step === 3}
+              />
+              <StepFour
+                data={data}
+                errors={errors}
+                onDataChange={handleOnChange}
+                isMobile={isMobile}
+                show={!isMobile || step === 4}
+              />
+            </>
           ) : (
-            <div style={{ marginTop: 25, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
-              <Button
-                type='button'
-                variant='secondary'
-                onClick={() => step === 1 ? clean() : handleStepDirection(-1)}
-              >
-                {step === 1 ? 'Cancel' : 'Back'}
-              </Button>
-              <Button type='button' textAlign='center' onClick={() => handleStepDirection(1)}>{step < MAX_STEPS ? 'Next' : 'Finish'}</Button>
-            </div>
+            <>
+              {step === 1 && (
+                <StepOne
+                  data={data}
+                  errors={errors}
+                  onDataChange={handleOnChange}
+                  isMobile={isMobile}
+                  show={!isMobile || step === 1}
+                />
+              )}
+              {step === 2 && (
+                <StepTwo
+                  data={data}
+                  errors={errors}
+                  onDataChange={handleOnChange}
+                  isMobile={isMobile}
+                  show={!isMobile || step === 2}
+                />
+              )}
+              {step === 3 && (
+                <StepThree
+                  data={data}
+                  errors={errors}
+                  onDataChange={handleOnChange}
+                  isMobile={isMobile}
+                  show={!isMobile || step === 3}
+                />
+              )}
+              {step === 4 && (
+                <StepFour
+                  data={data}
+                  errors={errors}
+                  onDataChange={handleOnChange}
+                  isMobile={isMobile}
+                  show={!isMobile || step === 4}
+                />
+              )}
+              <Divider style={{ margin: '72px 0 72px 0' }} />
+            </>
           )}
+
+          <div style={{ marginTop: 100, marginBottom: 50, display: 'flex', justifyContent: 'space-between' }}>
+            {isMobile ? (
+              <>
+                <Button
+                  type='button'
+                  variant='secondary'
+                  onClick={() => step === 1 ? clean() : handleStepDirection(-1)}
+                >
+                  {step === 1 ? 'Cancel' : 'Back'}
+                </Button>
+                <Button type='button' textAlign='center' onClick={() => handleStepDirection(1)}>{step < MAX_STEPS ? 'Next' : 'Finish'}</Button>
+              </>
+
+            ) : (
+              <>
+                <Button
+                  type='button'
+                  variant='secondary'
+                  onClick={() => step === 1 ? clean() : handleStepDirection(-1)}
+                >
+                  {step === 1 ? 'Cancel' : 'Back'}
+                </Button>
+                <Button
+                  type='button'
+                  textAlign='center'
+                  onClick={step < MAX_STEPS ? () => handleStepDirection(1) : handleSubmit}
+                >
+                  {step < MAX_STEPS ? 'Next' : intl.formatMessage({ id: 'VIEW_RESULTS' })}
+                </Button>
+              </>
+            )}
+          </div>
         </Container>
       </main>
     </>

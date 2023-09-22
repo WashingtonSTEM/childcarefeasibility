@@ -151,5 +151,6 @@
   "S3_#_INFANTS_TOOLTIP": "Infantes, de 0 a 11 meses de edad.",
   "S3_#_TODDLERS_TOOLTIP": "Niños pequeños, de 12 a 29 meses de edad.",
   "S3_#_PRESCHOOLERS_TOOLTIP": "Preescolares, de 30 meses a 6 años, no inscritos en la escuela.",
-  "S3_#_SAC_TOOLTIP": "Niños en edad escolar, de 15 a 12 años, matriculados en la escuela."
+  "S3_#_SAC_TOOLTIP": "Niños en edad escolar, de 15 a 12 años, matriculados en la escuela.",
+  "CLICK_VIEW_RESULTS":"haga clic aquí para ver el resultado detallado del análisis"
 }
